@@ -11,24 +11,26 @@ html { scroll-behavior: smooth; }
 
 @layer base {
   :root {
-    --background: 210 25% 7%;
-    --foreground: 210 10% 92%;
-    --card: 215 25% 12%;
-    --card-foreground: 210 10% 92%;
-    --popover: 215 25% 12%;
-    --popover-foreground: 210 10% 92%;
-    --primary: 195 35% 47%;
+    --metal-text: #F1F5F8;
+    --metal-subtext: #CCD7E0;
+    --background: 206 27% 28%;
+    --foreground: 206 33% 96%;
+    --card: 206 24% 33%;
+    --card-foreground: 206 33% 96%;
+    --popover: 206 24% 33%;
+    --popover-foreground: 206 33% 96%;
+    --primary: 195 53% 33%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 215 20% 18%;
-    --secondary-foreground: 210 10% 92%;
-    --muted: 215 20% 18%;
-    --muted-foreground: 215 15% 65%;
+    --secondary: 206 24% 38%;
+    --secondary-foreground: 206 33% 96%;
+    --muted: 206 24% 38%;
+    --muted-foreground: 206 25% 84%;
     --accent: 195 35% 47%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 215 20% 20%;
-    --input: 215 20% 18%;
+    --border: 206 21% 43%;
+    --input: 206 21% 43%;
     --ring: 195 35% 47%;
     --chart-1: 195 35% 47%;
     --chart-2: 145 45% 42%;
@@ -46,40 +48,7 @@ html { scroll-behavior: smooth; }
     --sidebar-ring: 195 35% 47%
   }
 
-  .dark {
-    --background: 210 25% 7%;
-    --foreground: 210 10% 92%;
-    --card: 215 25% 12%;
-    --card-foreground: 210 10% 92%;
-    --popover: 215 25% 12%;
-    --popover-foreground: 210 10% 92%;
-    --primary: 195 35% 47%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 215 20% 18%;
-    --secondary-foreground: 210 10% 92%;
-    --muted: 215 20% 18%;
-    --muted-foreground: 215 15% 65%;
-    --accent: 195 35% 47%;
-    --accent-foreground: 0 0% 100%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 215 20% 20%;
-    --input: 215 20% 18%;
-    --ring: 195 35% 47%;
-    --chart-1: 195 35% 47%;
-    --chart-2: 145 45% 42%;
-    --chart-3: 30 60% 45%;
-    --chart-4: 280 50% 55%;
-    --chart-5: 340 65% 50%;
-    --sidebar-background: 215 25% 10%;
-    --sidebar-foreground: 210 10% 92%;
-    --sidebar-primary: 195 35% 47%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 215 20% 15%;
-    --sidebar-accent-foreground: 210 10% 92%;
-    --sidebar-border: 215 20% 20%;
-    --sidebar-ring: 195 35% 47%
-  }
+
 }
 
 @layer base {
@@ -98,13 +67,55 @@ html { scroll-behavior: smooth; }
 
 /* Transparent product assets share one neutral studio surface. */
 .product-stage {
-  background: radial-gradient(ellipse at 50% 40%, #303945 0%, #1d2530 55%, #141b24 100%);
+  background: radial-gradient(ellipse at 50% 40%, #61778A 0%, #4A6276 55%, #405769 100%);
 }
 .hero-product-visual {
   width: 100%; height: 100%; object-fit: contain;
-  padding: 6rem 3vw 1rem; opacity: .72;
-  background: radial-gradient(ellipse at 50% 55%, #293544, #101820 75%);
+  padding: 6rem 3vw 1rem; opacity: .85;
+  background: radial-gradient(ellipse at 50% 55%, #4A5C6B, #303C47 75%);
 }
 @media (max-width: 640px) {
   .hero-product-visual { padding: 8rem 0 1rem; }
 }
+
+.site-chrome, .hero-scene, .hero-product-scene {
+  --metal-text: #f4f7fa;
+  --metal-subtext: #d4e0e9;
+}
+.site-chrome { --border: 210 20% 40%; }
+.site-chrome .text-steel { color: #9dd6e6; }
+.site-chrome .hover\:text-steel:hover, .hero-scene .hover\:text-steel:hover { color: #9dd6e6; }
+.bg-industrial-secondary.border { box-shadow: 0 4px 18px rgba(15,25,35,.12); }
+
+.text-steel, .hover\:text-steel:hover { color: #A5DCEC; }
+.hero-product-scene .text-steel, .hero-product-scene .hover\:text-steel:hover { color: #A5DCEC; }
+
+/* Soft charcoal connects the catalog to the industrial hero photography. */
+.catalog-surface { background: #384753; }
+.catalog-filter {
+  background: #303A43;
+  border-color: #586773;
+  box-shadow: 0 5px 18px rgba(20,27,34,.1);
+}
+.catalog-filter .bg-industrial-secondary { background: #43515D; }
+.catalog-category {
+  border: 1px solid rgba(162,181,194,.16);
+  box-shadow: 0 6px 20px rgba(20,27,34,.06);
+}
+.catalog-tone-0 { background: #303C47; }
+.catalog-tone-1 { background: #435360; }
+.catalog-card-content { background: #35434F; }
+.catalog-card { border-color: #596B79; }
+.catalog-card .bg-industrial { background: #2F3B46; }
+.catalog-card .product-stage {
+  background: radial-gradient(ellipse at 50% 35%, #697A88, #526371 60%, #445461);
+}
+
+.hero-product-scene { border-bottom: 1px solid #718B9D; }
+.product-detail-surface { background: #405769; }
+.product-detail-specs { background: #303C47; border-color: #596B79; }
+.product-detail-inquiry { background: #435360; border-color: #6B7E8D; }
+.product-detail-surface .product-stage {
+  background: radial-gradient(ellipse at 50% 35%, #697A88, #526371 60%, #445461);
+}
+.product-detail-related { background: #35434F; }

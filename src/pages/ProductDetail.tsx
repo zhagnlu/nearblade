@@ -62,7 +62,7 @@ export default function ProductDetail() {
         secondaryAction={{ label: "Request Quote", to: "/contact" }}
       />
 
-      <section id="product-content" className="scroll-mt-20 py-section-mobile md:py-section bg-industrial">
+      <section id="product-content" className="product-detail-surface scroll-mt-20 py-section-mobile md:py-section bg-industrial">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link
             to="/products"
@@ -198,7 +198,7 @@ export default function ProductDetail() {
             </div>
           </div>
 
-          <div className="bg-industrial-secondary rounded-card border border-border p-8 mb-16">
+          <div className="product-detail-specs rounded-card border border-border p-5 sm:p-8 mb-16">
             <h2 className="text-2xl font-semibold text-metal-text mb-6">Technical Specifications</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
@@ -234,7 +234,7 @@ export default function ProductDetail() {
                   <Link
                     key={related.id}
                     to={`/products/${related.id}`}
-                    className="group bg-industrial-secondary border border-border rounded-card overflow-hidden hover:border-steel/50 transition-all duration-300"
+                    className="product-detail-related group border border-border rounded-card overflow-hidden hover:border-steel/50 transition-all duration-300"
                   >
                     <div className="aspect-[4/3] overflow-hidden product-stage">
                       <img
@@ -256,7 +256,7 @@ export default function ProductDetail() {
             </div>
           )}
 
-          <div className="bg-industrial-secondary rounded-card border border-border p-8">
+          <div className="product-detail-inquiry rounded-card border border-border p-5 sm:p-8">
             <h2 className="text-2xl font-semibold text-metal-text mb-2 text-center">Request a Quote</h2>
             <p className="text-metal-subtext text-center mb-8">
               Tell us about your requirements and we will get back to you within 24 hours.

@@ -47,9 +47,9 @@ export default function Products() {
         secondaryAction={{ label: "Request Quote", to: "/contact" }}
       />
 
-      <section id="products-content" className="scroll-mt-20 py-section-mobile md:py-section bg-industrial">
+      <section id="products-content" className="catalog-surface scroll-mt-20 py-section-mobile md:py-section bg-industrial">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-12">
+          <div className="catalog-filter mb-12 p-5 sm:p-7 rounded-card border border-border">
             <div className="flex items-center gap-2 mb-4">
               <FaFilter className="text-steel" size={14} />
               <span className="text-metal-subtext text-sm">Filter by Category</span>
@@ -82,8 +82,8 @@ export default function Products() {
           </div>
 
           <div className="space-y-16">
-            {filteredCategories.map((category) => (
-              <div key={category.id} id={category.id}>
+            {filteredCategories.map((category, index) => (
+              <div key={category.id} id={category.id} className={`catalog-category catalog-tone-${index % 2} scroll-mt-24 p-5 sm:p-8 lg:p-10 rounded-card`}>
                 <div className="flex items-center gap-4 mb-8">
                   <div className="w-12 h-12 bg-steel/10 rounded-card flex items-center justify-center">
                     <img
@@ -105,7 +105,7 @@ export default function Products() {
                     <Link
                       key={product.id}
                       to={`/products/${product.id}`}
-                      className="group bg-industrial-secondary border border-border rounded-card overflow-hidden hover:border-steel/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-steel/5"
+                      className="catalog-card group bg-industrial-secondary border border-border rounded-card overflow-hidden hover:border-steel/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-steel/5"
                     >
                       <div className="aspect-[4/3] overflow-hidden product-stage">
                         <img
@@ -116,7 +116,7 @@ export default function Products() {
                           className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
                         />
                       </div>
-                      <div className="p-6">
+                      <div className="catalog-card-content p-6">
                         <h3 className="text-lg font-semibold text-metal-text mb-2 group-hover:text-steel transition-colors">
                           {product.name}
                         </h3>
