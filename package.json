@@ -6,7 +6,10 @@
   "scripts": {
     "dev": "node node_modules/vite/bin/vite.js --host 127.0.0.1",
     "build": "tsc --noEmit && vite build",
-    "preview": "vite preview --host 127.0.0.1"
+    "preview": "vite preview --host 127.0.0.1",
+    "build:ecs": "node scripts/build-ecs.mjs",
+    "publish:ecs": "node scripts/publish-ecs.mjs",
+    "test:ecs": "node --test tests/ecs-publication.test.mjs"
   },
   "dependencies": {
     "react": "18.3.1",

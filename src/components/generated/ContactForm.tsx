@@ -54,7 +54,7 @@ export function ContactForm({ compact = false }: ContactFormProps) {
             required
             value={formData.name}
             onChange={handleChange}
-            className="w-full px-4 py-3 bg-industrial-secondary border border-border rounded-card text-metal-text placeholder-metal-gray focus:outline-none focus:border-steel transition-colors"
+            className="w-full px-4 py-3 inquiry-field border border-border rounded-card text-metal-text placeholder-metal-gray focus:outline-none focus:border-steel transition-colors"
             placeholder="John Smith"
           />
         </div>
@@ -69,7 +69,7 @@ export function ContactForm({ compact = false }: ContactFormProps) {
             required
             value={formData.email}
             onChange={handleChange}
-            className="w-full px-4 py-3 bg-industrial-secondary border border-border rounded-card text-metal-text placeholder-metal-gray focus:outline-none focus:border-steel transition-colors"
+            className="w-full px-4 py-3 inquiry-field border border-border rounded-card text-metal-text placeholder-metal-gray focus:outline-none focus:border-steel transition-colors"
             placeholder="john@company.com"
           />
         </div>
@@ -85,7 +85,7 @@ export function ContactForm({ compact = false }: ContactFormProps) {
             name="company"
             value={formData.company}
             onChange={handleChange}
-            className="w-full px-4 py-3 bg-industrial-secondary border border-border rounded-card text-metal-text placeholder-metal-gray focus:outline-none focus:border-steel transition-colors"
+            className="w-full px-4 py-3 inquiry-field border border-border rounded-card text-metal-text placeholder-metal-gray focus:outline-none focus:border-steel transition-colors"
             placeholder="Your Company Ltd."
           />
         </div>
@@ -99,7 +99,7 @@ export function ContactForm({ compact = false }: ContactFormProps) {
             name="phone"
             value={formData.phone}
             onChange={handleChange}
-            className="w-full px-4 py-3 bg-industrial-secondary border border-border rounded-card text-metal-text placeholder-metal-gray focus:outline-none focus:border-steel transition-colors"
+            className="w-full px-4 py-3 inquiry-field border border-border rounded-card text-metal-text placeholder-metal-gray focus:outline-none focus:border-steel transition-colors"
             placeholder="+1 234 567 8900"
           />
         </div>
@@ -115,7 +115,7 @@ export function ContactForm({ compact = false }: ContactFormProps) {
           rows={compact ? 3 : 5}
           value={formData.message}
           onChange={handleChange}
-          className="w-full px-4 py-3 bg-industrial-secondary border border-border rounded-card text-metal-text placeholder-metal-gray focus:outline-none focus:border-steel transition-colors resize-none"
+          className="w-full px-4 py-3 inquiry-field border border-border rounded-card text-metal-text placeholder-metal-gray focus:outline-none focus:border-steel transition-colors resize-none"
           placeholder="Please describe the products you need, specifications, quantity, etc."
         />
       </div>

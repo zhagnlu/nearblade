@@ -11,27 +11,33 @@ html { scroll-behavior: smooth; }
 
 @layer base {
   :root {
-    --metal-text: #F1F5F8;
-    --metal-subtext: #CCD7E0;
-    --background: 206 27% 28%;
-    --foreground: 206 33% 96%;
-    --card: 206 24% 33%;
-    --card-foreground: 206 33% 96%;
-    --popover: 206 24% 33%;
-    --popover-foreground: 206 33% 96%;
-    --primary: 195 53% 33%;
+    color-scheme: light;
+    --surface: 255 255 255;
+    --surface-secondary: 241 245 249;
+    --surface-tertiary: 226 232 240;
+    --brand: 166 83 21;
+    --brand-hover: 145 72 20;
+    --metal-text: #182B49;
+    --metal-subtext: #475569;
+    --background: 0 0% 100%;
+    --foreground: 216 51% 19%;
+    --card: 0 0% 100%;
+    --card-foreground: 216 51% 19%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 216 51% 19%;
+    --primary: 26 78% 37%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 206 24% 38%;
-    --secondary-foreground: 206 33% 96%;
-    --muted: 206 24% 38%;
-    --muted-foreground: 206 25% 84%;
-    --accent: 195 35% 47%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 216 51% 19%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 19% 35%;
+    --accent: 26 78% 37%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 206 21% 43%;
-    --input: 206 21% 43%;
-    --ring: 195 35% 47%;
+    --border: 214 32% 88%;
+    --input: 214 32% 80%;
+    --ring: 26 78% 37%;
     --chart-1: 195 35% 47%;
     --chart-2: 145 45% 42%;
     --chart-3: 215 25% 30%;
@@ -65,9 +71,9 @@ html { scroll-behavior: smooth; }
   pointer-events: none;
 }
 
-/* Transparent product assets share one neutral studio surface. */
+/* Light, neutral stages keep the silver blade edges visible. */
 .product-stage {
-  background: radial-gradient(ellipse at 50% 40%, #61778A 0%, #4A6276 55%, #405769 100%);
+  background: radial-gradient(ellipse at 50% 35%, #FFFFFF 0%, #E9EEF3 60%, #DAE2E9 100%);
 }
 .hero-product-visual {
   width: 100%; height: 100%; object-fit: contain;
@@ -78,50 +84,60 @@ html { scroll-behavior: smooth; }
   .hero-product-visual { padding: 8rem 0 1rem; }
 }
 
-.site-chrome, .hero-scene, .hero-product-scene {
+.hero-scene, .hero-product-scene {
+  --brand: 40 108 130;
+  --brand-hover: 52 127 150;
+  --border: 206 21% 43%;
   --metal-text: #f4f7fa;
   --metal-subtext: #d4e0e9;
 }
-.site-chrome { --border: 210 20% 40%; }
-.site-chrome .text-steel { color: #9dd6e6; }
-.site-chrome .hover\:text-steel:hover, .hero-scene .hover\:text-steel:hover { color: #9dd6e6; }
-.bg-industrial-secondary.border { box-shadow: 0 4px 18px rgba(15,25,35,.12); }
-
-.text-steel, .hover\:text-steel:hover { color: #A5DCEC; }
-.hero-product-scene .text-steel, .hero-product-scene .hover\:text-steel:hover { color: #A5DCEC; }
-
-/* Soft charcoal connects the catalog to the industrial hero photography. */
-.catalog-surface { background: #384753; }
-.catalog-filter {
-  background: #303A43;
-  border-color: #586773;
-  box-shadow: 0 5px 18px rgba(20,27,34,.1);
-}
-.catalog-filter .bg-industrial-secondary { background: #43515D; }
-.catalog-category {
-  border: 1px solid rgba(162,181,194,.16);
-  box-shadow: 0 6px 20px rgba(20,27,34,.06);
-}
-.catalog-tone-0 { background: #303C47; }
-.catalog-tone-1 { background: #435360; }
-.catalog-card-content { background: #35434F; }
-.catalog-card { border-color: #596B79; }
-.catalog-card .bg-industrial { background: #2F3B46; }
-.catalog-card .product-stage {
-  background: radial-gradient(ellipse at 50% 35%, #697A88, #526371 60%, #445461);
-}
-
+.hero-scene .hover\:text-steel:hover { color: #9dd6e6; }
+.hero-scene .text-steel, .hero-product-scene .text-steel,
+.hero-product-scene .hover\:text-steel:hover { color: #A5DCEC; }
 .hero-product-scene { border-bottom: 1px solid #718B9D; }
-.product-detail-surface { background: #405769; }
-.product-detail-specs { background: #303C47; border-color: #596B79; }
-.product-detail-inquiry { background: #435360; border-color: #6B7E8D; }
-.product-detail-surface .product-stage {
-  background: radial-gradient(ellipse at 50% 35%, #697A88, #526371 60%, #445461);
-}
-.product-detail-related { background: #35434F; }
 
-.blog-surface { background: #0C2438; }
-.blog-card { background: #123747; border-color: #2B5869; }
-.blog-card .product-stage, .blog-surface .blog-article-image {
-  background: radial-gradient(ellipse at 50% 35%, #164554, #123747 55%, #0C2939);
+/* Navy frames the light content; copper is reserved for actions and highlights. */
+.site-chrome, .dark-panel {
+  --surface: 15 23 42;
+  --surface-secondary: 24 43 73;
+  --surface-tertiary: 51 65 85;
+  --metal-text: #F8FAFC;
+  --metal-subtext: #CBD5E1;
+  --border: 215 25% 27%;
+  background-color: rgb(var(--surface));
+}
+.site-chrome .text-steel, .dark-panel .text-steel,
+.site-chrome .hover\:text-steel:hover { color: #F1A45C; }
+.site-header-scrolled { background-color: rgb(15 23 42 / .96); }
+.photo-card { --metal-text: #F8FAFC; --metal-subtext: #E2E8F0; }
+.photo-card-overlay { background: linear-gradient(to top, #0F172A, rgb(15 23 42 / .35) 50%, transparent); }
+
+.catalog-surface, .blog-surface { background: #F1F5F9; }
+.catalog-filter {
+  background: #FFFFFF;
+  box-shadow: 0 4px 20px rgb(15 23 42 / .04);
+}
+.catalog-category {
+  border: 1px solid hsl(var(--border));
+}
+.catalog-tone-0 { background: #FFFFFF; }
+.catalog-tone-1 { background: #E9EFF5; }
+.catalog-card-content, .product-detail-related, .blog-card { background: #FFFFFF; }
+.catalog-card .bg-industrial { background: #F1F5F9; }
+.catalog-card, .blog-card {
+  box-shadow: 0 3px 16px rgb(15 23 42 / .04);
+}
+.product-detail-surface { background: #FFFFFF; }
+.product-detail-specs { background: #F1F5F9; }
+.product-detail-inquiry {
+  background: #F8FAFC;
+  border-top: 3px solid rgb(var(--brand));
+}
+.inquiry-field {
+  background: #FFFFFF;
+  border-color: hsl(var(--input));
+}
+.inquiry-field:focus-visible {
+  outline: 2px solid rgb(var(--brand) / .35);
+  outline-offset: 2px;
 }

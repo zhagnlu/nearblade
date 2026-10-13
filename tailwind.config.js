@@ -17,13 +17,13 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         industrial: {
-          DEFAULT: "#34495B",
-          secondary: "#405769",
-          tertiary: "#4A6276",
+          DEFAULT: "rgb(var(--surface) / <alpha-value>)",
+          secondary: "rgb(var(--surface-secondary) / <alpha-value>)",
+          tertiary: "rgb(var(--surface-tertiary) / <alpha-value>)",
         },
         steel: {
-          DEFAULT: "#286C82",
-          light: "#347F96",
+          DEFAULT: "rgb(var(--brand) / <alpha-value>)",
+          light: "rgb(var(--brand-hover) / <alpha-value>)",
           muted: "#8B9DAF",
         },
         metal: {

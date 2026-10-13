@@ -3,7 +3,7 @@ import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaLinkedin, FaFacebook } from "rea
 
 export function Footer() {
   return (
-    <footer className="site-chrome bg-[#34495B] border-t border-border">
+    <footer className="site-chrome border-t border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div>

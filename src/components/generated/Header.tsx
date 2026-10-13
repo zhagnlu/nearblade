@@ -8,7 +8,7 @@ const navItems = [
   { label: "About", path: "/about" },
   { label: "Equipment", path: "/equipment" },
   { label: "Blog", path: "/blog" },
-                { label: "Contact", path: "/contact" },
+  { label: "Contact", path: "/contact" },
 ];
 
 export function Header() {
@@ -33,8 +33,8 @@ export function Header() {
     <header
       className={`site-chrome fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-[#34495B]/95 backdrop-blur-sm shadow-lg"
-          : "bg-[#34495B]"
+          ? "site-header-scrolled backdrop-blur-sm shadow-lg"
+          : ""
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -90,7 +90,7 @@ export function Header() {
       </div>
 
       {isMobileMenuOpen && (
-        <div className="lg:hidden bg-[#34495B] border-t border-border">
+        <div className="lg:hidden bg-industrial border-t border-border">
           <nav className="px-4 py-4 space-y-1">
             {navItems.map((item) => (
               <Link

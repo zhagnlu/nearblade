@@ -27,7 +27,7 @@ export default function Home() {
         secondaryAction={{ label: "Request Quote", to: "/contact" }}
       />
 
-      <section id="home-content" className="scroll-mt-20 py-section-mobile md:py-section bg-industrial">
+      <section id="home-content" className="scroll-mt-20 py-section-mobile md:py-section bg-industrial-secondary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-h2 text-metal-text mb-4">Our Product Range</h2>
@@ -41,7 +41,7 @@ export default function Home() {
               <Link
                 key={category.id}
                 to={`/products?category=${category.id}`}
-                className="group bg-industrial-secondary border border-border rounded-card overflow-hidden hover:border-steel/50 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-steel/5"
+                className="group bg-card border border-border rounded-card overflow-hidden hover:border-steel/50 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-steel/5"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="aspect-[3/2] overflow-hidden product-stage">
@@ -69,7 +69,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-section-mobile md:py-section bg-industrial-secondary">
+      <section className="dark-panel py-section-mobile md:py-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-h2 text-metal-text mb-4">Manufacturing Excellence</h2>
@@ -104,7 +104,7 @@ export default function Home() {
             ].map((item, index) => (
               <div
                 key={index}
-                className="group relative overflow-hidden rounded-card bg-industrial-secondary border border-border"
+                className="photo-card group relative overflow-hidden rounded-card bg-industrial-secondary border border-border"
               >
                 <div className="aspect-[4/3] overflow-hidden">
                   <img
@@ -115,7 +115,7 @@ export default function Home() {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-industrial via-transparent to-transparent" />
+                <div className="photo-card-overlay absolute inset-0" />
                 <div className="absolute bottom-0 left-0 right-0 p-6">
                   <h3 className="text-lg font-semibold text-metal-text mb-1">{item.title}</h3>
                   <p className="text-metal-subtext text-sm">{item.desc}</p>
