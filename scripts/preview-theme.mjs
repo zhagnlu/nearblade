@@ -8,11 +8,12 @@ import helmet from 'react-helmet-async';
 import fs from 'node:fs';
 const { HelmetProvider } = helmet;
 const bundle = path.resolve('scripts/.preview-routes.cjs');
-await build({stdin:{contents:"export { routes } from './src/routes'; export { getAllProducts } from './src/data/products';",resolveDir:process.cwd(),loader:'ts'},bundle:true,platform:'node',format:'cjs',packages:'external',alias:{'@':path.resolve('src')},outfile:bundle,plugins:[{name:'preview-counter-values',setup(builder){builder.onLoad({filter:/StatCounter\.tsx$/},args=>({contents:fs.readFileSync(args.path,'utf8').replace('useState(0)','useState(value)'),loader:'tsx'}));}}]});
+await build({stdin:{contents:"export { routes } from './src/routes'; export { getAllProducts } from './src/data/products'; export { blogPosts } from './src/data/blog';",resolveDir:process.cwd(),loader:'ts'},bundle:true,platform:'node',format:'cjs',packages:'external',alias:{'@':path.resolve('src')},outfile:bundle,plugins:[{name:'preview-counter-values',setup(builder){builder.onLoad({filter:/StatCounter\.tsx$/},args=>({contents:fs.readFileSync(args.path,'utf8').replace('useState(0)','useState(value)'),loader:'tsx'}));}}]});
 try {
- const { routes, getAllProducts } = createRequire(import.meta.url)(bundle);
+ const { routes, getAllProducts, blogPosts } = createRequire(import.meta.url)(bundle);
  const css = fs.readFileSync('dist/assets/' + fs.readdirSync('dist/assets').find(x=>x.endsWith('.css')), 'utf8');
- const pages = [['/', 'index.html'], ['/products','products.html'], ['/about','about.html'], ['/equipment','equipment.html'], ['/contact','contact.html']];
+ const pages = [['/', 'index.html'], ['/products','products.html'], ['/about','about.html'], ['/equipment','equipment.html'], ['/contact','contact.html'], ['/blog','blog.html']];
+ pages.push(...blogPosts.map(post => ['/blog/'+post.slug,'blog-'+post.slug+'.html']));
  pages.push(...getAllProducts().map(product => ['/products/'+product.id,'product-'+product.id+'.html']));
  fs.mkdirSync('previews/light-theme',{recursive:true});
  for (const [path,file] of pages) {

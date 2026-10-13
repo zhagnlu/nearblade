@@ -1,0 +1,19 @@
+/* Sky blue highlights, with charcoal structure and deep-blue product cards. */
+.home-about-preview, .product-detail-inquiry {
+  background-color: #4B8FB3;
+  --metal-text: #132B3A;
+  --metal-subtext: #173449;
+}
+.home-about-preview .text-steel,
+.home-about-preview .hover\:text-steel:hover,
+.product-detail-inquiry .text-steel {
+  color: #16374A;
+}
+.product-detail-inquiry { border-color: #77A9C3; }
+.product-detail-inquiry input, .product-detail-inquiry textarea {
+  --metal-text: #EDF2F5;
+  --metal-subtext: #E1EAF0;
+  border-color: #8BB4CA;
+}
+.product-detail-inquiry input::placeholder,
+.product-detail-inquiry textarea::placeholder { color: #CED9E0; }

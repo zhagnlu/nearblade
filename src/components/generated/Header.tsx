@@ -7,13 +7,15 @@ const navItems = [
   { label: "Products", path: "/products" },
   { label: "About", path: "/about" },
   { label: "Equipment", path: "/equipment" },
-  { label: "Contact", path: "/contact" },
+  { label: "Blog", path: "/blog" },
+                { label: "Contact", path: "/contact" },
 ];
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
+  const isActive = (path: string) => location.pathname === path || (path !== "/" && location.pathname.startsWith(path + "/"));
 
   useEffect(() => {
     const handleScroll = () => {
@@ -53,7 +55,7 @@ export function Header() {
                 key={item.path}
                 to={item.path}
                 className={`text-sm font-medium transition-colors duration-200 relative group ${
-                  location.pathname === item.path
+                  isActive(item.path)
                     ? "text-steel"
                     : "text-metal-subtext hover:text-metal-text"
                 }`}
@@ -61,7 +63,7 @@ export function Header() {
                 {item.label}
                 <span
                   className={`absolute bottom-0 left-0 h-0.5 bg-steel transition-all duration-300 ${
-                    location.pathname === item.path ? "w-full" : "w-0 group-hover:w-full"
+                    isActive(item.path) ? "w-full" : "w-0 group-hover:w-full"
                   }`}
                 />
               </Link>
@@ -95,7 +97,7 @@ export function Header() {
                 key={item.path}
                 to={item.path}
                 className={`block px-4 py-3 rounded-card text-sm font-medium transition-colors ${
-                  location.pathname === item.path
+                  isActive(item.path)
                     ? "bg-steel/10 text-steel"
                     : "text-metal-subtext hover:text-metal-text hover:bg-white/5"
                 }`}

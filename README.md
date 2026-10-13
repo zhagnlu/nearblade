@@ -50,3 +50,9 @@ npm run dev
 `previews/light-theme/index.html` 为可直接在浏览器打开的静态视觉预览，可导航至产品、关于、设备和联系页面。它由实际 React 页面生成，不包含筛选、表单或移动导航交互。重新生成：先执行 `npm run build`，再执行 `node scripts/preview-theme.mjs`。
 
 全部 7 个产品详情页统一采用炭灰 Hero 背景、白色标题和浅蓝强调，移除原来的白色摄影棚底与浅色遮罩。详情正文采用蓝灰底，规格区采用炭灰色，询价区采用较浅蓝灰色。`previews/light-theme/product-产品ID.html` 提供每个详情页的静态视觉预览，产品列表链接可分别进入对应详情页。
+
+## Blog 模块
+
+`/blog` 为文章列表，`/blog/:slug` 为文章详情。首页、导航与页脚增加 Blog 入口；初始文章涵盖定制询价、产品分类和更换规划。内容在 `src/data/blog.ts` 编辑，详情页包含目录、相关产品、询价入口与相关文章。新 Blog 页面使用深海蓝、深青蓝展示底色，并配有独立生成的主图；来源与提示词见 `public/images/assets.json`。这是一组静态内容页面，没有管理后台。
+
+最新版主题预览：构建后依次执行 `node scripts/preview-theme.mjs` 和 `node scripts/preview-hero-blue.mjs`。Blog 列表预览位于 `previews/hero-blue-theme/blog.html`。

@@ -1,3 +1,5 @@
+import { BlogCard } from "@/components/common/BlogCard";
+import { blogPosts } from "@/data/blog";
 import { PageHero } from "@/components/common/PageHero";
 import { Link } from "react-router-dom";
 import { PageMeta } from "@/components/common/PageMeta";
@@ -180,6 +182,16 @@ export default function Home() {
               <div className="absolute -top-6 -right-6 w-24 h-24 border-2 border-steel/20 rounded-card -z-10" />
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="blog-surface py-section-mobile md:py-section">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-5 mb-10">
+            <div><h2 className="text-3xl lg:text-h2 text-metal-text mb-4">Blade Insights &amp; Guides</h2><p className="text-metal-subtext">Product knowledge and practical ideas for your next tooling requirement.</p></div>
+            <Link to="/blog" className="text-steel font-medium inline-flex items-center gap-2">View All Articles <FaArrowRight size={14} /></Link>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">{blogPosts.map(post => <BlogCard key={post.slug} post={post} />)}</div>
         </div>
       </section>
 

@@ -119,3 +119,9 @@ html { scroll-behavior: smooth; }
   background: radial-gradient(ellipse at 50% 35%, #697A88, #526371 60%, #445461);
 }
 .product-detail-related { background: #35434F; }
+
+.blog-surface { background: #0C2438; }
+.blog-card { background: #123747; border-color: #2B5869; }
+.blog-card .product-stage, .blog-surface .blog-article-image {
+  background: radial-gradient(ellipse at 50% 35%, #164554, #123747 55%, #0C2939);
+}

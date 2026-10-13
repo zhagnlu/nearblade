@@ -6,6 +6,8 @@ import ProductDetail from "./pages/ProductDetail";
 import About from "./pages/About";
 import Equipment from "./pages/Equipment";
 import Contact from "./pages/Contact";
+import Blog from "./pages/Blog";
+import BlogDetail from "./pages/BlogDetail";
 
 export const routes: RouteObject[] = [
   {
@@ -31,6 +33,8 @@ export const routes: RouteObject[] = [
         path: "/equipment",
         element: <Equipment />,
       },
+      { path: "/blog", element: <Blog /> },
+      { path: "/blog/:slug", element: <BlogDetail /> },
       {
         path: "/contact",
         element: <Contact />,

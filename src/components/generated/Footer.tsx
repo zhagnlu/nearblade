@@ -29,6 +29,7 @@ export function Footer() {
                 { label: "Products", path: "/products" },
                 { label: "About Us", path: "/about" },
                 { label: "Equipment", path: "/equipment" },
+                { label: "Blog", path: "/blog" },
                 { label: "Contact", path: "/contact" },
               ].map((item) => (
                 <li key={item.path}>

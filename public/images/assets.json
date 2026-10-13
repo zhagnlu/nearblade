@@ -257,5 +257,11 @@
       941
     ],
     "note": "Conceptual promotional scene; not a photograph documenting the company's premises."
+  },
+  {
+    "file": "/images/heroes/blog-hero.jpg",
+    "kind": "ai-generated-conceptual-promotional-hero",
+    "tool": "built-in image_gen",
+    "prompt": "Use case: ads-marketing. A unique high resolution wide 16:9 hero background for the Blog / Knowledge Center of a precision industrial blades manufacturer. Photorealistic overhead close-up of a dark navy engineering desk, at far lower right a simple precision steel circular knife and a small rectangular shear knife resting beside a folded unmarked engineering sketch sheet with subtle thin geometric blade profile lines but absolutely no written text or dimensions, at lower left a metallic pencil. Center and upper 65 percent clean dark deep ocean blue negative space for centered website heading. Restrained cool cyan reflections on polished steel, grounded realistic materials and sharp fine detail, consistent premium industrial mood. Not a factory documentary photograph. No people logos lettering watermarks sparks collage or frame. Highest supported resolution."
   }
 ]
