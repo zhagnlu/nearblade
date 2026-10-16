@@ -1,12 +1,41 @@
 import assert from 'node:assert/strict';
 import { execFileSync, spawnSync } from 'node:child_process';
-import { cpSync, existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { chmodSync, cpSync, existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import test from 'node:test';
 
 const project = fileURLToPath(new URL('../', import.meta.url));
+
+test('ECS preflight identifies missing rsync and directory failures without needing SSH credentials', (t) => {
+  const temp = mkdtempSync(join(tmpdir(), 'nearblade-preflight-test-'));
+  t.after(() => rmSync(temp, { recursive: true, force: true }));
+  const workflow = readFileSync(join(project, '.github/workflows/deploy-ecs.yml'), 'utf8');
+  const script = workflow.match(/<<'REMOTE'\n([\s\S]*?)\n {10}REMOTE/)[1].replace(/^ {10}/gm, '');
+  const bin = join(temp, 'bin');
+  mkdirSync(bin);
+  writeFileSync(join(bin, 'rsync'), '#!/bin/sh\nexit 0\n', { mode: 0o755 });
+  const run = (target, path = `${bin}:/usr/bin:/bin`) => spawnSync('/bin/sh', ['-s', '--', target], { input: script, encoding: 'utf8', env: { ...process.env, PATH: path } });
+  const target = join(temp, 'website');
+  assert.equal(run(target).status, 0);
+  assert.ok(existsSync(target));
+  const missingRsync = run(target, join(temp, 'empty-path'));
+  assert.notEqual(missingRsync.status, 0);
+  assert.match(missingRsync.stdout, /::error::ECS is missing rsync/);
+  writeFileSync(join(temp, 'file'), 'not a directory');
+  const invalidDirectory = run(join(temp, 'file/website'));
+  assert.notEqual(invalidDirectory.status, 0);
+  assert.match(invalidDirectory.stdout, /::error::ECS_USER cannot create ECS_DEPLOY_PATH/);
+  if (process.getuid?.() !== 0) {
+    chmodSync(target, 0o555);
+    try {
+      const readOnly = run(target);
+      assert.notEqual(readOnly.status, 0);
+      assert.match(readOnly.stdout, /::error::ECS_USER cannot write to ECS_DEPLOY_PATH/);
+    } finally { chmodSync(target, 0o755); }
+  }
+});
 
 function fixture(t) {
   const temp = mkdtempSync(join(tmpdir(), 'nearblade-ecs-test-'));
