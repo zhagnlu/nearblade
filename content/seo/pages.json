@@ -1,0 +1,114 @@
+{
+  "/": {
+    "intent": "Find a manufacturer for industrial blade and tooling procurement",
+    "primaryKeyword": "industrial blade manufacturer",
+    "secondaryKeywords": ["custom industrial blades", "industrial knives manufacturer", "blade manufacturer China"],
+    "title": "Industrial Blade Manufacturer & Custom Tooling | Nearblade",
+    "description": "Nearblade manufactures industrial blades and press brake tooling in Nanjing, China. Explore shear blades, slitting knives and doctor blades, or send a drawing."
+  },
+  "/products": {
+    "intent": "Compare blade families and find the appropriate product",
+    "primaryKeyword": "industrial blades and tooling",
+    "secondaryKeywords": ["industrial cutting blades", "shear blades", "slitting knives", "press brake tooling"],
+    "title": "Industrial Blades & Press Brake Tooling Catalog | Nearblade",
+    "description": "Compare guillotine and swing beam shear blades, circular knives, slitting knives, corrugated blades, doctor blades and press brake tooling by application."
+  },
+  "/products/sb-001": {
+    "intent": "Source replacement or custom guillotine shear blades",
+    "primaryKeyword": "guillotine shear blades",
+    "secondaryKeywords": ["guillotine shear knives", "replacement shear blades", "custom shear blades"],
+    "title": "Guillotine Shear Blades & Replacement Knives | Nearblade",
+    "description": "Source guillotine shear blades for sheet metal cutting. Share your Q11 or QC12Y machine details, blade dimensions and mounting drawing for a custom quotation."
+  },
+  "/products/sb-002": {
+    "intent": "Source replacement knife sets for swing beam shears",
+    "primaryKeyword": "swing beam shear blades",
+    "secondaryKeywords": ["swing beam shear knives", "replacement shear knife sets", "sheet metal shear blades"],
+    "title": "Swing Beam Shear Blades & Knife Sets | Nearblade",
+    "description": "Explore swing beam shear blades for sheet metal production. Confirm your machine model, blade position, mounting face and edge geometry for replacement sets."
+  },
+  "/products/pb-001": {
+    "intent": "Source standard or custom V dies for sheet metal bending",
+    "primaryKeyword": "press brake V dies",
+    "secondaryKeywords": ["press brake tooling", "V die sets", "custom press brake dies", "sheet metal bending dies"],
+    "title": "Press Brake V Dies & Custom Tooling | Nearblade",
+    "description": "Explore press brake V-die sets for sheet metal bending. Share the V opening, working height, angle and clamping interface for a standard or custom tooling quote."
+  },
+  "/products/rs-001": {
+    "intent": "Source circular blades for rolling shears and plate cutting",
+    "primaryKeyword": "circular shear blades",
+    "secondaryKeywords": ["rolling shear blades", "circular shear knives", "custom circular blades"],
+    "title": "Circular Shear Blades for Rolling Shears | Nearblade",
+    "description": "Circular shear blades for rolling-shear and plate-cutting applications. Send the outside diameter, bore, thickness and machine drawing for a custom quotation."
+  },
+  "/products/sk-001": {
+    "intent": "Source rotary knives for paper, film and foil slitting",
+    "primaryKeyword": "rotary slitting knives",
+    "secondaryKeywords": ["rotary slitter knives", "circular slitter blades", "paper slitting knives", "film slitting blades"],
+    "title": "Rotary Slitting Knives for Paper, Film & Foil | Nearblade",
+    "description": "Rotary slitting knives for paper, film, aluminum foil, copper foil and tape. Specify diameter, bore, thickness and edge profile to request a custom blade quote."
+  },
+  "/products/tb-001": {
+    "intent": "Source replacement or custom corrugated board cutting blades",
+    "primaryKeyword": "corrugated cutting blades",
+    "secondaryKeywords": ["corrugated board knives", "corrugated slotting knives", "toothed cutting blades", "serrated blades"],
+    "title": "Corrugated Cutting Blades & Slotting Knives | Nearblade",
+    "description": "Explore corrugated cutting blades for board trimming and slotting. Share the tooth profile, mounting dimensions and machine details for replacement or custom blades."
+  },
+  "/products/db-001": {
+    "intent": "Source doctor blades for flexographic and gravure printing",
+    "primaryKeyword": "lamella doctor blades",
+    "secondaryKeywords": ["flexo doctor blades", "gravure doctor blades", "ink metering blades", "printing doctor blades"],
+    "title": "Lamella Doctor Blades for Flexo & Gravure | Nearblade",
+    "description": "Lamella doctor blades for flexographic and gravure printing, coating and ink metering. Specify your holder, edge profile and strip or coil format for a quote."
+  },
+  "/about": {
+    "intent": "Evaluate the manufacturer and its production background",
+    "primaryKeyword": "industrial blade manufacturer in China",
+    "secondaryKeywords": ["Nearblade manufacturer", "Nanjing blade manufacturer", "custom blade manufacturing"],
+    "title": "Industrial Blade Manufacturer in China | About Nearblade",
+    "description": "Meet Nearblade, an industrial blade and tooling manufacturer in Nanjing, China. Learn about our production capabilities, quality inspection and custom solutions."
+  },
+  "/equipment": {
+    "intent": "Review blade manufacturing processes and equipment references",
+    "primaryKeyword": "blade manufacturing equipment",
+    "secondaryKeywords": ["blade heat treatment", "CNC machining equipment", "industrial blade production"],
+    "title": "Blade Manufacturing Equipment & Heat Treatment | Nearblade",
+    "description": "Explore CNC machining, gantry equipment and blade heat-treatment workshop reference views, plus the drawing and inspection details needed for a manufacturing inquiry."
+  },
+  "/contact": {
+    "intent": "Request a blade or tooling quotation with drawing and application details",
+    "primaryKeyword": "industrial blade quote",
+    "secondaryKeywords": ["custom blade quotation", "blade supplier contact", "press brake tooling quote"],
+    "title": "Request an Industrial Blade & Tooling Quote | Nearblade",
+    "description": "Request an industrial blade or press brake tooling quote. Send your drawing, machine details, material and quantity by email, phone or WhatsApp to Nearblade."
+  },
+  "/blog": {
+    "intent": "Find practical buying and replacement planning guides",
+    "primaryKeyword": "industrial blade guides",
+    "secondaryKeywords": ["blade buying guide", "industrial blade types", "blade replacement planning"],
+    "title": "Industrial Blade Guides & Buying Advice | Nearblade",
+    "description": "Read industrial blade guides on product types, custom quotation requirements and replacement planning. Prepare clearer drawings and purchasing inquiries."
+  },
+  "/blog/custom-blade-inquiry-guide": {
+    "intent": "Prepare the information required for a custom blade quotation",
+    "primaryKeyword": "custom industrial blade quote",
+    "secondaryKeywords": ["custom blade inquiry checklist", "blade quotation drawing requirements", "industrial knife quotation"],
+    "title": "Custom Industrial Blade Quote: Inquiry Checklist | Nearblade",
+    "description": "Prepare a custom industrial blade quote request with a dimensioned drawing, machine details, material, quantity and inspection requirements. Follow this checklist."
+  },
+  "/blog/blade-product-families": {
+    "intent": "Understand blade types before selecting a product family",
+    "primaryKeyword": "types of industrial blades",
+    "secondaryKeywords": ["shear blades vs slitting knives", "industrial knife types", "doctor blade applications"],
+    "title": "Types of Industrial Blades: A Product Guide | Nearblade",
+    "description": "Compare types of industrial blades: straight shear blades, circular knives, slitter knives, toothed blades and doctor blades, with links to relevant products."
+  },
+  "/blog/blade-replacement-planning": {
+    "intent": "Plan replacement purchasing and spare blade quantities",
+    "primaryKeyword": "industrial blade replacement planning",
+    "secondaryKeywords": ["replacement blade purchasing", "spare blade inventory", "shear blade replacement records"],
+    "title": "Industrial Blade Replacement Planning Guide | Nearblade",
+    "description": "Plan industrial blade replacements using part records, approved drawing revisions, spare quantities and supplier lead times. Build a clearer purchasing schedule."
+  }
+}

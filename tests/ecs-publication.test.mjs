@@ -27,13 +27,24 @@ function fixture(t) {
   }
   cpSync(join(project, '.github/workflows/deploy-ecs.yml'), join(root, '.github/workflows/deploy-ecs.yml'));
   writeFileSync(join(root, '.gitignore'), 'dist/\n');
-  writeFileSync(join(root, 'package.json'), JSON.stringify({ scripts: { build: 'node compile.cjs' } }));
+  writeFileSync(join(root, 'package.json'), JSON.stringify({ scripts: { build: 'node compile.cjs', test: 'npm run build && node verify.cjs' } }));
   // A tiny compiler keeps the release tests independent of the application build.
   writeFileSync(join(root, 'compile.cjs'), `const fs = require('node:fs');
 fs.rmSync('dist', { recursive: true, force: true });
 fs.mkdirSync('dist/assets', { recursive: true });
 fs.writeFileSync('dist/index.html', '<html>release</html>');
 fs.writeFileSync('dist/assets/site.js', 'console.log("release")');
+fs.mkdirSync('dist/about', { recursive: true });
+fs.mkdirSync('dist/locales', { recursive: true });
+fs.writeFileSync('dist/about/index.html', '<html>about</html>');
+fs.writeFileSync('dist/404.html', '<html>not found</html>');
+fs.writeFileSync('dist/sitemap.xml', '<urlset/>');
+fs.writeFileSync('dist/robots.txt', 'User-agent: *');
+fs.writeFileSync('dist/locales/zh-CN.json', '{"Home":"首页"}');
+`);
+  writeFileSync(join(root, 'verify.cjs'), `const fs = require('node:fs');
+if (!fs.existsSync('dist/index.html')) throw new Error('Build must finish before tests');
+fs.writeFileSync('dist/assets/tested.txt', 'release checks passed');
 `);
   const commit = () => {
     git(['add', '-A']);
@@ -53,18 +64,43 @@ fs.writeFileSync('dist/assets/site.js', 'console.log("release")');
     assert.match(result.stderr, message);
   };
   const remoteGit = (...args) => git(['--git-dir', remote, ...args]);
-  return { root, git, commit, ok, rejected, remoteGit };
+  return { root, git, commit, run, ok, rejected, remoteGit };
 }
+
+const publishedFiles = script => [
+  '.github/workflows/deploy-ecs.yml', '404.html', 'about/index.html', `assets/${script}`, 'assets/tested.txt', 'index.html', 'locales/zh-CN.json', 'robots.txt', 'sitemap.xml',
+].sort();
 
 test('build records the source commit without publishing; rejects dirty source and clears stale marker', (t) => {
   const f = fixture(t);
   f.ok('build');
   const marker = join(f.root, 'dist/.ecs-build.json');
   assert.equal(JSON.parse(readFileSync(marker)).sourceCommit, f.git(['rev-parse', 'HEAD']));
+  assert.equal(readFileSync(join(f.root, 'dist/assets/tested.txt'), 'utf8'), 'release checks passed');
   assert.equal(f.remoteGit('for-each-ref', '--format=%(refname)'), '');
   writeFileSync(join(f.root, 'uncommitted.txt'), 'pending source change');
   f.rejected('build', /Commit development changes/);
   assert.equal(existsSync(marker), false);
+});
+
+test('failed release tests remove an earlier build marker and prevent publication', (t) => {
+  const f = fixture(t);
+  f.ok('build');
+  writeFileSync(join(f.root, 'verify.cjs'), 'throw new Error("Release verification failed");\n');
+  f.commit();
+  f.rejected('build', /Release verification failed/);
+  assert.equal(existsSync(join(f.root, 'dist/.ecs-build.json')), false);
+  f.rejected('publish', /Run npm run build:ecs/);
+  assert.equal(f.remoteGit('for-each-ref', '--format=%(refname)'), '');
+});
+
+test('a clean commit change during the build cannot receive a release marker', (t) => {
+  const f = fixture(t);
+  const verifier = join(f.root, 'verify.cjs');
+  writeFileSync(verifier, readFileSync(verifier, 'utf8') + `require('node:child_process').execFileSync('git', ['commit', '--allow-empty', '-m', 'Concurrent source commit']);\n`);
+  f.commit();
+  f.rejected('build', /Development commit changed during/);
+  assert.equal(existsSync(join(f.root, 'dist/.ecs-build.json')), false);
 });
 
 test('publishing requires a clean source tree and a build from the current commit', (t) => {
@@ -87,9 +123,7 @@ test('dry run leaves the remote untouched and publishing includes only artifacts
   assert.match(f.ok('publish', '--dry-run'), /nothing pushed/);
   assert.equal(f.remoteGit('for-each-ref', '--format=%(refname)'), '');
   f.ok('publish');
-  assert.deepEqual(f.remoteGit('ls-tree', '-r', '--name-only', 'push_remote').split('\n'), [
-    '.github/workflows/deploy-ecs.yml', 'assets/site.js', 'index.html',
-  ]);
+  assert.deepEqual(f.remoteGit('ls-tree', '-r', '--name-only', 'push_remote').split('\n'), publishedFiles('site.js'));
   assert.equal(f.git(['branch', '--show-current']), 'main');
   assert.equal(f.git(['rev-parse', 'HEAD']), source);
   assert.equal(f.git(['status', '--porcelain']), '');
@@ -111,9 +145,7 @@ test('updated publications retain history and remove obsolete assets; identical 
   assert.equal(f.remoteGit('rev-parse', 'push_remote'), first);
   f.ok('publish');
   assert.equal(f.remoteGit('rev-parse', 'push_remote^'), first);
-  assert.deepEqual(f.remoteGit('ls-tree', '-r', '--name-only', 'push_remote').split('\n'), [
-    '.github/workflows/deploy-ecs.yml', 'assets/new-site.js', 'index.html',
-  ]);
+  assert.deepEqual(f.remoteGit('ls-tree', '-r', '--name-only', 'push_remote').split('\n'), publishedFiles('new-site.js'));
 });
 
 test('build and publish reject running on the publication branch', (t) => {

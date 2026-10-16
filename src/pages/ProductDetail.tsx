@@ -1,9 +1,12 @@
 import { PageHero } from "@/components/common/PageHero";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useParams, Link } from "react-router-dom";
 import { PageMeta } from "@/components/common/PageMeta";
 import { getProductById, productCategories } from "@/data/products";
 import { ContactForm } from "@/components/generated/ContactForm";
+import { ProductSelectionGuide } from "@/components/common/ProductSelectionGuide";
+import { productGuides } from "@/data/productGuides";
+import NotFound from "./NotFound";
 import { FaArrowLeft, FaCheck, FaArrowRight, FaTimes, FaSearchPlus, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 export default function ProductDetail() {
@@ -12,26 +15,27 @@ export default function ProductDetail() {
   const category = productCategories.find((c) => c.products.some((p) => p.id === id));
   const [isZoomed, setIsZoomed] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const zoomDialog = useRef<HTMLDialogElement>(null);
 
   useEffect(() => {
     setCurrentImageIndex(0);
     setIsZoomed(false);
   }, [id]);
 
+  useEffect(() => {
+    if (!isZoomed) return;
+    zoomDialog.current?.showModal();
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => { document.body.style.overflow = previousOverflow; };
+  }, [isZoomed]);
+
   if (!product) {
-    return (
-      <section className="pt-24 lg:pt-28 pb-section-mobile md:pb-section bg-industrial min-h-screen flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-2xl text-metal-text mb-4">Product Not Found</h1>
-          <Link to="/products" className="text-steel hover:text-steel-light">
-            Back to Products
-          </Link>
-        </div>
-      </section>
-    );
+    return <NotFound />;
   }
 
-  const productImages = product.images && product.images.length > 0 ? product.images : [product.image];
+  const guide = productGuides[product.id];
+  const productImages = [...new Set([...(product.images?.length ? product.images : [product.image]), ...(guide ? [guide.catalogImage] : [])])];
   const currentImage = productImages[currentImageIndex] || productImages[0];
   const relatedProducts = category?.products.filter((p) => p.id !== product.id).slice(0, 3) || [];
 
@@ -46,16 +50,16 @@ export default function ProductDetail() {
   return (
     <>
       <PageMeta
-        title={`${product.name} - Rucheng Technology`}
-        description={product.description}
-        keywords={[...product.materials, ...product.applications]}
+        image={product.image}
+        breadcrumbs={[{ name: "Home", path: "/" }, { name: "Products", path: "/products" }, { name: product.name, path: `/products/${product.id}` }]}
+        structuredData={{ "@type": "Product", name: product.name, description: product.description, image: [product.image], sku: product.id, brand: { "@type": "Brand", name: "Nearblade" }, category: category?.name, material: product.materials }}
       />
 
       <PageHero
         image={product.image}
         productVisual
-        title={category?.name || "Precision Industrial"}
-        accent={product.name}
+        title={product.searchName || product.name}
+        accent="Made to Your Drawing"
         description={product.description}
         contentId="product-content"
         primaryAction={{ label: "View Specifications", to: "#product-content" }}
@@ -78,12 +82,21 @@ export default function ProductDetail() {
                 <div
                   className="aspect-[3/2] product-stage rounded-card overflow-hidden border border-border relative cursor-pointer"
                   onClick={() => setIsZoomed(true)}
+                  role="button"
+                  tabIndex={0}
+                  aria-label={`Enlarge ${product.name} image`}
+                  onKeyDown={(event) => {
+                    if (event.key === "Enter" || event.key === " ") {
+                      event.preventDefault();
+                      setIsZoomed(true);
+                    }
+                  }}
                 >
                   <img
                     loading="lazy"
                     decoding="async"
                     src={currentImage}
-                    alt={`${product.name} - View ${currentImageIndex + 1}`}
+                    alt={currentImage === guide?.catalogImage ? `${product.name} catalog reference` : `${product.name} product overview`}
                     className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-industrial/0 group-hover:bg-industrial/30 transition-all duration-300 flex items-center justify-center">
@@ -97,14 +110,14 @@ export default function ProductDetail() {
                   <>
                     <button
                       onClick={handlePrevImage}
-                      className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 bg-industrial-secondary/80 backdrop-blur-sm border border-border rounded-full flex items-center justify-center text-metal-text hover:text-steel hover:border-steel transition-all duration-200 opacity-0 group-hover:opacity-100"
+                      className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 bg-industrial-secondary/80 backdrop-blur-sm border border-border rounded-full flex items-center justify-center text-metal-text hover:text-steel hover:border-steel transition-all duration-200 lg:opacity-0 lg:group-hover:opacity-100 focus-visible:opacity-100"
                       aria-label="Previous image"
                     >
                       <FaChevronLeft size={14} />
                     </button>
                     <button
                       onClick={handleNextImage}
-                      className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 bg-industrial-secondary/80 backdrop-blur-sm border border-border rounded-full flex items-center justify-center text-metal-text hover:text-steel hover:border-steel transition-all duration-200 opacity-0 group-hover:opacity-100"
+                      className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 bg-industrial-secondary/80 backdrop-blur-sm border border-border rounded-full flex items-center justify-center text-metal-text hover:text-steel hover:border-steel transition-all duration-200 lg:opacity-0 lg:group-hover:opacity-100 focus-visible:opacity-100"
                       aria-label="Next image"
                     >
                       <FaChevronRight size={14} />
@@ -125,6 +138,8 @@ export default function ProductDetail() {
                     <button
                       key={index}
                       onClick={() => setCurrentImageIndex(index)}
+                      aria-label={img === guide?.catalogImage ? "Show catalog reference" : "Show product overview"}
+                      aria-pressed={index === currentImageIndex}
                       className={`flex-shrink-0 w-20 h-20 rounded-card overflow-hidden border-2 transition-all duration-200 ${
                         index === currentImageIndex
                           ? "border-steel shadow-lg shadow-steel/20"
@@ -143,7 +158,7 @@ export default function ProductDetail() {
                 </div>
               )}
 
-              <p className="text-metal-subtext text-sm mt-3 text-center">Click image to zoom in</p>
+              <p className="text-metal-subtext text-sm mt-3 text-center">{currentImage === guide?.catalogImage ? "Catalog reference · Product-family examples" : "Product overview"}. Select image to enlarge.</p>
             </div>
 
             <div>
@@ -183,8 +198,9 @@ export default function ProductDetail() {
                 </div>
 
                 <div>
-                  <h3 className="text-metal-text font-semibold mb-3">Precision Tolerance</h3>
+                  <h3 className="text-metal-text font-semibold mb-3">Catalog Precision Reference</h3>
                   <p className="text-steel font-mono text-2xl">{product.tolerance}</p>
+                  <p className="text-sm text-metal-subtext leading-relaxed mt-2">Specify the controlled dimension, datum and inspection method on your drawing. The applicable tolerance is confirmed with your quotation.</p>
                 </div>
               </div>
 
@@ -213,7 +229,7 @@ export default function ProductDetail() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-metal-text font-medium mb-4">Material Properties</h3>
+                <h3 className="text-metal-text font-medium mb-4">Material Options</h3>
                 <div className="space-y-3">
                   {product.materials.map((material) => (
                     <div key={material} className="flex justify-between items-center py-2 border-b border-border last:border-0">
@@ -225,6 +241,8 @@ export default function ProductDetail() {
               </div>
             </div>
           </div>
+
+          {guide && <ProductSelectionGuide guide={guide} />}
 
           {relatedProducts.length > 0 && (
             <div className="mb-16">
@@ -261,14 +279,17 @@ export default function ProductDetail() {
             <p className="text-metal-subtext text-center mb-8">
               Tell us about your requirements and we will get back to you within 24 hours.
             </p>
-            <ContactForm />
+            <ContactForm key={product.id} initialSubject={`Quotation request: ${product.name}`} />
           </div>
         </div>
       </section>
 
       {isZoomed && (
-        <div
-          className="fixed inset-0 z-[100] bg-industrial/95 flex items-center justify-center p-4 animate-fade-in-up"
+        <dialog
+          ref={zoomDialog}
+          aria-label={`${product.name} enlarged image`}
+          onCancel={() => setIsZoomed(false)}
+          className="fixed inset-0 m-0 w-screen h-[100svh] max-w-none max-h-none border-0 z-[100] bg-industrial/95 flex items-center justify-center p-4"
           onClick={() => setIsZoomed(false)}
         >
           <button
@@ -332,7 +353,7 @@ export default function ProductDetail() {
               ))}
             </div>
           )}
-        </div>
+        </dialog>
       )}
     </>
   );

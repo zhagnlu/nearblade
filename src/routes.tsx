@@ -8,6 +8,7 @@ import Equipment from "./pages/Equipment";
 import Contact from "./pages/Contact";
 import Blog from "./pages/Blog";
 import BlogDetail from "./pages/BlogDetail";
+import NotFound from "./pages/NotFound";
 
 export const routes: RouteObject[] = [
   {
@@ -41,7 +42,7 @@ export const routes: RouteObject[] = [
       },
       {
         path: "*",
-        element: <Home />,
+        element: <NotFound />,
       },
     ],
   },

@@ -1,56 +1,50 @@
-import { useState } from "react";
-import { FaCheck } from "react-icons/fa";
+import { useId, useRef, useState } from "react";
+import { contactEmail, contactEmailDraft } from "@/data/contact";
 
 interface ContactFormProps {
   compact?: boolean;
+  initialSubject?: string;
 }
 
-export function ContactForm({ compact = false }: ContactFormProps) {
-  const [isSubmitted, setIsSubmitted] = useState(false);
+export function ContactForm({ compact = false, initialSubject = "Nearblade product inquiry" }: ContactFormProps) {
+  const formId = useId();
+  const draftLink = useRef<HTMLAnchorElement>(null);
+  const [isDraftReady, setIsDraftReady] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     company: "",
     phone: "",
+    subject: initialSubject,
     message: "",
   });
+  const draftUrl = contactEmailDraft(formData);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setIsSubmitted(true);
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({ name: "", email: "", company: "", phone: "", message: "" });
-    }, 3000);
+    if (!e.currentTarget.reportValidity()) return;
+    setIsDraftReady(true);
+    draftLink.current?.click();
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    setFormData((current) => ({ ...current, [e.target.name]: e.target.value }));
+    setIsDraftReady(false);
   };
-
-  if (isSubmitted) {
-    return (
-      <div className="flex flex-col items-center justify-center py-12 text-center">
-        <div className="w-16 h-16 bg-success/20 rounded-full flex items-center justify-center mb-4">
-          <FaCheck className="text-success" size={24} />
-        </div>
-        <h3 className="text-xl font-semibold text-metal-text mb-2">Demo Completed</h3>
-        <p className="text-metal-subtext">This preview form does not send inquiries. Please email sales@ruchengmachine.com.</p>
-      </div>
-    );
-  }
 
   return (
     <form onSubmit={handleSubmit} className={`space-y-4 ${compact ? "" : "max-w-2xl mx-auto"}`}>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label htmlFor="name" className="block text-sm text-metal-subtext mb-2">
+          <label htmlFor={`${formId}-name`} className="block text-sm text-metal-subtext mb-2">
             Full Name *
           </label>
           <input
             type="text"
-            id="name"
+            id={`${formId}-name`}
             name="name"
+            autoComplete="name"
+            maxLength={300}
             required
             value={formData.name}
             onChange={handleChange}
@@ -59,13 +53,15 @@ export function ContactForm({ compact = false }: ContactFormProps) {
           />
         </div>
         <div>
-          <label htmlFor="email" className="block text-sm text-metal-subtext mb-2">
+          <label htmlFor={`${formId}-email`} className="block text-sm text-metal-subtext mb-2">
             Email Address *
           </label>
           <input
             type="email"
-            id="email"
+            id={`${formId}-email`}
             name="email"
+            autoComplete="email"
+            maxLength={300}
             required
             value={formData.email}
             onChange={handleChange}
@@ -76,13 +72,15 @@ export function ContactForm({ compact = false }: ContactFormProps) {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label htmlFor="company" className="block text-sm text-metal-subtext mb-2">
+          <label htmlFor={`${formId}-company`} className="block text-sm text-metal-subtext mb-2">
             Company Name
           </label>
           <input
             type="text"
-            id="company"
+            id={`${formId}-company`}
             name="company"
+            autoComplete="organization"
+            maxLength={300}
             value={formData.company}
             onChange={handleChange}
             className="w-full px-4 py-3 inquiry-field border border-border rounded-card text-metal-text placeholder-metal-gray focus:outline-none focus:border-steel transition-colors"
@@ -90,13 +88,15 @@ export function ContactForm({ compact = false }: ContactFormProps) {
           />
         </div>
         <div>
-          <label htmlFor="phone" className="block text-sm text-metal-subtext mb-2">
-            Phone Number
+          <label htmlFor={`${formId}-phone`} className="block text-sm text-metal-subtext mb-2">
+            Phone / WhatsApp
           </label>
           <input
             type="tel"
-            id="phone"
+            id={`${formId}-phone`}
             name="phone"
+            autoComplete="tel"
+            maxLength={100}
             value={formData.phone}
             onChange={handleChange}
             className="w-full px-4 py-3 inquiry-field border border-border rounded-card text-metal-text placeholder-metal-gray focus:outline-none focus:border-steel transition-colors"
@@ -105,13 +105,30 @@ export function ContactForm({ compact = false }: ContactFormProps) {
         </div>
       </div>
       <div>
-        <label htmlFor="message" className="block text-sm text-metal-subtext mb-2">
+        <label htmlFor={`${formId}-subject`} className="block text-sm text-metal-subtext mb-2">
+          Subject *
+        </label>
+        <input
+          type="text"
+          id={`${formId}-subject`}
+          name="subject"
+          required
+          maxLength={300}
+          value={formData.subject}
+          onChange={handleChange}
+          className="w-full px-4 py-3 inquiry-field border border-border rounded-card text-metal-text placeholder-metal-gray focus:outline-none focus:border-steel transition-colors"
+          placeholder="Product inquiry or quotation request"
+        />
+      </div>
+      <div>
+        <label htmlFor={`${formId}-message`} className="block text-sm text-metal-subtext mb-2">
           Your Requirements *
         </label>
         <textarea
-          id="message"
+          id={`${formId}-message`}
           name="message"
           required
+          maxLength={5000}
           rows={compact ? 3 : 5}
           value={formData.message}
           onChange={handleChange}
@@ -119,12 +136,24 @@ export function ContactForm({ compact = false }: ContactFormProps) {
           placeholder="Please describe the products you need, specifications, quantity, etc."
         />
       </div>
+      <p className="text-sm text-metal-subtext">
+        This opens your email app with your inquiry addressed to {contactEmail}. Review and send the message there.
+      </p>
       <button
         type="submit"
         className="w-full md:w-auto px-8 py-3.5 bg-steel text-white font-medium rounded-card hover:bg-steel-light transition-all duration-200 hover:-translate-y-0.5"
       >
-        Submit Inquiry
+        Open Email Draft
       </button>
+      <a ref={draftLink} href={draftUrl} hidden aria-hidden="true" tabIndex={-1}>Open Email Draft</a>
+      {isDraftReady && (
+        <div role="status" aria-live="polite" className="bg-industrial-secondary border border-border rounded-card p-4 text-sm text-metal-subtext">
+          <p className="mb-2">Your email draft is ready. Send it from your email app. Your details remain here for editing.</p>
+          <p>
+            If your email app did not open, <a href={draftUrl} className="text-steel font-medium hover:underline">open the draft again</a>, or email <a href={`mailto:${contactEmail}`} className="text-steel font-medium hover:underline">{contactEmail}</a> with your requirements.
+          </p>
+        </div>
+      )}
     </form>
   );
 }

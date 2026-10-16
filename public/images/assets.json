@@ -1,5 +1,403 @@
 [
   {
+    "file": "/images/equipment/blade-heat-treatment-v1.webp",
+    "kind": "ai-generated-conceptual-equipment-reference",
+    "tool": "built-in image_gen",
+    "page": "equipment",
+    "section": "Blade Heat Treatment Workshop",
+    "prompt": "Use case: photorealistic-natural. Asset type: Blade Heat Treatment Workshop inline image for a precision industrial blade manufacturer's equipment webpage. Generate one NEW LANDSCAPE 4:3 photograph, ideally 1448x1086 or larger. Show a clean, realistic medium-sized industrial heat-treatment bay specifically for long shear blades and circular slitting knives. Main subject: a credible horizontal electric batch heat-treatment furnace, neutral cream-gray outer housing, thick insulated rectangular chamber door open to reveal a simple refractory-lined chamber with a very restrained warm amber interior glow. In front of it is a practical wheeled loading cart aligned with the furnace hearth. Several LONG, THIN, STRAIGHT rectangular industrial shear blade blanks, with a single row of mounting holes, lie flat, evenly spaced on a rigid heat-resistant steel loading fixture with multiple transverse supports along their length; their weight is fully supported and all long edges remain perfectly straight. Do not show a solid block of fused blades or bright red-hot sagging metal. At the side, one small orderly tray contains several circular knife blanks with central bores, reinforcing that this is a blade heat-treatment shop. A second closed furnace and modest control cabinet recede into the background. The foreground blade fixture and furnace opening must be clearly readable in one coherent scene. Eye-level three-quarter industrial editorial photograph; clear fine detail, straight structural lines, believable mechanical geometry, real matte furnace panels, fine steel textures, natural overhead workshop lighting with soft window light, neutral white balance and understated warm highlights only inside the furnace. Clean, maintained dry workshop, floor markings and a tidy work area. Photographic realism comes from plausible equipment and materials, not dirt or extreme aging. No people, no exposed flames, no showers of sparks, no smoke or steam, no dramatic molten-metal scene, no cinematic orange fog, no rust or greasy stains, no impossible hanging blades, no plastic CGI sheen, no fake depth blur. Keep complete primary equipment comfortably within the 4:3 frame. No legible text, temperatures, model codes, branding, signs, logos, watermark, collage, border or graphic overlays. Conceptual AI-generated promotional equipment reference imagery, not a documentary photograph or proof of any specific temperature, treatment cycle or certification.",
+    "resolution": [
+      1448,
+      1086
+    ],
+    "source": "/Users/luzhang/.codex/generated_images/01a13a82-113a-7a32-8847-f4856c27ad50/exec-cdc600ed-774d-4920-9b84-bd8ac23c9951.png",
+    "replaces": "/images/equipment/assembly-workshop-v3.webp",
+    "note": "Conceptual blade heat-treatment furnace and blade-loading fixture; not a documented photograph of actual facilities or evidence of specific treatment capabilities. Encoded as WebP, quality 88."
+  },
+  {
+    "file": "/images/equipment/assembly-workshop-v3.webp",
+    "kind": "ai-generated-conceptual-equipment-reference",
+    "tool": "built-in image_gen",
+    "page": "equipment",
+    "section": "Machine Assembly Workshop",
+    "prompt": "Use case: photorealistic-natural. Asset type: replacement Machine Assembly Workshop photograph for an industrial blades and tooling equipment webpage. Generate ONE new standalone LANDSCAPE 4:3 image, ideally 1448x1086 or larger, with clear detailed engineering geometry. Primary request: show actual assembly work on ONE industrial machine, with a clear readable subject and human craftsmanship. Scene: a modest clean organized Chinese machinery assembly bay. One partly assembled red-and-charcoal sheet-metal shearing machine occupies the center and right of the frame, viewed at a natural three-quarter angle. The machine has convincing substantial side frames and a straight horizontal crossbeam; an accessible rear assembly area shows two clean straight guide rails and a simple backgauge carriage being fitted. Keep the geometry mechanically coherent and uncomplicated, with straight parallel rails and correctly supported components. One Chinese / East Asian male assembly technician with short black hair, natural East Asian facial features, navy cotton workwear and clear safety glasses stands at the left beside the stationary machine. Show his natural side profile while he uses a single ordinary hand wrench to secure a readily accessible mounting bolt on the rear carriage; believable hands, grip, stance and working distance. He must be working beside the machine, with hands outside any cutting area. A compact nearby workbench or tool trolley holds a few neatly arranged fasteners, a wrench and a caliper. A low-key normal assembly workshop and one distant workstation form the background. Composition: medium-wide industrial editorial photograph at normal eye level, the machine and assembly operation fill the image, leave a little margin around the complete main machine, no endless rows of duplicated equipment, no warehouse aisle vanishing-point composition. Natural soft side-window light plus ordinary overhead fixtures, neutral color balance, navy workwear and restrained muted industrial red, matte painted panels, realistic brushed steel and cloth textures, broad natural focus, crisp fine details without artificial sharpening. Clean well-maintained environment and clean dry surfaces, no added grime, rust, oily streaks, exaggerated scratches or dirty clothes. Avoid showroom CGI sheen, smooth plastic surfaces, theatrical lighting, orange sparks, smoke, fake bokeh, cloned machines, distorted hands, bent rails and impossible mechanical parts. No legible writing, brand names, model codes, logos, watermark, collage, text overlay or border. This is a conceptual AI-generated assembly reference photograph, not documentary evidence of a real facility.",
+    "resolution": [
+      1448,
+      1086
+    ],
+    "source": "/Users/luzhang/.codex/generated_images/01a13a82-113a-7a32-8847-f4856c27ad50/exec-dca060ca-9fba-45bb-a157-379f3e0a2307.png",
+    "replaces": "/images/equipment/assembly-workshop-v2.webp",
+    "note": "Single-machine assembly scene with an East Asian technician. Conceptual promotional image, not a documentary photograph of actual premises. WebP encoded with cwebp quality 88."
+  },
+  {
+    "file": "/images/equipment/cnc-machining-centers-v2.webp",
+    "kind": "ai-reconstructed-conceptual-equipment-reference",
+    "tool": "built-in image_gen",
+    "page": "equipment",
+    "referenceImages": [
+      "/images/manual/cnc-machining-centers.jpg"
+    ],
+    "prompt": "Use case: photorealistic-natural / reference-guided equipment reconstruction. Asset type: industrial equipment webpage inline photo. Input image 1 is the equipment-category and composition reference, not documentary detail that can be recovered exactly. Create a much sharper high-resolution natural industrial photograph based closely on this reference. Output LANDSCAPE 4:3, ideally 2048x1536 pixels, crisp enough for a 600 CSS-pixel card on a Retina display. Subject: An enclosed three-axis vertical CNC machining center with charcoal lower body, cream front enclosure panels, muted blue sliding doors, control pendant at the right, visible foundation and a small practical chip trolley. Preserve the reference machine's mechanical proportions and its visible arrangement. Reconstruct a believable control panel without inventing legible specifications or maker branding. Visual direction: ordinary clean, well-maintained Chinese precision-manufacturing workshop, believable real industrial photography, neutral daylight with soft normal ceiling illumination, natural color balance, clear midtones, modest contrast, realistic painted metal and fine machined-steel textures. Clean intact machine paint, clean dry floor and work surfaces. NO added rust, grime, grease, dirty stains, dramatic wear, excessive dust or artificially aged equipment. Realism must come from physically coherent machinery, straight lines, real material texture and restrained lighting. Broad natural focus and fine resolvable detail across the main machine, no defocus of the primary subject. Avoid CGI sheen, plastic surfaces, painterly smoothing, aggressive sharpening halos, overprocessed HDR, fake bokeh or cinematic teal/orange lighting. Preserve the equipment CATEGORY, mechanical arrangement and reference palette; do not invent a different class of machine. Keep the complete primary machine safely inside the frame with a little breathing room for a 4:3 card crop. Do not add people, readable model numbers, brand labels, lettering, watermarks, sparks, smoke, collages or frames. This is AI-reconstructed conceptual equipment reference imagery, not an original high-resolution documentary photograph of actual premises.",
+    "source": "/Users/luzhang/.codex/generated_images/01a13a82-113a-7a32-8847-f4856c27ad50/exec-9307e0d4-f90f-4096-9857-caaa3393ae18.png",
+    "resolution": [
+      1448,
+      1086
+    ],
+    "note": "Reference-guided AI reconstruction for clearer illustrative equipment imagery; not recovered documentary detail or an original photograph of the actual premises. Encoded as WebP with cwebp quality 88."
+  },
+  {
+    "file": "/images/equipment/gantry-machining-v2.webp",
+    "kind": "ai-reconstructed-conceptual-equipment-reference",
+    "tool": "built-in image_gen",
+    "page": "equipment",
+    "referenceImages": [
+      "/images/manual/gantry-machining.jpg"
+    ],
+    "prompt": "Use case: photorealistic-natural / reference-guided equipment reconstruction. Asset type: industrial equipment webpage inline photo. Input image 1 is the equipment-category and composition reference, not documentary detail that can be recovered exactly. Create a much sharper high-resolution natural industrial photograph based closely on this reference. Output LANDSCAPE 4:3, ideally 2048x1536 pixels, crisp enough for a 600 CSS-pixel card on a Retina display. Subject: A large green double-column gantry machining machine viewed obliquely from the front, long ribbed T-slot bed receding to the right, broad portal beam and two substantial vertical columns. Keep the spindle carriage and operating pendant in the reference arrangement. The machine's long rails and rectangular bed edges must be perfectly straight in consistent perspective. Visual direction: ordinary clean, well-maintained Chinese precision-manufacturing workshop, believable real industrial photography, neutral daylight with soft normal ceiling illumination, natural color balance, clear midtones, modest contrast, realistic painted metal and fine machined-steel textures. Clean intact machine paint, clean dry floor and work surfaces. NO added rust, grime, grease, dirty stains, dramatic wear, excessive dust or artificially aged equipment. Realism must come from physically coherent machinery, straight lines, real material texture and restrained lighting. Broad natural focus and fine resolvable detail across the main machine, no defocus of the primary subject. Avoid CGI sheen, plastic surfaces, painterly smoothing, aggressive sharpening halos, overprocessed HDR, fake bokeh or cinematic teal/orange lighting. Preserve the equipment CATEGORY, mechanical arrangement and reference palette; do not invent a different class of machine. Keep the complete primary machine safely inside the frame with a little breathing room for a 4:3 card crop. Do not add people, readable model numbers, brand labels, lettering, watermarks, sparks, smoke, collages or frames. This is AI-reconstructed conceptual equipment reference imagery, not an original high-resolution documentary photograph of actual premises.",
+    "source": "/Users/luzhang/.codex/generated_images/01a13a82-113a-7a32-8847-f4856c27ad50/exec-c4edc7af-0ddf-4eeb-9cdc-012bc4a2fdba.png",
+    "resolution": [
+      1448,
+      1086
+    ],
+    "note": "Reference-guided AI reconstruction for clearer illustrative equipment imagery; not recovered documentary detail or an original photograph of the actual premises. Encoded as WebP with cwebp quality 88."
+  },
+  {
+    "file": "/images/equipment/laser-cutting-workshop-v2.webp",
+    "kind": "ai-reconstructed-conceptual-equipment-reference",
+    "tool": "built-in image_gen",
+    "page": "equipment",
+    "referenceImages": [
+      "/images/manual/laser-cutting-workshop.jpg"
+    ],
+    "prompt": "Use case: photorealistic-natural / reference-guided equipment reconstruction. Asset type: industrial equipment webpage inline photo. Input image 1 is the equipment-category and composition reference, not documentary detail that can be recovered exactly. Create a much sharper high-resolution natural industrial photograph based closely on this reference. Output LANDSCAPE 4:3, ideally 2048x1536 pixels, crisp enough for a 600 CSS-pixel card on a Retina display. Subject: A white and charcoal open-bed sheet-metal laser cutting machine in a steel-framed industrial hall. Preserve the long toothed support bed, broad white gantry bridge, black cable chain and large-format working area. Keep the main near machine complete and sharply defined rather than filling the image with many repeated machines. Visual direction: ordinary clean, well-maintained Chinese precision-manufacturing workshop, believable real industrial photography, neutral daylight with soft normal ceiling illumination, natural color balance, clear midtones, modest contrast, realistic painted metal and fine machined-steel textures. Clean intact machine paint, clean dry floor and work surfaces. NO added rust, grime, grease, dirty stains, dramatic wear, excessive dust or artificially aged equipment. Realism must come from physically coherent machinery, straight lines, real material texture and restrained lighting. Broad natural focus and fine resolvable detail across the main machine, no defocus of the primary subject. Avoid CGI sheen, plastic surfaces, painterly smoothing, aggressive sharpening halos, overprocessed HDR, fake bokeh or cinematic teal/orange lighting. Preserve the equipment CATEGORY, mechanical arrangement and reference palette; do not invent a different class of machine. Keep the complete primary machine safely inside the frame with a little breathing room for a 4:3 card crop. Do not add people, readable model numbers, brand labels, lettering, watermarks, sparks, smoke, collages or frames. This is AI-reconstructed conceptual equipment reference imagery, not an original high-resolution documentary photograph of actual premises.",
+    "source": "/Users/luzhang/.codex/generated_images/01a13a82-113a-7a32-8847-f4856c27ad50/exec-ad2e744a-6cae-4dbf-bccd-3d58334ca28b.png",
+    "resolution": [
+      1448,
+      1086
+    ],
+    "note": "Reference-guided AI reconstruction for clearer illustrative equipment imagery; not recovered documentary detail or an original photograph of the actual premises. Encoded as WebP with cwebp quality 88."
+  },
+  {
+    "file": "/images/equipment/gantry-machine-detail-v2.webp",
+    "kind": "ai-reconstructed-conceptual-equipment-reference",
+    "tool": "built-in image_gen",
+    "page": "equipment",
+    "referenceImages": [
+      "/images/manual/gantry-machine-detail.jpg"
+    ],
+    "prompt": "Use case: photorealistic-natural / reference-guided equipment reconstruction. Asset type: industrial equipment webpage inline photo. Input image 1 is the equipment-category and composition reference, not documentary detail that can be recovered exactly. Create a much sharper high-resolution natural industrial photograph based closely on this reference. Output LANDSCAPE 4:3, ideally 2048x1536 pixels, crisp enough for a 600 CSS-pixel card on a Retina display. Subject: A second large green portal gantry machining station, broad horizontal beam and spindle carriage above a long T-slot bed, console on the left. The original is portrait: recompose to a LANDSCAPE 4:3 photograph, stepping the camera back and revealing a believable modest amount of adjacent workshop so the complete portal and bed fit naturally. Keep the full machine upright and visible, with no collage, blurry side panels, letterboxing or stretched geometry. Visual direction: ordinary clean, well-maintained Chinese precision-manufacturing workshop, believable real industrial photography, neutral daylight with soft normal ceiling illumination, natural color balance, clear midtones, modest contrast, realistic painted metal and fine machined-steel textures. Clean intact machine paint, clean dry floor and work surfaces. NO added rust, grime, grease, dirty stains, dramatic wear, excessive dust or artificially aged equipment. Realism must come from physically coherent machinery, straight lines, real material texture and restrained lighting. Broad natural focus and fine resolvable detail across the main machine, no defocus of the primary subject. Avoid CGI sheen, plastic surfaces, painterly smoothing, aggressive sharpening halos, overprocessed HDR, fake bokeh or cinematic teal/orange lighting. Preserve the equipment CATEGORY, mechanical arrangement and reference palette; do not invent a different class of machine. Keep the complete primary machine safely inside the frame with a little breathing room for a 4:3 card crop. Do not add people, readable model numbers, brand labels, lettering, watermarks, sparks, smoke, collages or frames. This is AI-reconstructed conceptual equipment reference imagery, not an original high-resolution documentary photograph of actual premises.",
+    "source": "/Users/luzhang/.codex/generated_images/01a13a82-113a-7a32-8847-f4856c27ad50/exec-caf04b42-24f7-40ed-808e-8c3a080259a6.png",
+    "resolution": [
+      1448,
+      1086
+    ],
+    "note": "Reference-guided AI reconstruction for clearer illustrative equipment imagery; not recovered documentary detail or an original photograph of the actual premises. Encoded as WebP with cwebp quality 88."
+  },
+  {
+    "file": "/images/equipment/press-workshop-v2.webp",
+    "kind": "ai-reconstructed-conceptual-equipment-reference",
+    "tool": "built-in image_gen",
+    "page": "equipment",
+    "referenceImages": [
+      "/images/manual/press-workshop.jpg"
+    ],
+    "prompt": "Use case: photorealistic-natural / reference-guided equipment reconstruction. Asset type: industrial equipment webpage inline photo. Input image 1 is the equipment-category and composition reference, not documentary detail that can be recovered exactly. Create a much sharper high-resolution natural industrial photograph based closely on this reference. Output LANDSCAPE 4:3, ideally 2048x1536 pixels, crisp enough for a 600 CSS-pixel card on a Retina display. Subject: A workshop with a modest row of green industrial mechanical presses, the nearest heavy cast press clearly dominant, its yellow circular flywheel, stationary ram and lower die table recognizable. Preserve the reference machine types and arrangement, but simplify far-background details to physically coherent equipment. Machines stopped, no operators, crisp circular and straight metal geometry. Visual direction: ordinary clean, well-maintained Chinese precision-manufacturing workshop, believable real industrial photography, neutral daylight with soft normal ceiling illumination, natural color balance, clear midtones, modest contrast, realistic painted metal and fine machined-steel textures. Clean intact machine paint, clean dry floor and work surfaces. NO added rust, grime, grease, dirty stains, dramatic wear, excessive dust or artificially aged equipment. Realism must come from physically coherent machinery, straight lines, real material texture and restrained lighting. Broad natural focus and fine resolvable detail across the main machine, no defocus of the primary subject. Avoid CGI sheen, plastic surfaces, painterly smoothing, aggressive sharpening halos, overprocessed HDR, fake bokeh or cinematic teal/orange lighting. Preserve the equipment CATEGORY, mechanical arrangement and reference palette; do not invent a different class of machine. Keep the complete primary machine safely inside the frame with a little breathing room for a 4:3 card crop. Do not add people, readable model numbers, brand labels, lettering, watermarks, sparks, smoke, collages or frames. This is AI-reconstructed conceptual equipment reference imagery, not an original high-resolution documentary photograph of actual premises.",
+    "source": "/Users/luzhang/.codex/generated_images/01a13a82-113a-7a32-8847-f4856c27ad50/exec-893b836e-f12f-4a03-9399-8025a8bb402b.png",
+    "resolution": [
+      1448,
+      1086
+    ],
+    "note": "Reference-guided AI reconstruction for clearer illustrative equipment imagery; not recovered documentary detail or an original photograph of the actual premises. Encoded as WebP with cwebp quality 88."
+  },
+  {
+    "file": "/images/equipment/assembly-workshop-v2.webp",
+    "kind": "ai-reconstructed-conceptual-equipment-reference",
+    "tool": "built-in image_gen",
+    "page": "equipment",
+    "referenceImages": [
+      "/images/manual/assembly-workshop.jpg"
+    ],
+    "prompt": "Use case: photorealistic-natural / reference-guided equipment reconstruction. Asset type: industrial equipment webpage inline photo. Input image 1 is the equipment-category and composition reference, not documentary detail that can be recovered exactly. Create a much sharper high-resolution natural industrial photograph based closely on this reference. Output LANDSCAPE 4:3, ideally 2048x1536 pixels, crisp enough for a 600 CSS-pixel card on a Retina display. Subject: An orderly assembly workshop with steel columns, daylight windows, overhead beams and several red-and-charcoal sheet-metal shearing machines positioned along a straight marked aisle. Preserve the reference concept and perspective, while keeping the nearest red machine fully legible and mechanically coherent, its support table, housing and control panel crisp. Distant machines should recede naturally without cloning artifacts. Visual direction: ordinary clean, well-maintained Chinese precision-manufacturing workshop, believable real industrial photography, neutral daylight with soft normal ceiling illumination, natural color balance, clear midtones, modest contrast, realistic painted metal and fine machined-steel textures. Clean intact machine paint, clean dry floor and work surfaces. NO added rust, grime, grease, dirty stains, dramatic wear, excessive dust or artificially aged equipment. Realism must come from physically coherent machinery, straight lines, real material texture and restrained lighting. Broad natural focus and fine resolvable detail across the main machine, no defocus of the primary subject. Avoid CGI sheen, plastic surfaces, painterly smoothing, aggressive sharpening halos, overprocessed HDR, fake bokeh or cinematic teal/orange lighting. Preserve the equipment CATEGORY, mechanical arrangement and reference palette; do not invent a different class of machine. Keep the complete primary machine safely inside the frame with a little breathing room for a 4:3 card crop. Do not add people, readable model numbers, brand labels, lettering, watermarks, sparks, smoke, collages or frames. This is AI-reconstructed conceptual equipment reference imagery, not an original high-resolution documentary photograph of actual premises.",
+    "source": "/Users/luzhang/.codex/generated_images/01a13a82-113a-7a32-8847-f4856c27ad50/exec-6d719d9d-bdee-4790-8dc4-1a50d210fbe4.png",
+    "resolution": [
+      1448,
+      1086
+    ],
+    "note": "Reference-guided AI reconstruction for clearer illustrative equipment imagery; not recovered documentary detail or an original photograph of the actual premises. Encoded as WebP with cwebp quality 88."
+  },
+  {
+    "file": "/images/products/guillotine.webp",
+    "kind": "web-optimized-derivative",
+    "tool": "cwebp",
+    "source": "/images/products/guillotine.png",
+    "quality": 88,
+    "resolution": [
+      1536,
+      1024
+    ],
+    "bytes": 117946,
+    "note": "WebP delivery derivative. Original asset retained; subject and composition unchanged."
+  },
+  {
+    "file": "/images/products/rolling-shear.webp",
+    "kind": "web-optimized-derivative",
+    "tool": "cwebp",
+    "source": "/images/products/rolling-shear.png",
+    "quality": 88,
+    "resolution": [
+      1536,
+      1024
+    ],
+    "bytes": 187376,
+    "note": "WebP delivery derivative. Original asset retained; subject and composition unchanged."
+  },
+  {
+    "file": "/images/products/doctor.webp",
+    "kind": "web-optimized-derivative",
+    "tool": "cwebp",
+    "source": "/images/products/doctor.png",
+    "quality": 88,
+    "resolution": [
+      1536,
+      1024
+    ],
+    "bytes": 155044,
+    "note": "WebP delivery derivative. Original asset retained; subject and composition unchanged."
+  },
+  {
+    "file": "/images/products/swing-beam.webp",
+    "kind": "web-optimized-derivative",
+    "tool": "cwebp",
+    "source": "/images/products/swing-beam.png",
+    "quality": 88,
+    "resolution": [
+      1536,
+      1024
+    ],
+    "bytes": 95724,
+    "note": "WebP delivery derivative. Original asset retained; subject and composition unchanged."
+  },
+  {
+    "file": "/images/products/toothed.webp",
+    "kind": "web-optimized-derivative",
+    "tool": "cwebp",
+    "source": "/images/products/toothed.png",
+    "quality": 88,
+    "resolution": [
+      1536,
+      1024
+    ],
+    "bytes": 170884,
+    "note": "WebP delivery derivative. Original asset retained; subject and composition unchanged."
+  },
+  {
+    "file": "/images/products/press-brake.webp",
+    "kind": "web-optimized-derivative",
+    "tool": "cwebp",
+    "source": "/images/products/press-brake.png",
+    "quality": 88,
+    "resolution": [
+      1536,
+      1024
+    ],
+    "bytes": 100814,
+    "note": "WebP delivery derivative. Original asset retained; subject and composition unchanged."
+  },
+  {
+    "file": "/images/products/slitting.webp",
+    "kind": "web-optimized-derivative",
+    "tool": "cwebp",
+    "source": "/images/products/slitting.png",
+    "quality": 88,
+    "resolution": [
+      1536,
+      1024
+    ],
+    "bytes": 194536,
+    "note": "WebP delivery derivative. Original asset retained; subject and composition unchanged."
+  },
+  {
+    "file": "/images/brand/nearblade-logo.webp",
+    "kind": "web-optimized-derivative",
+    "tool": "cwebp",
+    "source": "/images/brand/nearblade-logo.png",
+    "quality": 88,
+    "resolution": [
+      2172,
+      724
+    ],
+    "bytes": 28964,
+    "note": "WebP delivery derivative. Original asset retained; subject and composition unchanged."
+  },
+  {
+    "file": "/images/manual/shear-blades-detail.webp",
+    "kind": "web-optimized-derivative",
+    "tool": "cwebp",
+    "source": "/images/manual/shear-blades-detail.jpg",
+    "quality": 88,
+    "resolution": [
+      1554,
+      308
+    ],
+    "bytes": 40576,
+    "note": "WebP delivery derivative. Original asset retained; subject and composition unchanged."
+  },
+  {
+    "file": "/images/manual/press-brake-profiles.webp",
+    "kind": "web-optimized-derivative",
+    "tool": "cwebp",
+    "source": "/images/manual/press-brake-profiles.jpg",
+    "quality": 88,
+    "resolution": [
+      1588,
+      889
+    ],
+    "bytes": 116894,
+    "note": "WebP delivery derivative. Original asset retained; subject and composition unchanged."
+  },
+  {
+    "file": "/images/manual/rolling-shear-blades.webp",
+    "kind": "web-optimized-derivative",
+    "tool": "cwebp",
+    "source": "/images/manual/rolling-shear-blades.jpg",
+    "quality": 88,
+    "resolution": [
+      1824,
+      1465
+    ],
+    "bytes": 136484,
+    "note": "WebP delivery derivative. Original asset retained; subject and composition unchanged."
+  },
+  {
+    "file": "/images/manual/slitting-knives.webp",
+    "kind": "web-optimized-derivative",
+    "tool": "cwebp",
+    "source": "/images/manual/slitting-knives.jpg",
+    "quality": 88,
+    "resolution": [
+      1776,
+      1267
+    ],
+    "bytes": 130486,
+    "note": "WebP delivery derivative. Original asset retained; subject and composition unchanged."
+  },
+  {
+    "file": "/images/manual/toothed-blades.webp",
+    "kind": "web-optimized-derivative",
+    "tool": "cwebp",
+    "source": "/images/manual/toothed-blades.jpg",
+    "quality": 88,
+    "resolution": [
+      1778,
+      1207
+    ],
+    "bytes": 128914,
+    "note": "WebP delivery derivative. Original asset retained; subject and composition unchanged."
+  },
+  {
+    "file": "/images/manual/doctor-blades.webp",
+    "kind": "web-optimized-derivative",
+    "tool": "cwebp",
+    "source": "/images/manual/doctor-blades.jpg",
+    "quality": 88,
+    "resolution": [
+      1708,
+      1223
+    ],
+    "bytes": 113436,
+    "note": "WebP delivery derivative. Original asset retained; subject and composition unchanged."
+  },
+  {
+    "file": "/images/about/blade-manufacturing-v4.webp",
+    "kind": "ai-generated-conceptual-promotional-inline",
+    "tool": "built-in image_gen",
+    "page": "about",
+    "section": "Our Story",
+    "prompt": "Use case: precise-object-edit. Asset type: About page inline photograph, landscape 3:2, 1536x1024. Input image 1 is the edit target. Change ONLY the geometry of the THREE long shear blades on the foreground workbench so that they are visibly, precisely STRAIGHT. Currently the long edges bow and their width varies slightly. Reconstruct each knife as a rigid precision-ground rectangular steel bar: both longitudinal outlines must each be a SINGLE perfectly straight unbroken line segment from end to end in the photograph, including the outermost front knife cutting edge; zero curvature, bow, waviness, sag, swelling, bent tips or barrel-lens distortion. Uniform physical width and thickness throughout each bar, planar flat broad faces, crisp straight constant-width bevel, square ends, corners meeting exactly, hole centers arranged on a perfectly straight centerline. Preserve three knives, their row of countersunk mounting holes and approximate positions, lengths and orientation on the table. Their corresponding longitudinal edges must share one coherent perspective and vanishing point. Reflections and directional brushed-steel grinding marks should follow the straight geometry and must not produce a visual illusion of a bowed edge. Keep natural metallic texture and subdued real-world illumination. Blades remain resting flat on straight solid supports on the clean workbench. LOCK EVERYTHING ELSE: same East Asian worker identity, face, black hair, safety glasses, navy work clothes, pose and hand position; same clean cream-and-navy grinder, clean steel workbench, tools, window, background, lighting, camera angle and 3:2 framing. Do not add dirt or stains, do not change the person's appearance, do not change the machine, do not darken or stylize the photograph. No new text, branding, watermark, people or props. This is a tightly localized correction of straight steel blade geometry, retaining the existing natural photographic appearance. Conceptual AI-generated promotional photograph.",
+    "referenceImages": [
+      "/images/about/blade-manufacturing-v3.webp"
+    ],
+    "resolution": [
+      1536,
+      1024
+    ],
+    "source": "/Users/luzhang/.codex/generated_images/01a13a82-113a-7a32-8847-f4856c27ad50/exec-74525761-3754-4389-ba38-ef04f79afe41.png",
+    "note": "Localized correction of the three foreground blades' straight edges and aligned mounting holes, retaining the clean workshop and East Asian worker. Conceptual AI-generated promotional image. Replaces blade-manufacturing-v3.webp on the About page."
+  },
+  {
+    "file": "/images/about/blade-manufacturing-v3.webp",
+    "kind": "ai-generated-conceptual-promotional-inline",
+    "tool": "built-in image_gen",
+    "page": "about",
+    "section": "Our Story",
+    "prompt": "Use case: precise-object-edit. Asset type: About / Our Story inline manufacturing image, landscape 3:2, 1536x1024. Input image 1 is the edit target. Primary request: clean this workshop thoroughly while preserving its natural photographic realism. The previous edit exaggerated dirt. Remove ALL visible grime, rust spots, brown stains, oily streaks, dust accumulations, dried coolant residues and dirty patches from the machine, machine interior, workbench, surrounding walls and worker clothing. The machine's cream and navy painted panels must look clean and well maintained with intact uniform paint. Inside the grinder use clean brushed metal and clean pale panels. The workbench must be a clean dry neutral matte steel top, with clean navy painted legs and no corrosion or deposits. Remove the dirty rag at the left. Keep a few neatly placed clean tools there. Do NOT introduce dirt, artificial aging, distressed paint, scratches or stains to convey realism. Preserve the SAME East Asian male worker's face, short black hair, safety glasses, navy cotton workwear, pose and position on the right; his workwear is clean with natural cloth texture and folds. Preserve the existing machine structure, the three foreground shear blades with mounting holes, their positions and believable dimensions, camera viewpoint, crop, composition and natural neutral color balance. Make the scene a clean, well-maintained working precision shop. Preserve fine real-world photographic detail: modest natural window illumination, soft realistic shadows, subtle camera grain, actual brushed steel directional grinding lines, restrained non-mirror metal reflections and natural skin texture. Keep coherent realistic perspectives and broad focus. Cleanliness should not turn the photo into CGI or a showroom rendering: no glossy plastic materials, no unnatural HDR, no excessively perfect bright highlights, no smoothing of human skin, no cinematic color grading. No added logos, writing, watermark or people. Keep it a conceptual AI-generated promotional photograph.",
+    "referenceImages": [
+      "/images/about/blade-manufacturing-v2.webp"
+    ],
+    "resolution": [
+      1536,
+      1024
+    ],
+    "source": "/Users/luzhang/.codex/generated_images/01a13a82-113a-7a32-8847-f4856c27ad50/exec-cb4532ab-e282-47f0-bc33-023a62584958.png",
+    "note": "Clean, well-maintained workshop revision; preserves the East Asian worker and natural photographic textures while removing exaggerated dirt, stains and rust. Conceptual AI-generated promotional image. Replaces blade-manufacturing-v2.webp on the About page."
+  },
+  {
+    "file": "/images/about/blade-manufacturing-v2.webp",
+    "kind": "ai-generated-conceptual-promotional-inline",
+    "tool": "built-in image_gen",
+    "page": "about",
+    "section": "Our Story",
+    "prompt": "Use case: style-transfer and precise-object-edit. Asset type: replacement About / Our Story inline manufacturing image, 1536x1024 landscape 3:2. Input image 1 is the edit target, an overly synthetic blade manufacturing photo. Primary request: make the same general blade grinding workstation scene look like an ordinary authentic on-site industrial photograph, and replace the worker with a Chinese / East Asian man with short black hair, realistic East Asian facial features and natural medium-light skin tone, approximately 40 years old, in practical navy cotton workwear and clear safety glasses. He is shown in three-quarter side profile so his face is visibly East Asian, focused on the stopped machine's control panel, naturally positioned hands. Preserve the overall relationship of foreground long rectangular shear blades, enclosed surface grinder behind them, and worker on the right; preserve the inline 3:2 framing and blade manufacturing subject. Reconstruct unrealistic details as necessary: the shear blades should be believable usable knives about 700-900 mm long, 70-100 mm wide and 12-18 mm thick, with a simple consistent row of countersunk mounting holes and a narrow straight ground cutting bevel, lying flat and fully supported on a practical steel workbench. No gigantic thick polished steel slabs, no impossible clamps. Give the blades understated fine directional grinding marks and realistic muted metallic reflections rather than mirror-perfect chrome. The workshop is an everyday Chinese precision blade shop, clean enough to work in but visibly used: slightly worn machine paint around access points, a modest amount of settled dust on remote ledges, minor scuffs on the workbench, faint coolant discoloration around the enclosed grinder table, realistic cables and fasteners; no theatrical mess. Photography: candid industrial editorial photograph from eye level, ordinary 35mm lens, f/5.6, natural side window light mixed with typical ceiling lighting, neutral slightly warm white balance, modest dynamic range, subtle sensor grain, coherent perspective. Broad natural focus rather than exaggerated blurred background. Worker has natural skin pores, cloth wrinkles and a relaxed working posture, not a posed stock-photo model. Remove plastic smoothness, CGI sheen, exaggerated sharpness, showroom perfection, cinematic lighting, blue color grading and composited appearance. No logos, no added writing, no legible gibberish text, no watermark, no extra people, no sparks. Conceptual AI-generated promotional image; photorealistic appearance, not a claim to document real premises.",
+    "referenceImages": [
+      "/images/about/blade-manufacturing.webp"
+    ],
+    "resolution": [
+      1536,
+      1024
+    ],
+    "source": "/Users/luzhang/.codex/generated_images/01a13a82-113a-7a32-8847-f4856c27ad50/exec-67475a72-d9fa-4377-8d21-6ea43fed5208.png",
+    "note": "Revised with an East Asian worker, natural lighting and used workshop textures. Conceptual AI-generated promotional scene, not a documented photograph of the company's premises. Replaces blade-manufacturing.webp on the About page."
+  },
+  {
+    "file": "/images/about/blade-manufacturing.webp",
+    "kind": "ai-generated-conceptual-promotional-inline",
+    "tool": "built-in image_gen",
+    "page": "about",
+    "section": "Our Story",
+    "prompt": "Use case: photorealistic-natural. Asset type: Our Story inline photograph for the About page of Nearblade, a precision industrial blade and tooling manufacturer. Primary request: polished realistic conceptual industrial photograph showing the craftsmanship of manufacturing long shear blades. Landscape 3:2 composition, high resolution. Scene: a tidy well-lit precision machining workstation in a modern blade manufacturing workshop. Main subject: three long rectangular silver steel guillotine shear blades with evenly spaced mounting holes and accurately ground straight bevel edges on a substantial fixture/workbench, viewed at an editorial three-quarter angle; behind them a believable enclosed surface grinder, and one technician in navy workwear seen from side/rear studying the setup while the machine is stopped. Believable proportions, no decorative props. Emphasize real machining textures, subtle fine grind marks, coherent equipment geometry and steel detail. Background softly recedes, not a cavernous factory aisle or an aerial building render. Bright soft daylight, restrained silver, warm gray and muted navy palette matching a light professional website; natural contrast, no heavy dark hero treatment, no artificial cinematic teal or oversaturation. Balanced detailed scene filling the entire inline image, no blank title space. No text, numbers, brands, logos, watermarks, sparks, collage or frame. This is a conceptual promotional scene, not a documented photograph of any real company's premises.",
+    "resolution": [
+      1536,
+      1024
+    ],
+    "note": "Conceptual promotional scene; not a photograph documenting the company's premises or evidence of measured tolerances."
+  },
+  {
+    "file": "/images/about/blade-inspection.webp",
+    "kind": "ai-generated-conceptual-promotional-inline",
+    "tool": "built-in image_gen",
+    "page": "about",
+    "section": "Quality Commitment",
+    "prompt": "Use case: photorealistic-natural. Asset type: Quality Commitment inline photograph for the About page of Nearblade, precision industrial blades and tooling. Primary request: a refined realistic conceptual industrial photograph of blade dimensional quality inspection, clearly showing how precision is checked. Landscape 3:2 composition, high resolution. Scene: a clean metrology workstation with a dark gray granite inspection plate. Main subject: one polished silver steel circular slitting knife lying horizontally on the granite plate, with a clean central bore and ground annular faces, plus one slim straight shear blade with several mounting holes lying beside it. A realistic mechanical dial indicator attached to a robust height gauge on a heavy base, with a vertical probe touching the top face of the circular knife to inspect face runout/flatness; physically coherent components and contact point. Focus on the blade and measurement instrument; no people, no hands, no computer displays or digital readouts. An organized inspection room softly out of focus in the background. Professional close editorial industrial photography from a three-quarter angle, crisp machining textures, brushed and polished steel, gentle natural task lighting, restrained silver, neutral gray and subtle navy palette coordinated with a bright professional website. Balanced frame with complete primary objects, filling the image, no blank title space. No legible text, numbers, logos, brands, watermark, collage, frame, floating tools, exaggerated glow or sparks. This is a conceptual promotional scene, not a documentary photograph or evidence of measured tolerances.",
+    "resolution": [
+      1536,
+      1024
+    ],
+    "note": "Conceptual promotional scene; not a photograph documenting the company's premises or evidence of measured tolerances."
+  },
+  {
+    "file": "/images/heroes/about-hero-v3.webp",
+    "kind": "ai-generated-conceptual-promotional-hero",
+    "tool": "built-in image_gen",
+    "page": "about",
+    "prompt": "Use case: ads-marketing. Asset type: About page full-screen hero background for Nearblade, an industrial blades and tooling brand. Primary request: replace the previous awkward dark inspection close-up with an elegant photorealistic conceptual manufacturing scene. Landscape 16:9, high resolution. Scene: an orderly precision blade manufacturing workshop with a deep architectural aisle, clean enclosed grinding equipment receding along the outer sides, high ceilings and soft daylight. Foreground: several convincing precision-ground long rectangular guillotine shear blades with clean mounting holes and bevelled cutting edges neatly arranged on a dark workbench along the lower third; one small circular slitting knife at the lower right adds product context. Realistic brushed silver steel, crisp machining details, restrained navy and steel-gray palette, natural soft illumination with no exaggerated orange accents. Composition: wide editorial industrial photography, strong depth and calm balanced framing. The center and upper middle are a naturally subdued, softly focused view down the workshop aisle that supports a centered white heading; keep relevant blade geometry visible in both landscape and a centered portrait crop. Do not create a blank black panel or dark wall to make text space. No people, hands, micrometers, measurement tools, text, logos, brand signs, watermarks, CGI appearance, collage, sparks, smoke or dramatic artificial glow. Conceptual promotional scene, not a documentary of a real company's premises.",
+    "resolution": [
+      1672,
+      941
+    ],
+    "source": "/Users/luzhang/.codex/generated_images/01a13546-a970-7f12-85d3-896ad49a6085/exec-515584e5-d71f-43d1-b448-62ca5006849c.png",
+    "note": "Conceptual promotional scene; not a photograph documenting the company's premises. Encoded as WebP for web delivery; replaces about-hero-v2.jpg on the About page."
+  },
+  {
     "file": "/images/manual/factory-exterior.jpg",
     "source": "南京如程科技有限公司-刀片与模具产品手册_整理版.docx",
     "originalMedia": "fdb5a8faa2c4fa4a69256a690b25d7c619d06a3a.png",

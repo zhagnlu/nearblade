@@ -2,58 +2,16 @@ import { PageHero } from "@/components/common/PageHero";
 import { Link } from "react-router-dom";
 import { PageMeta } from "@/components/common/PageMeta";
 import { FaArrowRight, FaCheck } from "react-icons/fa";
-
-const equipmentList = [
-  {
-    name: "CNC Machining Centers",
-    description: "Enclosed CNC machining equipment shown in the Rucheng product manual, supporting industrial production and component manufacturing.",
-    image: "/images/manual/cnc-machining-centers.jpg",
-    capabilities: ["CNC-controlled machining", "Enclosed working area", "Production tooling support"],
-  },
-  {
-    name: "Gantry Machining Equipment",
-    description: "Large-format gantry equipment in the production workshop for machining large industrial components.",
-    image: "/images/manual/gantry-machining.jpg",
-    capabilities: ["Gantry structure", "Large-component machining", "Industrial production workshop"],
-  },
-  {
-    name: "Laser Cutting Workshop",
-    description: "Sheet metal laser cutting systems documented in the company's manufacturing and production facilities.",
-    image: "/images/manual/laser-cutting-workshop.jpg",
-    capabilities: ["Sheet metal processing", "Laser cutting systems", "Production workspace"],
-  },
-  {
-    name: "Large-format Machining Station",
-    description: "A second view of the company's heavy manufacturing equipment and machining workspace.",
-    image: "/images/manual/gantry-machine-detail.jpg",
-    capabilities: ["Heavy manufacturing equipment", "Large working area", "Component machining"],
-  },
-  {
-    name: "Press Equipment Workshop",
-    description: "Workshop photography from the product manual showing industrial presses and supporting production equipment.",
-    image: "/images/manual/press-workshop.jpg",
-    capabilities: ["Industrial press equipment", "Production organization", "Manufacturing support"],
-  },
-  {
-    name: "Machine Assembly Workshop",
-    description: "The manufacturing and assembly area shown in the Rucheng product manual, with machines organized for production and delivery.",
-    image: "/images/manual/assembly-workshop.jpg",
-    capabilities: ["Machine assembly", "Production preparation", "Delivery organization"],
-  },
-];
+import { equipmentList, equipmentImageSize } from "@/data/equipment";
 
 export default function Equipment() {
   return (
     <>
-      <PageMeta
-        title="Production Equipment - Rucheng Technology"
-        description="Explore our state-of-the-art manufacturing equipment including CNC machining centers, gantry equipment, laser cutting systems, and assembly workshops."
-        keywords={["manufacturing equipment", "CNC machining", "laser cutting", "assembly workshop"]}
-      />
+      <PageMeta />
 
       <PageHero
-        title="Precision Manufacturing"
-        accent="& Equipment"
+        title="Blade Manufacturing"
+        accent="Equipment"
         description="Our advanced manufacturing facilities and precision equipment ensure consistent quality and tight tolerances across all product lines."
         contentId="equipment-content"
         image="/images/heroes/equipment-hero-v2.jpg"
@@ -79,19 +37,22 @@ export default function Equipment() {
             </div>
           </div>
 
+          <p className="text-sm text-metal-subtext mb-6">Illustrative equipment reference views based on our product catalog.</p>
           <div className="space-y-12">
             {equipmentList.map((item, index) => (
               <div
-                key={index}
+                key={item.id}
                 className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center bg-industrial border border-border rounded-card overflow-hidden"
               >
-                <div className={`aspect-[4/3] lg:aspect-auto lg:h-full ${index % 2 === 1 ? "lg:order-2" : ""}`}>
+                <div className={`aspect-[4/3] relative self-center bg-industrial-secondary ${index % 2 === 1 ? "lg:order-2" : ""}`}>
                   <img
                     loading="lazy"
                     decoding="async"
                     src={item.image}
-                    alt={item.name}
-                    className="w-full h-full object-cover"
+                    alt={`${item.name} — illustrative reference view`}
+                    width={equipmentImageSize.width}
+                    height={equipmentImageSize.height}
+                    className="absolute inset-0 w-full h-full object-cover"
                   />
                 </div>
                 <div className="p-8 lg:p-12">

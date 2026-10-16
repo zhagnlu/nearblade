@@ -4,6 +4,20 @@
 
 html { scroll-behavior: smooth; }
 
+.language-switcher { position: relative; display: flex; align-items: center; gap: 6px; flex-shrink: 0; color: #E2E8F0; }
+.language-icon { width: 15px; height: 15px; }
+.language-switcher select { width: 108px; padding: 7px 4px; background: #182B49; color: #F8FAFC; border: 1px solid #526073; border-radius: 2px; font: inherit; font-size: 13px; cursor: pointer; direction: ltr; }
+.language-switcher select:focus-visible { outline: 2px solid #F1A45C; outline-offset: 3px; }
+.language-status:empty { display: none; }
+.language-status:not(:empty) { position: absolute; top: calc(100% + 12px); inset-inline-end: 0; width: 220px; padding: 10px 12px; border: 1px solid #526073; background: #182B49; color: #F8FAFC; font-size: 13px; }
+main, footer { overflow-wrap: anywhere; }
+[dir="rtl"] .text-left { text-align: right; }
+[dir="rtl"] input[type="email"], [dir="rtl"] input[type="tel"], [dir="rtl"] [translate="no"], [dir="rtl"] .font-mono, .blade-dimension-drawing { direction: ltr; unicode-bidi: isolate; }
+[dir="rtl"] main p { line-height: 1.85; }
+@media (max-width: 639px) { .language-switcher select { width: 76px; font-size: 12px; } .language-icon { display: none; } }
+@media (max-width: 360px) { header .brand-logo { width: 140px !important; } }
+@media print { .language-switcher { display: none; } }
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .animate-fade-in-up { animation: none !important; }
@@ -109,6 +123,30 @@ html { scroll-behavior: smooth; }
 .site-chrome .text-steel, .dark-panel .text-steel,
 .site-chrome .hover\:text-steel:hover { color: #F1A45C; }
 .site-header-scrolled { background-color: rgb(15 23 42 / .96); }
+/* Frame the horizontal lockup without stretching the source artwork. */
+.brand-logo {
+  position: relative;
+  display: block;
+  width: 220px;
+  aspect-ratio: 1920 / 360;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.brand-logo img {
+  position: absolute;
+  width: 106.666667%;
+  max-width: none;
+  height: auto;
+  left: -3.645833%;
+  top: -38.888889%;
+}
+.brand-logo:focus-visible { outline: 2px solid #F1A45C; outline-offset: 4px; }
+@media (max-width: 767px) {
+  header .brand-logo { width: 180px; }
+}
+@media (max-width: 380px) {
+  header .brand-logo { width: 164px; }
+}
 .photo-card { --metal-text: #F8FAFC; --metal-subtext: #E2E8F0; }
 .photo-card-overlay { background: linear-gradient(to top, #0F172A, rgb(15 23 42 / .35) 50%, transparent); }
 
@@ -141,3 +179,38 @@ html { scroll-behavior: smooth; }
   outline: 2px solid rgb(var(--brand) / .35);
   outline-offset: 2px;
 }
+
+/* Keep the contact shortcut below navigation and product image dialogs. */
+.whatsapp-float {
+  position: fixed;
+  right: calc(28px + env(safe-area-inset-right, 0px));
+  bottom: calc(28px + env(safe-area-inset-bottom, 0px));
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #25D366;
+  color: #FFFFFF;
+  box-shadow: 0 4px 16px rgb(37 211 102 / .35);
+  text-decoration: none;
+  transition: transform .2s, box-shadow .2s;
+}
+.whatsapp-float svg { flex-shrink: 0; }
+.whatsapp-float:focus-visible { outline: 3px solid #0F172A; outline-offset: 4px; }
+@media (hover: hover) {
+  .whatsapp-float:hover { transform: scale(1.1); box-shadow: 0 6px 24px rgb(37 211 102 / .5); }
+}
+@media (max-width: 640px) {
+  .whatsapp-float {
+    right: calc(16px + env(safe-area-inset-right, 0px));
+    bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .whatsapp-float { transition: none; }
+  .whatsapp-float:hover { transform: none; }
+}
+@media print { .whatsapp-float { display: none; } }

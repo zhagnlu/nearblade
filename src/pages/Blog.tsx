@@ -5,7 +5,7 @@ import { blogPosts } from "@/data/blog";
 
 export default function Blog() {
   return <>
-    <PageMeta title="Blog & Blade Guides - Rucheng Technology" description="Practical guides to industrial blade product families, custom inquiries and replacement planning." />
+    <PageMeta />
     <PageHero image="/images/heroes/blog-hero.jpg" title="Industrial Blade" accent="Insights & Guides" description="Practical ideas for product selection, custom tooling inquiries and production planning." contentId="blog-content" primaryAction={{ label: "Explore Articles", to: "#blog-content" }} secondaryAction={{ label: "Explore Products", to: "/products" }} lightOverlay />
     <section id="blog-content" className="blog-surface scroll-mt-20 py-section-mobile md:py-section">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -14,7 +14,7 @@ for (const file of fs.readdirSync(source).filter(file => file.endsWith('.html'))
     return '<section' + attrs.replace(/class="([^"]*)"/, 'class="$1 manufacturing-preview"') + '>' + content + '</section>';
   });
   html = html.replace(/<section\b([^>]*)>([\s\S]*?)<\/section>/g, (match, attrs, content) => {
-    if (!content.includes('About Rucheng Technology')) return match;
+    if (!content.includes('About Nearblade')) return match;
     return '<section' + attrs.replace(/class="([^"]*)"/, 'class="$1 home-about-preview"') + '>' + content + '</section>';
   });
   html = html.replace(/<a\b([^>]*)>([\s\S]*?)<\/a>/g, (match, attrs, content) => {

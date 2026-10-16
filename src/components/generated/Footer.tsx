@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaLinkedin, FaFacebook } from "react-icons/fa";
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaWhatsapp } from "react-icons/fa";
+import { BrandLogo } from "@/components/common/BrandLogo";
+import { contactPhone, phoneUrl, whatsappContact, whatsappUrl } from "@/data/contact";
 
 export function Footer() {
   return (
@@ -7,17 +9,9 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div>
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 bg-steel rounded-card flex items-center justify-center">
-                <span className="text-white font-bold text-lg">RC</span>
-              </div>
-              <div>
-                <p className="text-metal-text font-semibold text-sm">RUCHENG</p>
-                <p className="text-metal-subtext text-xs">TECHNOLOGY</p>
-              </div>
-            </div>
+            <BrandLogo className="mb-6" />
             <p className="text-metal-subtext text-sm leading-relaxed">
-              Nanjing Rucheng Technology Co., Ltd. Specializing in precision industrial blades and tooling for global manufacturers.
+              Nearblade specializes in precision industrial blades and tooling for global manufacturers.
             </p>
           </div>
 
@@ -48,18 +42,18 @@ export function Footer() {
             <h4 className="text-metal-text font-semibold mb-6">Products</h4>
             <ul className="space-y-3">
               {[
-                "Shear Blades",
-                "Press Brake Tooling",
-                "Rolling Shear Blades",
-                "Slitting Knives",
-                "Doctor Blades",
+                { name: "Shear Blades", category: "shear-blades" },
+                { name: "Press Brake Tooling", category: "press-brake-tooling" },
+                { name: "Rolling Shear Blades", category: "rolling-shear-blades" },
+                { name: "Slitting Knives", category: "slitting-knives" },
+                { name: "Doctor Blades", category: "doctor-blades" },
               ].map((item) => (
-                <li key={item}>
+                <li key={item.category}>
                   <Link
-                    to="/products"
+                    to={`/products?category=${item.category}`}
                     className="text-metal-subtext text-sm hover:text-steel transition-colors duration-200"
                   >
-                    {item}
+                    {item.name}
                   </Link>
                 </li>
               ))}
@@ -71,18 +65,27 @@ export function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <FaPhone className="text-steel mt-1 flex-shrink-0" size={14} />
-                <div className="text-metal-subtext text-sm">
-                  <p>+86-13813096295</p>
-                  <p>400-886-6884</p>
-                </div>
+                <a href={phoneUrl} translate="no" className="text-metal-subtext text-sm hover:text-steel transition-colors">{contactPhone.displayNumber}</a>
+              </li>
+              <li className="flex items-start gap-3">
+                <FaWhatsapp className="text-steel mt-1 flex-shrink-0" size={16} aria-hidden="true" />
+                <a
+                  href={whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-metal-subtext text-sm hover:text-steel transition-colors"
+                >
+                  WhatsApp: {whatsappContact.displayNumber}
+                  <span className="sr-only"> (opens in a new tab)</span>
+                </a>
               </li>
               <li className="flex items-start gap-3">
                 <FaEnvelope className="text-steel mt-1 flex-shrink-0" size={14} />
                 <a
-                  href="mailto:sales@ruchengmachine.com"
+                  href="mailto:info@nearblade.com"
                   className="text-metal-subtext text-sm hover:text-steel transition-colors"
                 >
-                  sales@ruchengmachine.com
+                  info@nearblade.com
                 </a>
               </li>
               <li className="flex items-start gap-3">
@@ -92,29 +95,13 @@ export function Footer() {
                 </p>
               </li>
             </ul>
-            <div className="flex items-center gap-4 mt-6">
-              <a
-                href="#"
-                className="w-9 h-9 bg-white/10 rounded-card flex items-center justify-center text-metal-subtext hover:text-steel hover:bg-white/5 transition-all duration-200"
-                aria-label="LinkedIn"
-              >
-                <FaLinkedin size={16} />
-              </a>
-              <a
-                href="#"
-                className="w-9 h-9 bg-white/10 rounded-card flex items-center justify-center text-metal-subtext hover:text-steel hover:bg-white/5 transition-all duration-200"
-                aria-label="Facebook"
-              >
-                <FaFacebook size={16} />
-              </a>
-            </div>
           </div>
         </div>
 
         <div className="mt-12 pt-8 border-t border-border">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-metal-subtext text-sm">
-              &copy; {new Date().getFullYear()} Nanjing Rucheng Technology Co., Ltd. All rights reserved.
+              &copy; {new Date().getFullYear()} Nearblade All rights reserved.
             </p>
             <p className="text-metal-subtext text-xs">
               Mon - Fri: 8:30 - 17:30 (GMT+8)

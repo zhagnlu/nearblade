@@ -6,19 +6,14 @@ import { FaArrowRight, FaIndustry, FaCogs, FaShieldAlt, FaGlobe, FaAward, FaUser
 export default function About() {
   return (
     <>
-      <PageMeta
-        title="About Us - Nanjing Rucheng Technology"
-        description="Learn about Nanjing Rucheng Technology, a leading manufacturer of precision industrial blades and tooling with over 15 years of experience."
-        keywords={["about rucheng", "industrial blade manufacturer", "china blade factory"]}
-      />
+      <PageMeta />
 
       <PageHero
-        title="About Rucheng"
-        accent="Technology"
+        title="About"
+        accent="Nearblade"
         description="A trusted partner for precision industrial blades and tooling, serving manufacturers across the globe with consistent quality and custom solutions."
         contentId="about-content"
-        image="/images/heroes/about-hero-v2.jpg"
-        lightOverlay
+        image="/images/heroes/about-hero-v3.webp"
         primaryAction={{ label: "Discover Our Story", to: "#about-content" }}
         secondaryAction={{ label: "Explore Products", to: "/products" }}
       />
@@ -30,7 +25,7 @@ export default function About() {
               <h2 className="text-2xl lg:text-h3 text-metal-text mb-6">Our Story</h2>
               <div className="space-y-4 text-metal-subtext leading-relaxed">
                 <p>
-                  Founded in Nanjing, China, Rucheng Technology has grown from a specialized blade manufacturer to a comprehensive industrial tooling solutions provider. Our journey began with a simple mission: to deliver precision cutting tools that meet the exacting standards of modern manufacturing.
+                  Founded in Nanjing, China, Nearblade has grown from a specialized blade manufacturer to a comprehensive industrial tooling solutions provider. Our journey began with a simple mission: to deliver precision cutting tools that meet the exacting standards of modern manufacturing.
                 </p>
                 <p>
                   Over the years, we have invested heavily in advanced manufacturing equipment and quality control systems. Today, our products serve customers across 8+ industries, including sheet metal fabrication, packaging, steel processing, and precision manufacturing.
@@ -44,9 +39,11 @@ export default function About() {
               <img
                 loading="lazy"
                 decoding="async"
-                src="/images/manual/factory-exterior.jpg"
-                alt="Rucheng factory"
-                className="rounded-card shadow-xl"
+                src="/images/about/blade-manufacturing-v4.webp"
+                alt="Precision-ground shear blades at a surface grinding workstation"
+                width={1536}
+                height={1024}
+                className="w-full aspect-[3/2] object-cover rounded-card shadow-xl"
               />
               <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-steel/20 rounded-card -z-10" />
             </div>
@@ -57,7 +54,7 @@ export default function About() {
       <section className="py-section-mobile md:py-section bg-industrial">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-2xl lg:text-h3 text-metal-text mb-4">Why Choose Rucheng</h2>
+            <h2 className="text-2xl lg:text-h3 text-metal-text mb-4">Why Choose Nearblade</h2>
             <p className="text-metal-subtext max-w-2xl mx-auto">
               Our competitive advantages that set us apart in the industrial blade manufacturing industry.
             </p>
@@ -118,9 +115,11 @@ export default function About() {
               <img
                 loading="lazy"
                 decoding="async"
-                src="/images/manual/production-workshop.jpg"
-                alt="Production workshop shown in the Rucheng product manual"
-                className="rounded-card shadow-xl"
+                src="/images/about/blade-inspection.webp"
+                alt="Circular slitting knife inspected with a dial indicator on a granite inspection table"
+                width={1536}
+                height={1024}
+                className="w-full aspect-[3/2] object-cover rounded-card shadow-xl"
               />
             </div>
             <div className="order-1 lg:order-2">

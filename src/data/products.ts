@@ -1,6 +1,7 @@
 export interface Product {
   id: string;
   name: string;
+  searchName?: string;
   category: string;
   description: string;
   features: string[];
@@ -19,17 +20,17 @@ export interface ProductCategory {
   products: Product[];
 }
 
-const SHEAR_BLADES_IMG = "/images/products/guillotine.png";
+const SHEAR_BLADES_IMG = "/images/products/guillotine.webp";
 
-const PRESS_BRAKE_IMG = "/images/products/press-brake.png";
+const PRESS_BRAKE_IMG = "/images/products/press-brake.webp";
 
-const ROLLING_SHEAR_IMG = "/images/products/rolling-shear.png";
+const ROLLING_SHEAR_IMG = "/images/products/rolling-shear.webp";
 
-const SLITTING_IMG = "/images/products/slitting.png";
+const SLITTING_IMG = "/images/products/slitting.webp";
 
-const TOOTHED_IMG = "/images/products/toothed.png";
+const TOOTHED_IMG = "/images/products/toothed.webp";
 
-const DOCTOR_IMG = "/images/products/doctor.png";
+const DOCTOR_IMG = "/images/products/doctor.webp";
 
 export const productCategories: ProductCategory[] = [
   {
@@ -42,7 +43,7 @@ export const productCategories: ProductCategory[] = [
         id: "sb-001",
         name: "Guillotine Shear Blades",
         category: "shear-blades",
-        description: "Precision-engineered guillotine shear blades for heavy-duty sheet metal cutting applications. Suitable for Q11 mechanical and QC12Y hydraulic shearing machines.",
+        description: "Guillotine shear blades for sheet metal cutting and replacement knife sets. Send your Q11 or QC12Y machine details, mounting-hole pattern and blade drawing for a quotation.",
         features: ["Sharp edge with wear resistance", "Clean cuts without burrs", "Up to 8 meters length", "HRC 58-62 hardness"],
         materials: ["9CrSi", "5CrW2Si", "6CrW2Si", "CrWMn", "Cr12MoV", "H13", "H13K", "W18Cr4V"],
         tolerance: "±0.003mm",
@@ -54,13 +55,13 @@ export const productCategories: ProductCategory[] = [
         id: "sb-002",
         name: "Swing Beam Shear Blades",
         category: "shear-blades",
-        description: "Durable swing beam shear blades designed for high-volume production environments with consistent cutting quality.",
+        description: "Swing beam shear blades for replacement knife sets in sheet-metal production. Confirm the machine model, mounting face and cutting-edge geometry with your drawing.",
         features: ["Long service life", "Consistent cutting quality", "Easy installation", "Precision ground edge"],
         materials: ["6CrW2Si", "Cr12MoV", "H13"],
         tolerance: "±0.003mm",
         applications: ["Metal processing centers", "Steel service centers", "Heavy plate cutting"],
-        image: "/images/products/swing-beam.png",
-        images: ["/images/products/swing-beam.png"],
+        image: "/images/products/swing-beam.webp",
+        images: ["/images/products/swing-beam.webp"],
       },
     ],
   },
@@ -73,8 +74,9 @@ export const productCategories: ProductCategory[] = [
       {
         id: "pb-001",
         name: "Standard V-Die Set",
+        searchName: "Press Brake V Dies",
         category: "press-brake-tooling",
-        description: "Versatile V-die sets for general-purpose bending applications. Includes national standard and CNC press brake tooling with custom design options.",
+        description: "Press brake V dies for sheet-metal bending, with tooling specified to your drawing. Share the V opening, working height and clamping interface for a quotation.",
         features: ["85° included angle", "Multiple V openings", "Precision ground", "Quick clamp system available"],
         materials: ["42CrMo", "Cr12MoV"],
         tolerance: "±0.01mm",
@@ -94,7 +96,7 @@ export const productCategories: ProductCategory[] = [
         id: "rs-001",
         name: "Circular Shear Blades",
         category: "rolling-shear-blades",
-        description: "Precision circular blades for rolling shear machines, ensuring smooth continuous cutting with high accuracy.",
+        description: "Circular shear blades for rolling-shear and plate-cutting applications. Request custom diameters and confirm the complete knife-set arrangement with your machine drawing.",
         features: ["Balanced rotation", "Wear-resistant edge", "Custom diameters", "High precision thickness tolerance"],
         materials: ["Cr12MoV", "H13", "SKD-11"],
         tolerance: "±0.005mm",
@@ -107,14 +109,14 @@ export const productCategories: ProductCategory[] = [
   {
     id: "slitting-knives",
     name: "Slitting Knives",
-    description: "Rotary slitting knives for precision slitting of metal coils and strip materials.",
+    description: "Rotary slitting knives for paper, film and foil converting applications.",
     image: SLITTING_IMG,
     products: [
       {
         id: "sk-001",
         name: "Rotary Slitting Knives",
         category: "slitting-knives",
-        description: "High-performance rotary knives for clean slitting of paper, film, aluminum foil, copper foil, and tape materials.",
+        description: "Rotary slitting knives, also called rotary slitter knives, for paper, film, aluminum foil, copper foil and tape. Share your drawing for a custom quotation.",
         features: ["Precision edge geometry", "Extended tool life", "Low cutting resistance", "Micron-level accuracy available"],
         materials: ["SKD-11", "SKH-51", "Cr12MoV", "W6Mo5Cr4V2", "W18Cr4V", "LD"],
         tolerance: "±0.001mm",
@@ -134,12 +136,12 @@ export const productCategories: ProductCategory[] = [
         id: "tb-001",
         name: "Corrugated Cutting Blades",
         category: "toothed-blades",
-        description: "Specialized toothed blades for corrugated board cutting including trimming knives, slotting knives, and thin blades for production lines.",
+        description: "Corrugated cutting blades for board trimming and slotting. Share the tooth profile, mounting dimensions and machine details for replacement or custom toothed blades.",
         features: ["Precision tooth profile", "Heat-treated edge", "Custom tooth counts", "Clean edge cutting"],
         materials: ["SK2", "SUS-440C", "420-J2", "TC", "SKD-11", "SKH"],
         tolerance: "±0.02mm",
         applications: ["Corrugated packaging", "Paper converting", "Packaging machinery", "Food processing machinery"],
-        image: "/images/products/toothed.png",
+        image: "/images/products/toothed.webp",
         images: [TOOTHED_IMG],
       },
     ],
@@ -154,7 +156,7 @@ export const productCategories: ProductCategory[] = [
         id: "db-001",
         name: "Lamella Doctor Blades",
         category: "doctor-blades",
-        description: "Thin steel lamella blades for precision ink metering in flexographic and gravure printing. Includes standard, combined, blue steel, stainless steel, and ceramic options.",
+        description: "Lamella doctor blades for flexographic and gravure printing, coating and ink metering. Specify the blade holder, edge profile and strip or coil delivery format.",
         features: ["Consistent ink film", "Corrosion resistant", "Long blade life", "Multiple material options"],
         materials: ["Stainless steel", "Carbon steel", "Blue steel", "Ceramic"],
         tolerance: "±0.005mm",

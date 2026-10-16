@@ -11,9 +11,7 @@ export default function Products() {
 
   useEffect(() => {
     const category = searchParams.get("category");
-    if (category) {
-      setSelectedCategory(category);
-    }
+    setSelectedCategory(productCategories.some(item => item.id === category) ? category : null);
   }, [searchParams]);
 
   const handleCategoryChange = (categoryId: string | null) => {
@@ -31,17 +29,13 @@ export default function Products() {
 
   return (
     <>
-      <PageMeta
-        title="Industrial Blades & Tooling Products - Rucheng Technology"
-        description="Browse our comprehensive range of precision industrial blades, shear blades, press brake tooling, slitting knives, and doctor blades."
-        keywords={["industrial blades", "shear blades", "press brake tooling", "slitting knives"]}
-      />
+      <PageMeta />
 
       <PageHero
         image="/images/catalog-hero.jpg"
-        title="Precision Industrial"
-        accent="Blades & Tooling Products"
-        description="Explore our comprehensive range of precision-engineered industrial blades and tooling solutions."
+        title="Industrial Blades"
+        accent="& Press Brake Tooling"
+        description="Compare industrial blades and tooling by cutting process, material and machine. Select a product to review dimensions, mounting details and quotation requirements."
         contentId="products-content"
         primaryAction={{ label: "Browse Products", to: "#products-content" }}
         secondaryAction={{ label: "Request Quote", to: "/contact" }}

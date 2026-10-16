@@ -4,6 +4,7 @@ import { PageHero } from "@/components/common/PageHero";
 import { Link } from "react-router-dom";
 import { PageMeta } from "@/components/common/PageMeta";
 import { productCategories } from "@/data/products";
+import { equipmentList, equipmentImageSize } from "@/data/equipment";
 import { StatCounter } from "@/components/generated/StatCounter";
 import { ContactForm } from "@/components/generated/ContactForm";
 import { FaArrowRight, FaIndustry, FaCogs, FaShieldAlt } from "react-icons/fa";
@@ -11,17 +12,13 @@ import { FaArrowRight, FaIndustry, FaCogs, FaShieldAlt } from "react-icons/fa";
 export default function Home() {
   return (
     <>
-      <PageMeta
-        title="Nanjing Rucheng Technology - Precision Industrial Blades & Tooling"
-        description="Leading manufacturer of high-precision industrial blades, shear blades, press brake tooling, and slitting knives for global manufacturers."
-        keywords={["industrial blades", "shear blades", "press brake tooling", "slitting knives", "precision cutting"]}
-      />
+      <PageMeta />
 
       <PageHero
         image="/images/blades-tooling-hero-v2.jpg"
-        title="Precision Industrial"
-        accent="Blades & Tooling"
-        description="High-performance cutting solutions for global manufacturers. Engineered for precision, built for durability."
+        title="Industrial Blade Manufacturer"
+        accent="& Tooling Supplier"
+        description="Custom industrial blades and press brake tooling from Nanjing, China. Send your drawing and application details to discuss materials, fit and a quotation."
         contentId="home-content"
         primaryAction={{ label: "Explore Products", to: "/products" }}
         secondaryAction={{ label: "Request Quote", to: "/contact" }}
@@ -30,7 +27,7 @@ export default function Home() {
       <section id="home-content" className="scroll-mt-20 py-section-mobile md:py-section bg-industrial-secondary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-h2 text-metal-text mb-4">Our Product Range</h2>
+            <h2 className="text-3xl lg:text-h2 text-metal-text mb-4">Industrial Blades &amp; Press Brake Tooling</h2>
             <p className="text-metal-subtext max-w-2xl mx-auto">
               Comprehensive solutions across 10+ product series, serving diverse industrial applications worldwide.
             </p>
@@ -97,28 +94,26 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              { title: "CNC Machining Centers", desc: "Precision machining and production capability", img: "/images/manual/cnc-machining-centers.jpg" },
-              { title: "Gantry Machining", desc: "Large-format manufacturing equipment", img: "/images/manual/gantry-machining.jpg" },
-              { title: "Laser Cutting Systems", desc: "Sheet metal processing facilities", img: "/images/manual/laser-cutting-workshop.jpg" },
-            ].map((item, index) => (
+            {equipmentList.slice(0, 3).map((item) => (
               <div
-                key={index}
+                key={item.id}
                 className="photo-card group relative overflow-hidden rounded-card bg-industrial-secondary border border-border"
               >
                 <div className="aspect-[4/3] overflow-hidden">
                   <img
                     loading="lazy"
                     decoding="async"
-                    src={item.img}
-                    alt={item.title}
+                    src={item.image}
+                    alt={`${item.name} — illustrative reference view`}
+                    width={equipmentImageSize.width}
+                    height={equipmentImageSize.height}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <div className="photo-card-overlay absolute inset-0" />
                 <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <h3 className="text-lg font-semibold text-metal-text mb-1">{item.title}</h3>
-                  <p className="text-metal-subtext text-sm">{item.desc}</p>
+                  <h3 className="text-lg font-semibold text-metal-text mb-1">{item.name}</h3>
+                  <p className="text-metal-subtext text-sm">{item.summary}</p>
                 </div>
               </div>
             ))}
@@ -140,7 +135,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl lg:text-h2 text-metal-text mb-6">About Rucheng Technology</h2>
+              <h2 className="text-3xl lg:text-h2 text-metal-text mb-6">About Nearblade</h2>
               <p className="text-metal-subtext mb-6 leading-relaxed">
                 Located in Nanjing, China, we specialize in manufacturing high-precision industrial blades and tooling. Our commitment to quality and innovation has made us a trusted supplier for manufacturers across 8+ industries worldwide.
               </p>
@@ -170,16 +165,18 @@ export default function Home() {
               </Link>
             </div>
 
-            <div className="relative">
+            <div className="relative isolate">
               <img
                 loading="lazy"
                 decoding="async"
-                src="/images/manual/factory-exterior.jpg"
-                alt="Rucheng factory"
-                className="rounded-card shadow-2xl"
+                src="/images/about/blade-manufacturing-v4.webp"
+                alt="Precision shear blades and a technician at a surface grinding workstation"
+                width={1536}
+                height={1024}
+                className="w-full aspect-[3/2] object-cover rounded-card shadow-2xl"
               />
-              <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-steel/10 rounded-card -z-10" />
-              <div className="absolute -top-6 -right-6 w-24 h-24 border-2 border-steel/20 rounded-card -z-10" />
+              <div aria-hidden="true" className="absolute bottom-0 left-0 sm:-bottom-6 sm:-left-6 w-32 h-32 bg-steel/10 rounded-card -z-10" />
+              <div aria-hidden="true" className="absolute top-0 right-0 sm:-top-6 sm:-right-6 w-24 h-24 border-2 border-steel/20 rounded-card -z-10" />
             </div>
           </div>
         </div>

@@ -1,0 +1,18 @@
+{
+  "reviewedOn": "2026-10-16",
+  "market": "English-language industrial procurement",
+  "method": "Public search-result review, manufacturer terminology and the existing Nearblade catalog. Search intent and keyword grouping are editorial judgments; no paid search-volume, difficulty, ranking or conversion data was available.",
+  "scope": "The 16 existing English canonical pages. The language selector does not create independent multilingual SEO routes.",
+  "sources": [
+    { "url": "https://developers.google.com/search/docs/appearance/title-link", "use": "Distinct, descriptive titles aligned with visible page content; avoid stuffing." },
+    { "url": "https://developers.google.com/search/docs/appearance/snippet", "use": "Page-specific descriptions matching the actual content." },
+    { "url": "https://developers.google.com/search/docs/crawling-indexing/special-tags", "use": "Google does not use meta keywords for indexing or ranking." },
+    { "url": "https://tyzack.com/guillotine-shear-blades/", "use": "Guillotine shear blade terminology." },
+    { "url": "https://www.maxwellslitters.com/shearing-blades/", "use": "Shear knife and replacement product terminology; no competitor capability claims transferred." },
+    { "url": "https://krumarknives.com/industrial-knives/rotary-slitter-knives/", "use": "Rotary slitter knife terminology." },
+    { "url": "https://www.baucor.com/collections/circular-slitter-blades-rotary-slitting-knives", "use": "Circular slitter blade and custom drawing terminology." },
+    { "url": "https://supertechblades.com/", "use": "Lamella doctor blade and printing application terminology." },
+    { "url": "https://camttooling.com/products/press-brake-tooling/press-brake-dies/v-dies/", "use": "Press brake V-die and custom tooling terminology." },
+    { "url": "https://www.dkeblade.com/", "use": "Corrugated cutting and slotting blade terminology." }
+  ]
+}

@@ -1,15 +1,23 @@
 {
-  "name": "rucheng-industrial-blades",
+  "name": "nearblade-industrial-blades",
   "version": "1.0.0",
   "private": true,
   "type": "module",
+  "engines": {
+    "node": ">=22.13.0"
+  },
   "scripts": {
     "dev": "node node_modules/vite/bin/vite.js --host 127.0.0.1",
-    "build": "tsc --noEmit && vite build",
+    "build": "tsc --noEmit && node scripts/check-locales.mjs && vite build && node scripts/build-seo.mjs",
     "preview": "vite preview --host 127.0.0.1",
+    "test": "npm run build && node --test tests/*.test.mjs",
     "build:ecs": "node scripts/build-ecs.mjs",
     "publish:ecs": "node scripts/publish-ecs.mjs",
-    "test:ecs": "node --test tests/ecs-publication.test.mjs"
+    "test:ecs": "node --test tests/ecs-publication.test.mjs",
+    "test:site": "node --test tests/site-publication.test.mjs",
+    "i18n:extract": "node scripts/extract-locales.mjs",
+    "i18n:build": "node scripts/check-locales.mjs",
+    "test:i18n": "node --test tests/i18n.test.mjs"
   },
   "dependencies": {
     "react": "18.3.1",

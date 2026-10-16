@@ -4,17 +4,18 @@
 
 ```text
 开发分支修改源码 → git commit
-  → npm run build:ecs（TypeScript 检查 + Vite 编译）
+  → npm run build:ecs（npm test：构建 + SEO / 多语言 / 发布流程检查）
   → npm run preview（浏览器检查 dist/）
   → npm run publish:ecs（静态产物提交并推送到 push_remote）
   → GitHub Actions（SSH + rsync）→ ECS → Nginx
 ```
 
-与 `nearfastener` 使用相同的开发/发布分支模式，本项目直接使用 Vite 的 `dist/`。服务器无需 Node.js、npm 或源码。发布分支根目录包含 `index.html`、`assets/`、`images/` 和 `.github/workflows/deploy-ecs.yml`，不包含 `dist/` 外层目录、源码或构建标记。
+与 `nearfastener` 使用相同的开发/发布分支模式和构建测试入口，本项目直接使用 Vite 的 `dist/`，无需该参考站的 Next 静态导出步骤。服务器无需 Node.js、npm 或源码。发布分支根目录包含 `index.html`、各路由的 `index.html`、`404.html`、`assets/`、`images/`、`locales/`、`sitemap.xml`、`robots.txt` 和 `.github/workflows/deploy-ecs.yml`，不包含 `dist/` 外层目录、源码或构建标记。
 
 开发和发布都从 `main` 或其他开发分支执行，不要切换到 `push_remote` 开发或将源码分支合并进去。开发分支按平常方式提交、推送；只推送开发分支不会部署。
 
 ```bash
+# 本机构建使用 Node.js >=22.13.0；ECS 不需要 Node.js
 npm ci
 # 修改源码，检查并 git commit 后：
 npm run build:ecs
@@ -24,7 +25,9 @@ npm run publish:ecs -- --dry-run
 npm run publish:ecs
 ```
 
-构建与发布前要求工作区干净。构建成功记录对应源码 commit；源码提交改变后必须重新构建和预览。普通 `npm run build` 不生成 ECS 构建标记。不要手工编辑 `dist/`；标记核对源码提交，不校验后来手改的产物。
+`npm test` 可在开发工作区执行，会先构建，再运行站点、语言包和发布流程测试。`build:ecs` 调用相同入口，但要求构建前后工作区均干净，且开发 commit 在整个过程中不变；只有全部检查通过才生成发布标记。构建或测试失败会使旧标记失效。构建成功记录对应源码 commit；源码提交改变后必须重新构建和预览。普通 `npm run build`、`npm test` 不生成 ECS 构建标记。不要手工编辑 `dist/`；标记核对源码提交，不校验后来手改的产物。
+
+图片、页面内容、语言源文件及生成的 `public/locales/` 均属于网站源码，应一并审核提交。测试截图和浏览器缓存位于已忽略的 `output/`、`.playwright-cli/`，不会影响干净工作区检查。
 
 发布使用独立临时 Git 仓库，不修改当前开发分支。第一次自动创建远程 `push_remote`，之后保留发布历史并移除过时文件。没有产物变化时不创建提交；不使用强制推送，远程并发修改会导致推送拒绝。`--dry-run` 仍读取远程分支和准备本地发布提交，但不推送、不触发部署。
 
@@ -48,7 +51,7 @@ sudo chmod 755 /var/www/nearblade
 
 只对本网站目录授权；目录中已有文件会被发布覆盖或清理。部署用户不需要 sudo。ECS 安全组及系统防火墙需允许 SSH 和网站 HTTP/HTTPS 端口。
 
-Nginx 站点配置示例，将 `example.com` 换成实际域名，已有 HTTPS 配置保持原有证书设置：
+Nginx 站点配置示例，将 `example.com` 换成实际域名，已有 HTTPS 配置保持原有证书设置。可直接参考仓库内的 [deploy/nginx.conf.example](../deploy/nginx.conf.example)，该模板默认对应 `site.config.json` 的 `www.nearblade.com` 和 `/var/www/nearblade`，沿用线上从裸域名到 `www` 的跳转：
 
 ```nginx
 server {
@@ -57,8 +60,14 @@ server {
     root /var/www/nearblade;
     index index.html;
 
+    # build-seo.mjs generates an HTML entry for every public route.
     location / {
-        try_files $uri $uri/ /index.html;
+        try_files $uri/index.html $uri =404;
+    }
+
+    error_page 404 /404.html;
+    location = /404.html {
+        internal;
     }
 
     location /assets/ {
@@ -68,10 +77,16 @@ server {
     location /images/ {
         try_files $uri =404;
     }
+
+    location /locales/ {
+        try_files $uri =404;
+    }
 }
 ```
 
-本项目使用 React Router，`/products/:id`、`/blog/:slug` 等页面直接访问或刷新时必须回退到 `index.html`。不能照搬 `nearfastener` 页面路由的 `=404` 配置。静态资源缺失则返回 404。
+构建为 16 条公开路由生成独立 HTML 入口，包含对应的 canonical、分享信息及 JSON-LD，正文由 React Router 渲染。上述规则优先读取路由入口（例如 `/products/sb-001/index.html`），未知路由返回带 noindex 的 404 页面并保留 HTTP 404 状态。已有站点若仍使用回退到根 `index.html` 的配置，需同步更新 Nginx，才能让直接访问不同页面时获得各自的初始元数据。
+
+部署前核对根目录 `site.config.json` 的正式域名，再执行构建。`dist/sitemap.xml` 和 `dist/robots.txt` 随产物一起发布；没有编造页面修改日期或产品价格。
 
 ```bash
 sudo nginx -t
@@ -132,9 +147,9 @@ workflow 只响应 `push_remote` 推送，手动 Run workflow 也必须选择该
 | Permission denied (publickey) | 用户、私钥及 authorized_keys 是否匹配 |
 | Host key verification failed | known_hosts 主机、公钥、端口是否一致 |
 | rsync 权限错误 | 部署用户是否能修改整个站点目录 |
-| 刷新详情页 404 | Nginx 是否回退到 /index.html |
+| 刷新详情页 404 | 发布产物是否包含该路由的 index.html，Nginx 是否优先读取 $uri/index.html |
 | workflow 未执行 | 是否推送 push_remote，且该分支包含 workflow |
 
-`npm run test:ecs` 使用临时本地仓库验证发布隔离、构建提交检查、首次发布、更新、清理旧产物及 dry-run，不连接真实 ECS。
+`npm run test:ecs` 使用临时本地仓库验证完整构建测试入口、失败标记清理、构建中提交变化、发布隔离、首次发布、更新、清理旧产物，以及 SEO 页面和语言包的静态发布，不连接真实 ECS。
 
-当前询价表单仍为演示交互，部署不会自动增加邮件或后台 API。
+当前询价表单通过 `mailto:` 打开访客的邮件应用并准备询盘，由访客核对发送；电话及 WhatsApp 共用 `src/data/contact.ts` 中的号码。ECS 不需要报价 API，部署也不会增加后台邮件服务。

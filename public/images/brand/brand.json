@@ -1,0 +1,16 @@
+{
+  "brand": "Nearblade",
+  "logo": "nearblade-logo.png",
+  "favicon": "/favicon.svg",
+  "tool": "Built-in image_gen",
+  "reference": "nearfastener horizontal monogram and lowercase wordmark, copper accent and white lettering on navy",
+  "source": "exec-079764ec-60e1-4fb8-9a96-009f84e80f7f.png",
+  "prompt": "Final production website logo, extremely clean flat vector graphics, horizontal 3:1 canvas. Background is uniform solid dark navy #0F172A. Left emblem: angular NB monogram, copper-orange (#C87320) N interlocked with off-white (#F8FAFC) B, crisp solid geometric shapes with industrial blade-like slanted corners. Right wordmark exact text 'nearblade' in lowercase, bold modern geometric sans-serif, solid off-white (#F8FAFC). A clear small gap separates the emblem from the wordmark. Emblem around 1.4x text height. Balanced compact horizontal lockup, fills canvas width with small even margins. This is precise flat vector-like brand artwork, NO distressed texture, NO transparency, NO dirt, NO speckles, NO gradients, NO shadows, NO 3D, NO extra symbols, NO tagline, NO mockup. All strokes and edges mathematically crisp and solid. Background #0F172A everywhere except the logo itself. Output final polished NB nearblade logo only.",
+  "usage": "Shared BrandLogo component in header/footer; CSS crops source margins without distortion. Favicon is a simplified SVG of the NB mark for small browser tabs.",
+  "webAsset": "/images/brand/nearblade-logo.webp",
+  "optimization": {
+    "tool": "cwebp",
+    "quality": 88,
+    "bytes": 28964
+  }
+}

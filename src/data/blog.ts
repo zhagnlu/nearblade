@@ -5,17 +5,19 @@ export interface BlogPost {
   excerpt: string;
   image: string;
   productId: string;
+  relatedProductIds: string[];
   sections: { heading: string; paragraphs: string[] }[];
 }
 
 export const blogPosts: BlogPost[] = [
   {
     slug: "custom-blade-inquiry-guide",
-    title: "What to Include in a Custom Blade Inquiry",
+    title: "Custom Industrial Blade Quote: What to Include",
     category: "Buying Guide",
     excerpt: "Prepare the application details, drawings and quantities that help a supplier understand your blade requirements.",
-    image: "/images/products/guillotine.png",
+    image: "/images/products/guillotine.webp",
     productId: "sb-001",
+    relatedProductIds: ["sb-001", "pb-001", "sk-001"],
     sections: [
       { heading: "Start with the application", paragraphs: ["Describe the material being cut and the machine on which the blade will be used. Include the machine manufacturer and model when available. A replacement part number can provide context, but a drawing or clear photographs help communicate the actual component.", "Explain what you want to improve: replacement availability, cut appearance, installation fit or maintenance planning. Giving that context makes the conversation more useful than requesting a material grade alone."] },
       { heading: "Make the geometry clear", paragraphs: ["Provide a dimensioned drawing showing the overall size, mounting holes, slots and cutting-edge profile. If you only have a sample, photograph both faces and the edge, and identify which dimensions are known and which still need confirmation.", "Mark the drawing revision and units. For a set of upper and lower knives, identify each component separately. Website illustrations describe a product family; they should not be used as manufacturing drawings."] },
@@ -25,11 +27,12 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "blade-product-families",
-    title: "A Guide to Our Industrial Blade Product Families",
+    title: "Types of Industrial Blades: Shear, Slitter & Doctor Blades",
     category: "Product Guide",
     excerpt: "Explore the differences between straight shear blades, circular knives, toothed blades and doctor blades in our catalog.",
-    image: "/images/products/slitting.png",
+    image: "/images/products/slitting.webp",
     productId: "sk-001",
+    relatedProductIds: ["sb-001", "sb-002", "rs-001", "sk-001", "tb-001", "db-001", "pb-001"],
     sections: [
       { heading: "Straight shear blades", paragraphs: ["Our shear-blade range includes guillotine and swing-beam knife sets for sheet-metal shearing applications. The long rectangular profile is only a starting point: mounting details, edge geometry and machine compatibility need to be confirmed for each order."] },
       { heading: "Circular shear and slitting knives", paragraphs: ["The catalog groups circular shear blades and rotary slitting knives separately. Both have circular forms, but their intended applications and specified geometry differ. Compare the relevant product information and send your drawing rather than selecting a knife by appearance alone."] },
@@ -39,11 +42,12 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "blade-replacement-planning",
-    title: "Planning Blade Replacements for Your Production Line",
+    title: "Industrial Blade Replacement Planning for Production Lines",
     category: "Operations",
     excerpt: "Organize part records, drawing revisions and spare quantities to make replacement purchasing more predictable.",
-    image: "/images/products/swing-beam.png",
+    image: "/images/products/swing-beam.webp",
     productId: "sb-002",
+    relatedProductIds: ["sb-001", "sb-002"],
     sections: [
       { heading: "Build a clear part record", paragraphs: ["Create a record for each blade position on a machine. Include the equipment model, internal part number, approved drawing revision and supplier reference. Label the components of a matched set so purchasing and maintenance teams can identify them consistently."] },
       { heading: "Keep a history of replacements", paragraphs: ["Record when a replacement was installed, the application it served and why it was replaced. This history gives the team a practical basis for discussing spare quantities and purchasing schedules.", "Avoid treating one replacement interval as a universal rule. Operating conditions and machine requirements should remain part of the discussion with your equipment and blade suppliers."] },
