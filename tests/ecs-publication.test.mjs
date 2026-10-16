@@ -16,6 +16,8 @@ test('ECS preflight identifies missing rsync and directory failures without need
   const bin = join(temp, 'bin');
   mkdirSync(bin);
   writeFileSync(join(bin, 'rsync'), '#!/bin/sh\nexit 0\n', { mode: 0o755 });
+  // Tests never invoke the host machine's sudo.
+  writeFileSync(join(bin, 'sudo'), '#!/bin/sh\nexit 1\n', { mode: 0o755 });
   const run = (target, path = `${bin}:/usr/bin:/bin`) => spawnSync('/bin/sh', ['-s', '--', target], { input: script, encoding: 'utf8', env: { ...process.env, PATH: path } });
   const target = join(temp, 'website');
   assert.equal(run(target).status, 0);
@@ -30,6 +32,11 @@ test('ECS preflight identifies missing rsync and directory failures without need
   if (process.getuid?.() !== 0) {
     chmodSync(target, 0o555);
     try {
+      const repaired = run(target);
+      assert.equal(repaired.status, 0, repaired.stderr);
+      assert.match(repaired.stdout, /Website directory write access restored/);
+      chmodSync(target, 0o555);
+      writeFileSync(join(bin, 'chmod'), '#!/bin/sh\nexit 1\n', { mode: 0o755 });
       const readOnly = run(target);
       assert.notEqual(readOnly.status, 0);
       assert.match(readOnly.stdout, /::error::ECS_USER cannot write to ECS_DEPLOY_PATH/);

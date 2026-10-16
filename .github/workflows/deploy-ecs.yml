@@ -81,8 +81,19 @@ jobs:
             exit 1
           fi
           if ! test -w "$deploy_path"; then
-            echo '::error::ECS_USER cannot write to ECS_DEPLOY_PATH. Grant the deployment user write access to this website directory.'
-            exit 1
+            # Repair only the dedicated website directory, never its parent or sibling sites.
+            if test -O "$deploy_path"; then
+              chmod u+rwx "$deploy_path" || true
+            elif command -v sudo >/dev/null 2>&1; then
+              if sudo -n chown "$(id -u):$(id -g)" "$deploy_path"; then
+                chmod u+rwx "$deploy_path" || true
+              fi
+            fi
+            if ! test -w "$deploy_path"; then
+              echo '::error::ECS_USER cannot write to ECS_DEPLOY_PATH and automatic directory repair is unavailable. An ECS administrator must grant the configured deployment user write access to this website directory.'
+              exit 1
+            fi
+            echo 'Website directory write access restored.'
           fi
           REMOTE
           then
