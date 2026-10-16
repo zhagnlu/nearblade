@@ -64,8 +64,33 @@ jobs:
           echo 'SSH private key format validated; connecting to ECS.'
           ssh_options=(-i "$ssh_dir/key" -p "$ECS_PORT" -o BatchMode=yes -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes -o "UserKnownHostsFile=$ssh_dir/known_hosts" -o ConnectTimeout=20 -o ServerAliveInterval=15)
           target="$ECS_USER@$ECS_HOST"
-          test -s index.html
-          ssh "${ssh_options[@]}" "$target" "mkdir -p '$ECS_DEPLOY_PATH' && test -w '$ECS_DEPLOY_PATH' && command -v rsync >/dev/null"
+          if [[ ! -s index.html ]]; then
+            echo '::error::Published index.html is missing or empty.'
+            exit 1
+          fi
+          if ssh "${ssh_options[@]}" "$target" "sh -s -- '$ECS_DEPLOY_PATH'" <<'REMOTE'
+          set -eu
+          deploy_path="$1"
+          echo 'SSH login succeeded; checking ECS prerequisites.'
+          if ! command -v rsync >/dev/null 2>&1; then
+            echo '::error::ECS is missing rsync in the deployment user PATH. Install rsync on ECS before deployment.'
+            exit 1
+          fi
+          if ! mkdir -p "$deploy_path"; then
+            echo '::error::ECS_USER cannot create ECS_DEPLOY_PATH. Create the website directory and grant the deployment user access.'
+            exit 1
+          fi
+          if ! test -w "$deploy_path"; then
+            echo '::error::ECS_USER cannot write to ECS_DEPLOY_PATH. Grant the deployment user write access to this website directory.'
+            exit 1
+          fi
+          REMOTE
+          then
+            echo 'ECS directory and rsync checks passed.'
+          else
+            echo '::error::ECS connection or prerequisite check failed. See the preceding SSH or server error.'
+            exit 1
+          fi
           # Delete obsolete website files only inside the dedicated deployment root.
           # Infrastructure files stay on ECS; Git and workflow files are never uploaded.
           rsync -rlptz --delete-delay --chmod=D755,F644 \
