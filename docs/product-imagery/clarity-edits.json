@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-17",
+  "tool": "built-in image_gen",
+  "status": "local-preview-not-published",
+  "note": "AI clarity edits of supplier reference images. Original source files retained. Enhanced surface details are not additional evidence of actual machining or specification. Requested dimensions are prompts; use actual output dimensions recorded separately.",
+  "images": [
+    {
+      "name": "hero",
+      "generatedSource": "/Users/zhanglu/.codex/generated_images/01a14896-4e7a-7da2-8180-dc6bba55511d/exec-ab3fda0b-4a7c-4f2c-96ce-7c44eb5679fe.png",
+      "prompt": "Use case: precise-object-edit. Asset type: full-width website hero photograph. Edit the input photo conservatively for clarity. Keep exactly the same two long parallel steel shear blades, every original mounting hole and original position, dimensions, perspective, bevel widths and end geometry. Improve photographic edge clarity and restrained local contrast; keep the original metal finish, no invented scratches or machining patterns. Replace only the transparency with a uniform very light neutral gray studio background (#e9ecef), seamless to all edges. NO alpha, no transparency, no halo or rough cutout edges. Keep the entire two-blade set visible and in the same diagonal orientation. Landscape canvas ideally 3072 x 1728, use extra background at left/right to reach 16:9 rather than stretching or changing the blades. No text, watermark or brand. This is an edited supplier reference photograph, not a new product design.",
+      "output": "/images/products/photo-pilot/guillotine-hero-clear-v2.webp",
+      "width": 1672,
+      "height": 941,
+      "bytes": 74264
+    },
+    {
+      "name": "three",
+      "generatedSource": "/Users/zhanglu/.codex/generated_images/01a14896-4e7a-7da2-8180-dc6bba55511d/exec-c461ae7c-2dc1-42f0-a8e9-95057c9a84f3.png",
+      "prompt": "Conservative photographic clarity enhancement of the provided THREE parallel steel guillotine shear blades. Preserve exactly three blades, original hole counts, hole positions, dimensions, orientation, bevels, thickness, framing and perspective. Sharpen existing visible edge lines and bore rims naturally; improve clarity of existing steel texture without inventing new geometry or finish. No added holes, slots, engraving, brands, text or watermark. No halos, no painterly texture, no excessive noise or plastic smoothing. Preserve original transparent background and composition. High resolution ideally 3840x2880, 4:3. Final presentation: use an opaque light neutral gray studio background, not transparency. Remove all fragile cutout halo artifacts; natural clean edges. Preserve exact original THREE blades and hole counts. Do not change product geometry. Output landscape 4:3.",
+      "output": "/images/products/photo-pilot/guillotine-three-clear-v2.webp",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 151066
+    },
+    {
+      "name": "overview",
+      "generatedSource": "/Users/zhanglu/.codex/generated_images/01a14896-4e7a-7da2-8180-dc6bba55511d/exec-0ad8859d-86c9-4141-ac10-6159e0a0224c.png",
+      "prompt": "Conservative high-resolution clarity edit of this EXACT product photograph: three shear blades, two flat silver rectangular blades and one darker channel/profile blade, on white. Preserve EXACTLY three blades and all existing mounting holes and their counts and locations, proportions, angles, perspective, edge geometry, material colors, framing and spacing. Enhance existing surface and bore rim sharpness naturally and reduce compression softness. No new machining marks or geometry, no new blades/holes, no text, watermark, logo or props. White background unchanged. Avoid halos, crunchy edges, plastic smoothing and artistic reinterpretation. Output ideally 3072x3072, square. Preserve photographic appearance.",
+      "output": "/images/products/photo-pilot/guillotine-overview-clear-v2.webp",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 89908
+    }
+  ]
+}

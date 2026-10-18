@@ -1,0 +1,42 @@
+[
+  {
+    "id": "rs-overview-white-v2",
+    "src": "research/alibaba/rs-001/rs-001-sego-01.png",
+    "subject": "exactly the THREE overlapping thick circular shear knives and their original bore keyways",
+    "prompt": "Use case: precise-object-edit. Target: exactly the THREE overlapping thick circular shear knives and their original bore keyways. Reframe into a horizontal 3:2 white-background product photograph. Remove excessive empty margins; center complete product to fill 80 percent of image width while leaving generous border. Retain product geometry, count, perspective, notches, bores, grooves, exact silhouette, relative proportions and realistic machining. Neutralize green color casts; naturally bright silver steel, increase modest clarity of existing edges, no artificial shiny chrome. Background PURE WHITE #ffffff at every corner and through open holes, subtle tight contact shadow only. No text, logos, watermarks, gray backdrop, extra items, duplication, redesigned features or plastic CGI smoothness.",
+    "path": "/Users/zhanglu/.codex/generated_images/01a14896-4e7a-7da2-8180-dc6bba55511d/exec-eae6c2da-337f-478d-abe1-e7a95468db21.png",
+    "tool": "built-in image_gen",
+    "decision": "Rejected: generated image adds visible keyways not evidenced by original; retain native photograph with CSS framing.",
+    "actualDimensions": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "rs-single-white-v2",
+    "src": "research/alibaba/rs-001/rs-001-sego-02.png",
+    "subject": "exactly this ONE thick circular shear knife with its single rectangular bore keyway",
+    "prompt": "Use case: precise-object-edit. Target: exactly this ONE thick circular shear knife with its single rectangular bore keyway. Reframe into a horizontal 3:2 white-background product photograph. Remove excessive empty margins; center complete product to fill 80 percent of image width while leaving generous border. Retain product geometry, count, perspective, notches, bores, grooves, exact silhouette, relative proportions and realistic machining. Neutralize green color casts; naturally bright silver steel, increase modest clarity of existing edges, no artificial shiny chrome. Background PURE WHITE #ffffff at every corner and through open holes, subtle tight contact shadow only. No text, logos, watermarks, gray backdrop, extra items, duplication, redesigned features or plastic CGI smoothness.",
+    "path": "/Users/zhanglu/.codex/generated_images/01a14896-4e7a-7da2-8180-dc6bba55511d/exec-d65e984c-49b0-4953-bc15-50a575f6cf7f.png",
+    "tool": "built-in image_gen",
+    "decision": "Not selected: prefer native photograph consistency.",
+    "actualDimensions": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "pb-overview-white-v2",
+    "src": "research/alibaba/pb-001/pb-001-prima-01.png",
+    "subject": "exactly these FOUR long steel multi-V die blocks stacked two by two with the same front section openings and all side V grooves",
+    "prompt": "Use case: precise-object-edit. Target: exactly these FOUR long steel multi-V die blocks stacked two by two with the same front section openings and all side V grooves. Reframe into a horizontal 3:2 white-background product photograph. Remove excessive empty margins; center complete product to fill 80 percent of image width while leaving generous border. Retain product geometry, count, perspective, notches, bores, grooves, exact silhouette, relative proportions and realistic machining. Neutralize green color casts; naturally bright silver steel, increase modest clarity of existing edges, no artificial shiny chrome. Background PURE WHITE #ffffff at every corner and through open holes, subtle tight contact shadow only. No text, logos, watermarks, gray backdrop, extra items, duplication, redesigned features or plastic CGI smoothness.",
+    "path": "/Users/zhanglu/.codex/generated_images/01a14896-4e7a-7da2-8180-dc6bba55511d/exec-bb2b7bab-da5f-40cb-8009-8af673214e15.png",
+    "tool": "built-in image_gen",
+    "decision": "Selected: preserves four-block arrangement and front profile; edited texture, not recovered facts.",
+    "actualDimensions": [
+      1536,
+      1024
+    ],
+    "output": "public/images/products/category-photos/pb-overview-white-v2.webp"
+  }
+]

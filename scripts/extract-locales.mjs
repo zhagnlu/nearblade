@@ -17,7 +17,7 @@ const decode = text => text.replace(/&(#x[\da-f]+|#\d+|amp|lt|gt|quot|apos);/gi,
 
 export async function collectMessages() {
   const bundle = path.join(root, 'scripts/.i18n-routes.cjs');
-  const messages = new Set(['Language', 'Loading language…', 'Language could not be loaded. Please try again.', 'Close', 'Catalog reference · Product-family examples', 'Your email draft is ready. Send it from your email app. Your details remain here for editing.', 'If your email app did not open,', 'open the draft again', ', or email', 'with your requirements.', 'Go to image 1', 'Go to image 2']);
+  const messages = new Set(['Language', 'Loading language…', 'Language could not be loaded. Please try again.', 'Close', 'Your email draft is ready. Send it from your email app. Your details remain here for editing.', 'If your email app did not open,', 'open the draft again', ', or email', 'with your requirements.', 'Go to image 1', 'Go to image 2']);
   const originalError = console.error;
   try {
     await build({ stdin: { contents: "export { routes } from './src/routes'; export { getAllProducts } from './src/data/products'; export { blogPosts } from './src/data/blog';", resolveDir: root, loader: 'ts' }, bundle: true, platform: 'node', format: 'cjs', packages: 'external', alias: { '@': path.join(root, 'src') }, outfile: bundle });
@@ -34,7 +34,7 @@ export async function collectMessages() {
       } finally { router.dispose(); }
     }
     for (const product of getAllProducts()) {
-      for (const value of [`${product.name} catalog reference`, `${product.name} enlarged image`, `${product.name} - View 1`, `${product.name} - View 2`]) add(value);
+      for (const value of [`${product.name} enlarged image`, `${product.name} - View 1`, `${product.name} - View 2`]) add(value);
     }
     return [...messages].sort();
   } finally {

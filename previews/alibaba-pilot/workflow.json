@@ -1,0 +1,150 @@
+{
+  "date": "2026-10-17",
+  "status": "local-reference-preview",
+  "productId": "sb-001",
+  "source": {
+    "url": "https://www.alibaba.com/product-detail/Industrial-H13-SKD61-1100-100-25_1601006824568.html",
+    "supplier": "Nanjing Ouwei Machinery Technology Co., Ltd. / Anhui Huatian Mechanic Co., Ltd.",
+    "method": "Existing signed-in desktop Chrome → compare five shops → inspect product page and public original-image links → open original in Chrome → native Save. Full-page saves stalled at 97%; direct-image saves completed.",
+    "imageStatus": "Three originally unbranded supplier product images selected. No watermark removal, AI generation, upscaling or pixel editing performed. Supplier provenance remains in this manifest."
+  },
+  "workflow": [
+    "Use the existing normal browser session. Search with the product keyword below.",
+    "Open a matching blade product, excluding complete machines and unrelated paper-cutting tools. If sign-in or verification appears, let the user complete it.",
+    "Inspect the gallery and description. Open public original-image links in the normal browser and save the individual files. Whole-page saving can remain stuck on unrelated resources; use individual images when that happens.",
+    "Confirm the individual image download completed, verify file type and actual pixel dimensions, then inspect its content. Alibaba can serve AVIF despite a URL ending in .png; use the actual file format extension.",
+    "Keep raw account-specific snapshots local and ignored by Git. Copy only selected original images to the preview images directory.",
+    "Record supplier, canonical product URL, actual pixel dimensions, sharpness check, branding check, decision and specification discrepancies for every candidate.",
+    "Compare at least five shops, inspect native image quality and reject branded/watermarked final candidates. Prefer genuinely unbranded original photographs; choose an overview plus complementary edge and mounting views.",
+    "Rewrite detail content around application, dimensions, material selection, fit, inspection and packaging questions. Never import another supplier’s certification, delivery time, warranty or test claims.",
+    "Build a local preview, verify images and responsive layout. Substitute own or licensed photographs and confirm product specifications before using these as branded product assets."
+  ],
+  "searches": {
+    "sb-001": "guillotine shear blade sheet metal",
+    "sb-002": "swing beam shear blade QC12Y",
+    "pb-001": "press brake V die tooling",
+    "rs-001": "metal rolling shear circular blade",
+    "sk-001": "rotary slitting knife paper film foil",
+    "tb-001": "corrugated cardboard serrated cutting blade",
+    "db-001": "lamella doctor blade gravure flexographic"
+  },
+  "images": [
+    {
+      "file": "images/ouwei-overview-v2.jpg",
+      "width": 1000,
+      "height": 1000,
+      "format": "system-detected",
+      "bytes": 91660,
+      "sha256": "07f6fbbde82dd77abd644359ce21e73ebe072de9fdb249d87028451be8dbac2e",
+      "resolution": "conditional: inspect at 100%, content width up to 600 px",
+      "sharpness": "At native-size browser inspection, grinding texture, darker blade face and hole countersinks remain distinguishable. Suitable for the roughly 600 px preview stage.",
+      "branding": "No visible logo, brand name, domain watermark or promotional text found in browser inspection.",
+      "approved": true,
+      "original": "H9d8c5777998d4017a592439708e7af90P.jpg",
+      "originalUrl": "https://sc04.alicdn.com/kf/H9d8c5777998d4017a592439708e7af90P.jpg",
+      "supplier": "Ouwei",
+      "approvalScope": "Local product-photo preview only",
+      "processing": "None; Huatian files served as AVIF and saved using the correct .avif extension."
+    },
+    {
+      "file": "images/huatian-three-v2.avif",
+      "width": 1440,
+      "height": 1080,
+      "format": "avif",
+      "bytes": 35028,
+      "sha256": "ed858b408d14ff8d4b52e8f1234fd3b9a7ea6a1077da8c0f3742220775ac87dd",
+      "resolution": "preferred",
+      "sharpness": "Native 1440 px; clean background with strong retouching/smoothing. Keep as a supplementary product view, not evidence of an unretouched factory photograph.",
+      "branding": "No visible logo, brand name, domain watermark or promotional text found in browser inspection.",
+      "approved": true,
+      "original": "Ha535efb613ea4550ab4c4640c258076ae.png",
+      "originalUrl": "https://sc04.alicdn.com/kf/Ha535efb613ea4550ab4c4640c258076ae.png",
+      "supplier": "Huatian",
+      "approvalScope": "Local product-photo preview only",
+      "processing": "None; Huatian files served as AVIF and saved using the correct .avif extension."
+    },
+    {
+      "file": "images/huatian-pair-v2.avif",
+      "width": 1440,
+      "height": 1080,
+      "format": "avif",
+      "bytes": 41614,
+      "sha256": "32c2ba43cc8804e9fd20bebeace9310ee1ebc857d66b18c339d99ec77e3ab494",
+      "resolution": "preferred",
+      "sharpness": "Native 1440 px; visible bright edge, holes and paired blades. Strong background/lighting retouching; supplementary product view.",
+      "branding": "No visible logo, brand name, domain watermark or promotional text found in browser inspection.",
+      "approved": true,
+      "original": "H54dfd53f74fe49b1ba757c6261dfec94T.png",
+      "originalUrl": "https://sc04.alicdn.com/kf/H54dfd53f74fe49b1ba757c6261dfec94T.png",
+      "supplier": "Huatian",
+      "approvalScope": "Local product-photo preview only",
+      "processing": "None; Huatian files served as AVIF and saved using the correct .avif extension."
+    }
+  ],
+  "contentAudit": {
+    "referenceOnly": [
+      "Supplier hardness HRC 56–65 conflicts with current catalog HRC 58–62; do not merge.",
+      "Supplier description includes printing/food/textile applications; too broad for this sheet-metal product.",
+      "15-day lead time, 3-month warranty, supplier brand and service claims omitted."
+    ],
+    "detailAdditions": [
+      "Distinguish blade geometry and mounting holes.",
+      "Collect sheet material/thickness and upper/lower blade position.",
+      "Make hardness, inspection documents, edge protection and packaging quotation-confirmation items."
+    ]
+  },
+  "qualityGate": {
+    "searchCoverage": "Compare at least 5 different shops per product; extend the search if no acceptable image is found. This pilot compares Xinerli, Huatian, Alas, SKS/LD and Ouwei.",
+    "resolution": "Prefer original files with a long edge of at least 1200 px. Files at 960 px may qualify for a 600 px content area after 100% visual inspection. Reject smaller or visibly blurred files. Do not count AI upscaling as recovered detail.",
+    "inspection": [
+      "Inspect the downloaded image dimensions, not the page thumbnail size.",
+      "View at 100%: edge continuity, mounting-hole walls, grinding texture, compression blocks and halos.",
+      "Check every corner, background and blade face for logos, shop names, watermarks, promotional text and certifications.",
+      "Prefer originally unbranded photographs. Mark branded files as rejected for the final selection; if an edit is used, preserve the original and inspect the blade geometry afterward.",
+      "Inspect final desktop and mobile display; keep an original and a source record for each selected asset.",
+      "A large pixel count alone does not prove a real unretouched photograph. Mark strongly smoothed or rendered-looking views and prefer visible natural machining texture for the main image."
+    ],
+    "ranking": [
+      "Correct blade type and credible product detail",
+      "Native resolution and sharpness",
+      "No visible brand or watermark",
+      "Clean composition and background",
+      "Useful complementary angles"
+    ]
+  },
+  "shopComparison": [
+    {
+      "shop": "Xinerli",
+      "url": "https://www.alibaba.com/product-detail/High-Precision-Guillotine-Shearing-Machine-Blades_1600870696749.html",
+      "decision": "Reject previous selection",
+      "reason": "Supplier logo and domain watermark; 800×800 overview/pair, 790×552 detail."
+    },
+    {
+      "shop": "Anhui Huatian Mechanic Co., Ltd.",
+      "url": "https://www.alibaba.com/product-detail/Professional-Manufacturer-Sheet-Metal-Guillotine-Knife_1601772313061.html",
+      "decision": "Select two native 1440×1080 supplementary images; reject 749×749 main image",
+      "reason": "Two original files have higher resolution and no visible marks. Retouching/smoothing is apparent; image pixels do not establish original capture method."
+    },
+    {
+      "shop": "Nanjing Alas International Co., Ltd",
+      "url": "https://www.alibaba.com/product-detail/Sheet-Metal-Shearing-Guillotine-Blade-Sheet_1600979471884.html",
+      "decision": "Compared; not selected",
+      "reason": "Main image has no obvious marks, but whole-page download stalled. Ouwei provides stronger native-size detail for the selected overview."
+    },
+    {
+      "shop": "Nanjing Ld Machine Knife Manufacturing Co., Ltd. / SKS",
+      "url": "https://www.alibaba.com/product-detail/SKS-Guillotine-Shear-Blades-High-precision_1600447277347.html",
+      "decision": "Reject gallery selection",
+      "reason": "Prominent SKS logo on gallery photographs. Original unbranded candidates are available elsewhere."
+    },
+    {
+      "shop": "Nanjing Ouwei Machinery Technology Co., Ltd.",
+      "url": "https://www.alibaba.com/product-detail/Industrial-H13-SKD61-1100-100-25_1601006824568.html",
+      "decision": "Select original 1000×1000 overview",
+      "reason": "No visible marks. More distinct metal texture than the polished supplementary views; adequate for a 600 px display."
+    }
+  ],
+  "recordScope": "Historical selection pilot. Later clarity, white-background and navy-Hero edits are recorded in docs/product-imagery/. This file does not describe the final live-preview assets.",
+  "currentWorkflow": "../../docs/product-imagery/WORKFLOW.md",
+  "currentProductPage": "/products/sb-001"
+}

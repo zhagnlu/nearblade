@@ -1,0 +1,72 @@
+{
+  "date": "2026-10-18",
+  "status": "partial-local-preview; remaining research awaits user slider verification",
+  "publication": "local preview only; no commit, push or deployment authorized",
+  "remainingProducts": [
+    "tb-001",
+    "db-001"
+  ],
+  "reviews": [
+    {
+      "product": "pb-001",
+      "supplier": "Golin",
+      "url": "https://www.alibaba.com/product-detail/High-Quality-CNC-Press-Brake-Tooling_1601560837368.html",
+      "decision": "Reject main photo: native 640x640; gallery includes branded drawings.",
+      "image": "https://sc04.alicdn.com/kf/H6eba8575d7254852b1121f0472e8007d3.jpg"
+    },
+    {
+      "product": "pb-001",
+      "supplier": "Sanyang / SYRM",
+      "url": "https://www.alibaba.com/product-detail/Customized-SYRM-42CrMo-Press-Brake-Tooling_1601691659040.html",
+      "decision": "Reject main overview: prominent SY logo; multi-V blocks."
+    },
+    {
+      "product": "pb-001",
+      "supplier": "Fangwei",
+      "url": "https://www.alibaba.com/product-detail/Fangwei-Brand-Bending-Machine-Tooling-Press_1601650199945.html",
+      "decision": "Reject overview: branded punches rather than V lower dies."
+    },
+    {
+      "product": "pb-001",
+      "supplier": "Prima CNC",
+      "url": "https://www.alibaba.com/product-detail/Precision-Bending-Mold-V-Die-for_1601721663399.html",
+      "decision": "High-resolution candidate downloaded. Four multi-V blocks, no obvious branding in fitted browser view. Native-detail and exact product fit review still required; not approved for site.",
+      "image": "https://sc04.alicdn.com/kf/H009c69d154294126b98b1deb7adf3556t.jpg",
+      "local": "research/alibaba/pb-001/pb-001-prima-01.avif",
+      "browserNativeDimensions": [
+        3840,
+        5120
+      ],
+      "otherImage": "https://sc04.alicdn.com/kf/H0d9222b41fd24fd38c68f732465b26e1r.jpg",
+      "otherDecision": "Workshop photograph native 800x599; below target."
+    },
+    {
+      "product": "pb-001",
+      "supplier": "Ouwei",
+      "url": "https://www.alibaba.com/product-detail/Press-Brake-Multi-V-Dies-and_1601152833093.html",
+      "decision": "Main is composite; reject. Gallery single black tool is a punch, not a lower die; reject. Paired/stacked lower-die image downloaded but heavily smoothed/render-like, not approved as realistic photograph.",
+      "image": "https://sc04.alicdn.com/kf/H38148a420d2f4bcbabcaae4be5a8d4683.jpg",
+      "local": "research/alibaba/pb-001/pb-001-original-01.avif",
+      "browserNativeDimensions": [
+        1000,
+        1000
+      ]
+    }
+  ],
+  "next": "User handles current Alibaba slider verification. Continue five-shop toothed-blade and doctor-blade research, image processing and page verification; mobile review still pending.",
+  "previewProducts": [
+    "sb-002",
+    "pb-001",
+    "rs-001",
+    "sk-001"
+  ],
+  "validation": {
+    "build": "passed; 9 language packs, 515 entries each",
+    "diffCheck": "passed",
+    "desktopHero": "visually inspected all four updated products",
+    "gallery": "all updated photos inspected; native circular-shear photos retained after rejecting geometry-changing edit",
+    "modal": "slitting, circular and swing-beam opened and Escape closed",
+    "mobile": "not yet checked",
+    "content": "existing application, dimensions, fit and inspection guides retained; no supplier technical promises copied"
+  }
+}

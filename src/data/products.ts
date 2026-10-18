@@ -9,7 +9,9 @@ export interface Product {
   tolerance: string;
   applications: string[];
   image: string;
+  heroImage?: string;
   images?: string[];
+  galleryFit?: "contain" | "cover";
 }
 
 export interface ProductCategory {
@@ -20,13 +22,13 @@ export interface ProductCategory {
   products: Product[];
 }
 
-const SHEAR_BLADES_IMG = "/images/products/guillotine.webp";
+const SHEAR_BLADES_IMG = "/images/products/photo-pilot/guillotine-overview-clear-v2.webp";
 
-const PRESS_BRAKE_IMG = "/images/products/press-brake.webp";
+const PRESS_BRAKE_IMG = "/images/products/category-photos/pb-overview-white-v2.webp";
 
-const ROLLING_SHEAR_IMG = "/images/products/rolling-shear.webp";
+const ROLLING_SHEAR_IMG = "/images/products/category-photos/rs-001-sego-01-white-v1.webp";
 
-const SLITTING_IMG = "/images/products/slitting.webp";
+const SLITTING_IMG = "/images/products/category-photos/sk-overview-white-v1.webp";
 
 const TOOTHED_IMG = "/images/products/toothed.webp";
 
@@ -49,7 +51,8 @@ export const productCategories: ProductCategory[] = [
         tolerance: "±0.003mm",
         applications: ["Sheet metal fabrication", "Automotive manufacturing", "HVAC ductwork", "Steel processing"],
         image: SHEAR_BLADES_IMG,
-        images: [SHEAR_BLADES_IMG],
+        heroImage: "/images/products/photo-pilot/guillotine-hero-navy-v4.webp",
+        images: [SHEAR_BLADES_IMG, "/images/products/photo-pilot/guillotine-three-white-v3.webp", "/images/products/photo-pilot/guillotine-hero-white-v3.webp"],
       },
       {
         id: "sb-002",
@@ -60,8 +63,9 @@ export const productCategories: ProductCategory[] = [
         materials: ["6CrW2Si", "Cr12MoV", "H13"],
         tolerance: "±0.003mm",
         applications: ["Metal processing centers", "Steel service centers", "Heavy plate cutting"],
-        image: "/images/products/swing-beam.webp",
-        images: ["/images/products/swing-beam.webp"],
+        image: SHEAR_BLADES_IMG,
+        heroImage: "/images/products/category-photos/sb-002-hero-navy-v1.webp",
+        images: [SHEAR_BLADES_IMG, "/images/products/photo-pilot/guillotine-three-white-v3.webp"],
       },
     ],
   },
@@ -82,6 +86,7 @@ export const productCategories: ProductCategory[] = [
         tolerance: "±0.01mm",
         applications: ["General sheet metal bending", "Box and pan forming", "90°/60°/45°/30° bending", "Container manufacturing"],
         image: PRESS_BRAKE_IMG,
+        heroImage: "/images/products/category-photos/pb-hero-v1.webp",
         images: [PRESS_BRAKE_IMG],
       },
     ],
@@ -102,7 +107,9 @@ export const productCategories: ProductCategory[] = [
         tolerance: "±0.005mm",
         applications: ["Plate cutting", "Coil processing lines", "Steel rolling mills"],
         image: ROLLING_SHEAR_IMG,
-        images: [ROLLING_SHEAR_IMG],
+        heroImage: "/images/products/category-photos/rs-hero-v1.webp",
+        galleryFit: "cover",
+        images: [ROLLING_SHEAR_IMG, "/images/products/category-photos/rs-001-sego-02-white-v1.webp"],
       },
     ],
   },
@@ -122,7 +129,8 @@ export const productCategories: ProductCategory[] = [
         tolerance: "±0.001mm",
         applications: ["Paper slitting", "Film cutting", "Foil processing", "Tube manufacturing lines"],
         image: SLITTING_IMG,
-        images: [SLITTING_IMG],
+        heroImage: "/images/products/category-photos/sk-hero-v1.webp",
+        images: [SLITTING_IMG, "/images/products/category-photos/sk-edge-white-v1.webp"],
       },
     ],
   },

@@ -4,6 +4,8 @@
 
 ## 启动
 
+产品选图与详情页更新前先阅读 [产品图片工作流](docs/product-imagery/WORKFLOW.md)，并遵守根目录 [AGENTS.md](AGENTS.md) 中保存的用户偏好与本地预览约定。来源及图片处理记录保存在 `docs/product-imagery/`，不作为网页内容发布。
+
 ```sh
 npm install
 npm run dev

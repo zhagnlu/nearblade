@@ -1,0 +1,75 @@
+[
+  {
+    "id": "rs-hero-v1",
+    "target": "research/alibaba/rs-001/rs-001-sego-01.png",
+    "hero": true,
+    "subject": "exactly these three overlapping thick circular metal shear knives, same keyways and bores",
+    "prompt": "Use case: compositing. Asset type: website Hero photograph 16:9. Image 1 is edit target: exactly these three overlapping thick circular metal shear knives, same keyways and bores. Image 2 is background/style reference ONLY: match its exact deep navy blue industrial studio backdrop, subtly textured floor and cool side light. Replace white/gray background only, retain original real photographed products and geometry. Reframe into a wide horizontal image, products in lower half/right, uncluttered upper center for page title. Bright readable silver metal with neutral specular detail, crisp natural machining texture. Do not transfer ANY products from image 2. Keep number, holes, contours, edge shape and relative proportions of image 1. No text, logos, watermark, labels, extra objects, gray background, transparency, fog, CGI smoothing.",
+    "generated": "/Users/zhanglu/.codex/generated_images/01a14896-4e7a-7da2-8180-dc6bba55511d/exec-07dd5bc6-5bf5-4fad-9e24-06bcd1b38ae8.png",
+    "tool": "built-in image_gen",
+    "review": "Count and overall silhouette checked; edited texture is not recovered photographic evidence; local preview only.",
+    "output": "public/images/products/category-photos/rs-hero-v1.webp",
+    "actualDimensions": [
+      1672,
+      941
+    ]
+  },
+  {
+    "id": "sk-overview-white-v1",
+    "target": "research/alibaba/sk-001/sk-001-ouman-01.png",
+    "subject": "exactly these four graduated thin rotary slitting discs, keep each central bore and bevel, overlap and arrangement",
+    "prompt": "Use case: precise-object-edit. Asset type: white-background product gallery photograph. Edit the target photo of exactly these four graduated thin rotary slitting discs, keep each central bore and bevel, overlap and arrangement. Change ONLY dark background to clean pure white #ffffff including all corners and through holes. Preserve original photographic metal, exact geometry, count, sizes, cutting-edge profile and arrangement. Improve modest clarity and neutral exposure without invented engineering details. Natural close contact shadow only; do not create a gray panel, branding, words, watermark, duplicate discs, redesigned holes or rendered-looking smooth surfaces. Frame landscape 3:2, product fills 75% width with comfortable margin.",
+    "generated": "/Users/zhanglu/.codex/generated_images/01a14896-4e7a-7da2-8180-dc6bba55511d/exec-30e29733-90b4-47a8-a5f7-8ab756d913e6.png",
+    "tool": "built-in image_gen",
+    "review": "Count and overall silhouette checked; edited texture is not recovered photographic evidence; local preview only.",
+    "output": "public/images/products/category-photos/sk-overview-white-v1.webp",
+    "actualDimensions": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "sk-edge-white-v1",
+    "target": "research/alibaba/sk-001/sk-001-ouman-02.png",
+    "subject": "this single thin circular slitting knife close-up, retain crop, bore, curved cutting bevel, precise straight plane",
+    "prompt": "Use case: precise-object-edit. Asset type: white-background product gallery photograph. Edit the target photo of this single thin circular slitting knife close-up, retain crop, bore, curved cutting bevel, precise straight plane. Change ONLY dark background to clean pure white #ffffff including all corners and through holes. Preserve original photographic metal, exact geometry, count, sizes, cutting-edge profile and arrangement. Improve modest clarity and neutral exposure without invented engineering details. Natural close contact shadow only; do not create a gray panel, branding, words, watermark, duplicate discs, redesigned holes or rendered-looking smooth surfaces. Frame landscape 3:2, product fills 75% width with comfortable margin.",
+    "generated": "/Users/zhanglu/.codex/generated_images/01a14896-4e7a-7da2-8180-dc6bba55511d/exec-ea6de0ba-cab7-4084-821f-215676ccfe4f.png",
+    "tool": "built-in image_gen",
+    "review": "Count and overall silhouette checked; edited texture is not recovered photographic evidence; local preview only.",
+    "output": "public/images/products/category-photos/sk-edge-white-v1.webp",
+    "actualDimensions": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "sk-hero-v1",
+    "target": "research/alibaba/sk-001/sk-001-ouman-01.png",
+    "hero": true,
+    "subject": "exactly these four graduated thin rotary slitting discs, keep each central bore and bevel, overlap and arrangement",
+    "prompt": "Use case: compositing. Asset type: website Hero photograph 16:9. Image 1 is edit target: exactly these four graduated thin rotary slitting discs, keep each central bore and bevel, overlap and arrangement. Image 2 is background/style reference ONLY: match its exact deep navy blue industrial studio backdrop, subtly textured floor and cool side light. Replace white/gray background only, retain original real photographed products and geometry. Reframe into a wide horizontal image, products in lower half/right, uncluttered upper center for page title. Bright readable silver metal with neutral specular detail, crisp natural machining texture. Do not transfer ANY products from image 2. Keep number, holes, contours, edge shape and relative proportions of image 1. No text, logos, watermark, labels, extra objects, gray background, transparency, fog, CGI smoothing.",
+    "generated": "/Users/zhanglu/.codex/generated_images/01a14896-4e7a-7da2-8180-dc6bba55511d/exec-f25239dd-e411-4e1a-bbd9-354e79769b7e.png",
+    "tool": "built-in image_gen",
+    "review": "Count and overall silhouette checked; edited texture is not recovered photographic evidence; local preview only.",
+    "output": "public/images/products/category-photos/sk-hero-v1.webp",
+    "actualDimensions": [
+      1672,
+      941
+    ]
+  },
+  {
+    "id": "pb-hero-v1",
+    "target": "research/alibaba/pb-001/pb-001-prima-01.png",
+    "hero": true,
+    "subject": "exactly these four long multi-V press brake die blocks stacked two by two, preserve exact section, all notches and front opening, no extra tools",
+    "prompt": "Use case: compositing. Asset type: website Hero photograph 16:9. Image 1 is edit target: exactly these four long multi-V press brake die blocks stacked two by two, preserve exact section, all notches and front opening, no extra tools. Image 2 is background/style reference ONLY: match its exact deep navy blue industrial studio backdrop, subtly textured floor and cool side light. Replace white/gray background only, retain original real photographed products and geometry. Reframe into a wide horizontal image, products in lower half/right, uncluttered upper center for page title. Bright readable silver metal with neutral specular detail, crisp natural machining texture. Do not transfer ANY products from image 2. Keep number, holes, contours, edge shape and relative proportions of image 1. No text, logos, watermark, labels, extra objects, gray background, transparency, fog, CGI smoothing.",
+    "generated": "/Users/zhanglu/.codex/generated_images/01a14896-4e7a-7da2-8180-dc6bba55511d/exec-4b23f933-9628-41f4-80a2-d9094c14c110.png",
+    "tool": "built-in image_gen",
+    "review": "Count and overall silhouette checked; edited texture is not recovered photographic evidence; local preview only.",
+    "output": "public/images/products/category-photos/pb-hero-v1.webp",
+    "actualDimensions": [
+      1672,
+      941
+    ]
+  }
+]

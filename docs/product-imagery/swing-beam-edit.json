@@ -1,0 +1,13 @@
+{
+  "prompt": "Use case: compositing. Asset: wide 16:9 website Hero. Image 1 is exact product edit target: THREE shear blades, left and middle each FOUR countersunk holes, right blade FIVE holes and a dark recessed central strip. Preserve all three blades, precise hole count and geometry, rectangular outlines and edge profiles. Image 2 is background/style reference ONLY: deep navy blue industrial studio with subtle floor texture, soft blue side lights. Do NOT copy any products from image 2. Set the three photographed blades on matching navy floor across lower half with empty dark upper center for page heading, bright silver machined faces and crisp natural edge detail. Reframe wider, do not add or elongate blades, no extra holes. No text, logos, watermark, fog, gray or white backdrop, CGI smoothing.",
+  "path": "/Users/zhanglu/.codex/generated_images/01a14896-4e7a-7da2-8180-dc6bba55511d/exec-26c9603a-92a6-489a-a268-fb811c03868b.png",
+  "tool": "built-in image_gen",
+  "source": "research/alibaba/sb-001/ouwei-native-01.jpg",
+  "sourceProduct": "https://www.alibaba.com/product-detail/Industrial-H13-SKD61-1100-100-25_1601006824568.html",
+  "review": "Three blades; 4, 4 and 5 visible holes checked. Source lists QC12Y swing-beam and Q11; reuse prior five-shop shear-family research, not a new five-shop swing-beam audit. Gallery reuses approved family photos and does not establish machine fit.",
+  "output": "public/images/products/category-photos/sb-002-hero-navy-v1.webp",
+  "actualDimensions": [
+    1672,
+    941
+  ]
+}

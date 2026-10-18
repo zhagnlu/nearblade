@@ -1,0 +1,6 @@
+{
+  "tool": "built-in image_gen",
+  "generatedSource": "/Users/zhanglu/.codex/generated_images/01a14896-4e7a-7da2-8180-dc6bba55511d/exec-762e8fa4-c6c6-456b-848c-f74c9d4882bc.png",
+  "prompt": "Use case: precise-object-edit. Image 1 is ONLY a background color/lighting reference from the site's existing home hero. Image 2 is the edit target, the exact two parallel long guillotine shear blades. Change only target Image 2's light gray background into the same deep navy industrial studio background and subtly textured navy floor as Image 1, blue-black at upper center with restrained cool blue side lighting. Preserve EXACTLY Image 2's two blades, hole counts and locations, entire geometry, perspective, positions, diagonal framing and sharp silver metal surfaces. Keep blades visibly silver and well-lit, not tinted dark blue or hidden under an opaque overlay. Do not transfer any circular blades, tooling or other objects from Image 1. No new objects, marks, logos, text or watermark. 16:9 wide composition matching Image 2; same resolution or higher. Realistic clean studio photograph with crisp steel contours. No white/gray background, no broad fog over product.",
+  "output": "/images/products/photo-pilot/guillotine-hero-navy-v4.webp"
+}

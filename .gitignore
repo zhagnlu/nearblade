@@ -9,3 +9,7 @@ rucheng-website-source.zip
 /output/
 /.playwright-cli/
 /coverage/
+
+# Local Alibaba browser snapshots may include account-specific page data.
+
+/research/alibaba/

@@ -1,0 +1,88 @@
+{
+  "status": "local-preview-not-published",
+  "images": [
+    {
+      "file": "images/ouwei-overview-v2.jpg",
+      "width": 1000,
+      "height": 1000,
+      "format": "system-detected",
+      "bytes": 91660,
+      "sha256": "07f6fbbde82dd77abd644359ce21e73ebe072de9fdb249d87028451be8dbac2e",
+      "resolution": "conditional: inspect at 100%, content width up to 600 px",
+      "sharpness": "At native-size browser inspection, grinding texture, darker blade face and hole countersinks remain distinguishable. Suitable for the roughly 600 px preview stage.",
+      "branding": "No visible logo, brand name, domain watermark or promotional text found in browser inspection.",
+      "approved": true,
+      "original": "H9d8c5777998d4017a592439708e7af90P.jpg",
+      "originalUrl": "https://sc04.alicdn.com/kf/H9d8c5777998d4017a592439708e7af90P.jpg",
+      "supplier": "Ouwei",
+      "approvalScope": "Local product-photo preview only",
+      "processing": "None; Huatian files served as AVIF and saved using the correct .avif extension."
+    },
+    {
+      "file": "images/huatian-three-v2.avif",
+      "width": 1440,
+      "height": 1080,
+      "format": "avif",
+      "bytes": 35028,
+      "sha256": "ed858b408d14ff8d4b52e8f1234fd3b9a7ea6a1077da8c0f3742220775ac87dd",
+      "resolution": "preferred",
+      "sharpness": "Native 1440 px; clean background with strong retouching/smoothing. Keep as a supplementary product view, not evidence of an unretouched factory photograph.",
+      "branding": "No visible logo, brand name, domain watermark or promotional text found in browser inspection.",
+      "approved": true,
+      "original": "Ha535efb613ea4550ab4c4640c258076ae.png",
+      "originalUrl": "https://sc04.alicdn.com/kf/Ha535efb613ea4550ab4c4640c258076ae.png",
+      "supplier": "Huatian",
+      "approvalScope": "Local product-photo preview only",
+      "processing": "None; Huatian files served as AVIF and saved using the correct .avif extension."
+    },
+    {
+      "file": "images/huatian-pair-v2.avif",
+      "width": 1440,
+      "height": 1080,
+      "format": "avif",
+      "bytes": 41614,
+      "sha256": "32c2ba43cc8804e9fd20bebeace9310ee1ebc857d66b18c339d99ec77e3ab494",
+      "resolution": "preferred",
+      "sharpness": "Native 1440 px; visible bright edge, holes and paired blades. Strong background/lighting retouching; supplementary product view.",
+      "branding": "No visible logo, brand name, domain watermark or promotional text found in browser inspection.",
+      "approved": true,
+      "original": "H54dfd53f74fe49b1ba757c6261dfec94T.png",
+      "originalUrl": "https://sc04.alicdn.com/kf/H54dfd53f74fe49b1ba757c6261dfec94T.png",
+      "supplier": "Huatian",
+      "approvalScope": "Local product-photo preview only",
+      "processing": "None; Huatian files served as AVIF and saved using the correct .avif extension."
+    }
+  ],
+  "shopComparison": [
+    {
+      "shop": "Xinerli",
+      "url": "https://www.alibaba.com/product-detail/High-Precision-Guillotine-Shearing-Machine-Blades_1600870696749.html",
+      "decision": "Reject previous selection",
+      "reason": "Supplier logo and domain watermark; 800×800 overview/pair, 790×552 detail."
+    },
+    {
+      "shop": "Anhui Huatian Mechanic Co., Ltd.",
+      "url": "https://www.alibaba.com/product-detail/Professional-Manufacturer-Sheet-Metal-Guillotine-Knife_1601772313061.html",
+      "decision": "Select two native 1440×1080 supplementary images; reject 749×749 main image",
+      "reason": "Two original files have higher resolution and no visible marks. Retouching/smoothing is apparent; image pixels do not establish original capture method."
+    },
+    {
+      "shop": "Nanjing Alas International Co., Ltd",
+      "url": "https://www.alibaba.com/product-detail/Sheet-Metal-Shearing-Guillotine-Blade-Sheet_1600979471884.html",
+      "decision": "Compared; not selected",
+      "reason": "Main image has no obvious marks, but whole-page download stalled. Ouwei provides stronger native-size detail for the selected overview."
+    },
+    {
+      "shop": "Nanjing Ld Machine Knife Manufacturing Co., Ltd. / SKS",
+      "url": "https://www.alibaba.com/product-detail/SKS-Guillotine-Shear-Blades-High-precision_1600447277347.html",
+      "decision": "Reject gallery selection",
+      "reason": "Prominent SKS logo on gallery photographs. Original unbranded candidates are available elsewhere."
+    },
+    {
+      "shop": "Nanjing Ouwei Machinery Technology Co., Ltd.",
+      "url": "https://www.alibaba.com/product-detail/Industrial-H13-SKD61-1100-100-25_1601006824568.html",
+      "decision": "Select original 1000×1000 overview",
+      "reason": "No visible marks. More distinct metal texture than the polished supplementary views; adequate for a 600 px display."
+    }
+  ]
+}

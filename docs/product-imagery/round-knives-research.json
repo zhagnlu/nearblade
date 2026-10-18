@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-18",
+  "method": "Signed-in formal Chrome, normal navigation and source-view public image URL extraction; image files saved with native Save dialog. No inquiry sent.",
+  "rights": "Public supplier images; reuse permission not independently established. Local preview only. No claim of own-factory photography.",
+  "reviews": [
+    {"product":"rs-001","supplier":"Huatian","url":"https://www.alibaba.com/product-detail/Wholesale-D2-Rotary-Metal-Slitting-Blade_1601740628118.html","decision":"Reject watermark through image."},
+    {"product":"rs-001","supplier":"LD / SKS","url":"https://www.alibaba.com/product-detail/Roll-Shear-Galvanized-Cutting-Knives-Metal_1600449038689.html","decision":"Reject branded marketing gallery."},
+    {"product":"rs-001","supplier":"Changzhou Machinery Blade","url":"https://www.alibaba.com/product-detail/Circular-Shear-Cutting-Blades-for-Metal_60427605244.html","decision":"Reject central watermark and low detail."},
+    {"product":"rs-001","supplier":"Xinerli","url":"https://www.alibaba.com/product-detail/Rotary-Metal-Slitting-Blade-Circular-Metal_1601434538222.html","decision":"Reject branded collage."},
+    {"product":"rs-001","supplier":"Sego","url":"https://www.alibaba.com/product-detail/Round-Blade-Knife-Metal-Shear-Blades_1600601404678.html","decision":"Select unbranded three-knife photograph and single keyway knife view; preserve natural metal, no invented dimensional claims."},
+    {"product":"sk-001","supplier":"Huatian","url":"https://www.alibaba.com/product-detail/Upper-Rotary-Slitter-Knives-Paper-Film_1601783865983.html","decision":"Marked on blade; reject main."},
+    {"product":"sk-001","supplier":"Chunfeng","url":"https://www.alibaba.com/product-detail/ChunFeng-Circular-Slitter-Knifem-Factory-Supply_1601958702810.html","decision":"Natural workshop photo of thick lower-knife stacks; not preferred thin rotary overview."},
+    {"product":"sk-001","supplier":"Jiuno Precision","url":"https://www.alibaba.com/product-detail/Rotary-Slitting-Knife-Blade-for-Paper_1601921238930.html","decision":"Reject logos and marketing panels."},
+    {"product":"sk-001","supplier":"Sinostar","url":"https://www.alibaba.com/product-detail/Paper-Film-Cutting-Rotary-Circular-Slitting_60696805565.html","decision":"Reject watermark through product."},
+    {"product":"sk-001","supplier":"Fenglirui","url":"https://www.alibaba.com/product-detail/130mm-Industrial-Paper-Roll-Tape-Slitting_1600941979799.html","decision":"Reject branded rendering; workshop gallery low detail."},
+    {"product":"sk-001","supplier":"Dekeer","url":"https://www.alibaba.com/product-detail/Dekeer-Tungsten-Carbide-Rotary-Circular-Knife_1601602255631.html","decision":"Small carbide polygon/round cutting heads; different product emphasis."},
+    {"product":"sk-001","supplier":"Jiangsu Ouman","url":"https://www.alibaba.com/product-detail/Industrial-Circular-Slitting-Blade-Round-Knife_1601578614283.html","decision":"Select product-only unbranded overview and edge close-up; native 960px conditional, background edit required. Supplier processing cannot be excluded."}
+  ],
+  "downloads": [
+    {"file":"research/alibaba/rs-001/rs-001-sego-01.avif","image":"https://sc04.alicdn.com/kf/Hbb2b1536a21445e2b3e5f5d79dc7f03d6.jpg","width":1280,"height":1280,"processing":"format conversion only for white gallery"},
+    {"file":"research/alibaba/rs-001/rs-001-sego-02.avif","image":"https://sc04.alicdn.com/kf/H1003666abb39419390aa572e0f3e3daee.jpg","width":1042,"height":1042,"processing":"format conversion only for white gallery; conditional at 600px display"},
+    {"file":"research/alibaba/sk-001/sk-001-ouman-01.avif","image":"https://sc04.alicdn.com/kf/H7b197750b8e34583be6a3a8c7448be75O.png","width":960,"height":960,"processing":"white gallery background and separate navy Hero edits"},
+    {"file":"research/alibaba/sk-001/sk-001-ouman-02.avif","image":"https://sc04.alicdn.com/kf/H19ba679d31fd486c90363df6670e579f5.png","width":960,"height":960,"processing":"white gallery background edit"}
+  ],
+  "interruption":"Alibaba slider verification appeared on corrugated-serrated-slotting-blades search; user asked to handle it. No solving or bypass attempted."
+}

@@ -1,0 +1,22 @@
+{
+  "tool": "built-in image_gen",
+  "note": "Background-only edits of clarity-v2 assets; earlier versions retained.",
+  "images": [
+    {
+      "name": "hero",
+      "generatedSource": "/Users/zhanglu/.codex/generated_images/01a14896-4e7a-7da2-8180-dc6bba55511d/exec-4d05a40b-7ec4-4309-beca-a5bac510ff40.png",
+      "prompt": "Use case: precise-object-edit. Change ONLY the background of this exact product image to uniform pure white #FFFFFF, including all four corners and outer margins. Keep a very faint neutral contact shadow directly beneath the blades only, with no broad gray ground, vignette, gradient or horizon. Preserve the exact original product pixels as closely as possible: same blade count, hole counts and locations, contours, proportions, composition, perspective, sharpness, existing steel texture and colors. Do not redesign, relight or sharpen the product. No extra parts, logos, text, marks or watermarks. Keep original aspect ratio and resolution. Opaque white background, no transparency.",
+      "output": "/images/products/photo-pilot/guillotine-hero-white-v3.webp",
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "name": "three",
+      "generatedSource": "/Users/zhanglu/.codex/generated_images/01a14896-4e7a-7da2-8180-dc6bba55511d/exec-74e3830e-daaf-47f8-92e2-5a5e0da211b1.png",
+      "prompt": "Use case: precise-object-edit. Change ONLY the background of this exact product image to uniform pure white #FFFFFF, including all four corners and outer margins. Keep a very faint neutral contact shadow directly beneath the blades only, with no broad gray ground, vignette, gradient or horizon. Preserve the exact original product pixels as closely as possible: same blade count, hole counts and locations, contours, proportions, composition, perspective, sharpness, existing steel texture and colors. Do not redesign, relight or sharpen the product. No extra parts, logos, text, marks or watermarks. Keep original aspect ratio and resolution. Opaque white background, no transparency.",
+      "output": "/images/products/photo-pilot/guillotine-three-white-v3.webp",
+      "width": 1448,
+      "height": 1086
+    }
+  ]
+}

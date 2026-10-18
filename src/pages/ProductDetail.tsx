@@ -35,7 +35,7 @@ export default function ProductDetail() {
   }
 
   const guide = productGuides[product.id];
-  const productImages = [...new Set([...(product.images?.length ? product.images : [product.image]), ...(guide ? [guide.catalogImage] : [])])];
+  const productImages = [...new Set([...(product.images?.length ? product.images : [product.image]), ...(guide && !product.heroImage ? [guide.catalogImage] : [])])];
   const currentImage = productImages[currentImageIndex] || productImages[0];
   const relatedProducts = category?.products.filter((p) => p.id !== product.id).slice(0, 3) || [];
 
@@ -56,8 +56,8 @@ export default function ProductDetail() {
       />
 
       <PageHero
-        image={product.image}
-        productVisual
+        image={product.heroImage || product.image}
+        productVisual={!product.heroImage}
         title={product.searchName || product.name}
         accent="Made to Your Drawing"
         description={product.description}
@@ -80,7 +80,7 @@ export default function ProductDetail() {
             <div>
               <div className="relative group">
                 <div
-                  className="aspect-[3/2] product-stage rounded-card overflow-hidden border border-border relative cursor-pointer"
+                  className={`aspect-[3/2] ${product.heroImage ? "product-photo-stage" : "product-stage"} rounded-card overflow-hidden border border-border relative cursor-pointer`}
                   onClick={() => setIsZoomed(true)}
                   role="button"
                   tabIndex={0}
@@ -96,8 +96,8 @@ export default function ProductDetail() {
                     loading="lazy"
                     decoding="async"
                     src={currentImage}
-                    alt={currentImage === guide?.catalogImage ? `${product.name} catalog reference` : `${product.name} product overview`}
-                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                    alt={`${product.name} product overview`}
+                    className={`w-full h-full ${product.galleryFit === "cover" ? "object-cover" : "object-contain"} group-hover:scale-105 transition-transform duration-500`}
                   />
                   <div className="absolute inset-0 bg-industrial/0 group-hover:bg-industrial/30 transition-all duration-300 flex items-center justify-center">
                     <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-steel/90 rounded-full w-14 h-14 flex items-center justify-center">
@@ -138,7 +138,7 @@ export default function ProductDetail() {
                     <button
                       key={index}
                       onClick={() => setCurrentImageIndex(index)}
-                      aria-label={img === guide?.catalogImage ? "Show catalog reference" : "Show product overview"}
+                      aria-label="Show product overview"
                       aria-pressed={index === currentImageIndex}
                       className={`flex-shrink-0 w-20 h-20 rounded-card overflow-hidden border-2 transition-all duration-200 ${
                         index === currentImageIndex
@@ -158,7 +158,7 @@ export default function ProductDetail() {
                 </div>
               )}
 
-              <p className="text-metal-subtext text-sm mt-3 text-center">{currentImage === guide?.catalogImage ? "Catalog reference · Product-family examples" : "Product overview"}. Select image to enlarge.</p>
+              <p className="text-metal-subtext text-sm mt-3 text-center">{"Product overview"}. Select image to enlarge.</p>
             </div>
 
             <div>
@@ -198,7 +198,7 @@ export default function ProductDetail() {
                 </div>
 
                 <div>
-                  <h3 className="text-metal-text font-semibold mb-3">Catalog Precision Reference</h3>
+                  <h3 className="text-metal-text font-semibold mb-3">Precision &amp; Tolerance</h3>
                   <p className="text-steel font-mono text-2xl">{product.tolerance}</p>
                   <p className="text-sm text-metal-subtext leading-relaxed mt-2">Specify the controlled dimension, datum and inspection method on your drawing. The applicable tolerance is confirmed with your quotation.</p>
                 </div>
