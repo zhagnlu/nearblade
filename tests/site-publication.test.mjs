@@ -40,7 +40,7 @@ test('all canonical pages publish the keyword plan with unique titles, descripti
 });
 
 test('sitemap covers all public pages with unique HTTPS URLs and a matching robots directive', () => {
-  assert.equal(urls.length, 16);
+  assert.equal(urls.length, 39);
   assert.equal(new Set(urls).size, urls.length);
   for (const url of urls) {
     assert.equal(new URL(url).origin, config.url);
@@ -78,7 +78,7 @@ test('every route exposes its own canonical, sharing tags and valid JSON-LD with
 test('product and article schema match each individual route without invented commercial data', () => {
   const products = urls.filter(url => new URL(url).pathname.startsWith('/products/'));
   const articles = urls.filter(url => new URL(url).pathname.startsWith('/blog/'));
-  assert.equal(products.length, 7);
+  assert.equal(products.length, 30);
   assert.equal(articles.length, 3);
   for (const url of products) {
     const product = graphFor(htmlFor(url))['@graph'].find(item => item['@type'] === 'Product');

@@ -34,7 +34,11 @@ export async function collectMessages() {
       } finally { router.dispose(); }
     }
     for (const product of getAllProducts()) {
-      for (const value of [`${product.name} enlarged image`, `${product.name} - View 1`, `${product.name} - View 2`]) add(value);
+      add(`${product.name} enlarged image`);
+      for (let i = 1; i <= Math.max(product.images?.length || 1, 2); i++) {
+        add(`${product.name} - View ${i}`);
+        add(`Go to image ${i}`);
+      }
     }
     return [...messages].sort();
   } finally {
@@ -43,7 +47,7 @@ export async function collectMessages() {
   }
 }
 
-export const isInvariant = key => ['Nearblade', 'WhatsApp', 'WhatsApp:', 'English', 'Español', 'Français', 'Deutsch', 'Português', 'John Smith', 'mm'].includes(key) || /^[A-Za-z]$/.test(key) || /^[A-Z\d][A-Z\d ./%±×°+()[\]–-]*$/.test(key) || /^(?:42CrMo|5CrW2Si|6CrW2Si|9CrSi|Cr12MoV|CrWMn|W18Cr4V|W6Mo5Cr4V2|5000m²|±[\d.]+mm|8:30 - 17:30 \(GMT\+8\))$/.test(key) || /^(?:https?:\/\/|[^\s]+@)/.test(key);
+export const isInvariant = key => /^(?:BX[0-9]|Q11 · QC12Y)/.test(key) || ['Nearblade', 'WhatsApp', 'WhatsApp:', 'English', 'Español', 'Français', 'Deutsch', 'Português', 'John Smith', 'mm'].includes(key) || /^[A-Za-z]$/.test(key) || /^[A-Z\d][A-Z\d ./%±×°+()[\]–-]*$/.test(key) || /^(?:42CrMo|5CrW2Si|6CrW2Si|9CrSi|Cr12MoV|CrWMn|W18Cr4V|W6Mo5Cr4V2|5000m²|±[\d.]+mm|8:30 - 17:30 \(GMT\+8\))$/.test(key) || /^(?:https?:\/\/|[^\s]+@)/.test(key);
 
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   const keys = await collectMessages();

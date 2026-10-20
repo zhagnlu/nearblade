@@ -2,113 +2,401 @@
   "/": {
     "intent": "Find a manufacturer for industrial blade and tooling procurement",
     "primaryKeyword": "industrial blade manufacturer",
-    "secondaryKeywords": ["custom industrial blades", "industrial knives manufacturer", "blade manufacturer China"],
+    "secondaryKeywords": [
+      "custom industrial blades",
+      "industrial knives manufacturer",
+      "blade manufacturer China"
+    ],
     "title": "Industrial Blade Manufacturer & Custom Tooling | Nearblade",
     "description": "Nearblade manufactures industrial blades and press brake tooling in Nanjing, China. Explore shear blades, slitting knives and doctor blades, or send a drawing."
   },
   "/products": {
     "intent": "Compare blade families and find the appropriate product",
     "primaryKeyword": "industrial blades and tooling",
-    "secondaryKeywords": ["industrial cutting blades", "shear blades", "slitting knives", "press brake tooling"],
+    "secondaryKeywords": [
+      "industrial cutting blades",
+      "shear blades",
+      "slitting knives",
+      "press brake tooling"
+    ],
     "title": "Industrial Blades & Press Brake Tooling Catalog | Nearblade",
-    "description": "Compare guillotine and swing beam shear blades, circular knives, slitting knives, corrugated blades, doctor blades and press brake tooling by application."
+    "description": "Browse ten product families: shear blades, press brake tooling, rolling shear and slitting knives, steel rolling blades, corrugated cutters, toothed, doctor, chipper and crusher blades."
   },
   "/products/sb-001": {
-    "intent": "Source replacement or custom guillotine shear blades",
-    "primaryKeyword": "guillotine shear blades",
-    "secondaryKeywords": ["guillotine shear knives", "replacement shear blades", "custom shear blades"],
-    "title": "Guillotine Shear Blades & Replacement Knives | Nearblade",
-    "description": "Source guillotine shear blades for sheet metal cutting. Share your Q11 or QC12Y machine details, blade dimensions and mounting drawing for a custom quotation."
-  },
-  "/products/sb-002": {
-    "intent": "Source replacement knife sets for swing beam shears",
-    "primaryKeyword": "swing beam shear blades",
-    "secondaryKeywords": ["swing beam shear knives", "replacement shear knife sets", "sheet metal shear blades"],
-    "title": "Swing Beam Shear Blades & Knife Sets | Nearblade",
-    "description": "Explore swing beam shear blades for sheet metal production. Confirm your machine model, blade position, mounting face and edge geometry for replacement sets."
+    "intent": "Select shear blades and prepare a drawing-based quotation",
+    "primaryKeyword": "shear blades",
+    "secondaryKeywords": [
+      "custom shear blades",
+      "shear blades manufacturer"
+    ],
+    "title": "Shear Blades & Custom Knife Solutions | Nearblade",
+    "description": "Shear blades for Q11 mechanical and QC12Y hydraulic swing-beam shears. Specify blade dimensions, mounting holes and upper or lower position."
   },
   "/products/pb-001": {
-    "intent": "Source standard or custom V dies for sheet metal bending",
-    "primaryKeyword": "press brake V dies",
-    "secondaryKeywords": ["press brake tooling", "V die sets", "custom press brake dies", "sheet metal bending dies"],
-    "title": "Press Brake V Dies & Custom Tooling | Nearblade",
-    "description": "Explore press brake V-die sets for sheet metal bending. Share the V opening, working height, angle and clamping interface for a standard or custom tooling quote."
+    "intent": "Select press brake tooling and prepare a drawing-based quotation",
+    "primaryKeyword": "press brake tooling",
+    "secondaryKeywords": [
+      "custom press brake tooling",
+      "press brake tooling manufacturer"
+    ],
+    "title": "Press Brake Tooling & Custom Knife Solutions | Nearblade",
+    "description": "Standard and CNC press brake tooling, special forming dies and upper-tool quick clamps. Confirm the tooling profile and clamping interface."
   },
   "/products/rs-001": {
-    "intent": "Source circular blades for rolling shears and plate cutting",
-    "primaryKeyword": "circular shear blades",
-    "secondaryKeywords": ["rolling shear blades", "circular shear knives", "custom circular blades"],
-    "title": "Circular Shear Blades for Rolling Shears | Nearblade",
-    "description": "Circular shear blades for rolling-shear and plate-cutting applications. Send the outside diameter, bore, thickness and machine drawing for a custom quotation."
+    "intent": "Select rolling shear blades and prepare a drawing-based quotation",
+    "primaryKeyword": "rolling shear blades",
+    "secondaryKeywords": [
+      "custom rolling shear blades",
+      "rolling shear blades manufacturer"
+    ],
+    "title": "Rolling Shear Blades & Custom Knife Solutions | Nearblade",
+    "description": "Circular shear blades for rolling-shear and plate-cutting applications. Request custom diameters and confirm the complete knife-set arrangement with your machine drawing."
   },
   "/products/sk-001": {
-    "intent": "Source rotary knives for paper, film and foil slitting",
-    "primaryKeyword": "rotary slitting knives",
-    "secondaryKeywords": ["rotary slitter knives", "circular slitter blades", "paper slitting knives", "film slitting blades"],
-    "title": "Rotary Slitting Knives for Paper, Film & Foil | Nearblade",
-    "description": "Rotary slitting knives for paper, film, aluminum foil, copper foil and tape. Specify diameter, bore, thickness and edge profile to request a custom blade quote."
-  },
-  "/products/tb-001": {
-    "intent": "Source replacement or custom corrugated board cutting blades",
-    "primaryKeyword": "corrugated cutting blades",
-    "secondaryKeywords": ["corrugated board knives", "corrugated slotting knives", "toothed cutting blades", "serrated blades"],
-    "title": "Corrugated Cutting Blades & Slotting Knives | Nearblade",
-    "description": "Explore corrugated cutting blades for board trimming and slotting. Share the tooth profile, mounting dimensions and machine details for replacement or custom blades."
+    "intent": "Select slitting knives and prepare a drawing-based quotation",
+    "primaryKeyword": "slitting knives",
+    "secondaryKeywords": [
+      "custom slitting knives",
+      "slitting knives manufacturer"
+    ],
+    "title": "Slitting Knives & Custom Knife Solutions | Nearblade",
+    "description": "Rotary slitting knives, also called rotary slitter knives, for paper, film, aluminum foil, copper foil and tape. Share your drawing for a custom quotation."
   },
   "/products/db-001": {
-    "intent": "Source doctor blades for flexographic and gravure printing",
-    "primaryKeyword": "lamella doctor blades",
-    "secondaryKeywords": ["flexo doctor blades", "gravure doctor blades", "ink metering blades", "printing doctor blades"],
-    "title": "Lamella Doctor Blades for Flexo & Gravure | Nearblade",
-    "description": "Lamella doctor blades for flexographic and gravure printing, coating and ink metering. Specify your holder, edge profile and strip or coil format for a quote."
+    "intent": "Select doctor blades and prepare a drawing-based quotation",
+    "primaryKeyword": "doctor blades",
+    "secondaryKeywords": [
+      "custom doctor blades",
+      "doctor blades manufacturer"
+    ],
+    "title": "Doctor Blades & Custom Knife Solutions | Nearblade",
+    "description": "Standard, combination, blue-steel, stainless-steel and ceramic doctor blades, with combination holders for printing and coating."
   },
   "/about": {
     "intent": "Evaluate the manufacturer and its production background",
     "primaryKeyword": "industrial blade manufacturer in China",
-    "secondaryKeywords": ["Nearblade manufacturer", "Nanjing blade manufacturer", "custom blade manufacturing"],
+    "secondaryKeywords": [
+      "Nearblade manufacturer",
+      "Nanjing blade manufacturer",
+      "custom blade manufacturing"
+    ],
     "title": "Industrial Blade Manufacturer in China | About Nearblade",
     "description": "Meet Nearblade, an industrial blade and tooling manufacturer in Nanjing, China. Learn about our production capabilities, quality inspection and custom solutions."
   },
   "/equipment": {
     "intent": "Review blade manufacturing processes and equipment references",
     "primaryKeyword": "blade manufacturing equipment",
-    "secondaryKeywords": ["blade heat treatment", "CNC machining equipment", "industrial blade production"],
+    "secondaryKeywords": [
+      "blade heat treatment",
+      "CNC machining equipment",
+      "industrial blade production"
+    ],
     "title": "Blade Manufacturing Equipment & Heat Treatment | Nearblade",
     "description": "Explore CNC machining, gantry equipment and blade heat-treatment workshop reference views, plus the drawing and inspection details needed for a manufacturing inquiry."
   },
   "/contact": {
     "intent": "Request a blade or tooling quotation with drawing and application details",
     "primaryKeyword": "industrial blade quote",
-    "secondaryKeywords": ["custom blade quotation", "blade supplier contact", "press brake tooling quote"],
+    "secondaryKeywords": [
+      "custom blade quotation",
+      "blade supplier contact",
+      "press brake tooling quote"
+    ],
     "title": "Request an Industrial Blade & Tooling Quote | Nearblade",
     "description": "Request an industrial blade or press brake tooling quote. Send your drawing, machine details, material and quantity by email, phone or WhatsApp to Nearblade."
   },
   "/blog": {
     "intent": "Find practical buying and replacement planning guides",
     "primaryKeyword": "industrial blade guides",
-    "secondaryKeywords": ["blade buying guide", "industrial blade types", "blade replacement planning"],
+    "secondaryKeywords": [
+      "blade buying guide",
+      "industrial blade types",
+      "blade replacement planning"
+    ],
     "title": "Industrial Blade Guides & Buying Advice | Nearblade",
     "description": "Read industrial blade guides on product types, custom quotation requirements and replacement planning. Prepare clearer drawings and purchasing inquiries."
   },
   "/blog/custom-blade-inquiry-guide": {
     "intent": "Prepare the information required for a custom blade quotation",
     "primaryKeyword": "custom industrial blade quote",
-    "secondaryKeywords": ["custom blade inquiry checklist", "blade quotation drawing requirements", "industrial knife quotation"],
+    "secondaryKeywords": [
+      "custom blade inquiry checklist",
+      "blade quotation drawing requirements",
+      "industrial knife quotation"
+    ],
     "title": "Custom Industrial Blade Quote: Inquiry Checklist | Nearblade",
     "description": "Prepare a custom industrial blade quote request with a dimensioned drawing, machine details, material, quantity and inspection requirements. Follow this checklist."
   },
   "/blog/blade-product-families": {
     "intent": "Understand blade types before selecting a product family",
     "primaryKeyword": "types of industrial blades",
-    "secondaryKeywords": ["shear blades vs slitting knives", "industrial knife types", "doctor blade applications"],
+    "secondaryKeywords": [
+      "shear blades vs slitting knives",
+      "industrial knife types",
+      "doctor blade applications"
+    ],
     "title": "Types of Industrial Blades: A Product Guide | Nearblade",
     "description": "Compare types of industrial blades: straight shear blades, circular knives, slitter knives, toothed blades and doctor blades, with links to relevant products."
   },
   "/blog/blade-replacement-planning": {
     "intent": "Plan replacement purchasing and spare blade quantities",
     "primaryKeyword": "industrial blade replacement planning",
-    "secondaryKeywords": ["replacement blade purchasing", "spare blade inventory", "shear blade replacement records"],
+    "secondaryKeywords": [
+      "replacement blade purchasing",
+      "spare blade inventory",
+      "shear blade replacement records"
+    ],
     "title": "Industrial Blade Replacement Planning Guide | Nearblade",
     "description": "Plan industrial blade replacements using part records, approved drawing revisions, spare quantities and supplier lead times. Build a clearer purchasing schedule."
+  },
+  "/products/sr-001": {
+    "intent": "Select steel rolling blades and prepare a drawing-based quotation",
+    "primaryKeyword": "steel rolling blades",
+    "secondaryKeywords": [
+      "custom steel rolling blades",
+      "steel rolling blades manufacturer"
+    ],
+    "title": "Steel Rolling Blades & Custom Knife Solutions | Nearblade",
+    "description": "Bar shear blades and continuous-casting rolling blades for steel production. Confirm the cutting section and machine drawing."
+  },
+  "/products/cp-001": {
+    "intent": "Select corrugated paper cutters and prepare a drawing-based quotation",
+    "primaryKeyword": "corrugated paper cutters",
+    "secondaryKeywords": [
+      "custom corrugated paper cutters",
+      "corrugated paper cutters manufacturer"
+    ],
+    "title": "Corrugated Paper Cutters & Custom Knife Solutions | Nearblade",
+    "description": "Trimming, slitting, three-gang and four-gang slotting knives, and thin blades for corrugated board production."
+  },
+  "/products/cb-001": {
+    "intent": "Select chipper blades and prepare a drawing-based quotation",
+    "primaryKeyword": "chipper blades",
+    "secondaryKeywords": [
+      "custom chipper blades",
+      "chipper blades manufacturer"
+    ],
+    "title": "Chipper Blades & Custom Knife Solutions | Nearblade",
+    "description": "Wood-processing knives for particleboard and plywood production. Confirm the BX21-series machine model and mounting drawing."
+  },
+  "/products/cr-001": {
+    "intent": "Select crusher blades and prepare a drawing-based quotation",
+    "primaryKeyword": "crusher blades",
+    "secondaryKeywords": [
+      "custom crusher blades",
+      "crusher blades manufacturer"
+    ],
+    "title": "Crusher Blades & Custom Knife Solutions | Nearblade",
+    "description": "Stationary and rotor knives for plastics, wood and polymer-composite size reduction. Select the blade material for the feedstock and machine."
+  },
+  "/products/tb-002": {
+    "intent": "Select toothed blades and prepare a drawing-based quotation",
+    "primaryKeyword": "toothed blades",
+    "secondaryKeywords": [
+      "custom toothed blades",
+      "toothed blades manufacturer"
+    ],
+    "title": "Toothed Blades & Custom Knife Solutions | Nearblade",
+    "description": "Serrated and toothed knives for packaging, plastics, food processing and other industrial machinery. Specify the tooth and mounting profiles."
+  },
+  "/products/pb-straight-punch": {
+    "intent": "Find straight press brake punches and confirm dimensions, application and machine fit before requesting a quotation.",
+    "primaryKeyword": "Straight Press Brake Punches",
+    "secondaryKeywords": [
+      "straight press brake punches profile",
+      "straight press brake punches machine fit"
+    ],
+    "title": "Straight Press Brake Punches | Profile & Machine Fit | Nearblade",
+    "description": "Straight-body upper punches for accessible bends. Specify the punch angle, tip radius, working height and tang profile together with the lower die."
+  },
+  "/products/pb-gooseneck-punch": {
+    "intent": "Find gooseneck press brake punches and confirm dimensions, application and machine fit before requesting a quotation.",
+    "primaryKeyword": "Gooseneck Press Brake Punches",
+    "secondaryKeywords": [
+      "gooseneck press brake punches profile",
+      "gooseneck press brake punches machine fit"
+    ],
+    "title": "Gooseneck Press Brake Punches | Profile & Machine Fit | Nearblade",
+    "description": "Relieved upper punches for parts with return flanges. The gooseneck opening provides clearance while the tip forms the bend over a separate lower die."
+  },
+  "/products/pb-radius-tooling": {
+    "intent": "Find radius bending tooling and confirm dimensions, application and machine fit before requesting a quotation.",
+    "primaryKeyword": "Radius Bending Tooling",
+    "secondaryKeywords": [
+      "radius bending tooling profile",
+      "radius bending tooling machine fit"
+    ],
+    "title": "Radius Bending Tooling | Profile & Machine Fit | Nearblade",
+    "description": "Radius punches and cylindrical inserts for large-radius bends. Select the insert, holder and lower-die opening as a complete forming arrangement."
+  },
+  "/products/pb-u-forming": {
+    "intent": "Find u-profile forming tooling and confirm dimensions, application and machine fit before requesting a quotation.",
+    "primaryKeyword": "U-profile Forming Tooling",
+    "secondaryKeywords": [
+      "u-profile forming tooling profile",
+      "u-profile forming tooling machine fit"
+    ],
+    "title": "U-profile Forming Tooling | Profile & Machine Fit | Nearblade",
+    "description": "Matched tools for U-shaped sections. The inner width, flange height, bottom shape and release direction define the punch and lower-tool cavity."
+  },
+  "/products/pb-embossing": {
+    "intent": "Find embossing tooling and confirm dimensions, application and machine fit before requesting a quotation.",
+    "primaryKeyword": "Profile Forming and Embossing Tooling",
+    "secondaryKeywords": [
+      "profile forming and embossing tooling profile",
+      "profile forming and embossing tooling machine fit"
+    ],
+    "title": "Profile Forming and Embossing Tooling | Profile & Machine Fit | Nearblade",
+    "description": "Matched punches and dies for custom pressed sheet sections. Provide the finished profile, forming depth, sheet thickness and release direction."
+  },
+  "/products/pb-container": {
+    "intent": "Find container forming tooling and confirm dimensions, application and machine fit before requesting a quotation.",
+    "primaryKeyword": "Container Panel Forming Tooling",
+    "secondaryKeywords": [
+      "container panel forming tooling profile",
+      "container panel forming tooling machine fit"
+    ],
+    "title": "Container Panel Forming Tooling | Profile & Machine Fit | Nearblade",
+    "description": "Custom tooling for container-panel corrugations and edge sections. The panel drawing determines the profile, pitch, depth and forming sequence."
+  },
+  "/products/pb-light-pole": {
+    "intent": "Find light pole bending tooling and confirm dimensions, application and machine fit before requesting a quotation.",
+    "primaryKeyword": "Light Pole Bending Tooling",
+    "secondaryKeywords": [
+      "light pole bending tooling profile",
+      "light pole bending tooling machine fit"
+    ],
+    "title": "Light Pole Bending Tooling | Profile & Machine Fit | Nearblade",
+    "description": "Long tooling sets for polygonal or round pole shells. Select the section, taper, forming sequence and unloading clearance for the press brake arrangement."
+  },
+  "/products/pb-quick-clamps": {
+    "intent": "Find upper-tool quick clamps and confirm dimensions, application and machine fit before requesting a quotation.",
+    "primaryKeyword": "Upper-tool Quick Clamps",
+    "secondaryKeywords": [
+      "upper-tool quick clamps profile",
+      "upper-tool quick clamps machine fit"
+    ],
+    "title": "Upper-tool Quick Clamps | Profile & Machine Fit | Nearblade",
+    "description": "Upper-tool clamps secure the punch tang to the ram or an intermediate holder. Select the mounting seat, tang interface, seating and retention arrangement."
+  },
+  "/products/sk-paper-film": {
+    "intent": "Find paper and film slitting knives and confirm dimensions, application and machine fit before requesting a quotation.",
+    "primaryKeyword": "Paper and Film Slitting Knives",
+    "secondaryKeywords": [
+      "paper and film slitting knives drawing",
+      "paper and film slitting knives replacement"
+    ],
+    "title": "Paper and Film Slitting Knives | Drawing & Machine Fit | Nearblade",
+    "description": "Slitting knives for paper, film and tape converting. Identify the cutting method, web thickness, knife profile and holder."
+  },
+  "/products/sk-foil": {
+    "intent": "Find aluminum and copper foil slitting knives and confirm dimensions, application and machine fit before requesting a quotation.",
+    "primaryKeyword": "Aluminum and Copper Foil Slitting Knives",
+    "secondaryKeywords": [
+      "aluminum and copper foil slitting knives drawing",
+      "aluminum and copper foil slitting knives replacement"
+    ],
+    "title": "Aluminum and Copper Foil Slitting Knives | Drawing & Machine Fit | Nearblade",
+    "description": "Slitting knives for aluminum and copper foil. Specify foil thickness, edge requirements and the matched knife arrangement."
+  },
+  "/products/sr-bar": {
+    "intent": "Find bar shear blades and confirm dimensions, application and machine fit before requesting a quotation.",
+    "primaryKeyword": "Bar Shear Blades",
+    "secondaryKeywords": [
+      "bar shear blades drawing",
+      "bar shear blades replacement"
+    ],
+    "title": "Bar Shear Blades | Drawing & Machine Fit | Nearblade",
+    "description": "Shear blades for bar processing. Provide the bar cross-section, material, cutting temperature and blade-seat drawing."
+  },
+  "/products/sr-casting": {
+    "intent": "Find continuous casting and rolling shear blades and confirm dimensions, application and machine fit before requesting a quotation.",
+    "primaryKeyword": "Continuous Casting and Rolling Shear Blades",
+    "secondaryKeywords": [
+      "continuous casting and rolling shear blades drawing",
+      "continuous casting and rolling shear blades replacement"
+    ],
+    "title": "Continuous Casting and Rolling Shear Blades | Drawing & Machine Fit | Nearblade",
+    "description": "Shear blades for continuous casting and rolling lines. Identify the cutting station, workpiece section and operating temperature."
+  },
+  "/products/cp-thin-slitter": {
+    "intent": "Find corrugated slitter scorer knives and confirm dimensions, application and machine fit before requesting a quotation.",
+    "primaryKeyword": "Corrugated Slitter Scorer Knives",
+    "secondaryKeywords": [
+      "corrugated slitter scorer knives drawing",
+      "corrugated slitter scorer knives replacement"
+    ],
+    "title": "Corrugated Slitter Scorer Knives | Drawing & Machine Fit | Nearblade",
+    "description": "Thin circular blades for corrugated board slitting and trimming. Specify outside diameter, bore, thickness and mounting pattern."
+  },
+  "/products/cp-slotting": {
+    "intent": "Find corrugated slotting knives and confirm dimensions, application and machine fit before requesting a quotation.",
+    "primaryKeyword": "Corrugated Slotting Knives",
+    "secondaryKeywords": [
+      "corrugated slotting knives drawing",
+      "corrugated slotting knives replacement"
+    ],
+    "title": "Corrugated Slotting Knives | Drawing & Machine Fit | Nearblade",
+    "description": "Slotting knives for three-gang and four-gang carton machines. Match the arc profile, slot width and upper and lower knife arrangement."
+  },
+  "/products/tb-packaging": {
+    "intent": "Find packaging machine serrated knives and confirm dimensions, application and machine fit before requesting a quotation.",
+    "primaryKeyword": "Packaging Machine Serrated Knives",
+    "secondaryKeywords": [
+      "packaging machine serrated knives drawing",
+      "packaging machine serrated knives replacement"
+    ],
+    "title": "Packaging Machine Serrated Knives | Drawing & Machine Fit | Nearblade",
+    "description": "Serrated knives for packaging machinery. Specify the film structure, tooth profile and whether the required cut is complete or perforated."
+  },
+  "/products/db-gravure": {
+    "intent": "Find gravure doctor blades and confirm dimensions, application and machine fit before requesting a quotation.",
+    "primaryKeyword": "Gravure Doctor Blades",
+    "secondaryKeywords": [
+      "gravure doctor blades drawing",
+      "gravure doctor blades replacement"
+    ],
+    "title": "Gravure Doctor Blades | Drawing & Machine Fit | Nearblade",
+    "description": "Doctor blades for gravure ink metering. Specify the ink system, blade width, body thickness and working-edge profile."
+  },
+  "/products/db-flexo": {
+    "intent": "Find flexo doctor blades and confirm dimensions, application and machine fit before requesting a quotation.",
+    "primaryKeyword": "Flexo Doctor Blades",
+    "secondaryKeywords": [
+      "flexo doctor blades drawing",
+      "flexo doctor blades replacement"
+    ],
+    "title": "Flexo Doctor Blades | Drawing & Machine Fit | Nearblade",
+    "description": "Doctor blades for flexographic ink metering. Match the blade edge, ink system and holder to the anilox roll."
+  },
+  "/products/db-holders": {
+    "intent": "Find doctor blade holders and confirm dimensions, application and machine fit before requesting a quotation.",
+    "primaryKeyword": "Doctor Blade Holders",
+    "secondaryKeywords": [
+      "doctor blade holders drawing",
+      "doctor blade holders replacement"
+    ],
+    "title": "Doctor Blade Holders | Drawing & Machine Fit | Nearblade",
+    "description": "Holders for ink doctor blades. Provide the blade dimensions, mounting interface and adjustment arrangement."
+  },
+  "/products/cr-rotor": {
+    "intent": "Find granulator rotor knives and confirm dimensions, application and machine fit before requesting a quotation.",
+    "primaryKeyword": "Granulator Rotor Knives",
+    "secondaryKeywords": [
+      "granulator rotor knives drawing",
+      "granulator rotor knives replacement"
+    ],
+    "title": "Granulator Rotor Knives | Drawing & Machine Fit | Nearblade",
+    "description": "Rotating knives for material granulation. Specify the rotor model, blade-seat geometry, knife quantity and material being processed."
+  },
+  "/products/cr-stationary": {
+    "intent": "Find granulator bed knives and confirm dimensions, application and machine fit before requesting a quotation.",
+    "primaryKeyword": "Granulator Bed Knives",
+    "secondaryKeywords": [
+      "granulator bed knives drawing",
+      "granulator bed knives replacement"
+    ],
+    "title": "Granulator Bed Knives | Drawing & Machine Fit | Nearblade",
+    "description": "Stationary knives for granulators. Match the mounting datum and cutting edge to the rotor knives and machine gap specification."
   }
 }

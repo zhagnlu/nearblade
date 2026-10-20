@@ -1,9 +1,8 @@
 {
   "date": "2026-10-18",
-  "status": "partial-local-preview; remaining research awaits user slider verification",
+  "status": "toothed assets connected after checkpoint; visual QA and doctor research blocked by browser window connection / verification",
   "publication": "local preview only; no commit, push or deployment authorized",
   "remainingProducts": [
-    "tb-001",
     "db-001"
   ],
   "reviews": [
@@ -53,12 +52,13 @@
       ]
     }
   ],
-  "next": "User handles current Alibaba slider verification. Continue five-shop toothed-blade and doctor-blade research, image processing and page verification; mobile review still pending.",
+  "next": "Restore Chrome window connection and manually complete Alibaba slider on lamella doctor-blade search. Verify toothed actual page Hero, both images, modal and mobile; then compare five doctor-blade suppliers and finish assets.",
   "previewProducts": [
     "sb-002",
     "pb-001",
     "rs-001",
-    "sk-001"
+    "sk-001",
+    "tb-001"
   ],
   "validation": {
     "build": "passed; 9 language packs, 515 entries each",
@@ -67,6 +67,9 @@
     "gallery": "all updated photos inspected; native circular-shear photos retained after rejecting geometry-changing edit",
     "modal": "slitting, circular and swing-beam opened and Escape closed",
     "mobile": "not yet checked",
-    "content": "existing application, dimensions, fit and inspection guides retained; no supplier technical promises copied"
-  }
+    "content": "existing application, dimensions, fit and inspection guides retained; no supplier technical promises copied",
+    "toothed": "Image files inspected for three bodies and six slots each; build and diff check pass. Actual page visual QA pending: Chrome cgWindowNotFound."
+  },
+  "checkpointCommit": "2897261",
+  "taxonomySuperseded": "2026-10-19: product-family structure corrected to the ten PDF sections; see docs/catalog/manual-taxonomy-audit.md. Old tb-001 imagery now serves cp-001; sb-002 merged into sb-001. Doctor-photo work remains distinct from catalog coverage."
 }

@@ -1,0 +1,260 @@
+{
+  "pb-straight-punch": {
+    "role": "Upper punch",
+    "description": "Straight-body upper punches for accessible bends. Specify the punch angle, tip radius, working height and tang profile together with the lower die.",
+    "process": "The straight body transfers load to the punch tip. Check part clearance and the lower-die opening; the punch angle alone does not determine the finished bend angle.",
+    "features": [
+      "Straight body profile",
+      "Defined punch-tip radius",
+      "Continuous or sectional lengths"
+    ],
+    "dimensions": [
+      {
+        "label": "Punch angle and tip radius",
+        "detail": "Specify the tool angle and tip radius separately from the finished part angle and radius."
+      },
+      {
+        "label": "Working height and tang",
+        "detail": "Dimension the load-bearing shoulder, tool height and complete clamping profile."
+      },
+      {
+        "label": "Working length and sections",
+        "detail": "Provide total bend length, segment lengths and any horn or end-clearance requirements."
+      }
+    ],
+    "compatibility": "Match the punch tang and load-bearing shoulders to the holder. Check the complete bend sequence for interference.",
+    "inspection": [
+      "Check tip profile, working height and segment alignment.",
+      "Confirm permissible load for the actual punch and lower-die combination."
+    ],
+    "drawing": "tooling",
+    "toolingProfile": "straight-punch",
+    "catalogImage": ""
+  },
+  "pb-gooseneck-punch": {
+    "role": "Upper punch",
+    "description": "Relieved upper punches for parts with return flanges. The gooseneck opening provides clearance while the tip forms the bend over a separate lower die.",
+    "process": "Select the relief from the part cross-section and bending sequence. A larger throat changes the punch section and permissible load; check both clearance and strength.",
+    "features": [
+      "Relieved gooseneck body",
+      "Return-flange clearance",
+      "Profile-specific load assessment"
+    ],
+    "dimensions": [
+      {
+        "label": "Gooseneck opening and clearance",
+        "detail": "Provide flange heights, return lengths and the part position at each bend."
+      },
+      {
+        "label": "Punch angle and tip radius",
+        "detail": "Specify the working angle, tip radius and the required finished section."
+      },
+      {
+        "label": "Working height and tang",
+        "detail": "Check tool height, holder interface and seating shoulders before replacement."
+      }
+    ],
+    "compatibility": "Check the part against the punch, holder and machine throughout the bend sequence, including removal of the finished part.",
+    "inspection": [
+      "Check the complete relief contour and tip position.",
+      "Confirm load limits for the selected throat and working length."
+    ],
+    "drawing": "tooling",
+    "toolingProfile": "gooseneck-punch",
+    "catalogImage": ""
+  },
+  "pb-radius-tooling": {
+    "role": "Radius punch and holder",
+    "description": "Radius punches and cylindrical inserts for large-radius bends. Select the insert, holder and lower-die opening as a complete forming arrangement.",
+    "process": "The rounded upper tool forms the sheet across a suitable lower die. Target part radius and tool radius are separate inputs because springback and contact conditions affect the result.",
+    "features": [
+      "Rounded forming surface",
+      "Insert and holder arrangement",
+      "Lower-die opening assessment"
+    ],
+    "dimensions": [
+      {
+        "label": "Part radius and tool radius",
+        "detail": "Provide the target inside radius, material and thickness; identify the existing insert radius separately."
+      },
+      {
+        "label": "Insert and holder interface",
+        "detail": "Specify the insert diameter or profile, retention features and holder height."
+      },
+      {
+        "label": "Lower-die opening and angle",
+        "detail": "Confirm the lower-tool opening, shoulder radii and clearance for the intended bend."
+      }
+    ],
+    "compatibility": "Check the insert-to-holder fit and the complete upper/lower tool arrangement. Confirm the process with the actual material.",
+    "inspection": [
+      "Inspect the continuous radius surface and insert seating.",
+      "Check the formed radius and springback through an agreed trial-bend procedure."
+    ],
+    "drawing": "tooling",
+    "toolingProfile": "radius-tool",
+    "catalogImage": ""
+  },
+  "pb-u-forming": {
+    "role": "Matched forming tools",
+    "description": "Matched tools for U-shaped sections. The inner width, flange height, bottom shape and release direction define the punch and lower-tool cavity.",
+    "process": "A forming punch enters the matching lower cavity. Rounded and flat-bottom channels require different profiles; check wall clearance, material thickness and part removal.",
+    "features": [
+      "Matched punch and cavity",
+      "Defined channel cross-section",
+      "Part-release assessment"
+    ],
+    "dimensions": [
+      {
+        "label": "Channel inner width and flanges",
+        "detail": "Provide the complete finished section, inner width and both flange heights."
+      },
+      {
+        "label": "Bottom profile and sheet thickness",
+        "detail": "Identify a flat or rounded bottom, corner radii and material thickness."
+      },
+      {
+        "label": "Release direction and working length",
+        "detail": "Show how the part leaves the tool, including any ejector or support requirement."
+      }
+    ],
+    "compatibility": "Check machine open height, stroke, tool shut height and unloading clearance against the proposed forming arrangement.",
+    "inspection": [
+      "Check the matched profiles and material clearance.",
+      "Inspect channel width, flange geometry and corner shape on the trial part."
+    ],
+    "drawing": "tooling",
+    "toolingProfile": "u-forming",
+    "catalogImage": ""
+  },
+  "pb-embossing": {
+    "role": "Matched forming tools",
+    "name": "Profile Forming and Embossing Tooling",
+    "description": "Matched punches and dies for custom pressed sheet sections. Provide the finished profile, forming depth, sheet thickness and release direction.",
+    "process": "The tool outline follows the required part section. Contact surfaces, forming travel, material flow and springback are assessed together for the specified operation.",
+    "features": [
+      "Part-specific contact profiles",
+      "Forming-depth control",
+      "Matched upper and lower tools"
+    ],
+    "dimensions": [
+      {
+        "label": "Finished profile and forming depth",
+        "detail": "Provide the section outline, depth, corner radii and reference surfaces."
+      },
+      {
+        "label": "Material and forming operation",
+        "detail": "Identify the material, thickness and whether the operation forms a profile, bead or coined feature."
+      },
+      {
+        "label": "Tool closure and part release",
+        "detail": "Confirm tool shut height, working travel and release or ejection direction."
+      }
+    ],
+    "compatibility": "Define the specific forming operation before tooling design. Confirm required force and machine travel with the proposed tool set.",
+    "inspection": [
+      "Compare upper and lower contact profiles with the approved part section.",
+      "Confirm feature depth, position and surface condition on a trial part."
+    ],
+    "drawing": "tooling",
+    "toolingProfile": "profile-forming",
+    "catalogImage": ""
+  },
+  "pb-container": {
+    "role": "Custom panel forming tools",
+    "name": "Container Panel Forming Tooling",
+    "description": "Custom tooling for container-panel corrugations and edge sections. The panel drawing determines the profile, pitch, depth and forming sequence.",
+    "process": "Panel tooling is matched to the specified rib or edge section. Repeated corrugations require controlled pitch and sheet positioning; the tool arrangement depends on the actual panel.",
+    "features": [
+      "Panel-specific forming profile",
+      "Pitch and depth coordination",
+      "Feed and release assessment"
+    ],
+    "dimensions": [
+      {
+        "label": "Panel profile, pitch and depth",
+        "detail": "Provide the complete corrugation or edge section, pitch, depth and corner radii."
+      },
+      {
+        "label": "Sheet thickness and forming length",
+        "detail": "Identify material grade, thickness, panel width and working length."
+      },
+      {
+        "label": "Feed direction and forming sequence",
+        "detail": "Show positioning references, feed steps and how the formed panel is supported and removed."
+      }
+    ],
+    "compatibility": "Check the actual panel drawing, forming sequence and machine capacity. A container component name alone does not define a tool profile.",
+    "inspection": [
+      "Check profile continuity and repeated pitch where applicable.",
+      "Verify section depth and panel positioning on an agreed trial component."
+    ],
+    "drawing": "tooling",
+    "toolingProfile": "container-forming",
+    "catalogImage": ""
+  },
+  "pb-light-pole": {
+    "role": "Long pole forming tools",
+    "description": "Long tooling sets for polygonal or round pole shells. Select the section, taper, forming sequence and unloading clearance for the press brake arrangement.",
+    "process": "Longitudinal bends form the pole shell. Tooling and bend sequence must accommodate the small-end section, large-end section and removal of the formed shell.",
+    "features": [
+      "Longitudinal shell forming",
+      "Small- and large-end section checks",
+      "Unloading-clearance assessment"
+    ],
+    "dimensions": [
+      {
+        "label": "End sections and taper",
+        "detail": "Provide small-end and large-end sections, length, taper and seam position."
+      },
+      {
+        "label": "Forming method and lower tool",
+        "detail": "Identify polygonal bending or radius forming and the required upper/lower tool profiles."
+      },
+      {
+        "label": "Machine span and working length",
+        "detail": "Supply machine working length, open height, stroke and any tandem-machine arrangement."
+      }
+    ],
+    "compatibility": "Check holder interfaces, segment alignment, machine span and part removal across the complete shell-forming sequence.",
+    "inspection": [
+      "Check tool alignment along the working length.",
+      "Inspect both end sections, taper and seam opening on the formed shell."
+    ],
+    "drawing": "tooling",
+    "toolingProfile": "pole-forming",
+    "catalogImage": ""
+  },
+  "pb-quick-clamps": {
+    "role": "Clamping accessory",
+    "description": "Upper-tool clamps secure the punch tang to the ram or an intermediate holder. Select the mounting seat, tang interface, seating and retention arrangement.",
+    "process": "The clamping mechanism holds and seats the upper tool. The mounting side and punch side must both match; confirm how the punch is loaded, secured and released.",
+    "features": [
+      "Upper-tool tang retention",
+      "Defined mounting interface",
+      "Seating and alignment checks"
+    ],
+    "dimensions": [
+      {
+        "label": "Ram or holder mounting seat",
+        "detail": "Dimension the machine-side seat, mounting holes, bolt spacing and locating surfaces."
+      },
+      {
+        "label": "Punch tang and support shoulders",
+        "detail": "Provide the complete tang section, seating shoulders and working-height requirements."
+      },
+      {
+        "label": "Clamp mechanism and retention",
+        "detail": "Identify the lever or actuation arrangement, loading direction and required retention features."
+      }
+    ],
+    "compatibility": "Confirm both machine-side and punch-side interfaces. Automatic alignment or fall prevention depends on the selected clamp design.",
+    "inspection": [
+      "Inspect mounting datums, seating faces and clamp movement.",
+      "Verify tool retention and release using the selected machine and holder procedure."
+    ],
+    "drawing": "tooling",
+    "toolingProfile": "quick-clamp",
+    "catalogImage": ""
+  }
+}

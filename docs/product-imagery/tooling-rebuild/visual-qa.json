@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-20",
+  "browser": "Native Safari through cua; desktop screenshot approximately 1324x940 including browser chrome",
+  "preview": "http://127.0.0.1:5173",
+  "deployment": false,
+  "heroReviewed": [
+    "pb-straight-punch",
+    "pb-gooseneck-punch",
+    "pb-radius-tooling",
+    "pb-u-forming",
+    "pb-embossing",
+    "pb-container",
+    "pb-light-pole",
+    "pb-quick-clamps"
+  ],
+  "detailPanelReviewed": [
+    "pb-straight-punch",
+    "pb-gooseneck-punch",
+    "pb-radius-tooling",
+    "pb-light-pole",
+    "pb-quick-clamps"
+  ],
+  "zoomReviewed": [
+    "pb-straight-punch",
+    "pb-quick-clamps"
+  ],
+  "languagesObserved": [
+    "en",
+    "zh-CN"
+  ],
+  "fixes": [
+    {
+      "issue": "Animated H1 was absent from Safari screenshot although present in AX.",
+      "resolution": "Diagram-based heroes no longer animate their H1; 48px desktop title avoids cramped two-column wrapping. Rechecked visible."
+    },
+    {
+      "issue": "Pole illustration had a flat lower punch face while depicting polygonal V bending.",
+      "resolution": "Changed the illustrative working tip to a pointed profile and moved R leader to the tip. Static component and generated assets share one source; final visual recheck blocked."
+    }
+  ],
+  "pending": [
+    "Detailed body and guide visual check for U forming, profile forming and container forming",
+    "Gooseneck photo zoom; full finish-quality review remains provisional",
+    "Mobile and Arabic visual checks",
+    "Final visual recheck of corrected pole punch outline"
+  ],
+  "blocker": "Chrome and Safari both returned cgWindowNotFound after the later Alibaba lamp-pole detail navigation. Browser screenshot checks cannot be replaced by test/build success.",
+  "status": "Content and geometry first-pass corrected; visual and photo acceptance incomplete."
+}

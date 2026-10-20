@@ -1,0 +1,108 @@
+{
+  "date": "2026-10-20",
+  "published": false,
+  "records": [
+    {
+      "id": "pb-straight-punch",
+      "page": "https://www.sharktoolings.com/Press-brake-standard-straight-punch-1.html",
+      "url": "https://26511290.s21i.faiusr.com/2/ABUIABACGAAgvvvCgQYogKX6sQUw6Ac46Ac.jpg",
+      "original": "research/tooling-rebuild/straight-photo.jpg",
+      "pixels": [
+        1000,
+        1000
+      ],
+      "output": "/images/products/tooling-v2/straight-punch-white-v1.webp",
+      "edit": "WebP format conversion only; no geometric or background edits.",
+      "status": "Conditional local preview at approximately 600px display; below preferred 1200px native target.",
+      "originalSha256": "1b53d7695dcef6b4746e7697ba9fbf285a23dfbe4dc04c9ef41c373c75c5ce8a",
+      "outputSha256": "a7d96dccc97dcd8f894a4909a4c3b9525b01f58794530b07bab870a4e07ae274",
+      "rights": "Public supplier product-image candidate; independent reuse authorization not verified. No deployment performed."
+    },
+    {
+      "id": "pb-gooseneck-punch",
+      "page": "https://www.sharktoolings.com/Press-brake-standard-gooseneck-punch-1.html",
+      "url": "https://26511290.s21i.faiusr.com/2/ABUIABACGAAgtf3CgQYolMjitgQwuBc4uBc.jpg",
+      "original": "research/tooling-rebuild/gooseneck-photo.jpg",
+      "pixels": [
+        3000,
+        3000
+      ],
+      "output": "/images/products/tooling-v2/gooseneck-punch-white-v1.webp",
+      "edit": "WebP format conversion only.",
+      "status": "Provisional local candidate. Profile matches; large pixel dimensions do not prove photographic detail. Surface appears soft in actual page; seek better alternative. L=100mm engraving is a sample dimension, not our standard. Capture versus render provenance unverified.",
+      "originalSha256": "1b8183479478b219156b88eb20994ec93d7e54778be5b600a949d9086908d9b9",
+      "outputSha256": "0b1a6f567188ce15d190189bad7e0df016372d8ac7a3a57a86593c256b2337a6",
+      "rights": "Public supplier product-image candidate; independent reuse authorization not verified. No deployment performed."
+    },
+    {
+      "id": "pb-quick-clamps",
+      "page": "https://www.sharktoolings.com/Regular-fast-clamping-press-brake-punch-holder.html",
+      "url": "https://26511290.s21i.faiusr.com/2/ABUIABACGAAgra_cggYoqv65iAIw6Ac46Ac.jpg",
+      "original": "research/tooling-rebuild/clamp-photo.jpg",
+      "pixels": [
+        1000,
+        1000
+      ],
+      "output": "/images/products/tooling-v2/quick-clamp-white-v1.webp",
+      "editedPixels": [
+        1254,
+        1254
+      ],
+      "edit": "Imagegen background and margin-logo cleanup; WebP conversion only afterwards. Output dimensions do not imply recovered source resolution.",
+      "geometryReview": "Compared three large front bolts, four small edge fasteners, one safety-plate screw, rear pivot assembly, red handle and plate, seating edges. No obvious feature count change. Generative cleanup is not an untouched factory photo.",
+      "status": "Conditional local preview; source below preferred 1200px native target.",
+      "originalSha256": "c5f1c9adbe5aa5cc2ef4ef49edafce894cc7ce38e8d2ed2edd78cc2d6b41637c",
+      "outputSha256": "4a373a88231d9171fe8d07f6701ccdf6880bbb638908aa0fc940ea39748c4d23",
+      "rights": "Public supplier product-image candidate; independent reuse authorization not verified. No deployment performed."
+    }
+  ],
+  "clampEdit": {
+    "tool": "imagegen",
+    "prompt": "Use case: precise-object-edit. Edit this existing product photograph for a white-background industrial tooling gallery. Remove ONLY the brand logo and certification graphics in the top margin, and replace the pale gray tabletop/background with clean pure white. Preserve the actual black press brake upper-punch quick clamp and its exact geometry, all existing fasteners and mounting holes, the red lever, the smaller red safety plate, angles, relative dimensions, metal finish and orientation. Do not invent or delete any screw, hole, jaw, plate, handle or feature. Keep the complete product including all edges visible, with a small soft contact shadow. No text, no logos, no watermarks, no certification symbols. This is a photographic background cleanup, not a new clamp design. Output a high-resolution square photograph without changing the product.",
+    "output": "research/tooling-rebuild/clamp-cleanup-v1.png",
+    "outputSha256": "0a13af63ccd2d447857da7f049bb08298751940ec93cb2662b8cdbba8b8ab2b2"
+  },
+  "rejected": [
+    {
+      "file": "radius-photo.jpg",
+      "reason": "Margin branding/certification overlay, soft detail; matched round set not sufficient evidence for an insert-holder-V arrangement."
+    },
+    {
+      "file": "u-photo.jpg",
+      "reason": "550x550; brand banners and watermark across product."
+    },
+    {
+      "file": "u-system.png",
+      "reason": "Illustrated/CAD-like tooling with branding; not a real photo."
+    },
+    {
+      "file": "lightpole-1.webp",
+      "reason": "600x600 engineering illustration; not a photo."
+    },
+    {
+      "file": "pole-candidate.jpg",
+      "reason": "680x509; shows a formed shell, not a tool. Must not use as tooling photo."
+    },
+    {
+      "file": "trumpf-bending-tools-manual.pdf",
+      "reason": "Partial timed-out download; invalid document. Not read or used as full-manual evidence."
+    },
+    {
+      "file": "corrugating-native.jpg",
+      "source": "https://sc04.alicdn.com/kf/H68122c0325da4e38acb73cf9f9c53ab51.jpg",
+      "page": "https://www.alibaba.com/product-detail/Carriage-Plate-Corrugated-Plate-Bending-Machine_1601012943534.html",
+      "pixels": [
+        800,
+        800
+      ],
+      "reason": "Native Alibaba image downloaded from original URL found in UI-saved HTML; only 800x800 and includes margin brand. Correct wave-forming structure, rejected for public-photo quality."
+    }
+  ],
+  "pendingPhotoTypes": [
+    "pb-radius-tooling",
+    "pb-u-forming",
+    "pb-embossing",
+    "pb-container",
+    "pb-light-pole"
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "status": "local-preview-not-published",
+  "basis": "manual-backed scopes from blade-family-research-2026-10-19.md",
+  "newPages": [
+    {
+      "id": "pb-straight-punch",
+      "parentId": "pb-001",
+      "imageStatus": "technical selection view until matching photography is approved"
+    },
+    {
+      "id": "pb-gooseneck-punch",
+      "parentId": "pb-001",
+      "imageStatus": "technical selection view until matching photography is approved"
+    },
+    {
+      "id": "pb-radius-tooling",
+      "parentId": "pb-001",
+      "imageStatus": "technical selection view until matching photography is approved"
+    },
+    {
+      "id": "pb-u-forming",
+      "parentId": "pb-001",
+      "imageStatus": "technical selection view until matching photography is approved"
+    },
+    {
+      "id": "pb-embossing",
+      "parentId": "pb-001",
+      "imageStatus": "technical selection view until matching photography is approved"
+    },
+    {
+      "id": "pb-container",
+      "parentId": "pb-001",
+      "imageStatus": "technical selection view until matching photography is approved"
+    },
+    {
+      "id": "pb-light-pole",
+      "parentId": "pb-001",
+      "imageStatus": "technical selection view until matching photography is approved"
+    },
+    {
+      "id": "pb-quick-clamps",
+      "parentId": "pb-001",
+      "imageStatus": "technical selection view until matching photography is approved"
+    },
+    {
+      "id": "sk-paper-film",
+      "parentId": "sk-001",
+      "imageStatus": "existing multi-shop-reviewed imagery reused for matching subtype; actual-page review pending"
+    },
+    {
+      "id": "sk-foil",
+      "parentId": "sk-001",
+      "imageStatus": "technical selection view until matching photography is approved"
+    },
+    {
+      "id": "sr-bar",
+      "parentId": "sr-001",
+      "imageStatus": "technical selection view until matching photography is approved"
+    },
+    {
+      "id": "sr-casting",
+      "parentId": "sr-001",
+      "imageStatus": "technical selection view until matching photography is approved"
+    },
+    {
+      "id": "cp-thin-slitter",
+      "parentId": "cp-001",
+      "imageStatus": "technical selection view until matching photography is approved"
+    },
+    {
+      "id": "cp-slotting",
+      "parentId": "cp-001",
+      "imageStatus": "existing multi-shop-reviewed imagery; Hero, both gallery images, next, zoom and Escape inspected on actual page"
+    },
+    {
+      "id": "tb-packaging",
+      "parentId": "tb-002",
+      "imageStatus": "technical selection view until matching photography is approved"
+    },
+    {
+      "id": "db-gravure",
+      "parentId": "db-001",
+      "imageStatus": "technical selection view until matching photography is approved"
+    },
+    {
+      "id": "db-flexo",
+      "parentId": "db-001",
+      "imageStatus": "technical selection view until matching photography is approved"
+    },
+    {
+      "id": "db-holders",
+      "parentId": "db-001",
+      "imageStatus": "technical selection view until matching photography is approved"
+    },
+    {
+      "id": "cr-rotor",
+      "parentId": "cr-001",
+      "imageStatus": "technical selection view until matching photography is approved"
+    },
+    {
+      "id": "cr-stationary",
+      "parentId": "cr-001",
+      "imageStatus": "technical selection view until matching photography is approved"
+    }
+  ],
+  "deferred": "Market-only extensions, ambiguous combination doctor blade and unconfirmed machine-specific variants are not added as available products.",
+  "validation": {
+    "firstFullTestRun": "23 tests passed before the two matching subtype galleries were attached",
+    "latestBuild": "passed: 39 indexable pages; 30 products; 9 language packs with 717 entries",
+    "desktopVisual": "Chinese gooseneck Hero, corrugated slotting Hero and both gallery images, tooling category filter and child-link presence inspected in formal Chrome",
+    "galleryInteractions": "corrugated slotting: next image, zoom dialog and Escape close verified",
+    "mobileVisual": "pending",
+    "newImageAcquisition": "Golin punch/tooling detail inspected; original-image capture and additional-shop comparison not completed",
+    "focusedChecks": "15 catalog, i18n and site publication checks passed after final gallery and breadcrumb changes"
+  }
+}

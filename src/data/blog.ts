@@ -32,7 +32,7 @@ export const blogPosts: BlogPost[] = [
     excerpt: "Explore the differences between straight shear blades, circular knives, toothed blades and doctor blades in our catalog.",
     image: "/images/products/slitting.webp",
     productId: "sk-001",
-    relatedProductIds: ["sb-001", "sb-002", "rs-001", "sk-001", "tb-001", "db-001", "pb-001"],
+    relatedProductIds: ["sb-001", "rs-001", "sk-001", "sr-001", "cp-001", "tb-002", "db-001", "cb-001", "cr-001", "pb-001"],
     sections: [
       { heading: "Straight shear blades", paragraphs: ["Our shear-blade range includes guillotine and swing-beam knife sets for sheet-metal shearing applications. The long rectangular profile is only a starting point: mounting details, edge geometry and machine compatibility need to be confirmed for each order."] },
       { heading: "Circular shear and slitting knives", paragraphs: ["The catalog groups circular shear blades and rotary slitting knives separately. Both have circular forms, but their intended applications and specified geometry differ. Compare the relevant product information and send your drawing rather than selecting a knife by appearance alone."] },
@@ -46,8 +46,8 @@ export const blogPosts: BlogPost[] = [
     category: "Operations",
     excerpt: "Organize part records, drawing revisions and spare quantities to make replacement purchasing more predictable.",
     image: "/images/products/swing-beam.webp",
-    productId: "sb-002",
-    relatedProductIds: ["sb-001", "sb-002"],
+    productId: "sb-001",
+    relatedProductIds: ["sb-001"],
     sections: [
       { heading: "Build a clear part record", paragraphs: ["Create a record for each blade position on a machine. Include the equipment model, internal part number, approved drawing revision and supplier reference. Label the components of a matched set so purchasing and maintenance teams can identify them consistently."] },
       { heading: "Keep a history of replacements", paragraphs: ["Record when a replacement was installed, the application it served and why it was replaced. This history gives the team a practical basis for discussing spare quantities and purchasing schedules.", "Avoid treating one replacement interval as a universal rule. Operating conditions and machine requirements should remain part of the discussion with your equipment and blade suppliers."] },

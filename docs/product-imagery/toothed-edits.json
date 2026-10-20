@@ -1,0 +1,30 @@
+[
+  {
+    "id": "tb-overview-white-v1",
+    "hero": false,
+    "prompt": "Use case: precise-object-edit. Image 1 edit target is a real photograph of EXACTLY THREE silver steel arc-shaped corrugated carton slotter blades, each with EXACTLY SIX elongated mounting slots arranged in three pairs, fine serrations on the convex outer edge, and little rectangular end lips. Preserve exact silhouettes, six slot openings on each blade, arc curvature, thickness, fine tooth profile, relative size and original photograph machining texture. Replace wood tabletop and unrelated top-right object with pure white #ffffff seamless background, white through all slots, very light tight contact shadows. Reframe landscape 3:2 with all three complete blades, keep the stacked arrangement and about 80 percent image width. Neutralize cyan reflected color into natural silver steel; modestly improve clarity, no fake extra detail. No new objects, extra blades, round holes, added slots, removed slots, different tooth pattern, text, logos, watermarks, certifications, labels, fog, gray panels or artificial chrome.",
+    "path": "/Users/zhanglu/.codex/generated_images/01a14896-4e7a-7da2-8180-dc6bba55511d/exec-8a165407-44ab-45e2-aadf-655b725aefc1.png",
+    "tool": "built-in image_gen",
+    "source": "research/alibaba/tb-001/tb-001-sanli-02.png",
+    "review": "Three blade bodies, six oblong slots each and convex serrated edge checked. Background and light edited; exact tooth count not independently established and texture is not recovered photographic evidence.",
+    "output": "public/images/products/category-photos/tb-overview-white-v1.webp",
+    "actualDimensions": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "tb-hero-navy-v1",
+    "hero": true,
+    "prompt": "Use case: compositing. Image 1 edit target is a real photograph of EXACTLY THREE silver steel arc-shaped corrugated carton slotter blades, each with EXACTLY SIX elongated mounting slots arranged in three pairs, fine serrations on the convex outer edge, and little rectangular end lips. Preserve exact silhouettes, six slot openings on each blade, arc curvature, thickness, fine tooth profile, relative size and original photograph machining texture. Image 2 is background and color reference ONLY, do not transfer any of its products. Replace wood tabletop with matching deep navy industrial studio background and subtly textured floor, restrained cool side lighting. Wide 16:9 photograph, three blades neatly arranged across the lower half, empty dark navy upper center for page heading. Bright neutral silver metal, not overdark. No new objects, extra blades, round holes, added slots, removed slots, different tooth pattern, text, logos, watermarks, certifications, labels, fog, gray panels or artificial chrome.",
+    "path": "/Users/zhanglu/.codex/generated_images/01a14896-4e7a-7da2-8180-dc6bba55511d/exec-ad640541-c2a8-420b-a42f-b729064fe831.png",
+    "tool": "built-in image_gen",
+    "source": "research/alibaba/tb-001/tb-001-sanli-02.png",
+    "review": "Three blade bodies, six oblong slots each and convex serrated edge checked. Background and light edited; exact tooth count not independently established and texture is not recovered photographic evidence.",
+    "output": "public/images/products/category-photos/tb-hero-navy-v1.webp",
+    "actualDimensions": [
+      1672,
+      941
+    ]
+  }
+]

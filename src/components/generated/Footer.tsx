@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaWhatsapp } from "react-icons/fa";
 import { BrandLogo } from "@/components/common/BrandLogo";
 import { contactPhone, phoneUrl, whatsappContact, whatsappUrl } from "@/data/contact";
+import { productCategories } from "@/data/products";
 
 export function Footer() {
   return (
@@ -41,16 +42,10 @@ export function Footer() {
           <div>
             <h4 className="text-metal-text font-semibold mb-6">Products</h4>
             <ul className="space-y-3">
-              {[
-                { name: "Shear Blades", category: "shear-blades" },
-                { name: "Press Brake Tooling", category: "press-brake-tooling" },
-                { name: "Rolling Shear Blades", category: "rolling-shear-blades" },
-                { name: "Slitting Knives", category: "slitting-knives" },
-                { name: "Doctor Blades", category: "doctor-blades" },
-              ].map((item) => (
-                <li key={item.category}>
+              {productCategories.map((item) => (
+                <li key={item.id}>
                   <Link
-                    to={`/products?category=${item.category}`}
+                    to={`/products?category=${item.id}`}
                     className="text-metal-subtext text-sm hover:text-steel transition-colors duration-200"
                   >
                     {item.name}

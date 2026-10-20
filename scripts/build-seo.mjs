@@ -68,6 +68,12 @@ try {
   const urls = pages.map(route => `  <url><loc>${escapeXml(new URL(route, site.url).href)}</loc></url>`).join('\n');
   writeFileSync(path.join(dist, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`);
   writeFileSync(path.join(dist, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${site.url}/sitemap.xml\n`);
+  // Retired duplicate/misclassified products keep their historical entry points.
+  for (const [from, to] of Object.entries({ '/products/sb-002': '/products/sb-001', '/products/tb-001': '/products/cp-001' })) {
+    const target = path.join(dist, from.slice(1), 'index.html');
+    mkdirSync(path.dirname(target), { recursive: true });
+    writeFileSync(target, `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="robots" content="noindex, follow"><meta http-equiv="refresh" content="0;url=${to}"><link rel="canonical" href="${new URL(to, site.url).href}"><title>Product moved | Nearblade</title></head><body><a href="${to}">Continue to product</a></body></html>`);
+  }
   console.log(`Generated static metadata for ${pages.length} pages, 404.html, sitemap.xml and robots.txt (${site.url}).`);
 } finally {
   rmSync(bundle, { force: true });

@@ -1,0 +1,686 @@
+{
+  "date": "2026-10-19",
+  "canonicalCatalogChanged": false,
+  "legend": {
+    "M": "manual explicitly mentions the indicated scope; specifications still subject to confirmation",
+    "E": "external industry or market observation; not confirmed Nearblade offering",
+    "C": "meaning, structure or actual supply remains to be confirmed"
+  },
+  "warning": "Rows combine functional subtypes, structural attributes and accessories as labelled in report. Do not count as SKUs or automatically publish.",
+  "families": [
+    {
+      "id": "shear-blades",
+      "nameZh": "剪板机刀片",
+      "manualPage": 5,
+      "status": "research-candidates-not-approved-catalog",
+      "tableColumns": [
+        "候选项",
+        "英文搜索词",
+        "结构及采购识别点",
+        "证据与处理"
+      ],
+      "candidateRows": [
+        [
+          "机械剪板机适配刀组",
+          "mechanical guillotine shear blades Q11",
+          "上下刀配套；安装孔、刀座基准决定兼容性",
+          "M，适配项"
+        ],
+        [
+          "液压摆式剪板机适配刀组",
+          "hydraulic swing beam shear blades QC12Y",
+          "不能只按总长替换；核对截面和工作刃几何",
+          "M，适配项"
+        ],
+        [
+          "闸式剪板机适配刀组",
+          "hydraulic guillotine shear blades",
+          "设备运动机构与摆式不同，不能据外观认定互换",
+          "E/C，补机型资料"
+        ],
+        [
+          "上刀／下刀",
+          "upper / lower shear knife",
+          "装配位置不同；图纸可能不同",
+          "E，位置属性"
+        ],
+        [
+          "整体长刀／分段拼接刀",
+          "one-piece / segmented shear blade",
+          "拼接端面、安装基准与接缝质量需要单独确认",
+          "E/C，结构属性"
+        ],
+        [
+          "开平线定尺横剪刀",
+          "cut-to-length shear knife",
+          "连续板带开平后的横向切断",
+          "E/C，候选应用小类"
+        ]
+      ],
+      "selectionDimensions": "See report for family-specific RFQ fields",
+      "sourceIds": [
+        "S001",
+        "S002",
+        "S003",
+        "S004"
+      ]
+    },
+    {
+      "id": "press-brake-tooling",
+      "nameZh": "折弯机模具",
+      "manualPage": 6,
+      "status": "research-candidates-not-approved-catalog",
+      "tableColumns": [
+        "建议分组",
+        "可研究的小类",
+        "英文词",
+        "状态"
+      ],
+      "candidateRows": [
+        [
+          "上模 Punches",
+          "直身／刀形上模",
+          "straight punch / knife punch",
+          "M，具体截面 C"
+        ],
+        [
+          "上模 Punches",
+          "弯头／鹅颈上模，深鹅颈上模",
+          "gooseneck / deep gooseneck punch",
+          "M；深度范围 C"
+        ],
+        [
+          "上模 Punches",
+          "锐角上模、90° 等角度规格",
+          "acute angle punch",
+          "M；角度是属性"
+        ],
+        [
+          "上模 Punches",
+          "R 形／圆柱半径上模",
+          "radius punch / radius insert",
+          "M，装配形式 C"
+        ],
+        [
+          "下模 Dies",
+          "单 V 下模、双 V／多 V 下模",
+          "single V / two V / multi V die",
+          "E；多 V 已有市场图片"
+        ],
+        [
+          "下模 Dies",
+          "可调 V 下模",
+          "adjustable V die",
+          "E/C"
+        ],
+        [
+          "成形模",
+          "压平／折边模",
+          "hemming / flattening tools",
+          "E；手册相关名称须核对"
+        ],
+        [
+          "成形模",
+          "Z 形台阶／偏移模",
+          "offset / joggle tooling",
+          "E/C"
+        ],
+        [
+          "成形模",
+          "U 形、压印、特殊轮廓成形模",
+          "U forming / embossing / custom form tool",
+          "M，必须看工件图"
+        ],
+        [
+          "行业专用",
+          "集装箱、灯杆模具",
+          "container / light pole press brake tooling",
+          "M，不代表单一标准截面"
+        ],
+        [
+          "附件",
+          "高精度上模快夹、转接座、加高座",
+          "punch clamp / adapter / extender",
+          "快夹 M；其余 E/C"
+        ]
+      ],
+      "selectionDimensions": "See report for family-specific RFQ fields",
+      "sourceIds": [
+        "S005",
+        "S006",
+        "S007",
+        "S008",
+        "S009",
+        "S010",
+        "S011"
+      ]
+    },
+    {
+      "id": "rolling-shear-blades",
+      "nameZh": "滚剪机刀片",
+      "manualPage": 7,
+      "status": "research-candidates-not-approved-catalog",
+      "tableColumns": [
+        "建议小类／配套项",
+        "英文词",
+        "识别重点",
+        "状态"
+      ],
+      "candidateRows": [
+        [
+          "金属纵剪圆刀",
+          "metal rotary slitter knife",
+          "OD×ID×T、键槽、侧面基准、成组厚度",
+          "M"
+        ],
+        [
+          "金属边部修切圆刀",
+          "rotary side trimmer knife",
+          "修边工位，不能按普通分条刀直接替换",
+          "E/C"
+        ],
+        [
+          "精密隔套／间隔环",
+          "precision spacer",
+          "决定排刀间距，含不同结构",
+          "E，附件 C"
+        ],
+        [
+          "包胶退料环、钢退料环",
+          "stripper ring",
+          "与圆刀和板厚匹配；不是切削刀片",
+          "E，附件 C"
+        ],
+        [
+          "薄调整垫片",
+          "plastic / precision shim",
+          "配组调整，与主刀分开计价",
+          "E，附件 C"
+        ],
+        [
+          "分离盘／分离片",
+          "separator disc / tool",
+          "位于分离装置，不能和主刀混图",
+          "E，附件 C"
+        ],
+        [
+          "废边切碎刀",
+          "scrap chopper knife",
+          "下游碎边工序，建议关联产品",
+          "E，归属 C"
+        ]
+      ],
+      "selectionDimensions": "See report for family-specific RFQ fields",
+      "sourceIds": [
+        "S012",
+        "S013",
+        "S014",
+        "S015"
+      ]
+    },
+    {
+      "id": "slitting-knives",
+      "nameZh": "分切刀系列",
+      "manualPage": 8,
+      "status": "research-candidates-not-approved-catalog",
+      "tableColumns": [
+        "工艺分组",
+        "细分对象",
+        "英文词",
+        "说明与状态"
+      ],
+      "candidateRows": [
+        [
+          "剪切式",
+          "平圆上刀、碟形上刀",
+          "flat / dished top slitter knife",
+          "上下刀配合；行业 E，手册系列 M"
+        ],
+        [
+          "剪切式",
+          "下刀环／底刀、下刀筒或多槽刀块",
+          "bottom knife / anvil ring / multi-groove block",
+          "与上刀成套确认；E/C"
+        ],
+        [
+          "剃刀式",
+          "三孔刀、长槽刀、注入式小刀",
+          "three-hole / slotted / injector razor blade",
+          "固定薄刃切卷材；E/C"
+        ],
+        [
+          "压切式",
+          "压切／压痕圆刀与砧辊",
+          "crush / score knife and anvil",
+          "不能与剪切上刀互用；E/C"
+        ],
+        [
+          "专用刀组",
+          "胶带、纸、薄膜、金属箔用刀组",
+          "tape / paper / film / foil slitting knives",
+          "应用标签；纸、膜、铝铜箔等 M"
+        ],
+        [
+          "新应用研究",
+          "锂电极片、隔膜分切",
+          "battery electrode / separator slitting",
+          "导言涉及锂电，但具体刀型及工艺 C"
+        ],
+        [
+          "附件",
+          "气动刀架、刀座、定位组件",
+          "pneumatic knife holder / positioning",
+          "E/C，附件分组"
+        ]
+      ],
+      "selectionDimensions": "See report for family-specific RFQ fields",
+      "sourceIds": [
+        "S016",
+        "S017",
+        "S018",
+        "S019",
+        "S020",
+        "S021"
+      ]
+    },
+    {
+      "id": "steel-rolling-blades",
+      "nameZh": "轧钢刀片",
+      "manualPage": 9,
+      "status": "research-candidates-not-approved-catalog",
+      "tableColumns": [
+        "候选小类",
+        "英文词",
+        "工位／结构辨识",
+        "状态"
+      ],
+      "candidateRows": [
+        [
+          "棒材、线材剪切刀",
+          "bar / wire rod shear knife",
+          "按圆、方或其他截面确认工作刃",
+          "M；具体型面 C"
+        ],
+        [
+          "钢坯剪刀片",
+          "billet shear knife",
+          "坯料分断，不等于薄板剪",
+          "E/C，手册连铸方向相关"
+        ],
+        [
+          "飞剪刀片",
+          "flying shear knife",
+          "在线随运动材料剪切；机构各异",
+          "E/C"
+        ],
+        [
+          "切头尾／切废刀",
+          "crop / cobble shear knife",
+          "切头尾、事故料处理需分工位",
+          "E/C"
+        ],
+        [
+          "冷定尺分断刀",
+          "cold dividing shear knife",
+          "冷态成品分断",
+          "E/C"
+        ],
+        [
+          "热带轧线剪刀",
+          "hot strip mill shear knife",
+          "鼓式、曲柄式、摆式等设备适配",
+          "E/C，机构作属性"
+        ],
+        [
+          "厚板侧剪及修边刀",
+          "plate side shear / trimmer knife",
+          "与滚剪圆刀系列有交叉，按工位设关联",
+          "E/C"
+        ],
+        [
+          "连铸连轧配套剪刀",
+          "continuous casting / CSP shear knife",
+          "须具体到设备位置和工艺温度",
+          "手册方向 M，型号 C"
+        ]
+      ],
+      "selectionDimensions": "See report for family-specific RFQ fields",
+      "sourceIds": [
+        "S022",
+        "S023"
+      ]
+    },
+    {
+      "id": "corrugated-paper-cutters",
+      "nameZh": "瓦楞纸切刀",
+      "manualPage": 10,
+      "status": "research-candidates-not-approved-catalog",
+      "tableColumns": [
+        "建议小类",
+        "英文词",
+        "外形／任务与识别字段",
+        "状态"
+      ],
+      "candidateRows": [
+        [
+          "生产线纵切薄圆刀",
+          "corrugated slitter scorer knife",
+          "薄圆盘；外径、孔径、厚度、安装孔",
+          "M"
+        ],
+        [
+          "修边刀",
+          "corrugated trim knife",
+          "纸板边部修切；确认属于哪一工位",
+          "M，可能与纵切同型"
+        ],
+        [
+          "横切长刀",
+          "corrugator cutoff knife",
+          "横向定长切断；直线／曲线轮廓依设备图纸",
+          "E/C"
+        ],
+        [
+          "旋转剪刀具",
+          "corrugator rotary shear knife",
+          "与主横切、纵切工位区分",
+          "E/C"
+        ],
+        [
+          "弧形开槽上刀",
+          "arc slotter knife / male slotting knife",
+          "弧度、齿形、孔槽、刀座曲率",
+          "开槽 M；具体结构 E/C"
+        ],
+        [
+          "配对开槽下刀／环",
+          "female slotter knife / slotting ring",
+          "与上刀匹配；不能凭名称确定通用性",
+          "E/C"
+        ],
+        [
+          "三联／四联开槽机刀组",
+          "three / four gang slotter knives",
+          "设备配置／刀组适配，不是三种或四种刀材",
+          "M"
+        ],
+        [
+          "配套磨轮、刀座及压线轮",
+          "grinding wheel / holder / scoring wheel",
+          "压线轮和磨轮不是切刀，附件单列",
+          "E/C"
+        ]
+      ],
+      "selectionDimensions": "See report for family-specific RFQ fields",
+      "sourceIds": [
+        "S024",
+        "S025",
+        "S026",
+        "S027",
+        "S066"
+      ]
+    },
+    {
+      "id": "toothed-blades",
+      "nameZh": "齿刀系列",
+      "manualPage": 11,
+      "status": "research-candidates-not-approved-catalog",
+      "tableColumns": [
+        "建议小类／属性",
+        "英文词",
+        "适用研究方向",
+        "状态"
+      ],
+      "candidateRows": [
+        [
+          "包装机横切齿刀",
+          "packaging cutoff serrated knife",
+          "立式／枕式包装、袋膜切断",
+          "M 应用；结构 E"
+        ],
+        [
+          "直线易撕线刀",
+          "straight perforating knife",
+          "纸、薄膜、标签等保留连接切口",
+          "E/C"
+        ],
+        [
+          "圆形易撕线刀",
+          "circular perforating knife",
+          "连续纵向打断续切口",
+          "E/C"
+        ],
+        [
+          "异形包装齿刀",
+          "shaped / pointed / T-shaped packaging knife",
+          "依夹具、切封机构和图纸",
+          "E/C"
+        ],
+        [
+          "食品设备齿刀",
+          "food processing serrated machine knife",
+          "必须区分直接切食品与切包装",
+          "M 行业；具体产品 C"
+        ],
+        [
+          "齿形属性",
+          "V / high-low / scalloped / slant teeth",
+          "是工作刃形态；不要各建重复大类",
+          "M 齿形方向，具体轮廓 C"
+        ]
+      ],
+      "selectionDimensions": "See report for family-specific RFQ fields",
+      "sourceIds": [
+        "S028",
+        "S029",
+        "S030"
+      ]
+    },
+    {
+      "id": "doctor-blades",
+      "nameZh": "油墨刮刀",
+      "manualPage": 12,
+      "status": "research-candidates-not-approved-catalog",
+      "tableColumns": [
+        "用途分组",
+        "细分对象／英文",
+        "页面组织建议",
+        "状态"
+      ],
+      "candidateRows": [
+        [
+          "凹印",
+          "gravure metering doctor blade",
+          "计量用途页，另选刃口及材料",
+          "M"
+        ],
+        [
+          "柔印",
+          "flexo metering doctor blade",
+          "与网纹辊配合，记录墨水与辊面",
+          "M"
+        ],
+        [
+          "腔式柔印配套",
+          "containment / sealing blade",
+          "与计量刀位置和功能区分",
+          "E/C"
+        ],
+        [
+          "涂布与上光",
+          "coating / varnishing doctor blade",
+          "需明确设备和涂布液，不能泛化",
+          "M"
+        ],
+        [
+          "特殊印刷",
+          "decorative / label / UV applications",
+          "应用标签，不独立定义刀材",
+          "M"
+        ],
+        [
+          "支撑与夹持",
+          "backing blade / holder / chamber accessories",
+          "刀架、背衬、端封件分开",
+          "刀架 M，其余 E/C"
+        ],
+        [
+          "丝印关联",
+          "screen printing squeegee / scraper",
+          "核对实际胶刮／金属刮刀结构",
+          "手册应用 M，结构 C"
+        ]
+      ],
+      "selectionDimensions": "See report for family-specific RFQ fields",
+      "sourceIds": [
+        "S031",
+        "S032",
+        "S033",
+        "S034",
+        "S035",
+        "S036",
+        "S067",
+        "S068"
+      ]
+    },
+    {
+      "id": "chipper-blades",
+      "nameZh": "削片机刀片",
+      "manualPage": 13,
+      "status": "research-candidates-not-approved-catalog",
+      "tableColumns": [
+        "建议小类／配套项",
+        "英文词",
+        "区分点",
+        "状态"
+      ],
+      "candidateRows": [
+        [
+          "鼓式削片刀",
+          "drum chipper knife",
+          "鼓辊安装结构；BX 系列仍逐型号核图",
+          "E；手册削片系列 M"
+        ],
+        [
+          "盘式削片刀",
+          "disc chipper knife",
+          "刀盘安装、切削角和刀座不同",
+          "E/C"
+        ],
+        [
+          "再削片刀",
+          "rechipper knife",
+          "筛后超大片再处理",
+          "E/C"
+        ],
+        [
+          "锯木线削片头刀",
+          "sawmill chipping head knife",
+          "与主削片机刀区分",
+          "E/C"
+        ],
+        [
+          "传统可重磨刀",
+          "resharpenable chipper knife",
+          "修磨后尺寸与伸出量需要管理",
+          "E/C，结构属性"
+        ],
+        [
+          "可翻面／可更换刀片系统",
+          "reversible / disposable chipper knife",
+          "定位座与压紧结构成套确认",
+          "E/C，不能承诺专利系统替换"
+        ],
+        [
+          "底刀、压板及刀座",
+          "counter knife / clamp / holder",
+          "配套件，分别绘图",
+          "E/C"
+        ]
+      ],
+      "selectionDimensions": "See report for family-specific RFQ fields",
+      "sourceIds": [
+        "S037",
+        "S038",
+        "S039"
+      ]
+    },
+    {
+      "id": "crusher-blades",
+      "nameZh": "粉碎机刀片",
+      "manualPage": 14,
+      "status": "research-candidates-not-approved-catalog",
+      "tableColumns": [
+        "候选小类／属性",
+        "英文词",
+        "产品边界",
+        "状态"
+      ],
+      "candidateRows": [
+        [
+          "旋转动刀",
+          "granulator rotor knife",
+          "装于转子，与定刀配合",
+          "M"
+        ],
+        [
+          "固定刀／底刀",
+          "stator / bed knife",
+          "固定安装，配合间隙需按机器确认",
+          "M"
+        ],
+        [
+          "长直平刀",
+          "flat / straight granulator knife",
+          "几何形式，需看孔位和刀座",
+          "E/C"
+        ],
+        [
+          "分段／爪形动刀配置",
+          "segmented / claw rotor knife configuration",
+          "“爪刀”常涉及刀架安装，不一定是单片外形",
+          "E/C"
+        ],
+        [
+          "V 形剪切配置",
+          "V-cut rotor configuration",
+          "是转子排刀与剪切方式，不能误标单片刀形",
+          "E/C"
+        ],
+        [
+          "单轴撕碎刀块",
+          "single-shaft shredder cutting block",
+          "可转位方刀／刀块，另列候选产品",
+          "E/C"
+        ],
+        [
+          "多轴撕碎钩刀",
+          "multi-shaft shredder hook cutter",
+          "刀盘、隔套与轴匹配，另列",
+          "E/C"
+        ],
+        [
+          "切粒刀／滚刀",
+          "pelletizer knife / rotor",
+          "挤出切粒用途，不能等同废料粒碎刀",
+          "边界研究 C"
+        ],
+        [
+          "磨粉盘／齿盘",
+          "pulverizer disc / segment",
+          "研磨工具，与刀片系列分开",
+          "E，扩展范围 C"
+        ]
+      ],
+      "selectionDimensions": "See report for family-specific RFQ fields",
+      "sourceIds": [
+        "S040",
+        "S041",
+        "S042",
+        "S043",
+        "S044",
+        "S045"
+      ]
+    }
+  ]
+}

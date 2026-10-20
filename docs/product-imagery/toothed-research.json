@@ -1,0 +1,19 @@
+{
+  "status": "local preview work after commit 2897261; no push or deployment",
+  "method": "Formal signed-in Chrome; native navigation, screenshot checks, source-view public gallery URLs and single-image Save dialog.",
+  "rights": "Public supplier images; reuse permission not independently established; no own-factory-photo claim.",
+  "reviews": [
+    {"supplier":"Dongbai","url":"https://www.alibaba.com/product-detail/Corrugated-Paper-Arc-Serrated-Slotting-Blade_1601833808185.html","decision":"Main smooth-edge arc knives not preferred for visibly serrated overview."},
+    {"supplier":"Anhui Russan / Metalmass","url":"https://www.alibaba.com/product-detail/Custom-Serrated-Arc-Shape-Slotting-Knife_1601684407360.html","decision":"Clean serrated arc main, but native 800x800 and soft; reject.","image":"https://sc04.alicdn.com/kf/Hf392609bfd26442d9e9dcf8dfe850de2E.jpg"},
+    {"supplier":"Fengerli","url":"https://www.alibaba.com/product-detail/Fengerli-Arc-Shaped-Serrated-Blade-Corrugated_1601780443575.html","decision":"Natural hand-held red background gallery, composite main; not selected."},
+    {"supplier":"Nanjing Quality","url":"https://www.alibaba.com/product-detail/PassionTool-OEM-ODM-Arc-shaped-Carton_1601150146413.html","decision":"Main has watermark through stacked straight serrated blades; title inconsistent with photo."},
+    {"supplier":"Cangzhou Zhaoli","url":"https://www.alibaba.com/product-detail/Serrated-Arc-shape-Blade-Cardboard-Slotter_1601107124288.html","decision":"Clean natural dark steel arc main but native 750x750; reject.","image":"https://sc04.alicdn.com/kf/H96357fe586f94f549b8af5c87ddcfbc0b.jpg"},
+    {"supplier":"Foshan Sanli Packaging Machinery","url":"https://www.alibaba.com/product-detail/SKD-11-Corrugated-Board-Slotting-Knife_1601046224262.html","decision":"Selected original white product group and higher-resolution three-blade tabletop photograph. No obvious brands or watermarks. Cyan cast in tabletop photo requires neutralization."}
+  ],
+  "downloads": [
+    {"file":"research/alibaba/tb-001/tb-001-sanli-01.avif","image":"https://sc04.alicdn.com/kf/H1597a0f55a644102a6bd7a93a3870ac2a.png","actualDimensions":[960,960],"resolution":"conditional for approximately 600px product stage","review":"Four curved serrated knives with two one-slot and two two-slot bodies; pure white background. Keep source geometry."},
+    {"file":"research/alibaba/tb-001/tb-001-sanli-02.avif","image":"https://sc04.alicdn.com/kf/H5d0f04ddf5a7477e8a6250c736624c47K.jpg","actualDimensions":[1280,1706],"review":"Three curved fine-serrated blades; six elongated mounting slots each. Tabletop photo, no visible marks; selected for separate white gallery and navy Hero edits."}
+  ],
+  "detailUse":"Existing site tooth-profile, mounting-datum, machine-position and drawing-confirmation guidance retained. No supplier hardness, certification, warranty, dimensions or delivery promises copied.",
+  "interruption":"New Alibaba slider verification on lamella doctor-blade search. User asked to handle manually; no automated solution or bypass."
+}

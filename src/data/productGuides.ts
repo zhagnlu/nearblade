@@ -1,3 +1,6 @@
+import toolingDetails from "../../content/catalog/tooling-details.json";
+import type { ToolingProfile } from "@/components/common/ToolingProfileDrawing";
+
 export type DrawingKind = "straight" | "circular" | "tooling" | "toothed" | "strip";
 
 export interface ProductGuide {
@@ -6,6 +9,9 @@ export interface ProductGuide {
   compatibility: string;
   inspection: string[];
   catalogImage: string;
+  toolingProfile?: ToolingProfile;
+  process?: string;
+  role?: string;
 }
 
 const straightDimensions = [
@@ -22,18 +28,11 @@ export const productGuides: Record<string, ProductGuide> = {
     inspection: ["Identify the dimensions controlled by the quoted tolerance.", "State straightness, flatness and parallelism requirements separately.", "Confirm material, hardness and inspection documentation with the approved drawing."],
     catalogImage: "/images/manual/shear-blades-detail.webp",
   },
-  "sb-002": {
-    drawing: "straight",
-    dimensions: straightDimensions,
-    compatibility: "Provide the swing-beam shear model, blade position and existing part drawing. Include the mounting-face orientation and the material and thickness being cut.",
-    inspection: ["Specify thickness and the mounting datums used for inspection.", "Include blade-set matching and cutting-edge requirements on the drawing.", "Confirm the selected material and hardness for your application."],
-    catalogImage: "/images/manual/shear-blades-detail.webp",
-  },
   "pb-001": {
     drawing: "tooling",
     dimensions: [
       { label: "Length and sections · L", detail: "Specify total working length and individual segment lengths, including any special end sections." },
-      { label: "Working profile · V / H / R", detail: "Provide the V opening, working height, included angle and punch-tip or die-shoulder radii." },
+      { label: "Tool type and working profile", detail: "Identify the tool type first. Supply punch angle and tip radius, die opening and shoulder radii, forming-cavity profile or clamp interfaces as applicable." },
       { label: "Clamping interface", detail: "Supply the tang and mounting-interface drawing, machine model and clamping-system details." },
     ],
     compatibility: "Confirm the press-brake clamping interface, working height and required tooling profile with your machine specifications. Include the sheet material, thickness and bend drawing.",
@@ -62,7 +61,7 @@ export const productGuides: Record<string, ProductGuide> = {
     inspection: ["Identify the thickness or other dimension to which a precision requirement applies.", "Specify flatness, parallelism, bore fit and runout requirements separately.", "Confirm how matched knives will be measured and identified."],
     catalogImage: "/images/manual/slitting-knives.webp",
   },
-  "tb-001": {
+  "tb-002": {
     drawing: "toothed",
     dimensions: [
       { label: "Blade body · L × W × T", detail: "Provide the overall envelope, thickness and a drawing of any curved or special body profile." },
@@ -85,3 +84,16 @@ export const productGuides: Record<string, ProductGuide> = {
     catalogImage: "/images/manual/doctor-blades.webp",
   },
 };
+
+productGuides["cp-001"] = {
+  ...productGuides["tb-002"],
+  catalogImage: "/images/manual/corrugated-cutting-blades.jpg",
+};
+for (const id of ["sr-001", "cb-001", "cr-001"]) {
+  productGuides[id] = {
+    ...productGuides["sb-001"],
+    compatibility: "Provide the machine model, blade position, processed material and mounting drawing.",
+  };
+}
+
+Object.assign(productGuides, toolingDetails as unknown as Record<string, ProductGuide>);

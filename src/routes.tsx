@@ -1,4 +1,4 @@
-import { RouteObject } from "react-router-dom";
+import { Navigate, RouteObject } from "react-router-dom";
 import { Layout } from "./layout";
 import Home from "./pages/Home";
 import Products from "./pages/Products";
@@ -21,6 +21,14 @@ export const routes: RouteObject[] = [
       {
         path: "/products",
         element: <Products />,
+      },
+      {
+        path: "/products/sb-002",
+        element: <Navigate to="/products/sb-001" replace />,
+      },
+      {
+        path: "/products/tb-001",
+        element: <Navigate to="/products/cp-001" replace />,
       },
       {
         path: "/products/:id",

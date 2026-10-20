@@ -6,6 +6,8 @@ import { getProductById, productCategories } from "@/data/products";
 import { ContactForm } from "@/components/generated/ContactForm";
 import { ProductSelectionGuide } from "@/components/common/ProductSelectionGuide";
 import { productGuides } from "@/data/productGuides";
+import { BladeDimensionDrawing } from "@/components/common/BladeDimensionDrawing";
+import { ToolingProfileDrawing } from "@/components/common/ToolingProfileDrawing";
 import NotFound from "./NotFound";
 import { FaArrowLeft, FaCheck, FaArrowRight, FaTimes, FaSearchPlus, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
@@ -34,8 +36,11 @@ export default function ProductDetail() {
     return <NotFound />;
   }
 
-  const guide = productGuides[product.id];
-  const productImages = [...new Set([...(product.images?.length ? product.images : [product.image]), ...(guide && !product.heroImage ? [guide.catalogImage] : [])])];
+  const parent = getProductById(product.parentId || "");
+  const children = category?.products.filter(item => item.parentId === product.id) || [];
+  const baseGuide = productGuides[product.id] || productGuides[product.parentId || ""];
+  const guide = baseGuide && product.id === "cp-thin-slitter" ? productGuides["sk-001"] : baseGuide;
+  const productImages = [...new Set(product.images?.length ? product.images : [product.image])];
   const currentImage = productImages[currentImageIndex] || productImages[0];
   const relatedProducts = category?.products.filter((p) => p.id !== product.id).slice(0, 3) || [];
 
@@ -51,7 +56,7 @@ export default function ProductDetail() {
     <>
       <PageMeta
         image={product.image}
-        breadcrumbs={[{ name: "Home", path: "/" }, { name: "Products", path: "/products" }, { name: product.name, path: `/products/${product.id}` }]}
+        breadcrumbs={[{ name: "Home", path: "/" }, { name: "Products", path: "/products" }, ...(parent ? [{ name: parent.name, path: `/products/${parent.id}` }] : []), { name: product.name, path: `/products/${product.id}` }]}
         structuredData={{ "@type": "Product", name: product.name, description: product.description, image: [product.image], sku: product.id, brand: { "@type": "Brand", name: "Nearblade" }, category: category?.name, material: product.materials }}
       />
 
@@ -64,6 +69,7 @@ export default function ProductDetail() {
         contentId="product-content"
         primaryAction={{ label: "View Specifications", to: "#product-content" }}
         secondaryAction={{ label: "Request Quote", to: "/contact" }}
+        visual={product.toolingProfile ? <ToolingProfileDrawing profile={product.toolingProfile} dark /> : undefined}
       />
 
       <section id="product-content" className="product-detail-surface scroll-mt-20 py-section-mobile md:py-section bg-industrial">
@@ -75,9 +81,19 @@ export default function ProductDetail() {
             <FaArrowLeft className="mr-2" size={12} />
             Back to Products
           </Link>
+          {parent && <Link to={`/products/${parent.id}`} className="block text-steel mb-8 hover:underline">{parent.name}</Link>}
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
             <div>
+              {product.mediaMode === "specification" ? (
+                <div className="rounded-card border border-border p-5 sm:p-8 bg-industrial-secondary">
+                  <h2 className="text-2xl text-metal-text mb-4">Dimensions &amp; Fit</h2>
+                  {guide?.toolingProfile ? <ToolingProfileDrawing profile={guide.toolingProfile} /> : guide && !["pb-quick-clamps", "db-holders"].includes(product.id) && <BladeDimensionDrawing kind={guide.drawing === "toothed" && product.id === "cp-thin-slitter" ? "circular" : product.id.startsWith("sk-") ? "circular" : guide.drawing} />}
+                  <p className="text-metal-subtext text-sm leading-relaxed mb-6">Dimension reference, not to scale. Letters identify dimensions to include in your drawing; they do not define a standard size or manufacturing drawing.</p>
+                  <h3 className="text-metal-text font-semibold mb-3">Selection Requirements</h3>
+                  <ul className="space-y-3">{product.selectionFields?.map(field => <li key={field} className="border-b border-border pb-3 text-metal-subtext">{field}</li>)}</ul>
+                </div>
+              ) : <>
               <div className="relative group">
                 <div
                   className={`aspect-[3/2] ${product.heroImage ? "product-photo-stage" : "product-stage"} rounded-card overflow-hidden border border-border relative cursor-pointer`}
@@ -159,6 +175,7 @@ export default function ProductDetail() {
               )}
 
               <p className="text-metal-subtext text-sm mt-3 text-center">{"Product overview"}. Select image to enlarge.</p>
+              </>}
             </div>
 
             <div>
@@ -169,8 +186,34 @@ export default function ProductDetail() {
               )}
               <h2 className="text-3xl lg:text-h2 text-metal-text mt-2 mb-4">{product.name}</h2>
               <p className="text-metal-subtext leading-relaxed mb-8">{product.description}</p>
+              {guide?.role && <p className="text-steel font-medium mb-4">{guide.role}</p>}
+              {guide?.process && <p className="text-metal-subtext leading-relaxed mb-8">{guide.process}</p>}
 
               <div className="space-y-6">
+                {!product.mediaMode && !!product.selectionFields?.length && <div>
+                  <h3 className="text-metal-text font-semibold mb-3">Selection Requirements</h3>
+                  <ul className="space-y-2 text-metal-subtext">{product.selectionFields.map(field => <li key={field}>{field}</li>)}</ul>
+                </div>}
+                {!!product.variants?.length && (
+                  <div>
+                    <h3 className="text-metal-text font-semibold mb-3">Product Types</h3>
+                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-metal-subtext">
+                      {product.variants.map(type => <li key={type} className="border border-border rounded-card px-3 py-2">{type}</li>)}
+                    </ul>
+                  </div>
+                )}
+                {!!product.machineModels?.length && (
+                  <div>
+                    <h3 className="text-metal-text font-semibold mb-3">Machine Models</h3>
+                    <p className="text-metal-subtext leading-relaxed" translate="no">{product.machineModels.join(" · ")}</p>
+                  </div>
+                )}
+                {!!product.feedstocks?.length && (
+                  <div>
+                    <h3 className="text-metal-text font-semibold mb-3">Processed Materials</h3>
+                    <ul className="flex flex-wrap gap-2 text-metal-subtext">{product.feedstocks.map(item => <li key={item}>{item}</li>)}</ul>
+                  </div>
+                )}
                 <div>
                   <h3 className="text-metal-text font-semibold mb-3">Key Features</h3>
                   <ul className="space-y-2">
@@ -183,7 +226,7 @@ export default function ProductDetail() {
                   </ul>
                 </div>
 
-                <div>
+                {!!product.materials.length && <div>
                   <h3 className="text-metal-text font-semibold mb-3">Materials Available</h3>
                   <div className="flex flex-wrap gap-2">
                     {product.materials.map((material) => (
@@ -195,7 +238,7 @@ export default function ProductDetail() {
                       </span>
                     ))}
                   </div>
-                </div>
+                </div>}
 
                 <div>
                   <h3 className="text-metal-text font-semibold mb-3">Precision &amp; Tolerance</h3>
@@ -214,6 +257,13 @@ export default function ProductDetail() {
             </div>
           </div>
 
+          {!!children.length && <section className="mb-16" aria-label="Products in this series">
+            <h2 className="text-2xl font-semibold text-metal-text mb-6">Products in This Series</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">{children.map(item => <Link key={item.id} to={`/products/${item.id}`} className="border border-border rounded-card p-6 hover:border-steel transition-colors">
+              <h3 className="text-lg text-metal-text font-semibold mb-2">{item.name}</h3><p className="text-metal-subtext text-sm leading-relaxed mb-4">{item.description}</p><span className="text-steel text-sm">View Details</span>
+            </Link>)}</div>
+          </section>}
+
           <div className="product-detail-specs rounded-card border border-border p-5 sm:p-8 mb-16">
             <h2 className="text-2xl font-semibold text-metal-text mb-6">Technical Specifications</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -228,7 +278,7 @@ export default function ProductDetail() {
                   ))}
                 </ul>
               </div>
-              <div>
+              {!!product.materials.length ? <div>
                 <h3 className="text-metal-text font-medium mb-4">Material Options</h3>
                 <div className="space-y-3">
                   {product.materials.map((material) => (
@@ -238,11 +288,11 @@ export default function ProductDetail() {
                     </div>
                   ))}
                 </div>
-              </div>
+              </div> : <div><h3 className="text-metal-text font-medium mb-4">Material Selection</h3><p className="text-metal-subtext leading-relaxed">Material and treatment are selected after reviewing the application, machine and approved drawing.</p></div>}
             </div>
           </div>
 
-          {guide && <ProductSelectionGuide guide={guide} />}
+          {guide && product.id !== "db-holders" && <ProductSelectionGuide guide={guide} showDrawing={product.id !== "pb-001" && (!guide.toolingProfile || product.mediaMode !== "specification")} />}
 
           {relatedProducts.length > 0 && (
             <div className="mb-16">
@@ -254,7 +304,7 @@ export default function ProductDetail() {
                     to={`/products/${related.id}`}
                     className="product-detail-related group border border-border rounded-card overflow-hidden hover:border-steel/50 transition-all duration-300"
                   >
-                    <div className="aspect-[4/3] overflow-hidden product-stage">
+                    {related.mediaMode !== "specification" && <div className="aspect-[4/3] overflow-hidden product-stage">
                       <img
                         loading="lazy"
                         decoding="async"
@@ -262,7 +312,7 @@ export default function ProductDetail() {
                         alt={related.name}
                         className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
                       />
-                    </div>
+                    </div>}
                     <div className="p-4">
                       <h3 className="text-metal-text font-medium group-hover:text-steel transition-colors">
                         {related.name}

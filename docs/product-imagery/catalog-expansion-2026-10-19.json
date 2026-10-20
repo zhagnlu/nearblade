@@ -1,0 +1,28 @@
+{
+  "status": "local-preview-only",
+  "reuse": [
+    {
+      "product": "cp-slotting",
+      "sourceRecord": "toothed-research.json",
+      "match": "corrugated arc slotting knives",
+      "processing": "reuse approved white gallery and separate navy Hero; no new image edit"
+    },
+    {
+      "product": "sk-paper-film",
+      "sourceRecord": "round-knives-research.json",
+      "match": "paper/film circular slitting knife",
+      "processing": "reuse white gallery and separate navy Hero; no new image edit"
+    }
+  ],
+  "newComparison": [
+    {
+      "product": "pb-gooseneck-punch",
+      "supplier": "Maanshan Golin Press Brake Tooling Co., Ltd.",
+      "url": "https://www.alibaba.com/product-detail/Gooseneck-Punch-Press-Brake-Tool-Bending_1601522638264.html",
+      "review": "Formal Chrome search and gallery opened. Mixed punch and lower-die gallery; no new asset selected. Full native resolution not established.",
+      "status": "candidate-not-approved"
+    }
+  ],
+  "blocker": "Chrome window connection alternates between usable screenshots and noWindowsAvailable. No verification bypass.",
+  "queue": "18 added pages retain technical selection views pending matching multi-shop photography. No source links or production notes enter public content."
+}
