@@ -8,6 +8,7 @@ import { ProductSelectionGuide } from "@/components/common/ProductSelectionGuide
 import { productGuides } from "@/data/productGuides";
 import { BladeDimensionDrawing } from "@/components/common/BladeDimensionDrawing";
 import { ToolingProfileDrawing } from "@/components/common/ToolingProfileDrawing";
+import { BladeProfileDrawing } from "@/components/common/BladeProfileDrawing";
 import NotFound from "./NotFound";
 import { FaArrowLeft, FaCheck, FaArrowRight, FaTimes, FaSearchPlus, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
@@ -39,7 +40,7 @@ export default function ProductDetail() {
   const parent = getProductById(product.parentId || "");
   const children = category?.products.filter(item => item.parentId === product.id) || [];
   const baseGuide = productGuides[product.id] || productGuides[product.parentId || ""];
-  const guide = baseGuide && product.id === "cp-thin-slitter" ? productGuides["sk-001"] : baseGuide;
+  const guide = baseGuide;
   const productImages = [...new Set(product.images?.length ? product.images : [product.image])];
   const currentImage = productImages[currentImageIndex] || productImages[0];
   const relatedProducts = category?.products.filter((p) => p.id !== product.id).slice(0, 3) || [];
@@ -69,7 +70,7 @@ export default function ProductDetail() {
         contentId="product-content"
         primaryAction={{ label: "View Specifications", to: "#product-content" }}
         secondaryAction={{ label: "Request Quote", to: "/contact" }}
-        visual={product.toolingProfile ? <ToolingProfileDrawing profile={product.toolingProfile} dark /> : undefined}
+        visual={product.toolingProfile ? <ToolingProfileDrawing profile={product.toolingProfile} dark /> : product.bladeProfile && product.heroImage?.endsWith(".svg") ? <BladeProfileDrawing profile={product.bladeProfile} dark /> : undefined}
       />
 
       <section id="product-content" className="product-detail-surface scroll-mt-20 py-section-mobile md:py-section bg-industrial">
@@ -88,7 +89,10 @@ export default function ProductDetail() {
               {product.mediaMode === "specification" ? (
                 <div className="rounded-card border border-border p-5 sm:p-8 bg-industrial-secondary">
                   <h2 className="text-2xl text-metal-text mb-4">Dimensions &amp; Fit</h2>
-                  {guide?.toolingProfile ? <ToolingProfileDrawing profile={guide.toolingProfile} /> : guide && !["pb-quick-clamps", "db-holders"].includes(product.id) && <BladeDimensionDrawing kind={guide.drawing === "toothed" && product.id === "cp-thin-slitter" ? "circular" : product.id.startsWith("sk-") ? "circular" : guide.drawing} />}
+                  <button type="button" className="relative block w-full cursor-zoom-in" aria-label={`${product.name} enlarged image`} onClick={() => setIsZoomed(true)}>
+                    {guide?.toolingProfile ? <ToolingProfileDrawing profile={guide.toolingProfile} /> : guide?.bladeProfile ? <BladeProfileDrawing profile={guide.bladeProfile} /> : guide && <BladeDimensionDrawing kind={guide.drawing} />}
+                    <FaSearchPlus className="absolute top-2 right-2 text-steel" aria-hidden="true" size={18} />
+                  </button>
                   <p className="text-metal-subtext text-sm leading-relaxed mb-6">Dimension reference, not to scale. Letters identify dimensions to include in your drawing; they do not define a standard size or manufacturing drawing.</p>
                   <h3 className="text-metal-text font-semibold mb-3">Selection Requirements</h3>
                   <ul className="space-y-3">{product.selectionFields?.map(field => <li key={field} className="border-b border-border pb-3 text-metal-subtext">{field}</li>)}</ul>
@@ -292,7 +296,7 @@ export default function ProductDetail() {
             </div>
           </div>
 
-          {guide && product.id !== "db-holders" && <ProductSelectionGuide guide={guide} showDrawing={product.id !== "pb-001" && (!guide.toolingProfile || product.mediaMode !== "specification")} />}
+          {guide && <ProductSelectionGuide guide={guide} showDrawing={product.id !== "pb-001" && !guide.overview && (!(guide.toolingProfile || guide.bladeProfile) || product.mediaMode !== "specification")} />}
 
           {relatedProducts.length > 0 && (
             <div className="mb-16">
@@ -375,7 +379,9 @@ export default function ProductDetail() {
             </>
           )}
 
-          <img
+          {product.mediaMode === "specification" && guide ? <div className="w-full max-w-6xl max-h-[85svh] overflow-auto rounded-card bg-white p-4 sm:p-8" onClick={event => event.stopPropagation()}>
+            <div className="min-w-[680px]">{guide.toolingProfile ? <ToolingProfileDrawing profile={guide.toolingProfile} /> : guide.bladeProfile ? <BladeProfileDrawing profile={guide.bladeProfile} /> : <BladeDimensionDrawing kind={guide.drawing} />}</div>
+          </div> : <img
 
             loading="lazy"
 
@@ -384,7 +390,7 @@ export default function ProductDetail() {
             alt={`${product.name} - View ${currentImageIndex + 1}`}
             className="max-w-full max-h-full object-contain rounded-card shadow-2xl"
             onClick={(e) => e.stopPropagation()}
-          />
+          />}
 
           {productImages.length > 1 && (
             <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">

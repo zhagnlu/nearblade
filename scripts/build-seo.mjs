@@ -67,7 +67,7 @@ try {
   }
   const urls = pages.map(route => `  <url><loc>${escapeXml(new URL(route, site.url).href)}</loc></url>`).join('\n');
   writeFileSync(path.join(dist, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`);
-  writeFileSync(path.join(dist, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${site.url}/sitemap.xml\n`);
+  writeFileSync(path.join(dist, 'robots.txt'), `User-agent: *\nAllow: /\nDisallow: /images/assets.json\n\nSitemap: ${site.url}/sitemap.xml\n`);
   // Retired duplicate/misclassified products keep their historical entry points.
   for (const [from, to] of Object.entries({ '/products/sb-002': '/products/sb-001', '/products/tb-001': '/products/cp-001' })) {
     const target = path.join(dist, from.slice(1), 'index.html');

@@ -84,3 +84,28 @@ test('each brake-tool subtype has its own geometry, process and dimensional guid
   const silhouettes = children.map(product => readFileSync(new URL(`../public/images/products/tooling-v2/${product.toolingProfile}-section-v1.svg`, import.meta.url), 'utf8'));
   assert.equal(new Set(silhouettes).size, 8);
 });
+
+test('blade routes use explicit process guides and distinguish cutting systems', () => {
+  const details = JSON.parse(readFileSync(new URL('../content/catalog/blade-details.json', import.meta.url)));
+  const blades = products.filter(product => product.category !== 'press-brake-tooling');
+  assert.equal(blades.length, 21);
+  assert.deepEqual(Object.keys(details).sort(), blades.map(product => product.id).sort());
+  for (const product of blades) {
+    const guide = details[product.id];
+    assert.equal(guide.bladeProfile, product.bladeProfile, product.id);
+    assert.ok(guide.process && guide.dimensions.length === 3 && guide.compatibility && guide.inspection.length >= 2, product.id);
+    if (product.parentId) assert.deepEqual(product.selectionFields, guide.dimensions.map(dimension => dimension.label));
+    for (const asset of [product.image, product.heroImage, ...(product.images || [])].filter(Boolean)) {
+      assert.doesNotMatch(asset, /images\/manual\/|manual-series\/|catalog-hero/, product.id);
+    }
+    assert.ok(existsSync(new URL(`../public/images/products/blades-v2/${guide.bladeProfile}-section-v1.svg`, import.meta.url)));
+  }
+  assert.notEqual(details['rs-001'].bladeProfile, details['sk-001'].bladeProfile);
+  assert.notEqual(details['cp-thin-slitter'].bladeProfile, details['cp-slotting'].bladeProfile);
+  assert.notEqual(details['cr-rotor'].bladeProfile, details['cr-stationary'].bladeProfile);
+  assert.equal(details['db-holders'].bladeProfile, 'doctor-holder');
+  assert.match(details['db-flexo'].process, /containment blades/);
+  assert.match(details['sr-casting'].dimensions[0].detail, /process name alone does not define/);
+  assert.equal(byId['rs-001'].tolerance, 'To approved drawing');
+  assert.match(details['cp-thin-slitter'].process, /scoring tool forms a crease/);
+});

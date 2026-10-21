@@ -1,5 +1,6 @@
 import catalog from "../../content/catalog/products.json";
 import type { ToolingProfile } from "@/components/common/ToolingProfileDrawing";
+import type { BladeProfile } from "@/components/common/BladeProfileDrawing";
 
 export interface Product {
   id: string;
@@ -22,6 +23,7 @@ export interface Product {
   mediaMode?: "specification";
   selectionFields?: string[];
   toolingProfile?: ToolingProfile;
+  bladeProfile?: BladeProfile;
 }
 
 export interface ProductCategory {

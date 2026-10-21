@@ -42,7 +42,8 @@
         "machineModels": [
           "Q11",
           "QC12Y"
-        ]
+        ],
+        "bladeProfile": "shear"
       }
     ]
   },
@@ -330,17 +331,16 @@
         "category": "rolling-shear-blades",
         "description": "Circular shear blades for rolling-shear and plate-cutting applications. Request custom diameters and confirm the complete knife-set arrangement with your machine drawing.",
         "features": [
-          "Balanced rotation",
-          "Wear-resistant edge",
-          "Custom diameters",
-          "High precision thickness tolerance"
+          "Main dimensions · D × d × T",
+          "Mounting details",
+          "Edge and knife set"
         ],
         "materials": [
           "Cr12MoV",
           "H13",
           "SKD-11"
         ],
-        "tolerance": "±0.005mm",
+        "tolerance": "To approved drawing",
         "applications": [
           "Plate cutting",
           "Coil processing lines",
@@ -348,12 +348,13 @@
         ],
         "image": "/images/products/category-photos/rs-001-sego-01-white-v1.webp",
         "heroImage": "/images/products/category-photos/rs-hero-v1.webp",
-        "galleryFit": "cover",
+        "galleryFit": "contain",
         "images": [
           "/images/products/category-photos/rs-001-sego-01-white-v1.webp",
           "/images/products/category-photos/rs-001-sego-02-white-v1.webp"
         ],
-        "variants": []
+        "variants": [],
+        "bladeProfile": "metal-slitter"
       }
     ]
   },
@@ -369,10 +370,9 @@
         "category": "slitting-knives",
         "description": "Rotary slitting knives, also called rotary slitter knives, for paper, film, aluminum foil, copper foil and tape. Share your drawing for a custom quotation.",
         "features": [
-          "Precision edge geometry",
-          "Extended tool life",
-          "Low cutting resistance",
-          "Micron-level accuracy available"
+          "Main dimensions · D × d × T",
+          "Edge geometry",
+          "Arbor and set arrangement"
         ],
         "materials": [
           "SKD-11",
@@ -387,7 +387,7 @@
           "Paper slitting",
           "Film cutting",
           "Foil processing",
-          "Tube manufacturing lines"
+          "Packaging machinery"
         ],
         "image": "/images/products/category-photos/sk-overview-white-v1.webp",
         "heroImage": "/images/products/category-photos/sk-hero-v1.webp",
@@ -395,7 +395,8 @@
           "/images/products/category-photos/sk-overview-white-v1.webp",
           "/images/products/category-photos/sk-edge-white-v1.webp"
         ],
-        "variants": []
+        "variants": [],
+        "bladeProfile": "converting-slitter"
       },
       {
         "id": "sk-paper-film",
@@ -404,14 +405,15 @@
         "category": "slitting-knives",
         "description": "Slitting knives for paper, film and tape converting. Identify the cutting method, web thickness, knife profile and holder.",
         "features": [
-          "Drawing-based configuration",
-          "Machine interface matching",
-          "Application-specific material selection"
+          "Main dimensions · D × d × T",
+          "Edge geometry",
+          "Arbor and set arrangement"
         ],
         "materials": [],
         "tolerance": "To approved drawing",
         "applications": [
-          "Slitting Knives"
+          "Paper slitting",
+          "Film cutting"
         ],
         "image": "/images/products/category-photos/sk-overview-white-v1.webp",
         "heroImage": "/images/products/category-photos/sk-hero-v1.webp",
@@ -420,10 +422,11 @@
           "/images/products/category-photos/sk-edge-white-v1.webp"
         ],
         "selectionFields": [
-          "Web material, layers and thickness",
-          "Cutting method and blade pair",
-          "Holder interface and line speed"
-        ]
+          "Main dimensions · D × d × T",
+          "Edge geometry",
+          "Arbor and set arrangement"
+        ],
+        "bladeProfile": "converting-slitter"
       },
       {
         "id": "sk-foil",
@@ -432,24 +435,25 @@
         "category": "slitting-knives",
         "description": "Slitting knives for aluminum and copper foil. Specify foil thickness, edge requirements and the matched knife arrangement.",
         "features": [
-          "Drawing-based configuration",
-          "Machine interface matching",
-          "Application-specific material selection"
+          "Main dimensions · D × d × T",
+          "Edge geometry",
+          "Arbor and set arrangement"
         ],
         "materials": [],
         "tolerance": "To approved drawing",
         "applications": [
-          "Slitting Knives"
+          "Foil processing"
         ],
-        "image": "/images/catalog-hero.jpg",
-        "heroImage": "/images/catalog-hero.jpg",
+        "image": "/images/products/blades-v2/converting-slitter-section-v1.svg",
+        "heroImage": "/images/products/blades-v2/converting-slitter-navy-v1.svg",
         "images": [],
         "mediaMode": "specification",
         "selectionFields": [
-          "Foil alloy and thickness",
-          "Burr and edge requirements",
-          "Knife and spacer arrangement"
-        ]
+          "Main dimensions · D × d × T",
+          "Edge geometry",
+          "Arbor and set arrangement"
+        ],
+        "bladeProfile": "converting-slitter"
       }
     ]
   },
@@ -457,7 +461,7 @@
     "id": "steel-rolling-blades",
     "name": "Steel Rolling Blades",
     "description": "Bar shear blades and continuous-casting rolling blades for steel production. Confirm the cutting section and machine drawing.",
-    "image": "/images/products/manual-series/steel-rolling-overview-v1.webp",
+    "image": "/images/products/blades-v2/bar-shear-section-v1.svg",
     "products": [
       {
         "id": "sr-001",
@@ -478,15 +482,15 @@
           "Steel rolling mills",
           "Continuous casting"
         ],
-        "image": "/images/products/manual-series/steel-rolling-overview-v1.webp",
-        "heroImage": "/images/catalog-hero.jpg",
-        "images": [
-          "/images/products/manual-series/steel-rolling-overview-v1.webp"
-        ],
+        "image": "/images/products/blades-v2/bar-shear-section-v1.svg",
+        "heroImage": "/images/products/blades-v2/bar-shear-navy-v1.svg",
+        "images": [],
         "variants": [
           "Bar Shear Blades",
           "Continuous-casting Rolling Blades"
-        ]
+        ],
+        "bladeProfile": "bar-shear",
+        "mediaMode": "specification"
       },
       {
         "id": "sr-bar",
@@ -495,24 +499,25 @@
         "category": "steel-rolling-blades",
         "description": "Shear blades for bar processing. Provide the bar cross-section, material, cutting temperature and blade-seat drawing.",
         "features": [
-          "Drawing-based configuration",
-          "Machine interface matching",
-          "Application-specific material selection"
+          "Workpiece section and material",
+          "Cutting temperature and station",
+          "Blade-seat drawing"
         ],
         "materials": [],
         "tolerance": "To approved drawing",
         "applications": [
-          "Steel Rolling Blades"
+          "Steel rolling mills"
         ],
-        "image": "/images/catalog-hero.jpg",
-        "heroImage": "/images/catalog-hero.jpg",
+        "image": "/images/products/blades-v2/bar-shear-section-v1.svg",
+        "heroImage": "/images/products/blades-v2/bar-shear-navy-v1.svg",
         "images": [],
         "mediaMode": "specification",
         "selectionFields": [
-          "Bar material and cross-section",
+          "Workpiece section and material",
           "Cutting temperature and station",
           "Blade-seat drawing"
-        ]
+        ],
+        "bladeProfile": "bar-shear"
       },
       {
         "id": "sr-casting",
@@ -521,24 +526,25 @@
         "category": "steel-rolling-blades",
         "description": "Shear blades for continuous casting and rolling lines. Identify the cutting station, workpiece section and operating temperature.",
         "features": [
-          "Drawing-based configuration",
-          "Machine interface matching",
-          "Application-specific material selection"
+          "Workpiece section and material",
+          "Cutting temperature and station",
+          "Blade-seat drawing"
         ],
         "materials": [],
         "tolerance": "To approved drawing",
         "applications": [
-          "Steel Rolling Blades"
+          "Continuous casting"
         ],
-        "image": "/images/catalog-hero.jpg",
-        "heroImage": "/images/catalog-hero.jpg",
+        "image": "/images/products/blades-v2/billet-shear-section-v1.svg",
+        "heroImage": "/images/products/blades-v2/billet-shear-navy-v1.svg",
         "images": [],
         "mediaMode": "specification",
         "selectionFields": [
           "Workpiece section and material",
           "Cutting temperature and station",
           "Blade-seat drawing"
-        ]
+        ],
+        "bladeProfile": "billet-shear"
       }
     ]
   },
@@ -576,7 +582,8 @@
           "Three-gang Slotting Knives",
           "Four-gang Slotting Knives",
           "Thin Corrugated-line Blades"
-        ]
+        ],
+        "bladeProfile": "slotting-arc"
       },
       {
         "id": "cp-thin-slitter",
@@ -585,24 +592,26 @@
         "category": "corrugated-paper-cutters",
         "description": "Thin circular blades for corrugated board slitting and trimming. Specify outside diameter, bore, thickness and mounting pattern.",
         "features": [
-          "Drawing-based configuration",
-          "Machine interface matching",
-          "Application-specific material selection"
+          "Outside diameter, bore and thickness",
+          "Mounting holes and grinding system",
+          "Board structure and line speed"
         ],
         "materials": [],
         "tolerance": "To approved drawing",
         "applications": [
-          "Corrugated Paper Cutters"
+          "Corrugated packaging",
+          "Paper converting"
         ],
-        "image": "/images/catalog-hero.jpg",
-        "heroImage": "/images/catalog-hero.jpg",
+        "image": "/images/products/blades-v2/corrugated-thin-section-v1.svg",
+        "heroImage": "/images/products/blades-v2/corrugated-thin-navy-v1.svg",
         "images": [],
         "mediaMode": "specification",
         "selectionFields": [
           "Outside diameter, bore and thickness",
           "Mounting holes and grinding system",
           "Board structure and line speed"
-        ]
+        ],
+        "bladeProfile": "corrugated-thin"
       },
       {
         "id": "cp-slotting",
@@ -611,14 +620,14 @@
         "category": "corrugated-paper-cutters",
         "description": "Slotting knives for three-gang and four-gang carton machines. Match the arc profile, slot width and upper and lower knife arrangement.",
         "features": [
-          "Drawing-based configuration",
-          "Machine interface matching",
-          "Application-specific material selection"
+          "Arc profile and mounting slots",
+          "Slot width and tooth profile",
+          "Upper and lower knife arrangement"
         ],
         "materials": [],
         "tolerance": "To approved drawing",
         "applications": [
-          "Corrugated Paper Cutters"
+          "Corrugated packaging"
         ],
         "image": "/images/products/category-photos/tb-overview-white-v1.webp",
         "heroImage": "/images/products/category-photos/tb-hero-navy-v1.webp",
@@ -630,7 +639,8 @@
           "Arc profile and mounting slots",
           "Slot width and tooth profile",
           "Upper and lower knife arrangement"
-        ]
+        ],
+        "bladeProfile": "slotting-arc"
       }
     ]
   },
@@ -638,7 +648,7 @@
     "id": "toothed-blades",
     "name": "Toothed Blades",
     "description": "Serrated and toothed knives for packaging, plastics, food processing and other industrial machinery. Specify the tooth and mounting profiles.",
-    "image": "/images/manual/toothed-blades.webp",
+    "image": "/images/products/blades-v2/serrated-section-v1.svg",
     "products": [
       {
         "id": "tb-002",
@@ -646,10 +656,9 @@
         "category": "toothed-blades",
         "description": "Serrated and toothed knives for packaging, plastics, food processing and other industrial machinery. Specify the tooth and mounting profiles.",
         "features": [
-          "Precision tooth profile",
-          "Heat-treated edge",
-          "Custom tooth counts",
-          "Clean edge cutting"
+          "Blade body · L × W × T",
+          "Tooth profile · P / h",
+          "Mounting pattern"
         ],
         "materials": [
           "SK2",
@@ -665,12 +674,12 @@
           "Plastics processing",
           "Food processing machinery"
         ],
-        "image": "/images/manual/toothed-blades.webp",
-        "heroImage": "/images/catalog-hero.jpg",
-        "images": [
-          "/images/manual/toothed-blades.webp"
-        ],
-        "variants": []
+        "image": "/images/products/blades-v2/serrated-section-v1.svg",
+        "heroImage": "/images/products/blades-v2/serrated-navy-v1.svg",
+        "images": [],
+        "variants": [],
+        "bladeProfile": "serrated",
+        "mediaMode": "specification"
       },
       {
         "id": "tb-packaging",
@@ -679,24 +688,25 @@
         "category": "toothed-blades",
         "description": "Serrated knives for packaging machinery. Specify the film structure, tooth profile and whether the required cut is complete or perforated.",
         "features": [
-          "Drawing-based configuration",
-          "Machine interface matching",
-          "Application-specific material selection"
+          "Blade body · L × W × T",
+          "Tooth profile · P / h",
+          "Mounting pattern"
         ],
         "materials": [],
         "tolerance": "To approved drawing",
         "applications": [
-          "Toothed Blades"
+          "Packaging machinery"
         ],
-        "image": "/images/catalog-hero.jpg",
-        "heroImage": "/images/catalog-hero.jpg",
+        "image": "/images/products/blades-v2/serrated-section-v1.svg",
+        "heroImage": "/images/products/blades-v2/serrated-navy-v1.svg",
         "images": [],
         "mediaMode": "specification",
         "selectionFields": [
-          "Film structure and cutting direction",
-          "Tooth pitch and height",
-          "Complete cut or cut-and-tie pattern"
-        ]
+          "Blade body · L × W × T",
+          "Tooth profile · P / h",
+          "Mounting pattern"
+        ],
+        "bladeProfile": "serrated"
       }
     ]
   },
@@ -704,7 +714,7 @@
     "id": "doctor-blades",
     "name": "Doctor Blades",
     "description": "Standard, combination, blue-steel, stainless-steel and ceramic doctor blades, with combination holders for printing and coating.",
-    "image": "/images/products/doctor.webp",
+    "image": "/images/products/blades-v2/doctor-strip-section-v1.svg",
     "products": [
       {
         "id": "db-001",
@@ -712,10 +722,9 @@
         "category": "doctor-blades",
         "description": "Standard, combination, blue-steel, stainless-steel and ceramic doctor blades, with combination holders for printing and coating.",
         "features": [
-          "Consistent ink film",
-          "Corrosion resistant",
-          "Long blade life",
-          "Multiple material options"
+          "Strip dimensions · L × W × T",
+          "Metering edge",
+          "Holder and delivery format"
         ],
         "materials": [
           "Stainless steel",
@@ -731,10 +740,8 @@
           "Decorative printing",
           "Coating lines"
         ],
-        "image": "/images/products/doctor.webp",
-        "images": [
-          "/images/products/doctor.webp"
-        ],
+        "image": "/images/products/blades-v2/doctor-strip-section-v1.svg",
+        "images": [],
         "variants": [
           "Standard Doctor Blades",
           "Combination Doctor Blades",
@@ -742,7 +749,10 @@
           "Stainless-steel Doctor Blades",
           "Ceramic Doctor Blades",
           "Combination Blade Holders"
-        ]
+        ],
+        "bladeProfile": "doctor-strip",
+        "heroImage": "/images/products/blades-v2/doctor-strip-navy-v1.svg",
+        "mediaMode": "specification"
       },
       {
         "id": "db-gravure",
@@ -751,24 +761,25 @@
         "category": "doctor-blades",
         "description": "Doctor blades for gravure ink metering. Specify the ink system, blade width, body thickness and working-edge profile.",
         "features": [
-          "Drawing-based configuration",
-          "Machine interface matching",
-          "Application-specific material selection"
+          "Strip dimensions · L × W × T",
+          "Metering edge",
+          "Holder and delivery format"
         ],
         "materials": [],
         "tolerance": "To approved drawing",
         "applications": [
-          "Doctor Blades"
+          "Gravure printing"
         ],
-        "image": "/images/catalog-hero.jpg",
-        "heroImage": "/images/catalog-hero.jpg",
+        "image": "/images/products/blades-v2/doctor-strip-section-v1.svg",
+        "heroImage": "/images/products/blades-v2/doctor-strip-navy-v1.svg",
         "images": [],
         "mediaMode": "specification",
         "selectionFields": [
-          "Ink system and cylinder surface",
-          "Blade width and body thickness",
-          "Working-edge profile and thickness"
-        ]
+          "Strip dimensions · L × W × T",
+          "Metering edge",
+          "Holder and delivery format"
+        ],
+        "bladeProfile": "doctor-strip"
       },
       {
         "id": "db-flexo",
@@ -777,24 +788,25 @@
         "category": "doctor-blades",
         "description": "Doctor blades for flexographic ink metering. Match the blade edge, ink system and holder to the anilox roll.",
         "features": [
-          "Drawing-based configuration",
-          "Machine interface matching",
-          "Application-specific material selection"
+          "Strip dimensions · L × W × T",
+          "Metering edge",
+          "Holder and delivery format"
         ],
         "materials": [],
         "tolerance": "To approved drawing",
         "applications": [
-          "Doctor Blades"
+          "Flexographic printing"
         ],
-        "image": "/images/catalog-hero.jpg",
-        "heroImage": "/images/catalog-hero.jpg",
+        "image": "/images/products/blades-v2/doctor-strip-section-v1.svg",
+        "heroImage": "/images/products/blades-v2/doctor-strip-navy-v1.svg",
         "images": [],
         "mediaMode": "specification",
         "selectionFields": [
-          "Ink system and anilox surface",
-          "Blade width and body thickness",
-          "Working-edge profile and thickness"
-        ]
+          "Strip dimensions · L × W × T",
+          "Metering edge",
+          "Holder and delivery format"
+        ],
+        "bladeProfile": "doctor-strip"
       },
       {
         "id": "db-holders",
@@ -803,24 +815,27 @@
         "category": "doctor-blades",
         "description": "Holders for ink doctor blades. Provide the blade dimensions, mounting interface and adjustment arrangement.",
         "features": [
-          "Drawing-based configuration",
-          "Machine interface matching",
-          "Application-specific material selection"
+          "Blade dimensions and orientation",
+          "Mounting interface and datums",
+          "Adjustment and clamping arrangement"
         ],
         "materials": [],
         "tolerance": "To approved drawing",
         "applications": [
-          "Doctor Blades"
+          "Gravure printing",
+          "Flexographic printing",
+          "Coating lines"
         ],
-        "image": "/images/catalog-hero.jpg",
-        "heroImage": "/images/catalog-hero.jpg",
+        "image": "/images/products/blades-v2/doctor-holder-section-v1.svg",
+        "heroImage": "/images/products/blades-v2/doctor-holder-navy-v1.svg",
         "images": [],
         "mediaMode": "specification",
         "selectionFields": [
           "Blade dimensions and orientation",
           "Mounting interface and datums",
           "Adjustment and clamping arrangement"
-        ]
+        ],
+        "bladeProfile": "doctor-holder"
       }
     ]
   },
@@ -828,7 +843,7 @@
     "id": "chipper-blades",
     "name": "Chipper Blades",
     "description": "Wood-processing knives for particleboard and plywood production. Confirm the BX21-series machine model and mounting drawing.",
-    "image": "/images/products/manual-series/chipper-overview-v1.webp",
+    "image": "/images/products/blades-v2/chipper-white-01-v1.webp",
     "products": [
       {
         "id": "cb-001",
@@ -849,10 +864,12 @@
           "Particleboard production",
           "Plywood production"
         ],
-        "image": "/images/products/manual-series/chipper-overview-v1.webp",
-        "heroImage": "/images/catalog-hero.jpg",
+        "image": "/images/products/blades-v2/chipper-white-01-v1.webp",
+        "heroImage": "/images/products/blades-v2/chipper-navy-v1.svg",
         "images": [
-          "/images/products/manual-series/chipper-overview-v1.webp"
+          "/images/products/blades-v2/chipper-white-01-v1.webp",
+          "/images/products/blades-v2/chipper-white-02-v1.webp",
+          "/images/products/blades-v2/chipper-white-03-v1.webp"
         ],
         "variants": [],
         "machineModels": [
@@ -869,7 +886,9 @@
           "BX2113",
           "BX2113C",
           "BX2116"
-        ]
+        ],
+        "bladeProfile": "chipper",
+        "galleryFit": "contain"
       }
     ]
   },
@@ -877,7 +896,7 @@
     "id": "crusher-blades",
     "name": "Crusher Blades",
     "description": "Stationary and rotor knives for plastics, wood and polymer-composite size reduction. Select the blade material for the feedstock and machine.",
-    "image": "/images/products/manual-series/crusher-overview-v1.webp",
+    "image": "/images/products/blades-v2/granulator-rotor-section-v1.svg",
     "products": [
       {
         "id": "cr-001",
@@ -897,11 +916,9 @@
           "Wood processing",
           "Polymer composites"
         ],
-        "image": "/images/products/manual-series/crusher-overview-v1.webp",
-        "heroImage": "/images/catalog-hero.jpg",
-        "images": [
-          "/images/products/manual-series/crusher-overview-v1.webp"
-        ],
+        "image": "/images/products/blades-v2/granulator-rotor-section-v1.svg",
+        "heroImage": "/images/products/blades-v2/granulator-rotor-navy-v1.svg",
+        "images": [],
         "variants": [
           "Stationary Knives",
           "Rotor Knives"
@@ -915,7 +932,9 @@
           "Modified plastics",
           "Wood",
           "Polymer composites"
-        ]
+        ],
+        "bladeProfile": "granulator-rotor",
+        "mediaMode": "specification"
       },
       {
         "id": "cr-rotor",
@@ -924,24 +943,27 @@
         "category": "crusher-blades",
         "description": "Rotating knives for material granulation. Specify the rotor model, blade-seat geometry, knife quantity and material being processed.",
         "features": [
-          "Drawing-based configuration",
-          "Machine interface matching",
-          "Application-specific material selection"
+          "Rotor model and knife quantity",
+          "Matching rotor knife geometry",
+          "Machine cutting-gap specification"
         ],
         "materials": [],
         "tolerance": "To approved drawing",
         "applications": [
-          "Crusher Blades"
+          "Plastics processing",
+          "Wood processing",
+          "Polymer composites"
         ],
-        "image": "/images/catalog-hero.jpg",
-        "heroImage": "/images/catalog-hero.jpg",
+        "image": "/images/products/blades-v2/granulator-rotor-section-v1.svg",
+        "heroImage": "/images/products/blades-v2/granulator-rotor-navy-v1.svg",
         "images": [],
         "mediaMode": "specification",
         "selectionFields": [
           "Rotor model and knife quantity",
-          "Blade-seat drawing",
-          "Feedstock and contamination"
-        ]
+          "Matching rotor knife geometry",
+          "Machine cutting-gap specification"
+        ],
+        "bladeProfile": "granulator-rotor"
       },
       {
         "id": "cr-stationary",
@@ -950,24 +972,27 @@
         "category": "crusher-blades",
         "description": "Stationary knives for granulators. Match the mounting datum and cutting edge to the rotor knives and machine gap specification.",
         "features": [
-          "Drawing-based configuration",
-          "Machine interface matching",
-          "Application-specific material selection"
+          "Mounting datum and hole pattern",
+          "Matching rotor knife geometry",
+          "Machine cutting-gap specification"
         ],
         "materials": [],
         "tolerance": "To approved drawing",
         "applications": [
-          "Crusher Blades"
+          "Plastics processing",
+          "Wood processing",
+          "Polymer composites"
         ],
-        "image": "/images/catalog-hero.jpg",
-        "heroImage": "/images/catalog-hero.jpg",
+        "image": "/images/products/blades-v2/granulator-bed-section-v1.svg",
+        "heroImage": "/images/products/blades-v2/granulator-bed-navy-v1.svg",
         "images": [],
         "mediaMode": "specification",
         "selectionFields": [
           "Mounting datum and hole pattern",
           "Matching rotor knife geometry",
           "Machine cutting-gap specification"
-        ]
+        ],
+        "bladeProfile": "granulator-bed"
       }
     ]
   }

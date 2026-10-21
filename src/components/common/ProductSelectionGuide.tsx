@@ -1,6 +1,7 @@
 import { BladeDimensionDrawing } from "./BladeDimensionDrawing";
 import type { ProductGuide } from "@/data/productGuides";
 import { ToolingProfileDrawing } from "./ToolingProfileDrawing";
+import { BladeProfileDrawing } from "./BladeProfileDrawing";
 
 export function ProductSelectionGuide({ guide, showDrawing = true }: { guide: ProductGuide; showDrawing?: boolean }) {
   return (
@@ -9,7 +10,7 @@ export function ProductSelectionGuide({ guide, showDrawing = true }: { guide: Pr
       <p className="text-metal-subtext leading-relaxed mb-8">Made to your application and approved drawing. Share the following dimensions so we can confirm a suitable size, material and quotation.</p>
       <div className={`grid grid-cols-1 ${showDrawing ? "lg:grid-cols-2" : "md:grid-cols-3"} gap-8 items-start`}>
         {showDrawing && <figure className="bg-industrial-secondary rounded-card p-3 sm:p-5">
-          {guide.toolingProfile ? <ToolingProfileDrawing profile={guide.toolingProfile} /> : <BladeDimensionDrawing kind={guide.drawing} />}
+          {guide.toolingProfile ? <ToolingProfileDrawing profile={guide.toolingProfile} /> : guide.bladeProfile ? <BladeProfileDrawing profile={guide.bladeProfile} /> : <BladeDimensionDrawing kind={guide.drawing} />}
           <figcaption className="text-metal-subtext text-sm leading-relaxed">Dimension reference, not to scale. Letters identify dimensions to include in your drawing; they do not define a standard size or manufacturing drawing.</figcaption>
         </figure>}
         <dl className={showDrawing ? "divide-y divide-border" : "md:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-6"}>

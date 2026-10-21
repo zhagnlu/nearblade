@@ -94,11 +94,11 @@ About 正文的 Our Story 与 Quality Commitment 分别使用 `public/images/abo
 
 原 Machine Assembly Workshop 栏目现已替换为 Blade Heat Treatment Workshop，使用 `public/images/equipment/blade-heat-treatment-v1.webp`，展示刀片热处理炉、长条刀片装炉托架及圆刀坯。该图为内置 image_gen 生成的 1448×1086 概念参考图，不代表特定温度、工艺参数或认证；完整提示词记录于 `public/images/assets.json`。旧装配场景仅作为历史资源保留。
 
-7 个产品详情各增加原手册的产品族参考图，并通过 `src/data/productGuides.ts` 提供尺寸、安装、兼容性和检测要点。`BladeDimensionDrawing` 使用 SVG 绘制长刀、圆刀、模具、齿刀及刮刀带的尺寸示意。字母表示客户需要提供的尺寸，不构成加工图；没有新增未经确认的尺寸上下限。原有公差改标为目录精度参考，说明报价需明确受控尺寸、基准及检验方法。图库支持缩略图、手机切换和可用 Escape 关闭的放大弹窗。
+产品目录由 `content/catalog/products.json` 统一维护，按手册十个系列组织 30 个产品页。`tooling-details.json` 和 `blade-details.json` 分别提供模具及刀片的明确工艺、尺寸、接口和检验资料；不跨系列继承通用说明。`ToolingProfileDrawing` 和 `BladeProfileDrawing` 绘制分类型 SVG，构建时同时生成对应的独立资源。尺寸字母不代表标准规格或加工图，实际公差须明确受控尺寸、基准及检验方法。照片图库和尺寸面板均支持放大；SVG 放大保留当前语言，窄屏可横向查看。逐类纠正、选图取舍和未完成验收见 [刀片核对记录](docs/product-imagery/blade-rebuild/analysis.md)。
 
 站点 URL 集中配置在 `site.config.json`，正式地址为 `https://www.nearblade.com`，与线上裸域名跳转一致；正式域名改变时需更新该文件并重新构建。PageMeta 统一设置 canonical（忽略筛选参数）、Open Graph / Twitter 分享信息，以及 Organization、WebSite、WebPage 和面包屑 JSON-LD。产品和文章分别增加 Product、Article 数据；不生成价格、库存、评分或未经确认的认证信息。
 
-`npm run build` 在 Vite 编译后运行 `scripts/build-seo.mjs`，为 16 个公开页面生成独立 HTML 头部、`dist/sitemap.xml`、`dist/robots.txt` 和不允许索引的 `dist/404.html`。元数据在初始 HTML 中可读取，页面正文仍由 React 在客户端渲染。实施参考 [Google JavaScript SEO 文档](https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics) 和 [Open Graph 协议](https://ogp.me/)。
+`npm run build` 在 Vite 编译后运行 `scripts/build-seo.mjs`，为 39 个公开页面生成独立 HTML 头部、`dist/sitemap.xml`、`dist/robots.txt` 和不允许索引的 `dist/404.html`。元数据在初始 HTML 中可读取，页面正文仍由 React 在客户端渲染。实施参考 [Google JavaScript SEO 文档](https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics) 和 [Open Graph 协议](https://ogp.me/)。
 
 构建后执行 `npm run test:site`，检查站点地图覆盖、各页面 canonical / 分享图片 / JSON-LD、404 索引规则及图片体积。`npm run test:ecs` 检查原有发布流程。确认构建效果请使用 `npm run preview`；开发服务不提供构建生成的 sitemap 和静态元数据入口。
 
@@ -112,6 +112,6 @@ About 正文的 Our Story 与 Quality Commitment 分别使用 `public/images/abo
 
 ## SEO 关键词规划
 
-`content/seo/pages.json` 为现有 16 个英文 canonical 页面维护搜索意图、主关键词、辅助词、独立标题和描述。首页面向工业刀片制造商采购，目录用于比较产品系列；7 个详情页分别承接闸式刀、摆式刀、V 形折弯下模、圆剪刀、旋转分切刀、瓦楞纸切割刀和薄片刮墨刀。3 篇文章分别面向定制报价准备、刀片类型比较、替换采购计划，并使用产品名称链接到对应详情页。PageMeta 和 WebPage 结构化数据共用规划，新增页面未补规划会阻止 SEO 构建。
+`content/seo/pages.json` 为现有 39 个英文 canonical 页面维护搜索意图、主关键词、辅助词、独立标题和描述。首页面向工业刀片制造商采购，目录用于比较手册十个产品系列；30 个产品页分别承接系列及其已建立的小类。3 篇文章分别面向定制报价准备、刀片类型比较、替换采购计划，并使用产品名称链接到对应详情页。PageMeta 和 WebPage 结构化数据共用规划，新增页面未补规划会阻止 SEO 构建。
 
 本轮同时调整首页、目录、产品 H1 和正文，不堆砌材料牌号作为产品主关键词。新增文案同步更新八种译文。资料来源和范围保存在 `content/seo/research.json`；依据是公开搜索结果、制造商产品用语和现有目录，没有付费搜索量、竞争度或转化数据，也不把所选词视为排名承诺。Google 明确不使用 meta keywords 参与索引和排名，因此优化重点是具体标题、相关正文和可理解的内部链接。参考 [Google 标题说明](https://developers.google.com/search/docs/appearance/title-link)、[摘要说明](https://developers.google.com/search/docs/appearance/snippet)及[支持的元标签](https://developers.google.com/search/docs/crawling-indexing/special-tags)。
