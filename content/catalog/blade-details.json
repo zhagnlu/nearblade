@@ -1,0 +1,540 @@
+{
+  "sb-001": {
+    "drawing": "straight",
+    "dimensions": [
+      {
+        "label": "Overall size · L × W × T",
+        "detail": "Specify overall length, width and thickness in mm. Custom size and material combinations are confirmed with the quotation."
+      },
+      {
+        "label": "Mounting holes · d / P / E",
+        "detail": "Include hole diameter or thread, center-to-center pitch, first-hole offset, quantity and any countersinks."
+      },
+      {
+        "label": "Cutting edge",
+        "detail": "Show the bevel angle, number of usable edges and upper / lower knife positions on the drawing."
+      }
+    ],
+    "compatibility": "Send the shearing-machine manufacturer, model and the existing upper / lower blade drawing. Match the mounting pattern and edge geometry before confirming a replacement.",
+    "inspection": [
+      "Identify the dimensions controlled by the quoted tolerance.",
+      "State straightness, flatness and parallelism requirements separately.",
+      "Confirm material, hardness and inspection documentation with the approved drawing."
+    ],
+    "catalogImage": "",
+    "bladeProfile": "shear",
+    "process": "Upper and lower blades work as a pair. Match section, mounting pattern, cutting edge and machine-defined clearance."
+  },
+  "rs-001": {
+    "drawing": "circular",
+    "dimensions": [
+      {
+        "label": "Main dimensions · D × d × T",
+        "detail": "Specify outside diameter, bore diameter and thickness in mm."
+      },
+      {
+        "label": "Mounting details",
+        "detail": "Show any keyways, bolt holes, recesses and locating features, together with their datums."
+      },
+      {
+        "label": "Edge and knife set",
+        "detail": "Provide the edge profile and identify upper / lower knives or matched pairs where applicable."
+      }
+    ],
+    "compatibility": "Provide the rolling-shear machine model, arbor or mounting drawing and the material and thickness being processed. Confirm the complete knife-set arrangement.",
+    "inspection": [
+      "Identify diameter, bore and thickness tolerances separately.",
+      "State any flatness, parallelism and runout requirements on the drawing.",
+      "Confirm matched-set identification and inspection records when required."
+    ],
+    "catalogImage": "",
+    "bladeProfile": "metal-slitter",
+    "process": "Metal coil slitting depends on paired circular knives, spacing and clearances. Separate knife thickness, bore fit and runout requirements."
+  },
+  "sk-001": {
+    "drawing": "circular",
+    "dimensions": [
+      {
+        "label": "Main dimensions · D × d × T",
+        "detail": "Send outside diameter, bore diameter and thickness, together with the required quantities."
+      },
+      {
+        "label": "Edge geometry",
+        "detail": "Show the cutting-edge profile and bevel direction; include an existing part drawing when available."
+      },
+      {
+        "label": "Arbor and set arrangement",
+        "detail": "Specify locating features, keyways and the knife / spacer arrangement used by your slitting line."
+      }
+    ],
+    "compatibility": "Describe the material being slit, its thickness and the slitting-line model. Provide the knife and spacer drawings and any application-specific edge requirements.",
+    "inspection": [
+      "Identify the thickness or other dimension to which a precision requirement applies.",
+      "Specify flatness, parallelism, bore fit and runout requirements separately.",
+      "Confirm how matched knives will be measured and identified."
+    ],
+    "catalogImage": "",
+    "bladeProfile": "converting-slitter",
+    "process": "Shear, razor and crush slitting use different knife arrangements. Identify the actual cutting method before selecting a replacement."
+  },
+  "sk-paper-film": {
+    "drawing": "circular",
+    "dimensions": [
+      {
+        "label": "Main dimensions · D × d × T",
+        "detail": "Send outside diameter, bore diameter and thickness, together with the required quantities."
+      },
+      {
+        "label": "Edge geometry",
+        "detail": "Show the cutting-edge profile and bevel direction; include an existing part drawing when available."
+      },
+      {
+        "label": "Arbor and set arrangement",
+        "detail": "Specify locating features, keyways and the knife / spacer arrangement used by your slitting line."
+      }
+    ],
+    "compatibility": "Describe the material being slit, its thickness and the slitting-line model. Provide the knife and spacer drawings and any application-specific edge requirements.",
+    "inspection": [
+      "Identify the thickness or other dimension to which a precision requirement applies.",
+      "Specify flatness, parallelism, bore fit and runout requirements separately.",
+      "Confirm how matched knives will be measured and identified."
+    ],
+    "catalogImage": "",
+    "bladeProfile": "converting-slitter",
+    "process": "Shear, razor and crush slitting use different knife arrangements. Identify the actual cutting method before selecting a replacement."
+  },
+  "sk-foil": {
+    "drawing": "circular",
+    "dimensions": [
+      {
+        "label": "Main dimensions · D × d × T",
+        "detail": "Send outside diameter, bore diameter and thickness, together with the required quantities."
+      },
+      {
+        "label": "Edge geometry",
+        "detail": "Show the cutting-edge profile and bevel direction; include an existing part drawing when available."
+      },
+      {
+        "label": "Arbor and set arrangement",
+        "detail": "Specify locating features, keyways and the knife / spacer arrangement used by your slitting line."
+      }
+    ],
+    "compatibility": "Describe the material being slit, its thickness and the slitting-line model. Provide the knife and spacer drawings and any application-specific edge requirements.",
+    "inspection": [
+      "Identify the thickness or other dimension to which a precision requirement applies.",
+      "Specify flatness, parallelism, bore fit and runout requirements separately.",
+      "Confirm how matched knives will be measured and identified."
+    ],
+    "catalogImage": "",
+    "bladeProfile": "converting-slitter",
+    "process": "Confirm foil alloy, thickness, knife pairing and the accepted edge-inspection method. A paper-slitting setup does not establish foil-cutting performance."
+  },
+  "sr-001": {
+    "drawing": "straight",
+    "dimensions": [
+      {
+        "label": "Workpiece section and material",
+        "detail": "Match the blade-seat drawing to the workpiece section, cutting station and operating temperature."
+      },
+      {
+        "label": "Cutting temperature and station",
+        "detail": "Define the cutting contour, edge angle and regrinding limits for the actual machine."
+      },
+      {
+        "label": "Blade-seat drawing",
+        "detail": "State the mounting datums, hole pattern and paired-blade arrangement."
+      }
+    ],
+    "compatibility": "Match the blade-seat drawing to the workpiece section, cutting station and operating temperature.",
+    "inspection": [
+      "Define the cutting contour, edge angle and regrinding limits for the actual machine.",
+      "State the mounting datums, hole pattern and paired-blade arrangement."
+    ],
+    "catalogImage": "",
+    "bladeProfile": "bar-shear",
+    "process": "Cold and hot describe operating conditions; flying shear describes the machine motion. Identify the actual station and workpiece section."
+  },
+  "sr-bar": {
+    "drawing": "straight",
+    "dimensions": [
+      {
+        "label": "Workpiece section and material",
+        "detail": "Match the blade-seat drawing to the workpiece section, cutting station and operating temperature."
+      },
+      {
+        "label": "Cutting temperature and station",
+        "detail": "Define the cutting contour, edge angle and regrinding limits for the actual machine."
+      },
+      {
+        "label": "Blade-seat drawing",
+        "detail": "State the mounting datums, hole pattern and paired-blade arrangement."
+      }
+    ],
+    "compatibility": "Match the blade-seat drawing to the workpiece section, cutting station and operating temperature.",
+    "inspection": [
+      "Define the cutting contour, edge angle and regrinding limits for the actual machine.",
+      "State the mounting datums, hole pattern and paired-blade arrangement."
+    ],
+    "catalogImage": "",
+    "bladeProfile": "bar-shear",
+    "process": "Cold and hot describe operating conditions; flying shear describes the machine motion. Identify the actual station and workpiece section."
+  },
+  "sr-casting": {
+    "drawing": "straight",
+    "dimensions": [
+      {
+        "label": "Workpiece section and material",
+        "detail": "Identify the billet, slab or other workpiece section and the actual cutting station; the process name alone does not define a blade contour."
+      },
+      {
+        "label": "Cutting temperature and station",
+        "detail": "Define the cutting contour, edge angle and regrinding limits for the actual machine."
+      },
+      {
+        "label": "Blade-seat drawing",
+        "detail": "State the mounting datums, hole pattern and paired-blade arrangement."
+      }
+    ],
+    "compatibility": "Match the blade-seat drawing to the workpiece section, cutting station and operating temperature.",
+    "inspection": [
+      "Define the cutting contour, edge angle and regrinding limits for the actual machine.",
+      "State the mounting datums, hole pattern and paired-blade arrangement."
+    ],
+    "catalogImage": "",
+    "bladeProfile": "billet-shear",
+    "process": "Cold and hot describe operating conditions; flying shear describes the machine motion. Identify the actual station and workpiece section."
+  },
+  "cp-001": {
+    "drawing": "toothed",
+    "dimensions": [
+      {
+        "label": "Tool type and working profile",
+        "detail": "Identify slitting, slotting or cross-cutting before specifying the knife geometry."
+      },
+      {
+        "label": "Mounting details",
+        "detail": "Match the slotting arc, locating slots, blade thickness and mating lower knife."
+      },
+      {
+        "label": "Edge and knife set",
+        "detail": "A slitter knife cuts the board; the scoring tool forms a crease. Confirm the installed cutting and grinding arrangement."
+      }
+    ],
+    "compatibility": "Identify the packaging or converting machine, cutting position and material being processed. Match the tooth pattern and mounting geometry to the existing part.",
+    "inspection": [
+      "Separate tooth-profile requirements from body and mounting tolerances.",
+      "Confirm the tip shape and cutting direction before approving the drawing.",
+      "Specify material and treatment requirements for the application."
+    ],
+    "catalogImage": "",
+    "bladeProfile": "slotting-arc",
+    "process": "Identify slitting, slotting or cross-cutting before specifying the knife geometry.",
+    "overview": true
+  },
+  "cp-thin-slitter": {
+    "drawing": "circular",
+    "dimensions": [
+      {
+        "label": "Outside diameter, bore and thickness",
+        "detail": "Specify outside diameter, bore diameter and thickness in mm."
+      },
+      {
+        "label": "Mounting holes and grinding system",
+        "detail": "A slitter knife cuts the board; the scoring tool forms a crease. Confirm the installed cutting and grinding arrangement."
+      },
+      {
+        "label": "Board structure and line speed",
+        "detail": "Confirm the board structure, knife edge, grinding system and operating speed together."
+      }
+    ],
+    "compatibility": "Confirm the board structure, knife edge, grinding system and operating speed together.",
+    "inspection": [
+      "Identify diameter, bore and thickness tolerances separately.",
+      "State any flatness, parallelism and runout requirements on the drawing.",
+      "Confirm matched-set identification and inspection records when required."
+    ],
+    "catalogImage": "",
+    "bladeProfile": "corrugated-thin",
+    "process": "A slitter knife cuts the board; the scoring tool forms a crease. Confirm the installed cutting and grinding arrangement."
+  },
+  "cp-slotting": {
+    "drawing": "toothed",
+    "dimensions": [
+      {
+        "label": "Arc profile and mounting slots",
+        "detail": "Match the slotting arc, locating slots, blade thickness and mating lower knife."
+      },
+      {
+        "label": "Slot width and tooth profile",
+        "detail": "Specify slot width, board construction and machine position; three-gang or four-gang does not define a universal arc."
+      },
+      {
+        "label": "Upper and lower knife arrangement",
+        "detail": "An arc slotting knife works with the matching lower knife to remove material for a carton slot. It is separate from a thin circular slitter."
+      }
+    ],
+    "compatibility": "Match the slotting arc, locating slots, blade thickness and mating lower knife.",
+    "inspection": [
+      "Specify slot width, board construction and machine position; three-gang or four-gang does not define a universal arc.",
+      "Separate tooth-profile requirements from body and mounting tolerances."
+    ],
+    "catalogImage": "",
+    "bladeProfile": "slotting-arc",
+    "process": "An arc slotting knife works with the matching lower knife to remove material for a carton slot. It is separate from a thin circular slitter."
+  },
+  "tb-002": {
+    "drawing": "toothed",
+    "dimensions": [
+      {
+        "label": "Blade body · L × W × T",
+        "detail": "Provide the overall envelope, thickness and a drawing of any curved or special body profile."
+      },
+      {
+        "label": "Tooth profile · P / h",
+        "detail": "Specify tooth pitch, tooth height, tooth count and tip / root shape. Attach a profile drawing or sample photos."
+      },
+      {
+        "label": "Mounting pattern",
+        "detail": "Dimension every hole or slot from a clear datum and show the cutting direction."
+      }
+    ],
+    "compatibility": "Identify the packaging or converting machine, cutting position and material being processed. Match the tooth pattern and mounting geometry to the existing part.",
+    "inspection": [
+      "Separate tooth-profile requirements from body and mounting tolerances.",
+      "Confirm the tip shape and cutting direction before approving the drawing.",
+      "Specify material and treatment requirements for the application."
+    ],
+    "catalogImage": "",
+    "bladeProfile": "serrated",
+    "process": "Continuous serrations sever the material; perforation requires a defined cut-and-tie pattern. Confirm the mating cutting arrangement."
+  },
+  "tb-packaging": {
+    "drawing": "toothed",
+    "dimensions": [
+      {
+        "label": "Blade body · L × W × T",
+        "detail": "Provide the overall envelope, thickness and a drawing of any curved or special body profile."
+      },
+      {
+        "label": "Tooth profile · P / h",
+        "detail": "Specify tooth pitch, tooth height, tooth count and tip / root shape. Attach a profile drawing or sample photos."
+      },
+      {
+        "label": "Mounting pattern",
+        "detail": "Dimension every hole or slot from a clear datum and show the cutting direction."
+      }
+    ],
+    "compatibility": "Identify the packaging or converting machine, cutting position and material being processed. Match the tooth pattern and mounting geometry to the existing part.",
+    "inspection": [
+      "Separate tooth-profile requirements from body and mounting tolerances.",
+      "Confirm the tip shape and cutting direction before approving the drawing.",
+      "Specify material and treatment requirements for the application."
+    ],
+    "catalogImage": "",
+    "bladeProfile": "serrated",
+    "process": "Continuous serrations sever the material; perforation requires a defined cut-and-tie pattern. Confirm the mating cutting arrangement."
+  },
+  "db-001": {
+    "drawing": "strip",
+    "dimensions": [
+      {
+        "label": "Strip dimensions · L × W × T",
+        "detail": "Specify blade width and thickness, plus cut length or the required coil format and quantity."
+      },
+      {
+        "label": "Metering edge",
+        "detail": "Provide the lamella or bevel profile, working-edge dimensions and any coating requirement."
+      },
+      {
+        "label": "Holder and delivery format",
+        "detail": "Identify the blade holder, required edge orientation and whether the order is for strips or coils."
+      }
+    ],
+    "compatibility": "Send the printing or coating machine and blade-holder details, printing process and ink or coating type. Include the existing blade specification when available.",
+    "inspection": [
+      "Identify strip-thickness and working-edge dimensions separately.",
+      "Confirm the edge profile and surface requirements with the sample or drawing.",
+      "Specify strip / coil identification and packaging requirements."
+    ],
+    "catalogImage": "",
+    "bladeProfile": "doctor-strip",
+    "process": "Ceramic coating and solid ceramic are different constructions; confirm substrate, coating and working-edge profile."
+  },
+  "db-gravure": {
+    "drawing": "strip",
+    "dimensions": [
+      {
+        "label": "Strip dimensions · L × W × T",
+        "detail": "Specify blade width and thickness, plus cut length or the required coil format and quantity."
+      },
+      {
+        "label": "Metering edge",
+        "detail": "Provide the lamella or bevel profile, working-edge dimensions and any coating requirement."
+      },
+      {
+        "label": "Holder and delivery format",
+        "detail": "Identify the blade holder, required edge orientation and whether the order is for strips or coils."
+      }
+    ],
+    "compatibility": "Send the printing or coating machine and blade-holder details, printing process and ink or coating type. Include the existing blade specification when available.",
+    "inspection": [
+      "Identify strip-thickness and working-edge dimensions separately.",
+      "Confirm the edge profile and surface requirements with the sample or drawing.",
+      "Specify strip / coil identification and packaging requirements."
+    ],
+    "catalogImage": "",
+    "bladeProfile": "doctor-strip",
+    "process": "The blade meters ink at the gravure cylinder; identify cylinder surface, ink system and holder geometry."
+  },
+  "db-flexo": {
+    "drawing": "strip",
+    "dimensions": [
+      {
+        "label": "Strip dimensions · L × W × T",
+        "detail": "Specify blade width and thickness, plus cut length or the required coil format and quantity."
+      },
+      {
+        "label": "Metering edge",
+        "detail": "Provide the lamella or bevel profile, working-edge dimensions and any coating requirement."
+      },
+      {
+        "label": "Holder and delivery format",
+        "detail": "Identify the blade holder, required edge orientation and whether the order is for strips or coils."
+      }
+    ],
+    "compatibility": "Send the printing or coating machine and blade-holder details, printing process and ink or coating type. Include the existing blade specification when available.",
+    "inspection": [
+      "Identify strip-thickness and working-edge dimensions separately.",
+      "Confirm the edge profile and surface requirements with the sample or drawing.",
+      "Specify strip / coil identification and packaging requirements."
+    ],
+    "catalogImage": "",
+    "bladeProfile": "doctor-strip",
+    "process": "Metering and containment blades have different roles in a chambered flexo system. Confirm edge orientation and compatibility with the anilox roll."
+  },
+  "db-holders": {
+    "drawing": "strip",
+    "dimensions": [
+      {
+        "label": "Blade dimensions and orientation",
+        "detail": "Specify blade width and thickness, plus cut length or the required coil format and quantity."
+      },
+      {
+        "label": "Mounting interface and datums",
+        "detail": "Specify the blade strip, clamp length, seating surfaces and mounting datums."
+      },
+      {
+        "label": "Adjustment and clamping arrangement",
+        "detail": "Define the clamping and adjustment arrangement; the holder is separate from the metering blade."
+      }
+    ],
+    "compatibility": "Specify the blade strip, clamp length, seating surfaces and mounting datums.",
+    "inspection": [
+      "Specify the blade strip, clamp length, seating surfaces and mounting datums.",
+      "Define the clamping and adjustment arrangement; the holder is separate from the metering blade."
+    ],
+    "catalogImage": "",
+    "bladeProfile": "doctor-holder",
+    "process": "Define the clamping and adjustment arrangement; the holder is separate from the metering blade."
+  },
+  "cb-001": {
+    "drawing": "straight",
+    "dimensions": [
+      {
+        "label": "Overall size · L × W × T",
+        "detail": "Confirm chipper type and knife-seat drawing; a BX model name alone does not define every blade dimension."
+      },
+      {
+        "label": "Cutting edge",
+        "detail": "Define knife projection, bevel and remaining dimensions after regrinding."
+      },
+      {
+        "label": "Mounting pattern",
+        "detail": "Specify set quantity and any matching requirements for the machine."
+      }
+    ],
+    "compatibility": "Confirm chipper type and knife-seat drawing; a BX model name alone does not define every blade dimension.",
+    "inspection": [
+      "Define knife projection, bevel and remaining dimensions after regrinding.",
+      "Specify set quantity and any matching requirements for the machine."
+    ],
+    "catalogImage": "",
+    "bladeProfile": "chipper",
+    "process": "Chipper knives cut wood against a counter knife. Match the knife seat, projection and regrinding allowance to the machine."
+  },
+  "cr-001": {
+    "drawing": "straight",
+    "dimensions": [
+      {
+        "label": "Mounting datum and hole pattern",
+        "detail": "Confirm each knife seat, mounting datum and cutting direction."
+      },
+      {
+        "label": "Matching rotor knife geometry",
+        "detail": "Match rotor and bed knives as a cutting system; use the machine manufacturer’s clearance and adjustment procedure."
+      },
+      {
+        "label": "Machine cutting-gap specification",
+        "detail": "State permitted regrinding dimensions and how the set will be matched after sharpening."
+      }
+    ],
+    "compatibility": "Match rotor and bed knives as a cutting system; use the machine manufacturer’s clearance and adjustment procedure.",
+    "inspection": [
+      "Confirm each knife seat, mounting datum and cutting direction.",
+      "State permitted regrinding dimensions and how the set will be matched after sharpening."
+    ],
+    "catalogImage": "",
+    "bladeProfile": "granulator-rotor",
+    "process": "Match rotor and bed knives as a cutting system; use the machine manufacturer’s clearance and adjustment procedure."
+  },
+  "cr-rotor": {
+    "drawing": "straight",
+    "dimensions": [
+      {
+        "label": "Rotor model and knife quantity",
+        "detail": "Confirm each knife seat, mounting datum and cutting direction."
+      },
+      {
+        "label": "Matching rotor knife geometry",
+        "detail": "Match rotor and bed knives as a cutting system; use the machine manufacturer’s clearance and adjustment procedure."
+      },
+      {
+        "label": "Machine cutting-gap specification",
+        "detail": "State permitted regrinding dimensions and how the set will be matched after sharpening."
+      }
+    ],
+    "compatibility": "Match rotor and bed knives as a cutting system; use the machine manufacturer’s clearance and adjustment procedure.",
+    "inspection": [
+      "Confirm each knife seat, mounting datum and cutting direction.",
+      "State permitted regrinding dimensions and how the set will be matched after sharpening."
+    ],
+    "catalogImage": "",
+    "bladeProfile": "granulator-rotor",
+    "process": "Rotor knives move with the rotor and cut against stationary bed knives. Match the knife seat and set arrangement to the rotor design."
+  },
+  "cr-stationary": {
+    "drawing": "straight",
+    "dimensions": [
+      {
+        "label": "Mounting datum and hole pattern",
+        "detail": "Confirm each knife seat, mounting datum and cutting direction."
+      },
+      {
+        "label": "Matching rotor knife geometry",
+        "detail": "Match rotor and bed knives as a cutting system; use the machine manufacturer’s clearance and adjustment procedure."
+      },
+      {
+        "label": "Machine cutting-gap specification",
+        "detail": "State permitted regrinding dimensions and how the set will be matched after sharpening."
+      }
+    ],
+    "compatibility": "Match rotor and bed knives as a cutting system; use the machine manufacturer’s clearance and adjustment procedure.",
+    "inspection": [
+      "Confirm each knife seat, mounting datum and cutting direction.",
+      "State permitted regrinding dimensions and how the set will be matched after sharpening."
+    ],
+    "catalogImage": "",
+    "bladeProfile": "granulator-bed",
+    "process": "Bed knives remain fixed in the cutting chamber. Their seating and adjustment establish the cutting relationship with the rotor knives."
+  }
+}

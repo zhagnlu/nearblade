@@ -1,0 +1,164 @@
+{
+  "date": "2026-10-20",
+  "published": false,
+  "comparisonScope": "Five suppliers compared by downloaded original product images; three full product pages readable, two unavailable. These are not five Alibaba logged-in detail audits.",
+  "candidates": [
+    {
+      "supplier": "Hangjin",
+      "page": "https://www.hangjin-machinery.com/Wood-Chipper-Blade-pd580705358.html",
+      "url": "https://iprorwxhjpkolp5p-static.micyjz.com/cloud/lnBprKrnlqSRrlrillikkn/_G9A5716.jpg",
+      "file": "research/blade-rebuild/chipper-hangjin.jpg",
+      "pixels": [
+        1000,
+        1000
+      ],
+      "encoding": "JPEG",
+      "bytes": 91147,
+      "sha256": "bcabc3a0274a3bd38a2a7858ee9d9125f529d9e8868066873c9853313e1d6cd6",
+      "decision": "Selected as conditional local candidate; white background, no observed brand/watermark. Slotted chipper knife fits this family; not evidence of any BX-specific dimensions."
+    },
+    {
+      "supplier": "Alas",
+      "page": "https://www.alasmachinery.com/Industrial-Wood-Chipper-Blades-pd595870048.html",
+      "url": "https://iororwxhrkillq5q-static.micyjz.com/cloud/lmBpjKijllSRnllnqqkiio/wood-chipper-blades-A8-steel-precision-machining-800-800.jpg",
+      "file": "research/blade-rebuild/chipper-alas.jpg",
+      "pixels": [
+        800,
+        800
+      ],
+      "encoding": "JPEG",
+      "bytes": 92598,
+      "sha256": "5e48b71277de5ef166f19d164da960c164cd827b6026f59355142d2d63609b94",
+      "decision": "Rejected for native 800px size; below workflow minimum. Clean image is not enough."
+    },
+    {
+      "supplier": "Xiaote",
+      "page": "https://xiaote-88.en.made-in-china.com/product/yxTYeFPjnNpu/China-Factory-Price-High-Quality-Wear-Resistant-Alloy-Steel-54-60hcr-H12-Wood-Chipper-Blade.html",
+      "url": "https://image.made-in-china.com/202f0j00ZbKcpCAdpjuD/Factory-Price-High-Quality-Wear-Resistant-Alloy-Steel-54-60hcr-H12-Wood-Chipper-Blade.jpg",
+      "file": "research/blade-rebuild/chipper-xiaote.jpg",
+      "pixels": [
+        550,
+        550
+      ],
+      "encoding": "JPEG",
+      "bytes": 14477,
+      "sha256": "206ac4a72c124a2db704441bb777adb31fb4d6d0c69439b557c50fb6a43a3def",
+      "decision": "Rejected: 550px and prominent brand. Product page not readable through web tool; image observed independently."
+    },
+    {
+      "supplier": "Winsdone / Zhitong",
+      "page": "https://0cd3e26b15cfa706.en.made-in-china.com/product/kwXTDzsVfHUW/China-Bx2113-Drum-Chipper-Knife.html",
+      "url": "https://image.made-in-china.com/2f0j00AZblShBnMzup/Bx2113-Drum-Chipper-Knife.webp",
+      "file": "research/blade-rebuild/chipper-winsdone.webp",
+      "pixels": [
+        1000,
+        1000
+      ],
+      "encoding": "WEBP",
+      "bytes": 48362,
+      "sha256": "52e6d6a1296fa7526eb13a837436b381b106489a78ab129bfe19aaabee66461f",
+      "decision": "Rejected: red background, brand and certification graphics; a cleaner candidate exists. Product page not readable through web tool."
+    },
+    {
+      "supplier": "Skymech",
+      "page": "https://skymech.en.made-in-china.com/product/nfJrwBHdXvWg/China-5-Hole-Replacement-Chipper-Blade-for-Forestry-and-Industrial-Grinder-Chipper.html",
+      "url": "https://image.made-in-china.com/2f0j00jriCatTGFEoH/5-Hole-Replacement-Chipper-Blade-for-Forestry-and-Industrial-Grinder-Chipper.jpg",
+      "file": "research/blade-rebuild/chipper-skymech.jpg",
+      "pixels": [
+        1000,
+        1000
+      ],
+      "encoding": "JPEG",
+      "bytes": 37216,
+      "sha256": "3d8d5e2aada06fc16c58e7908aa7189f0e952e4563e25103984fc31ffc4fa9cb",
+      "decision": "Not selected: title says five holes but observed image has four. No inferred dimensions, hole count or machine compatibility imported."
+    }
+  ],
+  "selectedViews": [
+    {
+      "url": "https://iprorwxhjpkolp5p-static.micyjz.com/cloud/lnBprKrnlqSRrlrillikkn/_G9A5716.jpg",
+      "original": "research/blade-rebuild/chipper-hangjin.jpg",
+      "originalMetadata": {
+        "pixels": [
+          1000,
+          1000
+        ],
+        "encoding": "JPEG",
+        "bytes": 91147
+      },
+      "originalSha256": "bcabc3a0274a3bd38a2a7858ee9d9125f529d9e8868066873c9853313e1d6cd6",
+      "output": "public/images/products/blades-v2/chipper-white-01-v1.webp",
+      "outputMetadata": {
+        "pixels": [
+          1000,
+          1000
+        ],
+        "encoding": "WEBP",
+        "bytes": 11928
+      },
+      "outputSha256": "bdf3c64f9368a8688a4adbf604d445230f34e6a5abc60bd29a10a1b36ef109f4",
+      "edit": "WebP format conversion, quality 93. No crop, resize, geometry change, branding removal or generative enhancement.",
+      "status": "Conditional local preview only; native 1000px, below preferred 1200px target. Actual-page gallery and zoom acceptance pending browser restoration."
+    },
+    {
+      "url": "https://iprorwxhjpkolp5p-static.micyjz.com/cloud/lqBprKrnlqSRrlrillkkkn/_G9A5718.jpg",
+      "original": "research/blade-rebuild/chipper-hangjin-02.jpg",
+      "originalMetadata": {
+        "pixels": [
+          1000,
+          1000
+        ],
+        "encoding": "JPEG",
+        "bytes": 111011
+      },
+      "originalSha256": "870f2f5d05eea9c5e5848b222b443a6d4cdfd2aed86d4a3533c20f7637fd2fcc",
+      "output": "public/images/products/blades-v2/chipper-white-02-v1.webp",
+      "outputMetadata": {
+        "pixels": [
+          1000,
+          1000
+        ],
+        "encoding": "WEBP",
+        "bytes": 18890
+      },
+      "outputSha256": "3e663e54c455d47769d36965409e6b294c01d1c7e8c5b8b0989e54bc3377ebfd",
+      "edit": "WebP format conversion, quality 93. No crop, resize, geometry change, branding removal or generative enhancement.",
+      "status": "Conditional local preview only; native 1000px, below preferred 1200px target. Actual-page gallery and zoom acceptance pending browser restoration."
+    },
+    {
+      "url": "https://iprorwxhjpkolp5p-static.micyjz.com/cloud/lrBprKrnlqSRrlrillokko/_G9A5721.jpg",
+      "original": "research/blade-rebuild/chipper-hangjin-03.jpg",
+      "originalMetadata": {
+        "pixels": [
+          1000,
+          1000
+        ],
+        "encoding": "JPEG",
+        "bytes": 210236
+      },
+      "originalSha256": "2b360c5433a3968761da7552f709e9a7d1a798363cdaa29c737943d4a7ab1e9e",
+      "output": "public/images/products/blades-v2/chipper-white-03-v1.webp",
+      "outputMetadata": {
+        "pixels": [
+          1000,
+          1000
+        ],
+        "encoding": "WEBP",
+        "bytes": 43978
+      },
+      "outputSha256": "532eca0d1ed6e5a7b24e6128d389d16d3bc9e788aa42f0374685b61eb65a2754",
+      "edit": "WebP format conversion, quality 93. No crop, resize, geometry change, branding removal or generative enhancement.",
+      "status": "Conditional local preview only; native 1000px, below preferred 1200px target. Actual-page gallery and zoom acceptance pending browser restoration."
+    }
+  ],
+  "geometryCheck": "Overview and angled view show the same slotted blade with two round holes; macro shows matching slot, hole and bevel. No factory model or dimension is inferred.",
+  "rights": "Supplier-origin public images; independent reuse authorization unverified. Not represented as untouched photographs from our own factory.",
+  "retiredPublicGalleryAssets": [
+    "/images/products/manual-series/chipper-overview-v1.webp",
+    "/images/products/manual-series/crusher-overview-v1.webp",
+    "/images/products/manual-series/steel-rolling-overview-v1.webp",
+    "/images/manual/toothed-blades.webp",
+    "/images/products/doctor.webp"
+  ],
+  "retirementReason": "Mixed family montage, synthetic/uncertain presentation, or poor correspondence to specific pages. Historical files retained but no longer referenced by current products."
+}

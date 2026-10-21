@@ -1,0 +1,201 @@
+{
+  "date": "2026-10-20",
+  "checkpointCommit": "84f8a81",
+  "currentBladeChangesCommitted": false,
+  "pushed": false,
+  "deployed": false,
+  "browser": "Native signed-in Chrome through cua; desktop screenshots 1920x960 including browser chrome",
+  "previewBase": "http://127.0.0.1:5173",
+  "validation": {
+    "command": "npm test",
+    "tests": 25,
+    "passed": 25,
+    "languagePacks": 9,
+    "entriesPerLanguage": 814,
+    "diffCheck": "passed"
+  },
+  "pages": [
+    {
+      "id": "sb-001",
+      "profile": "shear",
+      "media": "product-photo candidate",
+      "detailPanelObserved": false,
+      "heroObserved": false,
+      "finalVisualAcceptance": false
+    },
+    {
+      "id": "rs-001",
+      "profile": "metal-slitter",
+      "media": "product-photo candidate",
+      "detailPanelObserved": true,
+      "heroObserved": false,
+      "finalVisualAcceptance": false
+    },
+    {
+      "id": "sk-001",
+      "profile": "converting-slitter",
+      "media": "product-photo candidate",
+      "detailPanelObserved": false,
+      "heroObserved": false,
+      "finalVisualAcceptance": false
+    },
+    {
+      "id": "sk-paper-film",
+      "profile": "converting-slitter",
+      "media": "product-photo candidate",
+      "detailPanelObserved": true,
+      "heroObserved": false,
+      "finalVisualAcceptance": false
+    },
+    {
+      "id": "sk-foil",
+      "profile": "converting-slitter",
+      "media": "engineering illustration",
+      "detailPanelObserved": false,
+      "heroObserved": false,
+      "finalVisualAcceptance": false
+    },
+    {
+      "id": "sr-001",
+      "profile": "bar-shear",
+      "media": "engineering illustration",
+      "detailPanelObserved": false,
+      "heroObserved": false,
+      "finalVisualAcceptance": false
+    },
+    {
+      "id": "sr-bar",
+      "profile": "bar-shear",
+      "media": "engineering illustration",
+      "detailPanelObserved": true,
+      "heroObserved": true,
+      "finalVisualAcceptance": false
+    },
+    {
+      "id": "sr-casting",
+      "profile": "billet-shear",
+      "media": "engineering illustration",
+      "detailPanelObserved": true,
+      "heroObserved": true,
+      "finalVisualAcceptance": false
+    },
+    {
+      "id": "cp-001",
+      "profile": "slotting-arc",
+      "media": "product-photo candidate",
+      "detailPanelObserved": false,
+      "heroObserved": false,
+      "finalVisualAcceptance": false
+    },
+    {
+      "id": "cp-thin-slitter",
+      "profile": "corrugated-thin",
+      "media": "engineering illustration",
+      "detailPanelObserved": true,
+      "heroObserved": true,
+      "finalVisualAcceptance": false
+    },
+    {
+      "id": "cp-slotting",
+      "profile": "slotting-arc",
+      "media": "product-photo candidate",
+      "detailPanelObserved": true,
+      "heroObserved": false,
+      "finalVisualAcceptance": false
+    },
+    {
+      "id": "tb-002",
+      "profile": "serrated",
+      "media": "engineering illustration",
+      "detailPanelObserved": false,
+      "heroObserved": false,
+      "finalVisualAcceptance": false
+    },
+    {
+      "id": "tb-packaging",
+      "profile": "serrated",
+      "media": "engineering illustration",
+      "detailPanelObserved": false,
+      "heroObserved": false,
+      "finalVisualAcceptance": false
+    },
+    {
+      "id": "db-001",
+      "profile": "doctor-strip",
+      "media": "engineering illustration",
+      "detailPanelObserved": false,
+      "heroObserved": false,
+      "finalVisualAcceptance": false
+    },
+    {
+      "id": "db-gravure",
+      "profile": "doctor-strip",
+      "media": "engineering illustration",
+      "detailPanelObserved": false,
+      "heroObserved": false,
+      "finalVisualAcceptance": false
+    },
+    {
+      "id": "db-flexo",
+      "profile": "doctor-strip",
+      "media": "engineering illustration",
+      "detailPanelObserved": false,
+      "heroObserved": false,
+      "finalVisualAcceptance": false
+    },
+    {
+      "id": "db-holders",
+      "profile": "doctor-holder",
+      "media": "engineering illustration",
+      "detailPanelObserved": false,
+      "heroObserved": false,
+      "finalVisualAcceptance": false
+    },
+    {
+      "id": "cb-001",
+      "profile": "chipper",
+      "media": "product-photo candidate",
+      "detailPanelObserved": false,
+      "heroObserved": false,
+      "finalVisualAcceptance": false
+    },
+    {
+      "id": "cr-001",
+      "profile": "granulator-rotor",
+      "media": "engineering illustration",
+      "detailPanelObserved": false,
+      "heroObserved": false,
+      "finalVisualAcceptance": false
+    },
+    {
+      "id": "cr-rotor",
+      "profile": "granulator-rotor",
+      "media": "engineering illustration",
+      "detailPanelObserved": false,
+      "heroObserved": false,
+      "finalVisualAcceptance": false
+    },
+    {
+      "id": "cr-stationary",
+      "profile": "granulator-bed",
+      "media": "engineering illustration",
+      "detailPanelObserved": false,
+      "heroObserved": false,
+      "finalVisualAcceptance": false
+    }
+  ],
+  "observedCorrections": [
+    "Slotting arc now uses radius from its center and single-blade thickness rather than a generic two-blade gap. Rechecked on actual page.",
+    "Converting-blade edge section simplified after first page check; final recheck pending.",
+    "Bar knife radius leader corrected after initial page check; final recheck pending."
+  ],
+  "pending": [
+    "Remaining desktop page and hero checks",
+    "Three new chipper photos: all thumbnails and zoom",
+    "New translated SVG enlargement and keyboard close",
+    "Mobile layout and horizontal SVG panning",
+    "Arabic RTL visual checks"
+  ],
+  "blocker": "Native browser returned cgWindowNotFound; fresh getApp binding failed again. User notified asynchronously to keep desktop unlocked and Chrome visible. No alternative automation used to bypass this state.",
+  "status": "Content, geometry, source comparison and automated checks completed for this pass; full visual/photo acceptance incomplete."
+}
