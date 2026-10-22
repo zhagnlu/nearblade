@@ -117,7 +117,7 @@ export default function ProductDetail() {
                     decoding="async"
                     src={currentImage}
                     alt={`${product.name} product overview`}
-                    className={`w-full h-full ${product.galleryFit === "cover" ? "object-cover" : "object-contain"} group-hover:scale-105 transition-transform duration-500`}
+                    className="w-full h-full object-contain p-4"
                   />
                   <div className="absolute inset-0 bg-industrial/0 group-hover:bg-industrial/30 transition-all duration-300 flex items-center justify-center">
                     <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-steel/90 rounded-full w-14 h-14 flex items-center justify-center">
@@ -314,7 +314,7 @@ export default function ProductDetail() {
                         decoding="async"
                         src={related.image}
                         alt={related.name}
-                        className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                        className="w-full h-full object-contain p-4"
                       />
                     </div>}
                     <div className="p-4">

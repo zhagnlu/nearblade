@@ -9,6 +9,11 @@ import { StatCounter } from "@/components/generated/StatCounter";
 import { ContactForm } from "@/components/generated/ContactForm";
 import { FaArrowRight, FaIndustry, FaCogs, FaShieldAlt } from "react-icons/fa";
 
+// The home showcase keeps the original six-photo layout, independently of
+// technical drawings and the complete ten-family procurement catalog.
+const homeShowcaseIds = ["shear-blades", "press-brake-tooling", "rolling-shear-blades", "slitting-knives", "corrugated-paper-cutters", "chipper-blades"];
+const homeShowcase = homeShowcaseIds.map(id => productCategories.find(category => category.id === id)!);
+
 export default function Home() {
   return (
     <>
@@ -34,28 +39,30 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {productCategories.map((category, index) => (
+            {homeShowcase.map((category, index) => (
               <Link
                 key={category.id}
                 to={`/products?category=${category.id}`}
-                className="group bg-card border border-border rounded-card overflow-hidden hover:border-steel/50 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-steel/5"
+                className="group min-w-0 flex flex-col bg-card border border-border rounded-card overflow-hidden hover:border-steel/50 transition-all duration-300 hover:shadow-xl hover:shadow-steel/5"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="aspect-[3/2] overflow-hidden product-stage">
+                <div className="relative w-full aspect-[3/2] shrink-0 bg-white">
+                  <div className="absolute inset-6 flex items-center justify-center">
                   <img
                     loading="lazy"
                     decoding="async"
                     src={category.image}
                     alt={category.name}
-                    className="w-full h-full object-contain p-3 group-hover:scale-105 transition-transform duration-500"
+                    className="block w-full h-full object-contain object-center"
                   />
+                  </div>
                 </div>
-                <div className="p-6">
-                  <h3 className="text-lg font-semibold text-metal-text mb-2 group-hover:text-steel transition-colors">
+                <div className="p-6 flex flex-1 flex-col">
+                  <h3 className="text-lg leading-7 font-semibold text-metal-text mb-2 h-14 line-clamp-2 group-hover:text-steel transition-colors">
                     {category.name}
                   </h3>
-                  <p className="text-metal-subtext text-sm line-clamp-2">{category.description}</p>
-                  <div className="mt-4 flex items-center text-steel text-sm font-medium">
+                  <p className="text-metal-subtext text-sm leading-5 line-clamp-2 h-10 mb-4">{category.description}</p>
+                  <div className="mt-auto flex items-center text-steel text-sm font-medium">
                     <span>View Products</span>
                     <FaArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={12} />
                   </div>
@@ -63,6 +70,10 @@ export default function Home() {
               </Link>
             ))}
           </div>
+          <div className="mt-10 flex flex-wrap justify-center gap-x-6 gap-y-3">
+            {productCategories.map(category => <Link key={category.id} to={`/products?category=${category.id}`} className="text-sm text-metal-subtext hover:text-steel underline underline-offset-4">{category.name}</Link>)}
+          </div>
+          <div className="mt-8 text-center"><Link to="/products" className="inline-flex items-center gap-2 px-6 py-3 border border-steel text-steel rounded-card hover:bg-steel hover:text-white transition-colors">Browse Products <FaArrowRight size={14} /></Link></div>
         </div>
       </section>
 

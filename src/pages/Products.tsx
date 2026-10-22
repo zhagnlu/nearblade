@@ -102,14 +102,16 @@ export default function Products() {
                       to={`/products/${product.id}`}
                       className="catalog-card group grid grid-cols-1 md:grid-cols-2 bg-industrial-secondary border border-border rounded-card overflow-hidden hover:border-steel/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-steel/5"
                     >
-                      <div className="aspect-[4/3] overflow-hidden product-stage">
+                      <div className="relative w-full aspect-[4/3] min-w-0 bg-white">
+                        <div className="absolute inset-6">
                         <img
                           loading="lazy"
                           decoding="async"
                           src={product.image}
                           alt={product.name}
-                          className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                          className="w-full h-full object-contain"
                         />
+                        </div>
                       </div>
                       <div className="catalog-card-content p-6">
                         <h3 className="text-lg font-semibold text-metal-text mb-2 group-hover:text-steel transition-colors">

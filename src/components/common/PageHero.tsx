@@ -37,7 +37,7 @@ export function PageHero({ title, accent, description, contentId, primaryAction,
         {visual ? <div className="absolute inset-0 bg-gradient-to-br from-[#172536] via-[#263b4f] to-[#34495B]" /> : <img src={image} alt="" className={productVisual ? "hero-product-visual" : "w-full h-full object-cover"} {...{ fetchpriority: "high" }} />}
         <div className={productVisual ? "absolute inset-0 bg-gradient-to-b from-[#263440]/35 via-[#263440]/65 to-[#293640]" : lightOverlay ? "absolute inset-0 bg-gradient-to-b from-[#101820]/20 via-[#101820]/25 to-[#34495B]/75" : "absolute inset-0 bg-gradient-to-b from-[#101820]/30 via-[#101820]/35 to-[#34495B]/80"} />
       </div>
-      <div className={`relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 ${visual ? "grid grid-cols-1 lg:grid-cols-2 items-center gap-10" : "text-center"}`}>
+      <div className={`relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 ${visual ? "w-full grid grid-cols-1 lg:grid-cols-2 items-center gap-10" : "text-center"}`}>
         <div>
         <h1 className={`text-4xl sm:text-5xl ${visual ? "lg:text-5xl" : "lg:text-hero animate-fade-in-up"} text-metal-text mb-6`}>
           {title}<span className="block text-[#8CC6D7]">{accent}</span>
