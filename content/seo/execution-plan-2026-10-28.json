@@ -1,0 +1,184 @@
+{
+  "reviewedOn": "2026-10-28",
+  "status": "proposed local SEO workflow; no scheduling, publication or deployment authorized by this document",
+  "referenceProject": "/Users/zhanglu/github/ruchengintelligent_new",
+  "referenceDocuments": [
+    "SEO_DAILY_WORKFLOW.md",
+    "SEO_BLOG_CONTENT_GUIDELINES.md",
+    "GEO_CONTENT_GUIDELINES.md",
+    "SEO_FOUNDATIONS_REVIEW_2026-10-17.md",
+    "PRESS_BRAKE_LASER_SEO_RANKING_PLAN.md",
+    "SEO_TOOLING_FOLLOWUP_2026-10-27.md"
+  ],
+  "baseline": {
+    "publicRoutes": 39,
+    "productRoutes": 30,
+    "families": 10,
+    "articles": 3,
+    "languagePacks": 9,
+    "localTests": "26 passed in preceding local review",
+    "staticBody": "Implemented locally; uncommitted and not confirmed live",
+    "liveCheck": "Web retrieval of robots.txt and sb-001 failed; this does not establish an outage or indexing failure.",
+    "gsc": "Not accessed; property, index coverage and performance baseline unverified.",
+    "conversion": "ContactForm opens a mailto draft. Draft opening is not a confirmed sent/received inquiry. No analytics integration found in reviewed source."
+  },
+  "adaptation": {
+    "adopt": [
+      "Evidence-based task selection",
+      "Explicit intent-to-URL map",
+      "Commercial hub, subtype, buyer guide and inquiry links",
+      "Answer-first content with useful original tables/checklists/drawings",
+      "Technical and factual quality gate",
+      "Separate implemented, tested, deployed, live-verified and indexed states",
+      "7-day technical and 14/28-day performance review"
+    ],
+    "doNotTransfer": [
+      "Rucheng account or social-publishing permissions",
+      "Automatic deployment authorization or cron",
+      "Press-brake-machine and laser-machine keyword priorities",
+      "Fixed article counts without evidence and editorial capacity",
+      "Historical Rucheng GSC metrics or rankings"
+    ]
+  },
+  "phases": [
+    {
+      "order": 1,
+      "name": "Baseline and evidence",
+      "tasks": [
+        "Verify live HTTP status, canonical host, route HTML, unknown-route 404, robots, sitemap and retired-route redirects.",
+        "Obtain GSC property and finalized query/page/country/device cohorts; compare equal complete 7-day and 28-day periods; record extraction time and data-through date.",
+        "Review About/Home/Equipment claims: ±0.001 mm capability, 15 years, decades, certifications, customer industries and equipment ownership. Claims are unverified, not established false.",
+        "Record analytics and real inquiry measurement availability separately."
+      ],
+      "doneWhen": "Dated technical baseline, evidence queue and explicit data gaps exist."
+    },
+    {
+      "order": 2,
+      "name": "Commercial pages and crawl paths",
+      "tasks": [
+        "Complete desktop/mobile preview of current static-body implementation, gallery, zoom, language restoration and client navigation.",
+        "Expand audit beyond product links to all internal URLs, anchors, sitemap/noindex mismatches and schema page-purpose checks.",
+        "Use existing family URLs as hubs; preserve ten-family taxonomy and existing IDs. No new category pages solely for keywords.",
+        "Review six homepage category cards linking to /products?category=...; consider direct links to existing family hubs while keeping a full-catalog entry.",
+        "Keep family pages focused on choosing among subtypes and children focused on geometry, process and mounting.",
+        "Review Product schema on family overview pages; separate Schema.org validity from Google rich-result eligibility. No invented prices/ratings."
+      ],
+      "doneWhen": "Priority buyer paths work in actual browser and local audit passes; publication remains a separate authorized step."
+    },
+    {
+      "order": 3,
+      "name": "Pilot topic clusters",
+      "priorityBasis": "Provisional content readiness, not search volume or business profitability; reorder using GSC, actual inquiries and confirmed supply priorities.",
+      "clusters": [
+        {
+          "hub": "/products/sb-001",
+          "terms": [
+            "shear blades",
+            "guillotine shear blades",
+            "replacement shear blades"
+          ],
+          "firstAsset": "Shear blade replacement drawing checklist: overall size, holes, edge and upper/lower position",
+          "evidence": "Confirmed drawings and machine arrangement; no universal clearance settings."
+        },
+        {
+          "hub": "/products/sk-001",
+          "terms": [
+            "slitting knives",
+            "rotary slitter knives",
+            "paper and film slitting knives",
+            "foil slitting knives"
+          ],
+          "firstAsset": "Slitting knife inquiry checklist by cutting method, material, holder and matched-knife arrangement",
+          "evidence": "Actual cutting method and application evidence; distinguish rs-001 rolling shear family."
+        },
+        {
+          "hub": "/products/pb-001",
+          "terms": [
+            "press brake tooling",
+            "press brake punches and dies",
+            "gooseneck press brake punches"
+          ],
+          "firstAsset": "Punch/die/clamp selection checklist: tang, working height, profile, clearance and verified load ratings",
+          "evidence": "Nearblade tooling drawings; avoid duplicating Rucheng machine-buying intent."
+        }
+      ],
+      "remainingFamilies": [
+        "rolling shear blades",
+        "steel rolling blades",
+        "corrugated paper cutters",
+        "doctor blades",
+        "chipper blades",
+        "crusher blades",
+        "toothed blades"
+      ],
+      "firstMonthCandidateArticles": [
+        "Shear blade replacement dimensions and mounting checklist",
+        "Guillotine versus swing-beam replacement blade fit",
+        "Paper/film versus foil slitting inquiry requirements",
+        "Slitting knife drawing and holder-interface checklist",
+        "Press brake punch and die interface identification",
+        "Straight versus gooseneck punches: clearance and rating checks",
+        "Industrial blade quotation inspection requirements",
+        "Blade replacement records and drawing revision checklist"
+      ],
+      "cadence": "Start with 2 evidence-backed articles and 2-3 distinct existing-page improvements per week; review capacity and outcomes after four weeks. No filler quota."
+    },
+    {
+      "order": 4,
+      "name": "Conversion and authority",
+      "tasks": [
+        "Track product/guide/quote transitions and email/WhatsApp clicks if analytics is configured; keep received qualified inquiries separate.",
+        "Use product-specific inquiry subjects and relevant drawing/quantity/material inputs; verify current form behavior before adding new collection services.",
+        "Prepare a useful blade drawing checklist or inspection-record asset.",
+        "Verify company identity and real factory/inspection media; retain internal image provenance.",
+        "Build relevant legitimate directory/profile/link prospects and outreach drafts. Sending messages or posting requires separate authorization."
+      ]
+    },
+    {
+      "order": 5,
+      "name": "Measurement and expansion",
+      "tasks": [
+        "After authorized deployment verify ordinary live URLs, current assets, static body and release identity.",
+        "Record sitemap submission and warranted GSC URL inspection separately from confirmed indexation.",
+        "Review crawl/technical state at 7 days and query cohorts and buyer paths at 14/28 days, longer for low volume.",
+        "Observe recently changed pages instead of repeatedly rewriting titles.",
+        "Choose additional language URLs only after market evidence and translation capacity; existing client dictionaries do not create independent localized indexable versions."
+      ]
+    }
+  ],
+  "perTaskWorkflow": [
+    "Read last report, current worktree and observation queue.",
+    "Select one documented problem using GSC or a clearly labeled source/content hypothesis.",
+    "Check intent and existing URL inventory; use current URL unless a separate purpose is established.",
+    "Collect primary technical evidence and inspect assets.",
+    "Implement content, relevant inbound/outbound links, translations and matching metadata/schema.",
+    "Run affected checks and full required build; visually inspect new pages/layout changes.",
+    "Record local result; commit/publish only under applicable authorization.",
+    "After authorized release, verify live output and record observation dates."
+  ],
+  "contentGate": [
+    "Answer the specific buyer question early with conditions attached.",
+    "Include useful independent value: decision table, dimensioned drawing/checklist or documented example; no mandatory arbitrary word count.",
+    "Technical numbers require source, scope, units and conditions.",
+    "No invented customer cases, expert sign-off, manufacturer claims or copied competitor promises.",
+    "Related product and quote links must be relevant and crawlable.",
+    "Maintain all nine existing translation packs for changed visible strings.",
+    "GEO follows readable evidence-based SEO; no hidden AI instructions or ranking claims for llms.txt."
+  ],
+  "reportFields": [
+    "Date and task reason",
+    "Data source, property, period and filters",
+    "Changed URLs and evidence",
+    "New article versus existing-page improvement",
+    "Tests and visual acceptance",
+    "Implemented/deployed/live-verified/indexed states",
+    "Real inquiry measurement availability",
+    "Blockers and next observation date"
+  ],
+  "officialSources": [
+    "https://developers.google.com/search/docs/fundamentals/creating-helpful-content",
+    "https://developers.google.com/search/docs/appearance/ai-features",
+    "https://developers.google.com/search/docs/specialty/international/managing-multi-regional-sites",
+    "https://developers.google.com/search/docs/appearance/structured-data/product-snippet"
+  ]
+}

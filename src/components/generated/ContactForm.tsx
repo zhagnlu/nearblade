@@ -10,13 +10,17 @@ export function ContactForm({ compact = false, initialSubject = "Nearblade produ
   const formId = useId();
   const draftLink = useRef<HTMLAnchorElement>(null);
   const [isDraftReady, setIsDraftReady] = useState(false);
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    company: "",
-    phone: "",
-    subject: initialSubject,
-    message: "",
+  const [formData, setFormData] = useState(() => {
+    const values = { name: "", email: "", company: "", phone: "", subject: initialSubject, message: "" };
+    // Preserve typing or autofill that happened while the static page was waiting
+    // for its JavaScript. New forms reached through React navigation use defaults.
+    if (typeof document !== "undefined") {
+      for (const name of Object.keys(values) as (keyof typeof values)[]) {
+        const field = document.getElementById(`${formId}-${name}`);
+        if (field instanceof HTMLInputElement || field instanceof HTMLTextAreaElement) values[name] = field.value;
+      }
+    }
+    return values;
   });
   const draftUrl = contactEmailDraft(formData);
 

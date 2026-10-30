@@ -6,6 +6,7 @@ import { getProductById, productCategories } from "@/data/products";
 import { ContactForm } from "@/components/generated/ContactForm";
 import { ProductSelectionGuide } from "@/components/common/ProductSelectionGuide";
 import { productGuides } from "@/data/productGuides";
+import { blogPosts } from "@/data/blog";
 import { BladeDimensionDrawing } from "@/components/common/BladeDimensionDrawing";
 import { ToolingProfileDrawing } from "@/components/common/ToolingProfileDrawing";
 import { BladeProfileDrawing } from "@/components/common/BladeProfileDrawing";
@@ -43,7 +44,8 @@ export default function ProductDetail() {
   const guide = baseGuide;
   const productImages = [...new Set(product.images?.length ? product.images : [product.image])];
   const currentImage = productImages[currentImageIndex] || productImages[0];
-  const relatedProducts = category?.products.filter((p) => p.id !== product.id).slice(0, 3) || [];
+  const relatedProducts = category?.products.filter((p) => p.id !== product.id && p.id !== product.parentId && p.parentId !== product.id).slice(0, 3) || [];
+  const relatedArticles = blogPosts.filter(post => post.relatedProductIds.includes(product.id) || (!!product.parentId && post.relatedProductIds.includes(product.parentId)));
 
   const handlePrevImage = () => {
     setCurrentImageIndex((prev) => (prev === 0 ? productImages.length - 1 : prev - 1));
@@ -58,7 +60,7 @@ export default function ProductDetail() {
       <PageMeta
         image={product.image}
         breadcrumbs={[{ name: "Home", path: "/" }, { name: "Products", path: "/products" }, ...(parent ? [{ name: parent.name, path: `/products/${parent.id}` }] : []), { name: product.name, path: `/products/${product.id}` }]}
-        structuredData={{ "@type": "Product", name: product.name, description: product.description, image: [product.image], sku: product.id, brand: { "@type": "Brand", name: "Nearblade" }, category: category?.name, material: product.materials }}
+        structuredData={{ "@type": "Product", name: product.name, description: product.description, image: [...new Set(product.images?.length ? product.images : [product.image])], sku: product.id, brand: { "@type": "Brand", name: "Nearblade" }, category: category?.name, ...(product.materials.length ? { material: product.materials } : {}) }}
       />
 
       <PageHero
@@ -297,6 +299,14 @@ export default function ProductDetail() {
           </div>
 
           {guide && <ProductSelectionGuide guide={guide} showDrawing={product.id !== "pb-001" && !guide.overview && (!(guide.toolingProfile || guide.bladeProfile) || product.mediaMode !== "specification")} />}
+
+          {!!relatedArticles.length && <section className="mb-16">
+            <h2 className="text-2xl font-semibold text-metal-text mb-6">Blade Insights &amp; Guides</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">{relatedArticles.map(post => <Link key={post.slug} to={`/blog/${post.slug}`} className="border border-border rounded-card p-5 hover:border-steel transition-colors">
+              <h3 className="font-semibold text-metal-text mb-2">{post.title}</h3>
+              <p className="text-sm text-metal-subtext leading-relaxed">{post.excerpt}</p>
+            </Link>)}</div>
+          </section>}
 
           {relatedProducts.length > 0 && (
             <div className="mb-16">

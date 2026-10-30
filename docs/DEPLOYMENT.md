@@ -84,7 +84,7 @@ server {
 }
 ```
 
-构建为 16 条公开路由生成独立 HTML 入口，包含对应的 canonical、分享信息及 JSON-LD，正文由 React Router 渲染。上述规则优先读取路由入口（例如 `/products/sb-001/index.html`），未知路由返回带 noindex 的 404 页面并保留 HTTP 404 状态。已有站点若仍使用回退到根 `index.html` 的配置，需同步更新 Nginx，才能让直接访问不同页面时获得各自的初始元数据。
+构建为 39 条公开路由生成独立 HTML 入口，包含完整英文正文、产品链接、对应的 canonical、分享信息及 JSON-LD；正文无需执行 JavaScript 即可读取，浏览器中的 React 接管已有内容后启用交互。上述规则优先读取路由入口（例如 `/products/sb-001/index.html`），未知路由返回带 noindex 的 404 页面并保留 HTTP 404 状态。已有站点若仍使用回退到根 `index.html` 的配置，需同步更新 Nginx，才能让直接访问不同页面时获得各自的初始元数据。
 
 部署前核对根目录 `site.config.json` 的正式域名，再执行构建。`dist/sitemap.xml` 和 `dist/robots.txt` 随产物一起发布；没有编造页面修改日期或产品价格。
 

@@ -57,7 +57,7 @@ About 正文的 Our Story 与 Quality Commitment 分别使用 `public/images/abo
 
 询价表单参考 `nearfastener` 联系页的邮件草稿实现：收集姓名、邮箱、公司、电话 / WhatsApp、主题和需求，点击 **Open Email Draft** 调用客户的邮件应用，收件人为 `info@nearblade.com`，客户审核后自行发送。首页、联系页、产品详情共用此实现；产品详情自动填入产品询价主题。表单保留已填写内容，并提供重新打开草稿及直接联系邮箱的入口。邮件地址和草稿生成逻辑位于 `src/data/contact.ts`。此方式无需服务器邮件接口，客户需要配置邮件应用；网站不保存客户资料。页脚移除未配置的 LinkedIn / Facebook 占位链接，产品链接按对应类别筛选。
 
-构建为每条公开路由生成带独立元数据的 HTML 入口。静态部署应优先读取对应路由的 `index.html`；Nginx 示例及 404 配置见 `docs/DEPLOYMENT.md`。
+构建为每条公开路由预渲染包含完整英文正文及独立元数据的 HTML 入口。静态部署应优先读取对应路由的 `index.html`；Nginx 示例及 404 配置见 `docs/DEPLOYMENT.md`。
 
 ## 验证
 
@@ -98,9 +98,9 @@ About 正文的 Our Story 与 Quality Commitment 分别使用 `public/images/abo
 
 站点 URL 集中配置在 `site.config.json`，正式地址为 `https://www.nearblade.com`，与线上裸域名跳转一致；正式域名改变时需更新该文件并重新构建。PageMeta 统一设置 canonical（忽略筛选参数）、Open Graph / Twitter 分享信息，以及 Organization、WebSite、WebPage 和面包屑 JSON-LD。产品和文章分别增加 Product、Article 数据；不生成价格、库存、评分或未经确认的认证信息。
 
-`npm run build` 在 Vite 编译后运行 `scripts/build-seo.mjs`，为 39 个公开页面生成独立 HTML 头部、`dist/sitemap.xml`、`dist/robots.txt` 和不允许索引的 `dist/404.html`。元数据在初始 HTML 中可读取，页面正文仍由 React 在客户端渲染。实施参考 [Google JavaScript SEO 文档](https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics) 和 [Open Graph 协议](https://ogp.me/)。
+`npm run build` 在 Vite 编译后运行 `scripts/build-seo.mjs`，为 39 个公开页面生成包含完整英文正文、产品链接及独立元数据的 HTML，同时生成 `dist/sitemap.xml`、`dist/robots.txt` 和不允许索引的 `dist/404.html`。正文无需执行 JavaScript 即可读取；加载脚本后 React 使用 hydration 接管现有页面，启用筛选、图库放大、多语言和询价交互。预渲染与浏览器构建共用 JSX 本地化转换，保持组件树及表单标签 ID 一致。首页数据在静态 HTML 中显示实际数值。实施参考 [Google JavaScript SEO 文档](https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics) 和 [Open Graph 协议](https://ogp.me/)。
 
-构建后执行 `npm run test:site`，检查站点地图覆盖、各页面 canonical / 分享图片 / JSON-LD、404 索引规则及图片体积。`npm run test:ecs` 检查原有发布流程。确认构建效果请使用 `npm run preview`；开发服务不提供构建生成的 sitemap 和静态元数据入口。
+构建后执行 `npm run test:site`，检查站点地图覆盖、各页面 canonical / 分享图片 / JSON-LD、404 索引规则及图片体积。`npm run test:ecs` 检查原有发布流程。确认构建效果请使用 `npm run preview`；开发服务仍使用客户端渲染；完整正文预渲染、sitemap 和独立元数据需在构建预览中检查。
 
 ## 多语言入口
 
@@ -111,6 +111,8 @@ About 正文的 Our Story 与 Quality Commitment 分别使用 `public/images/abo
 `scripts/localize-jsx.ts` 在 Vite 编译时将原生元素及路由链接交给 `LocalizedElement` 翻译文本和可访问属性，保留 React 对 DOM、表单值和 ref 的管理。修改本地化组件时，需验证语言切换、刷新恢复、内部导航、表单输入保留、图片弹窗及手机端 RTL 布局。
 
 ## SEO 关键词规划
+
+SEO 执行顺序、内容验收、数据复盘与发布边界见 [SEO 执行工作流](docs/SEO_WORKFLOW.md)。
 
 `content/seo/pages.json` 为现有 39 个英文 canonical 页面维护搜索意图、主关键词、辅助词、独立标题和描述。首页面向工业刀片制造商采购，目录用于比较手册十个产品系列；30 个产品页分别承接系列及其已建立的小类。3 篇文章分别面向定制报价准备、刀片类型比较、替换采购计划，并使用产品名称链接到对应详情页。PageMeta 和 WebPage 结构化数据共用规划，新增页面未补规划会阻止 SEO 构建。
 

@@ -15,6 +15,39 @@ const meta = (html, property) => html.match(new RegExp(`<meta[^>]*(?:name|proper
 const graphFor = html => JSON.parse(html.match(/<script[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/)?.[1] || 'null');
 const decode = text => text.replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&#x27;|&#39;/g, "'");
 
+test('every public page contains readable content and product navigation before JavaScript runs', () => {
+  const linkedProducts = new Set();
+  for (const url of urls) {
+    const html = htmlFor(url);
+    const body = html.split('<body>')[1];
+    assert.ok(body, url);
+    assert.doesNotMatch(body, /<div id="root"><\/div>/, url);
+    assert.equal([...body.matchAll(/<main\b/g)].length, 1, url);
+    assert.equal([...body.matchAll(/<h1\b/g)].length, 1, url);
+    for (const [, href] of body.matchAll(/href="(\/products\/[^"?#]+)"/g)) {
+      assert.ok(existsSync(path.join(dist, href, 'index.html')), `${url} links to ${href}`);
+      linkedProducts.add(href);
+    }
+    if (new URL(url).pathname.startsWith('/products/')) {
+      assert.match(body, /Technical Specifications/, url);
+      assert.match(body, /Dimensions &amp; Fit/, url);
+      assert.match(body, /href="\/contact"/, url);
+      const heading = decode(body.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/)[1].replace(/<[^>]*>/g, ' '));
+      assert.ok(heading.toLowerCase().includes(keywordPlan[new URL(url).pathname].primaryKeyword), url);
+    }
+  }
+  for (const url of urls.filter(value => new URL(value).pathname.startsWith('/products/'))) {
+    assert.ok(linkedProducts.has(new URL(url).pathname), `Orphan product: ${url}`);
+  }
+});
+
+test('static home manufacturing figures show their actual values without JavaScript', () => {
+  const html = htmlFor(`${config.url}/`);
+  const figures = [...html.matchAll(/class="font-mono text-4xl[^>]*>([\s\S]*?)<\/div>/g)]
+    .map(([, content]) => content.replace(/<[^>]*>/g, ''));
+  assert.deepEqual(figures, ['10+', '±0.001mm', '8+', '15+']);
+});
+
 test('all canonical pages publish the keyword plan with unique titles, descriptions and primary topics', () => {
   assert.deepEqual(Object.keys(keywordPlan).sort(), urls.map(url => new URL(url).pathname).sort());
   const titles = new Set();

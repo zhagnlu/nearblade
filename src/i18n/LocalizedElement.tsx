@@ -10,7 +10,10 @@ const translateChildren = (children: ReactNode, dictionary: Dictionary): ReactNo
   if (Array.isArray(children)) return children.map(child => translateChildren(child, dictionary));
   if (isValidElement(children) && children.type === Fragment) {
     const fragment = children as ReactElement<{ children?: ReactNode }>;
-    return cloneElement(fragment, undefined, translateChildren(fragment.props.children, dictionary));
+    const content = translateChildren(fragment.props.children, dictionary);
+    return Array.isArray(content)
+      ? cloneElement(fragment, undefined, ...content)
+      : cloneElement(fragment, undefined, content);
   }
   return children;
 };
@@ -27,6 +30,8 @@ export const LocalizedElement = forwardRef<Element, { as: ElementType; children?
     }
   }
   const content = disabled || as === "textarea" ? children : translateChildren(children, dictionary);
-  const element = createElement(as, attributes, content);
+  const element = Array.isArray(content)
+    ? createElement(as, attributes, ...content)
+    : createElement(as, attributes, content);
   return disabled && !inherited ? <TranslationDisabled.Provider value>{element}</TranslationDisabled.Provider> : element;
 });
