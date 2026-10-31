@@ -1,0 +1,18 @@
+{
+  "mode": "built-in imagegen edit",
+  "input": "public/images/products/hero-products-2026-10-31/doctor-strip-product-hero-v1.webp",
+  "output": "public/images/products/hero-products-2026-10-31/doctor-strip-white-v1.webp",
+  "prompt": "Use case: precise-object-edit. Edit target: attached Nearblade illustrative 3D printing doctor-blade product image. Replace ONLY the navy background and tabletop with seamless pure white (#FFFFFF) studio background and a soft close contact shadow. Preserve exactly ONE coil of thin metal doctor-blade strip with its extended free end, and ONE separate straight strip, their geometries, continuous working edges, thin ribbon thickness, metallic material, proportions and positions. No additional objects. Reframe both complete products together in a landscape 3:2 white product-card composition with modest even margins, products occupying about 85% width. No blue tint, no gradient, no text, no dimensions, no logo, no watermark. This remains an illustrative 3D product rendering, not an untouched factory photo.",
+  "pixels": [
+    1536,
+    1024
+  ],
+  "provenance": "Illustrative generated 3D product rendering; not an untouched factory photo.",
+  "scope": [
+    "doctor-blades category image",
+    "db-001 main gallery",
+    "db-gravure main gallery",
+    "db-flexo main gallery"
+  ],
+  "review": "One continuous coil/free end and one straight strip, no extra parts, clean white background and continuous working edges visually checked. Actual browser page review pending; previous native browser window unavailable."
+}

@@ -42,6 +42,28 @@ test('all catalog images exist and retired routes redirect without entering the 
   }
 });
 
+test('product Heroes use product imagery while engineering guides remain in the page body', () => {
+  for (const product of products) {
+    assert.match(product.heroImage || '', /\.(webp|png|jpe?g)$/i, product.id);
+    const html = readFileSync(new URL(`../dist/products/${product.id}/index.html`, import.meta.url), 'utf8');
+    const hero = html.match(/<section\b[\s\S]*?<\/section>/)?.[0];
+    assert.ok(hero?.includes(`src="${product.heroImage}"`), product.id);
+    assert.doesNotMatch(hero, /blade-profile-drawing|tooling-profile-drawing/);
+    assert.ok(html.includes('Dimensions &amp; Fit'), product.id);
+  }
+});
+
+test('related product cards show product images even when the detail gallery uses specifications', () => {
+  const html = readFileSync(new URL('../dist/products/pb-straight-punch/index.html', import.meta.url), 'utf8');
+  for (const id of ['pb-gooseneck-punch', 'pb-radius-tooling', 'pb-u-forming']) {
+    const card = [...html.matchAll(/<a\b[^>]*class="product-detail-related[^>]*>[\s\S]*?<\/a>/g)]
+      .map(match => match[0]).find(card => card.includes(`href="/products/${id}"`));
+    assert.ok(card, id);
+    assert.ok(card.includes(`src="${byId[id].heroImage}"`), id);
+    assert.doesNotMatch(card, /src="[^\"]+\.svg"/);
+  }
+});
+
 
 test('expanded product routes have a valid family, unique intent and matching media', () => {
   assert.equal(new Set(products.map(product => product.id)).size, products.length);

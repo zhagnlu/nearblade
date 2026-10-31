@@ -36,6 +36,12 @@ export interface ProductCategory {
 
 export const productCategories: ProductCategory[] = catalog as ProductCategory[];
 
+export const getCategoryPath = (category: ProductCategory): string => {
+  const family = category.products.find(product => !product.parentId);
+  if (!family) throw new Error(`Missing product-family page: ${category.id}`);
+  return `/products/${family.id}`;
+};
+
 export const getAllProducts = (): Product[] => productCategories.flatMap(category => category.products);
 export const getProductById = (id: string): Product | undefined => getAllProducts().find(product => product.id === id);
 export const getCategoryById = (id: string): ProductCategory | undefined => productCategories.find(category => category.id === id);

@@ -51,38 +51,21 @@ sudo chmod 755 /var/www/nearblade
 
 只对本网站目录授权；目录中已有文件会被发布覆盖或清理。部署用户不需要 sudo。ECS 安全组及系统防火墙需允许 SSH 和网站 HTTP/HTTPS 端口。
 
-Nginx 站点配置示例，将 `example.com` 换成实际域名，已有 HTTPS 配置保持原有证书设置。可直接参考仓库内的 [deploy/nginx.conf.example](../deploy/nginx.conf.example)，该模板默认对应 `site.config.json` 的 `www.nearblade.com` 和 `/var/www/nearblade`，沿用线上从裸域名到 `www` 的跳转：
+Nginx 路由规则以 [deploy/nginx.conf.example](../deploy/nginx.conf.example) 为准，正式域名对应 `site.config.json` 的 `www.nearblade.com`，默认根目录 `/var/www/nearblade`。将规则合并到现有提供正文的 HTTPS / CDN 回源站点块，保留线上证书、代理头和域名跳转配置，不要直接覆盖整个配置。
 
-```nginx
-server {
-    listen 80;
-    server_name example.com;
-    root /var/www/nearblade;
-    index index.html;
+规范 URL 使用 HTTPS、www、无末尾斜杠（首页 `/` 除外）。模板优先直接读取 `$uri/index.html`，使 `/products/pb-u-forming` 返回 200；带斜杠、显式 `index.html` 入口返回 301 到同一规范 URL，并保留查询参数。两个退役产品 URL 通过服务器 301 直接进入替代页，静态 HTML 跳转只作为尚未应用服务器规则时的兜底。不要把 `try_files` 改成 `$uri $uri/ /index.html`：目录检测会加斜杠，首页回退会让不存在的页面返回错误正文。
 
-    # build-seo.mjs generates an HTML entry for every public route.
-    location / {
-        try_files $uri/index.html $uri =404;
-    }
+线上在 CDN 后方，回源 `$scheme` 可能为 HTTP，不能仅据此强制跳 HTTPS，否则可能形成循环；应沿用已验证的边缘 HTTPS / www 规则。CDN 如果单独配置了“目录自动加斜杠”，也需同步关闭或更正。模板文件随源码保存，当前发布 workflow 不会自动应用它。
 
-    error_page 404 /404.html;
-    location = /404.html {
-        internal;
-    }
+应用配置后先检查 `nginx -t`，再 reload；按线上实际 URL 重新核对：
 
-    location /assets/ {
-        try_files $uri =404;
-    }
+- sitemap 中全部 39 个规范 URL 首次响应为 200，最终 URL 与 canonical 一致，正文直接可读。
+- `/products/pb-u-forming/` 和 `/products/pb-u-forming/index.html` 为 301，目标不带斜杠，无循环。
+- `sb-002` / `tb-001`（含斜杠和 index.html 入口）为 301 到 `sb-001` / `cp-001`，目标为 200。
+- 未知产品、未知文章及未知顶层地址返回真实 404，图片、CSS、JS 仍正常。
+- HTTP / 裸域名入口最终到达同一 HTTPS www 规范页，保留查询参数，并检查 CDN 的缓存跳转。
 
-    location /images/ {
-        try_files $uri =404;
-    }
-
-    location /locales/ {
-        try_files $uri =404;
-    }
-}
-```
+2026-10-31 审计时线上 38 个非首页仍跳转到带斜杠地址；本地模板修正不代表线上已生效。当前环境没有 Nginx 可执行程序，未在本机运行配置语法或真实 Nginx 请求测试；上述服务器验收必须在应用配置时完成。
 
 构建为 39 条公开路由生成独立 HTML 入口，包含完整英文正文、产品链接、对应的 canonical、分享信息及 JSON-LD；正文无需执行 JavaScript 即可读取，浏览器中的 React 接管已有内容后启用交互。上述规则优先读取路由入口（例如 `/products/sb-001/index.html`），未知路由返回带 noindex 的 404 页面并保留 HTTP 404 状态。已有站点若仍使用回退到根 `index.html` 的配置，需同步更新 Nginx，才能让直接访问不同页面时获得各自的初始元数据。
 

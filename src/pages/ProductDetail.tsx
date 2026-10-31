@@ -72,7 +72,6 @@ export default function ProductDetail() {
         contentId="product-content"
         primaryAction={{ label: "View Specifications", to: "#product-content" }}
         secondaryAction={{ label: "Request Quote", to: "/contact" }}
-        visual={product.toolingProfile ? <ToolingProfileDrawing profile={product.toolingProfile} dark /> : product.bladeProfile && product.heroImage?.endsWith(".svg") ? <BladeProfileDrawing profile={product.bladeProfile} dark /> : undefined}
       />
 
       <section id="product-content" className="product-detail-surface scroll-mt-20 py-section-mobile md:py-section bg-industrial">
@@ -318,15 +317,15 @@ export default function ProductDetail() {
                     to={`/products/${related.id}`}
                     className="product-detail-related group border border-border rounded-card overflow-hidden hover:border-steel/50 transition-all duration-300"
                   >
-                    {related.mediaMode !== "specification" && <div className="aspect-[4/3] overflow-hidden product-stage">
+                    <div className="aspect-[4/3] overflow-hidden bg-[#172536]">
                       <img
                         loading="lazy"
                         decoding="async"
-                        src={related.image}
+                        src={related.heroImage || related.image}
                         alt={related.name}
-                        className="w-full h-full object-contain p-4"
+                        className="w-full h-full object-cover"
                       />
-                    </div>}
+                    </div>
                     <div className="p-4">
                       <h3 className="text-metal-text font-medium group-hover:text-steel transition-colors">
                         {related.name}

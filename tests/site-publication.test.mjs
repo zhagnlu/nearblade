@@ -48,6 +48,24 @@ test('static home manufacturing figures show their actual values without JavaScr
   assert.deepEqual(figures, ['10+', '±0.001mm', '8+', '15+']);
 });
 
+test('home and every footer link directly to all ten canonical family pages', () => {
+  const catalog = JSON.parse(readFileSync(path.join(root, 'content/catalog/products.json'), 'utf8'));
+  const familyPaths = catalog.map(category => {
+    const families = category.products.filter(product => !product.parentId);
+    assert.equal(families.length, 1, category.id);
+    return `/products/${families[0].id}`;
+  });
+  assert.equal(familyPaths.length, 10);
+  const home = htmlFor(`${config.url}/`);
+  const showcase = home.split('id="home-content"')[1].split('</section>')[0];
+  for (const route of familyPaths) assert.ok(showcase.includes(`href="${route}"`), route);
+  for (const url of urls) {
+    const footer = htmlFor(url).split('<footer')[1].split('</footer>')[0];
+    for (const route of familyPaths) assert.ok(footer.includes(`href="${route}"`), `${url}: ${route}`);
+    assert.doesNotMatch(footer, /href="\/products\?category=/);
+  }
+});
+
 test('all canonical pages publish the keyword plan with unique titles, descriptions and primary topics', () => {
   assert.deepEqual(Object.keys(keywordPlan).sort(), urls.map(url => new URL(url).pathname).sort());
   const titles = new Set();

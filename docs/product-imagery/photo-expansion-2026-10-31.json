@@ -1,0 +1,711 @@
+{
+  "date": "2026-10-31",
+  "status": "Five product pages integrated for local review; 14 remain with engineering references. No commit, push or deployment.",
+  "baselineMissingPhotoIds": [
+    "pb-radius-tooling",
+    "pb-u-forming",
+    "pb-embossing",
+    "pb-container",
+    "pb-light-pole",
+    "sk-foil",
+    "sr-001",
+    "sr-bar",
+    "sr-casting",
+    "cp-thin-slitter",
+    "tb-002",
+    "tb-packaging",
+    "db-001",
+    "db-gravure",
+    "db-flexo",
+    "db-holders",
+    "cr-001",
+    "cr-rotor",
+    "cr-stationary"
+  ],
+  "access": {
+    "alibaba": "Normal logged-in Chrome search stopped at slider verification. Tab preserved for manual completion; no bypass and no Alibaba inquiry sent.",
+    "publicSites": "Public product pages and direct image files; HTTP failures recorded. Browser inspection used when a public image could not be fetched through HTTP tools."
+  },
+  "rights": "Public supplier candidates; independent reuse authorization unverified. Branding cleanup does not establish ownership, untouched-photo provenance, machine fit or Nearblade manufacturing evidence.",
+  "comparison": {
+    "granulator": [
+      "Signature Blades: 1080x1080 natural workshop group; complete central/lower knives selected for white edit.",
+      "Khosla: 836x400 composite; too small.",
+      "Yafei: 550x550; too small.",
+      "Sureay: product page and original 06 inspected in normal Chrome, 751x641; too small. Other images unavailable through HTTP.",
+      "Great Lakes: product gallery read; original photo downloads returned 403.",
+      "KN Knives, EDGE, Mastercut and Kamadur attempted; access failures in private fetch log."
+    ],
+    "serrated": [
+      "M. Bono e Hijo: 2025x2025; one correct serrated knife with four open U slots; engraved emblem requires edit.",
+      "LC Knife: 550x550; too small.",
+      "Jiangnan: 800x800; too small.",
+      "Senda: 800x800; too small.",
+      "Xiaote: 800x800; too small."
+    ],
+    "corrugatedThin": [
+      "DOMA: three 800x800 originals; too small.",
+      "Shen Gong: 800x800; too small.",
+      "Yafei: 1000x1000; four blades and prominent watermark; cleaner alternate preferred.",
+      "Kinki Hamono: 1024x768; single six-hole thin circular knife; conditional near-600px display candidate, background/branding edit needed.",
+      "Huatao: 500x500; too small."
+    ],
+    "radius": [
+      "ALAS: 800x800; too small.",
+      "Yafei: 1000x1000 engineering illustration, not product photo.",
+      "TSD: 550x412; too small.",
+      "BHT: 1775x1775; photo of radius inserts/holders, product content within promotional bands. Candidate under edit review.",
+      "Fabmax: 700x400; too small.",
+      "Infinity: 638x850; too small.",
+      "UKB original timed out; not marked visually accepted."
+    ],
+    "barShear": [
+      "Yafei: 1000x1000 branded family photo.",
+      "SHINITE: 1000x1000 original white image, seven bar/profile-shear components; conditional local candidate, no photo authenticity or model fit claim.",
+      "ALAS: 1600x1600 composite with repeated serrated/profile bars; not a continuous-casting billet photo."
+    ],
+    "pole": [
+      "CMC: 680x509; too small.",
+      "Hydraulic-press-brake.com: 2274x1706 natural photo; tooling geometry visible, multiple pieces/workshop context; further supplier comparison and white edit still required."
+    ],
+    "doctor": [
+      "JCT original inspected in Chrome: 700x467; too small.",
+      "Senda: 800x600; too small.",
+      "DEKEER original HTTP access failed; browser check pending.",
+      "Pinder: original timed out.",
+      "Swedev: 1920x1080 application photograph; not yet accepted as isolated blade/holder product photo.",
+      "DEKEER Standard inspected in Chrome: 620x620, rejected.",
+      "Sakshi: 1000x1000; coiled strip, finished doctor edge cannot be established; not assigned to a product.",
+      "Stripsteel: original returned 403.",
+      "DEKEJIE: 800x580; too small."
+    ],
+    "foil": [
+      "Hexin: 750x750; too small.",
+      "Senda: 700x500; too small."
+    ],
+    "specialTooling": [
+      "Gunnar U-tool image: 800x300, not a usable high-resolution photo.",
+      "Yafei U/W tool: 1000x1000, rendered-looking and branded; do not pass as product photo.",
+      "Shenlite U/corrugated tooling: 800x800, too small."
+    ]
+  },
+  "downloads": [
+    {
+      "file": "granulator-sureay-01.webp",
+      "url": "https://sureay.com/images/products/granulator-blades/granulator-blades-01.webp",
+      "error": "HTTP Error 403: Forbidden",
+      "localPath": "research/alibaba/photo-expansion-2026-10-31/granulator-sureay-01.webp"
+    },
+    {
+      "file": "granulator-sureay-03.webp",
+      "url": "https://sureay.com/images/products/granulator-blades/granulator-blades-03.webp",
+      "error": "HTTP Error 403: Forbidden",
+      "localPath": "research/alibaba/photo-expansion-2026-10-31/granulator-sureay-03.webp"
+    },
+    {
+      "file": "granulator-sureay-06.webp",
+      "url": "https://sureay.com/images/products/granulator-blades/granulator-blades-06.webp",
+      "error": "HTTP Error 403: Forbidden",
+      "localPath": "research/alibaba/photo-expansion-2026-10-31/granulator-sureay-06.webp"
+    },
+    {
+      "file": "granulator-khosla.webp",
+      "url": "https://khoslatools.com/assets/img/plastic-granulator-shredder-blades.webp",
+      "bytes": 115668,
+      "sha256": "0fa5f1f042b8de87082efbb754e3cfad89665ad9da294b33b61028e498ec377c",
+      "pixels": [
+        836,
+        400
+      ],
+      "encoding": "WEBP",
+      "localPath": "research/alibaba/photo-expansion-2026-10-31/granulator-khosla.webp"
+    },
+    {
+      "file": "granulator-glknife-set.jpg",
+      "url": "https://www.glknife.com/wp-content/uploads/2024/09/2024-CALENDAR-GRANULATING-1024x1024.jpg",
+      "error": "HTTP Error 403: Forbidden",
+      "localPath": "research/alibaba/photo-expansion-2026-10-31/granulator-glknife-set.jpg"
+    },
+    {
+      "file": "granulator-glknife-rotor.jpg",
+      "url": "https://www.glknife.com/wp-content/uploads/2024/09/456-Z300600_2-1024x1024.jpg",
+      "error": "HTTP Error 403: Forbidden",
+      "localPath": "research/alibaba/photo-expansion-2026-10-31/granulator-glknife-rotor.jpg"
+    },
+    {
+      "file": "granulator-glknife-bed.jpg",
+      "url": "https://www.glknife.com/wp-content/uploads/2024/09/457-K730_1-1024x1024.jpg",
+      "error": "HTTP Error 403: Forbidden",
+      "localPath": "research/alibaba/photo-expansion-2026-10-31/granulator-glknife-bed.jpg"
+    },
+    {
+      "file": "granulator-yafei.webp",
+      "url": "https://image.made-in-china.com/202f0j00IZmRrJPMCUoT/Rotary-and-Stationary-Plastic-Granulator-Blades.webp",
+      "bytes": 18470,
+      "sha256": "93b6b59edba0663ea2ece86917912f596906520952acea2cc1e54c098af151e4",
+      "pixels": [
+        550,
+        550
+      ],
+      "encoding": "WEBP",
+      "localPath": "research/alibaba/photo-expansion-2026-10-31/granulator-yafei.webp"
+    },
+    {
+      "file": "u-yafei.webp",
+      "url": "https://image.made-in-china.com/2f0j00FhSUQdugnroy/U-W-Channel-Special-Forming-Bending-Press-Brake-Dies.webp",
+      "bytes": 26632,
+      "sha256": "24bcbd2b8345a3cc55237d55eefbf2fd9959cef0bb0f27851733ef0ccef7ebc0",
+      "pixels": [
+        1000,
+        1000
+      ],
+      "encoding": "WEBP",
+      "localPath": "research/alibaba/photo-expansion-2026-10-31/u-yafei.webp"
+    },
+    {
+      "file": "u-shenlite.jpg",
+      "url": "https://image.made-in-china.com/2f0j00aKOkvyIdeFoj/Press-Brake-U-Bending-Tools-Car-Plate-Corrugated-Plate-Mold.jpg",
+      "bytes": 78196,
+      "sha256": "9ff927882120fd9efe1127b652611a014c54f769a9af46b8a500de9842ba6676",
+      "pixels": [
+        800,
+        800
+      ],
+      "encoding": "JPEG",
+      "localPath": "research/alibaba/photo-expansion-2026-10-31/u-shenlite.jpg"
+    },
+    {
+      "file": "doctor-jct-1.jpg",
+      "url": "https://www.jctprinting.com/Uploads/products/2017-12-29/en-DSC-1586-.jpg",
+      "error": "HTTP Error 403: Forbidden",
+      "localPath": "research/alibaba/photo-expansion-2026-10-31/doctor-jct-1.jpg"
+    },
+    {
+      "file": "doctor-jct-2.jpg",
+      "url": "https://www.jctprinting.com/Uploads/products/2017-12-29/en-6DSC-1444-.jpg",
+      "error": "HTTP Error 403: Forbidden",
+      "localPath": "research/alibaba/photo-expansion-2026-10-31/doctor-jct-2.jpg"
+    },
+    {
+      "file": "doctor-senda.jpg",
+      "url": "https://ecdn6.globalso.com/upload/p/212/image_product/2024-09/ink-doctor-blades-for-flexible-and-gravure-printing-2.jpg",
+      "bytes": 227163,
+      "sha256": "68be205263ec41f278fbcc39e6642fc7d3ae9986823443079836f3e29e2eecac",
+      "pixels": [
+        800,
+        600
+      ],
+      "encoding": "JPEG",
+      "localPath": "research/alibaba/photo-expansion-2026-10-31/doctor-senda.jpg"
+    },
+    {
+      "file": "corrugated-sg.png",
+      "url": "https://site.cdnfile.io/www.sgcarbide.com/2a334ed37052e1504c9fa61f53d2551e.png",
+      "bytes": 637348,
+      "sha256": "c14010411d67d380d3f42068411f08ec9701b6ebc965731089110249bf3b2d1c",
+      "pixels": [
+        800,
+        800
+      ],
+      "encoding": "PNG",
+      "localPath": "research/alibaba/photo-expansion-2026-10-31/corrugated-sg.png"
+    },
+    {
+      "file": "corrugated-yafei.jpg",
+      "url": "https://iqrorwxhljpmlk5p-static.micyjz.com/cloud/lmBprKnilkSRrjpklkniin/1.jpg",
+      "bytes": 454213,
+      "sha256": "6d1728ac78c0a7f61b5e9c88e52e51f6a1ba630db157633445f4d01b3bbc204d",
+      "pixels": [
+        1000,
+        1000
+      ],
+      "encoding": "JPEG",
+      "localPath": "research/alibaba/photo-expansion-2026-10-31/corrugated-yafei.jpg"
+    },
+    {
+      "file": "corrugated-kinki.png",
+      "url": "https://ja.nc-net.or.jp/up/library/74871/22900/a64497be26c0fb403dbc1f3fe72bc416.png",
+      "bytes": 932404,
+      "sha256": "f72082e392d6324e07a769134faa53113003cff295d3a9f2b029ba7e9b4a3306",
+      "pixels": [
+        1024,
+        768
+      ],
+      "encoding": "PNG",
+      "localPath": "research/alibaba/photo-expansion-2026-10-31/corrugated-kinki.png"
+    },
+    {
+      "file": "corrugated-huatao.jpg",
+      "url": "https://cpimg.tistatic.com/7795339/b/5/tungsten-carbide-slitter-blade.jpg",
+      "bytes": 48193,
+      "sha256": "55d4314acfa25c5f2c2fd7e3ac7f93da718e6810344f5255a55a2b599e0ce57a",
+      "pixels": [
+        500,
+        500
+      ],
+      "encoding": "JPEG",
+      "localPath": "research/alibaba/photo-expansion-2026-10-31/corrugated-huatao.jpg"
+    },
+    {
+      "file": "serrated-bono.jpg",
+      "url": "https://mbono.com.ar/storage/2024/07/Cuchilla-dentada-320x35x1.-2-e1721657261974.jpg",
+      "bytes": 117837,
+      "sha256": "7d4095b63226f2eca27b38f300d15bbe6e271f73086b3cc474f0c2abf7458bdd",
+      "pixels": [
+        2025,
+        2025
+      ],
+      "encoding": "JPEG",
+      "localPath": "research/alibaba/photo-expansion-2026-10-31/serrated-bono.jpg"
+    },
+    {
+      "file": "serrated-lcknife.jpg",
+      "url": "https://ko.lcknife.com/uploadfile/202103/18/15d95d7f1d698bf7640a441e404d8119_medium.jpg",
+      "bytes": 36509,
+      "sha256": "d8e29b35f85f1dea038ca5ddca94c7f39d1ee26bf7df7a0cd5fd2bccbfb5dd42",
+      "pixels": [
+        550,
+        550
+      ],
+      "encoding": "JPEG",
+      "localPath": "research/alibaba/photo-expansion-2026-10-31/serrated-lcknife.jpg"
+    },
+    {
+      "file": "serrated-jiangnan.jpg",
+      "url": "https://image.made-in-china.com/2f0j00RhVgHFrWEncJ/Straight-Serrated-Knives-for-Cutting-Plastic-Film-Foil.jpg",
+      "bytes": 173198,
+      "sha256": "1aa15d816cf4c0c268403d5f83460577de48870e69586cd47f5e0821f4bfce24",
+      "pixels": [
+        800,
+        800
+      ],
+      "encoding": "JPEG",
+      "localPath": "research/alibaba/photo-expansion-2026-10-31/serrated-jiangnan.jpg"
+    },
+    {
+      "file": "serrated-senda.jpg",
+      "url": "https://www.papercutting-blade.com/photo/pl168748685-high_speed_steel_serrated_blade_knife_for_packaging_machine_food_machine.jpg",
+      "bytes": 68691,
+      "sha256": "719d5eeb11a3fe0e4632e1f12b014154b48c1f0c6e8f142f77206ec534ff6562",
+      "pixels": [
+        800,
+        800
+      ],
+      "encoding": "JPEG",
+      "localPath": "research/alibaba/photo-expansion-2026-10-31/serrated-senda.jpg"
+    },
+    {
+      "file": "serrated-xiaote.webp",
+      "url": "https://image.made-in-china.com/2f0j00ocCbaqkqbDpV/Stainless-Steel-Packaging-Machine-Blades-Serrated-Sealing-Knife-for-Plastic-Bags-Cutting.webp",
+      "bytes": 150886,
+      "sha256": "4b2cd1d3d4d355cc8e05a38c032606a736eeeca422efcc39a19fa8c6a03b67af",
+      "pixels": [
+        800,
+        800
+      ],
+      "encoding": "WEBP",
+      "localPath": "research/alibaba/photo-expansion-2026-10-31/serrated-xiaote.webp"
+    },
+    {
+      "file": "radius-bht.webp",
+      "url": "https://image.made-in-china.com/2f0j00HaFocAEdEhpk/Press-Brake-Radius-Punch-Holder-and-Punch-Insert.webp",
+      "bytes": 245648,
+      "sha256": "aaaf067d8334f1e8931cd047b4ca93de594fa19484c7f0765f8775b016d9c88d",
+      "pixels": [
+        1775,
+        1775
+      ],
+      "encoding": "WEBP",
+      "localPath": "research/alibaba/photo-expansion-2026-10-31/radius-bht.webp"
+    },
+    {
+      "file": "radius-ukb.jpg",
+      "url": "https://daten.ukb-gmbh.de/produkte/Radienwerkzeuge/Katalog-14-Radienwerkzeuge-Typ-2-Sektioniert-A.jpg",
+      "error": "<urlopen error timed out>",
+      "localPath": "research/alibaba/photo-expansion-2026-10-31/radius-ukb.jpg"
+    },
+    {
+      "file": "radius-fabmax.jpg",
+      "url": "https://www.fabmax.cn/u_file/2601/file/eccd0283c4.jpg",
+      "bytes": 54260,
+      "sha256": "58e0af4916ecdefc0e0fd7a17c5fda01b8c005edef7bad2726b5c77d44358182",
+      "pixels": [
+        700,
+        400
+      ],
+      "encoding": "JPEG",
+      "localPath": "research/alibaba/photo-expansion-2026-10-31/radius-fabmax.jpg"
+    },
+    {
+      "file": "radius-infinity.webp",
+      "url": "https://d91ztqmtx7u1k.cloudfront.net/ClientContent/Images/ExtraLarge/radius-tool-holder-20260423045729657.webp",
+      "bytes": 32772,
+      "sha256": "c708b558eccffa122388206683cba21a8a810e5ab6a0dc264a9cc2e41fc97fb9",
+      "pixels": [
+        638,
+        850
+      ],
+      "encoding": "WEBP",
+      "localPath": "research/alibaba/photo-expansion-2026-10-31/radius-infinity.webp"
+    },
+    {
+      "file": "bar-yafei.jpg",
+      "url": "https://iqrorwxhljpmlk5p-static.micyjz.com/cloud/ljBprKnilkSRrjiklnpoio/steel-bar-cutter-blade.jpg",
+      "bytes": 343146,
+      "sha256": "12d2b8de9001927542df1dd6e7f15146d68f6d9b5e9cff156f856d5f2b9004d3",
+      "pixels": [
+        1000,
+        1000
+      ],
+      "encoding": "JPEG",
+      "localPath": "research/alibaba/photo-expansion-2026-10-31/bar-yafei.jpg"
+    },
+    {
+      "file": "bar-shinite.jpg",
+      "url": "https://image.made-in-china.com/2f0j00KOSoUbJRrakW/Custom-Hot-Rolling-Metal-Steel-Bar-Shear-Blades-for-Cutting-Rebars.jpg",
+      "bytes": 51149,
+      "sha256": "4d5a4c94ed8e8c75e3d8e7412e582ab682393eeaa723e30504f4d734a55ec8e1",
+      "pixels": [
+        1000,
+        1000
+      ],
+      "encoding": "JPEG",
+      "localPath": "research/alibaba/photo-expansion-2026-10-31/bar-shinite.jpg"
+    },
+    {
+      "file": "bar-alas.jpg",
+      "url": "https://iororwxhrkillq5q-static.micyjz.com/cloud/lpBpjKijllSRnlinqkkqio/hot-shearing-blades-steel-mill-h13.jpg",
+      "bytes": 160235,
+      "sha256": "c1c4d14c6d99875ed988f918536fb4ee527456a78d652746784088ff4f16f84b",
+      "pixels": [
+        1600,
+        1600
+      ],
+      "encoding": "JPEG",
+      "localPath": "research/alibaba/photo-expansion-2026-10-31/bar-alas.jpg"
+    },
+    {
+      "file": "pole-cmc.jpg",
+      "url": "https://www.cnchydraulicpressbrake.com/photo/cnchydraulicpressbrake/editor/20140915112347_83262.jpg",
+      "bytes": 38169,
+      "sha256": "8026efdca24fcf954d608062cf8a9cfe85a6df1f326bafb9942aef6f4346ad49",
+      "pixels": [
+        680,
+        509
+      ],
+      "encoding": "JPEG",
+      "localPath": "research/alibaba/photo-expansion-2026-10-31/pole-cmc.jpg"
+    },
+    {
+      "file": "pole-hydraulic.jpg",
+      "url": "https://www.hydraulic-press-brake.com/photo/ps154532353-conical_round_10m_light_pole_tooling.jpg",
+      "bytes": 713813,
+      "sha256": "99b2b4e8a64ada26e7fc6d51faeb468df06516ac701d327f8c25a3dddbe5e6dc",
+      "pixels": [
+        2274,
+        1706
+      ],
+      "encoding": "JPEG",
+      "localPath": "research/alibaba/photo-expansion-2026-10-31/pole-hydraulic.jpg"
+    },
+    {
+      "file": "foil-hexin.webp",
+      "url": "https://image.made-in-china.com/365f3j00kGEiLRtaWouH/High-Speed-Steel-Copper-Foil-Knife-Round-Slitting-Blade-for-Cutting.webp",
+      "bytes": 22932,
+      "sha256": "804732df36b447da72db09c42f441191fad4471f009542add84b27a80a4e3aff",
+      "pixels": [
+        750,
+        750
+      ],
+      "encoding": "WEBP",
+      "localPath": "research/alibaba/photo-expansion-2026-10-31/foil-hexin.webp"
+    },
+    {
+      "file": "foil-senda.jpg",
+      "url": "https://www.shearing-blades.com/photo/ps111604405-circular_knives_rotary_slitter_blades_hrc53_for_aluminum_foil_cutting.jpg",
+      "bytes": 57323,
+      "sha256": "3eadbeb4156c56a53d1fd27d1f0a174a2fbad8641359a72853f225ddffeaee39",
+      "pixels": [
+        700,
+        500
+      ],
+      "encoding": "JPEG",
+      "localPath": "research/alibaba/photo-expansion-2026-10-31/foil-senda.jpg"
+    },
+    {
+      "file": "doctor-dekeer.webp",
+      "url": "https://cdn.dkeblade.com/2026/01/MDC_Standard.webp",
+      "error": "HTTP Error 403: Forbidden",
+      "localPath": "research/alibaba/photo-expansion-2026-10-31/doctor-dekeer.webp"
+    },
+    {
+      "file": "doctor-dekeer-longlife.webp",
+      "url": "https://cdn.dkeblade.com/2026/01/MDC_Longlife.webp",
+      "error": "HTTP Error 403: Forbidden",
+      "localPath": "research/alibaba/photo-expansion-2026-10-31/doctor-dekeer-longlife.webp"
+    },
+    {
+      "file": "doctor-pinder.jpg",
+      "url": "https://www.pinderblades.com/img/polished.jpg",
+      "error": "<urlopen error timed out>",
+      "localPath": "research/alibaba/photo-expansion-2026-10-31/doctor-pinder.jpg"
+    },
+    {
+      "file": "doctor-swedev.jpg",
+      "url": "https://swedev-media.becdn.net/app/uploads/2022/05/mount-doctor-blade-in-chamber.jpg",
+      "bytes": 762375,
+      "sha256": "84865f04f5e8c917518c4a56bcdc4c695feaab55247083e53d3ddd08b9fc288c",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "encoding": "JPEG",
+      "localPath": "research/alibaba/photo-expansion-2026-10-31/doctor-swedev.jpg"
+    },
+    {
+      "file": "radius-alas.jpg",
+      "url": "https://iororwxhrkillq5q-static.micyjz.com/cloud/pnBpjKijllSRplmmprpjip/42crmo-interchangeable-radius-press-brake-dies-set.jpg",
+      "bytes": 70610,
+      "sha256": "93b667133f3cd7daaa4a34398c2eaadc1b4ff28e7f45c7dad9ebc7c0fcf2fa5b",
+      "pixels": [
+        800,
+        800
+      ],
+      "encoding": "JPEG",
+      "localPath": "research/alibaba/photo-expansion-2026-10-31/radius-alas.jpg"
+    },
+    {
+      "file": "radius-yafei.jpg",
+      "url": "https://iqrorwxhljpmlk5p-static.micyjz.com/cloud/llBprKnilkSRrjjlollmio/14.jpg",
+      "bytes": 228232,
+      "sha256": "f8e365d56f68c84eb92e70f79499751a8a2f42b4e5d26cd0deee73eb6453c417",
+      "pixels": [
+        1000,
+        1000
+      ],
+      "encoding": "JPEG",
+      "localPath": "research/alibaba/photo-expansion-2026-10-31/radius-yafei.jpg"
+    },
+    {
+      "file": "u-gunnar.webp",
+      "url": "https://www.gunnarpress.com/wp-content/uploads/2026/01/U-shape-bending-types-gunnarpress.webp",
+      "bytes": 12694,
+      "sha256": "28cecd36a6759e5ab47a27d7d8c2360cb2378d8197eaa63f559c819e4a2cd15b",
+      "pixels": [
+        800,
+        300
+      ],
+      "encoding": "WEBP",
+      "localPath": "research/alibaba/photo-expansion-2026-10-31/u-gunnar.webp"
+    },
+    {
+      "file": "radius-tsd.jpg",
+      "url": "https://5krorwxhnkpprik.leadongcdn.com/cloud/irBqnKrmRikSrjrjrqin/Radius-Tooling-for-Press-Brake-R-120mm.jpg",
+      "bytes": 39303,
+      "sha256": "ea7d85a1203ff644c62ef0d48150f05fa2fad705959742b712add58ef893c6b1",
+      "pixels": [
+        550,
+        412
+      ],
+      "encoding": "JPEG",
+      "localPath": "research/alibaba/photo-expansion-2026-10-31/radius-tsd.jpg"
+    },
+    {
+      "file": "u-chaoero.webp",
+      "url": "https://www.chaoero.com/wp-content/uploads/2024/11/How-to-use-a-U-bending-tool-to-bend-U-channel1.webp",
+      "error": "<urlopen error timed out>",
+      "localPath": "research/alibaba/photo-expansion-2026-10-31/u-chaoero.webp"
+    },
+    {
+      "file": "corrugated-doma-1.jpg",
+      "url": "https://ueeshop.ly200-cdn.com/u_file/UPAK/UPAK002/2311/products/10/d25baeb6b5.jpg",
+      "bytes": 86275,
+      "sha256": "2cf1d674c1848ee33bfc15b770c00a2360d0cc79a85bb2e6498e1fa96fe934e9",
+      "pixels": [
+        800,
+        800
+      ],
+      "encoding": "JPEG",
+      "localPath": "research/alibaba/photo-expansion-2026-10-31/corrugated-doma-1.jpg"
+    },
+    {
+      "file": "corrugated-doma-2.jpg",
+      "url": "https://ueeshop.ly200-cdn.com/u_file/UPAK/UPAK002/2311/products/10/4f0a755171.jpg",
+      "bytes": 75703,
+      "sha256": "685040779a27ae5adb77bdbeb4dae1ed14c524c7b453e5b4e8a1dd0007c478b2",
+      "pixels": [
+        800,
+        800
+      ],
+      "encoding": "JPEG",
+      "localPath": "research/alibaba/photo-expansion-2026-10-31/corrugated-doma-2.jpg"
+    },
+    {
+      "file": "corrugated-doma-3.jpg",
+      "url": "https://ueeshop.ly200-cdn.com/u_file/UPAK/UPAK002/2311/products/10/a54c58d92e.jpg",
+      "bytes": 95174,
+      "sha256": "7869a82b8c86a127bb313273bbad543d1df0c7bab7018a314d7f9b248e5cf149",
+      "pixels": [
+        800,
+        800
+      ],
+      "encoding": "JPEG",
+      "localPath": "research/alibaba/photo-expansion-2026-10-31/corrugated-doma-3.jpg"
+    },
+    {
+      "file": "granulator-signature.jpg",
+      "url": "https://img1.wsimg.com/isteam/ip/58f6763f-be44-47de-9e20-1a714eee9f4e/Production%20of%20%F0%9F%91%A8%E2%80%8D%F0%9F%8F%AD%20all%20types%20of%20indus-623a070.jpg",
+      "bytes": 147891,
+      "sha256": "22aa150d2f9a46df72ac2462d53a41f6d69836b8b358c459059d4a40b5203d22",
+      "pixels": [
+        1080,
+        1080
+      ],
+      "encoding": "JPEG",
+      "localPath": "research/alibaba/photo-expansion-2026-10-31/granulator-signature.jpg"
+    },
+    {
+      "file": "doctor-sakshi.png",
+      "url": "https://cpimg.tistatic.com/12024778/b/4/Carbon-Steel-Doctor-Blade..png",
+      "bytes": 104014,
+      "sha256": "7dac650d3c8e294a2fd6a673dfb2991973421bd0b3c354c3a31099d280178ddf",
+      "localPath": "research/alibaba/photo-expansion-2026-10-31/doctor-sakshi.png",
+      "pixels": [
+        1000,
+        1000
+      ],
+      "encoding": "JPEG"
+    },
+    {
+      "file": "doctor-stripsteel.jpg",
+      "url": "https://stripsteel.com.au/products/doctor-blades_files/slideshowImage-1259000.jpg",
+      "error": "HTTP Error 403: Forbidden",
+      "localPath": "research/alibaba/photo-expansion-2026-10-31/doctor-stripsteel.jpg"
+    },
+    {
+      "file": "doctor-dekejie.jpg",
+      "url": "https://doctorblade-cn.com/products/enhanced-carbon-steel-doctor-blade-cl-40_01.jpg",
+      "bytes": 25811,
+      "sha256": "7196d6bbd7baae88f89a29c33df1a74005fa7812f81cc316f26ad60a59c37051",
+      "localPath": "research/alibaba/photo-expansion-2026-10-31/doctor-dekejie.jpg",
+      "pixels": [
+        800,
+        580
+      ],
+      "encoding": "JPEG"
+    }
+  ],
+  "edits": {
+    "granulator": {
+      "productIds": [
+        "cr-001"
+      ],
+      "original": "granulator-signature.jpg",
+      "scope": "Select nine complete lower-row knives; remove workshop background; separate navy Hero edit. Four two-round-hole knives and five two-slot knives retained. Generated texture is not recovered photographic evidence.",
+      "white": "public/images/products/photo-expansion-2026-10-31/granulator-white-v1.webp",
+      "hero": "public/images/products/photo-expansion-2026-10-31/granulator-hero-v1.webp",
+      "geometryReview": "Nine pieces and two openings per piece visually checked against selected source pieces. Not evidence for specific rotor/bed interfaces.",
+      "whitePixels": [
+        1254,
+        1254
+      ],
+      "whiteBytes": 81822,
+      "heroPixels": [
+        1672,
+        941
+      ],
+      "heroBytes": 295118
+    },
+    "serrated": {
+      "productIds": [
+        "tb-002",
+        "tb-packaging"
+      ],
+      "original": "serrated-bono.jpg",
+      "scope": "Remove central engraved maker emblem, white background and framing; separate navy Hero.",
+      "white": "public/images/products/photo-expansion-2026-10-31/packaging-serrated-white-v1.webp",
+      "hero": "public/images/products/photo-expansion-2026-10-31/packaging-serrated-hero-v1.webp",
+      "geometryReview": "One knife, four open U mounting slots and fine continuous teeth checked. Approximate image contour count was 127 for source and white edit; not a technical tooth-count specification.",
+      "whitePixels": [
+        1536,
+        1024
+      ],
+      "whiteBytes": 74610,
+      "heroPixels": [
+        1672,
+        941
+      ],
+      "heroBytes": 288538
+    },
+    "barShear": {
+      "productIds": [
+        "sr-001",
+        "sr-bar"
+      ],
+      "original": "bar-shinite.jpg",
+      "scope": "White photo format converted only; no enlargement or geometric editing. 1000px conditional candidate checked in actual approximately 600px product stage.",
+      "white": "public/images/products/photo-expansion-2026-10-31/bar-shear-white-v1.webp",
+      "geometryReview": "Seven components retained; original holes/notches unchanged. Not used for continuous-casting billet knives.",
+      "whitePixels": [
+        1000,
+        1000
+      ],
+      "whiteBytes": 46788,
+      "heroCandidate": "output/product-photos-2026-10-31/bar-navy-v1-candidate.png",
+      "heroCandidatePixels": [
+        1672,
+        941
+      ],
+      "heroCandidateStatus": "Generated and visually compared to seven-piece original; not integrated until actual-page desktop/mobile review. Existing engineering Hero retained."
+    },
+    "rejected": [
+      {
+        "file": "output/product-photos-2026-10-31/corrugated-white-v1-rejected.png",
+        "reason": "Bore/outer diameter ratio changed from approximately 0.667 to 0.63."
+      },
+      {
+        "file": "output/product-photos-2026-10-31/corrugated-white-v2-rejected.png",
+        "reason": "Bore/outer ratio approximately 0.645, still different; do not integrate."
+      },
+      {
+        "file": "output/product-photos-2026-10-31/radius-white-v1-rejected.png",
+        "reason": "Reconstructed ends cropped in original and altered lower stacked pieces. Source cannot establish those details; do not integrate."
+      }
+    ]
+  },
+  "checks": {
+    "automated": "Final npm test: all 30 passed, including prerendered content and metadata, route HTML, hydration, gallery interactions, catalog assets and language packs. git diff --check passed.",
+    "visual": {
+      "reviewed": [
+        "cr-001: desktop photo Hero, white gallery and enlarged image",
+        "tb-packaging: desktop white gallery and enlarged image",
+        "sr-bar: desktop white gallery and enlarged image; 400px white gallery layout",
+        "tb-002: desktop photo Hero and readable text"
+      ],
+      "pending": [
+        "sr-001 actual page",
+        "tb-002 white gallery and enlarged image",
+        "tb-packaging final photo Hero",
+        "full mobile Hero checks for all changed pages"
+      ],
+      "interruption": "Chrome device-toolbar actions twice interrupted with user-changed-app notices. Do not mark the remaining review complete."
+    }
+  },
+  "remainingPhotoIds": [
+    "pb-radius-tooling",
+    "pb-u-forming",
+    "pb-embossing",
+    "pb-container",
+    "pb-light-pole",
+    "sk-foil",
+    "sr-casting",
+    "cp-thin-slitter",
+    "db-001",
+    "db-gravure",
+    "db-flexo",
+    "db-holders",
+    "cr-rotor",
+    "cr-stationary"
+  ],
+  "releaseStatus": "Local review only. Unverified supplier-image reuse authorization and pending visual review are recorded; no commit, push or deployment."
+}

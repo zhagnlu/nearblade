@@ -112,7 +112,7 @@
           "Upper punch"
         ],
         "image": "/images/products/tooling-v2/straight-punch-white-v1.webp",
-        "heroImage": "/images/products/tooling-v2/straight-punch-navy-v1.svg",
+        "heroImage": "/images/products/tooling-v2/straight-punch-product-hero-v1.webp",
         "images": [
           "/images/products/tooling-v2/straight-punch-white-v1.webp"
         ],
@@ -141,7 +141,7 @@
           "Upper punch"
         ],
         "image": "/images/products/tooling-v2/gooseneck-punch-white-v1.webp",
-        "heroImage": "/images/products/tooling-v2/gooseneck-punch-navy-v1.svg",
+        "heroImage": "/images/products/tooling-v2/gooseneck-punch-product-hero-v2.webp",
         "images": [
           "/images/products/tooling-v2/gooseneck-punch-white-v1.webp"
         ],
@@ -170,7 +170,7 @@
           "Radius punch and holder"
         ],
         "image": "/images/products/tooling-v2/radius-tool-section-v1.svg",
-        "heroImage": "/images/products/tooling-v2/radius-tool-navy-v1.svg",
+        "heroImage": "/images/products/tooling-v2/radius-tool-product-hero-v1.webp",
         "images": [],
         "mediaMode": "specification",
         "selectionFields": [
@@ -197,7 +197,7 @@
           "Matched forming tools"
         ],
         "image": "/images/products/tooling-v2/u-forming-section-v1.svg",
-        "heroImage": "/images/products/tooling-v2/u-forming-navy-v1.svg",
+        "heroImage": "/images/products/tooling-v2/u-forming-product-hero-v1.webp",
         "images": [],
         "mediaMode": "specification",
         "selectionFields": [
@@ -224,7 +224,7 @@
           "Matched forming tools"
         ],
         "image": "/images/products/tooling-v2/profile-forming-section-v1.svg",
-        "heroImage": "/images/products/tooling-v2/profile-forming-navy-v1.svg",
+        "heroImage": "/images/products/tooling-v2/profile-forming-product-hero-v1.webp",
         "images": [],
         "mediaMode": "specification",
         "selectionFields": [
@@ -251,7 +251,7 @@
           "Custom panel forming tools"
         ],
         "image": "/images/products/tooling-v2/container-forming-section-v1.svg",
-        "heroImage": "/images/products/tooling-v2/container-forming-navy-v1.svg",
+        "heroImage": "/images/products/tooling-v2/container-forming-product-hero-v1.webp",
         "images": [],
         "mediaMode": "specification",
         "selectionFields": [
@@ -278,7 +278,7 @@
           "Long pole forming tools"
         ],
         "image": "/images/products/tooling-v2/pole-forming-section-v1.svg",
-        "heroImage": "/images/products/tooling-v2/pole-forming-navy-v1.svg",
+        "heroImage": "/images/products/tooling-v2/pole-forming-product-hero-v1.webp",
         "images": [],
         "mediaMode": "specification",
         "selectionFields": [
@@ -305,7 +305,7 @@
           "Clamping accessory"
         ],
         "image": "/images/products/tooling-v2/quick-clamp-white-v1.webp",
-        "heroImage": "/images/products/tooling-v2/quick-clamp-navy-v1.svg",
+        "heroImage": "/images/products/tooling-v2/quick-clamp-product-hero-v1.webp",
         "images": [
           "/images/products/tooling-v2/quick-clamp-white-v1.webp"
         ],
@@ -445,7 +445,7 @@
           "Foil processing"
         ],
         "image": "/images/products/blades-v2/converting-slitter-section-v1.svg",
-        "heroImage": "/images/products/blades-v2/converting-slitter-navy-v1.svg",
+        "heroImage": "/images/products/hero-products-2026-10-31/foil-slitter-product-hero-v1.webp",
         "images": [],
         "mediaMode": "specification",
         "selectionFields": [
@@ -461,7 +461,7 @@
     "id": "steel-rolling-blades",
     "name": "Steel Rolling Blades",
     "description": "Bar shear blades and continuous-casting rolling blades for steel production. Confirm the cutting section and machine drawing.",
-    "image": "/images/products/blades-v2/bar-shear-section-v1.svg",
+    "image": "/images/products/photo-expansion-2026-10-31/bar-shear-white-v1.webp",
     "products": [
       {
         "id": "sr-001",
@@ -482,15 +482,16 @@
           "Steel rolling mills",
           "Continuous casting"
         ],
-        "image": "/images/products/blades-v2/bar-shear-section-v1.svg",
-        "heroImage": "/images/products/blades-v2/bar-shear-navy-v1.svg",
-        "images": [],
+        "image": "/images/products/photo-expansion-2026-10-31/bar-shear-white-v1.webp",
+        "heroImage": "/images/products/photo-expansion-2026-10-31/bar-shear-hero-v1.webp",
+        "images": [
+          "/images/products/photo-expansion-2026-10-31/bar-shear-white-v1.webp"
+        ],
         "variants": [
           "Bar Shear Blades",
           "Continuous-casting Rolling Blades"
         ],
-        "bladeProfile": "bar-shear",
-        "mediaMode": "specification"
+        "bladeProfile": "bar-shear"
       },
       {
         "id": "sr-bar",
@@ -508,10 +509,11 @@
         "applications": [
           "Steel rolling mills"
         ],
-        "image": "/images/products/blades-v2/bar-shear-section-v1.svg",
-        "heroImage": "/images/products/blades-v2/bar-shear-navy-v1.svg",
-        "images": [],
-        "mediaMode": "specification",
+        "image": "/images/products/photo-expansion-2026-10-31/bar-shear-white-v1.webp",
+        "heroImage": "/images/products/photo-expansion-2026-10-31/bar-shear-hero-v1.webp",
+        "images": [
+          "/images/products/photo-expansion-2026-10-31/bar-shear-white-v1.webp"
+        ],
         "selectionFields": [
           "Workpiece section and material",
           "Cutting temperature and station",
@@ -536,7 +538,7 @@
           "Continuous casting"
         ],
         "image": "/images/products/blades-v2/billet-shear-section-v1.svg",
-        "heroImage": "/images/products/blades-v2/billet-shear-navy-v1.svg",
+        "heroImage": "/images/products/hero-products-2026-10-31/billet-shear-product-hero-v1.webp",
         "images": [],
         "mediaMode": "specification",
         "selectionFields": [
@@ -603,7 +605,7 @@
           "Paper converting"
         ],
         "image": "/images/products/blades-v2/corrugated-thin-section-v1.svg",
-        "heroImage": "/images/products/blades-v2/corrugated-thin-navy-v1.svg",
+        "heroImage": "/images/products/hero-products-2026-10-31/corrugated-thin-product-hero-v1.webp",
         "images": [],
         "mediaMode": "specification",
         "selectionFields": [
@@ -648,7 +650,7 @@
     "id": "toothed-blades",
     "name": "Toothed Blades",
     "description": "Serrated and toothed knives for packaging, plastics, food processing and other industrial machinery. Specify the tooth and mounting profiles.",
-    "image": "/images/products/blades-v2/serrated-section-v1.svg",
+    "image": "/images/products/photo-expansion-2026-10-31/packaging-serrated-white-v1.webp",
     "products": [
       {
         "id": "tb-002",
@@ -674,12 +676,13 @@
           "Plastics processing",
           "Food processing machinery"
         ],
-        "image": "/images/products/blades-v2/serrated-section-v1.svg",
-        "heroImage": "/images/products/blades-v2/serrated-navy-v1.svg",
-        "images": [],
+        "image": "/images/products/photo-expansion-2026-10-31/packaging-serrated-white-v1.webp",
+        "heroImage": "/images/products/photo-expansion-2026-10-31/packaging-serrated-hero-v1.webp",
+        "images": [
+          "/images/products/photo-expansion-2026-10-31/packaging-serrated-white-v1.webp"
+        ],
         "variants": [],
-        "bladeProfile": "serrated",
-        "mediaMode": "specification"
+        "bladeProfile": "serrated"
       },
       {
         "id": "tb-packaging",
@@ -697,10 +700,11 @@
         "applications": [
           "Packaging machinery"
         ],
-        "image": "/images/products/blades-v2/serrated-section-v1.svg",
-        "heroImage": "/images/products/blades-v2/serrated-navy-v1.svg",
-        "images": [],
-        "mediaMode": "specification",
+        "image": "/images/products/photo-expansion-2026-10-31/packaging-serrated-white-v1.webp",
+        "heroImage": "/images/products/photo-expansion-2026-10-31/packaging-serrated-hero-v1.webp",
+        "images": [
+          "/images/products/photo-expansion-2026-10-31/packaging-serrated-white-v1.webp"
+        ],
         "selectionFields": [
           "Blade body · L × W × T",
           "Tooth profile · P / h",
@@ -714,7 +718,7 @@
     "id": "doctor-blades",
     "name": "Doctor Blades",
     "description": "Standard, combination, blue-steel, stainless-steel and ceramic doctor blades, with combination holders for printing and coating.",
-    "image": "/images/products/blades-v2/doctor-strip-section-v1.svg",
+    "image": "/images/products/hero-products-2026-10-31/doctor-strip-white-v1.webp",
     "products": [
       {
         "id": "db-001",
@@ -740,8 +744,10 @@
           "Decorative printing",
           "Coating lines"
         ],
-        "image": "/images/products/blades-v2/doctor-strip-section-v1.svg",
-        "images": [],
+        "image": "/images/products/hero-products-2026-10-31/doctor-strip-white-v1.webp",
+        "images": [
+          "/images/products/hero-products-2026-10-31/doctor-strip-white-v1.webp"
+        ],
         "variants": [
           "Standard Doctor Blades",
           "Combination Doctor Blades",
@@ -751,8 +757,7 @@
           "Combination Blade Holders"
         ],
         "bladeProfile": "doctor-strip",
-        "heroImage": "/images/products/blades-v2/doctor-strip-navy-v1.svg",
-        "mediaMode": "specification"
+        "heroImage": "/images/products/hero-products-2026-10-31/doctor-strip-product-hero-v1.webp"
       },
       {
         "id": "db-gravure",
@@ -770,10 +775,11 @@
         "applications": [
           "Gravure printing"
         ],
-        "image": "/images/products/blades-v2/doctor-strip-section-v1.svg",
-        "heroImage": "/images/products/blades-v2/doctor-strip-navy-v1.svg",
-        "images": [],
-        "mediaMode": "specification",
+        "image": "/images/products/hero-products-2026-10-31/doctor-strip-white-v1.webp",
+        "heroImage": "/images/products/hero-products-2026-10-31/doctor-strip-product-hero-v1.webp",
+        "images": [
+          "/images/products/hero-products-2026-10-31/doctor-strip-white-v1.webp"
+        ],
         "selectionFields": [
           "Strip dimensions · L × W × T",
           "Metering edge",
@@ -797,10 +803,11 @@
         "applications": [
           "Flexographic printing"
         ],
-        "image": "/images/products/blades-v2/doctor-strip-section-v1.svg",
-        "heroImage": "/images/products/blades-v2/doctor-strip-navy-v1.svg",
-        "images": [],
-        "mediaMode": "specification",
+        "image": "/images/products/hero-products-2026-10-31/doctor-strip-white-v1.webp",
+        "heroImage": "/images/products/hero-products-2026-10-31/doctor-strip-product-hero-v1.webp",
+        "images": [
+          "/images/products/hero-products-2026-10-31/doctor-strip-white-v1.webp"
+        ],
         "selectionFields": [
           "Strip dimensions · L × W × T",
           "Metering edge",
@@ -827,7 +834,7 @@
           "Coating lines"
         ],
         "image": "/images/products/blades-v2/doctor-holder-section-v1.svg",
-        "heroImage": "/images/products/blades-v2/doctor-holder-navy-v1.svg",
+        "heroImage": "/images/products/hero-products-2026-10-31/doctor-holder-product-hero-v1.webp",
         "images": [],
         "mediaMode": "specification",
         "selectionFields": [
@@ -865,7 +872,7 @@
           "Plywood production"
         ],
         "image": "/images/products/blades-v2/chipper-white-01-v1.webp",
-        "heroImage": "/images/products/blades-v2/chipper-navy-v1.svg",
+        "heroImage": "/images/products/hero-products-2026-10-31/chipper-product-hero-v1.webp",
         "images": [
           "/images/products/blades-v2/chipper-white-01-v1.webp",
           "/images/products/blades-v2/chipper-white-02-v1.webp",
@@ -896,7 +903,7 @@
     "id": "crusher-blades",
     "name": "Crusher Blades",
     "description": "Stationary and rotor knives for plastics, wood and polymer-composite size reduction. Select the blade material for the feedstock and machine.",
-    "image": "/images/products/blades-v2/granulator-rotor-section-v1.svg",
+    "image": "/images/products/photo-expansion-2026-10-31/granulator-white-v1.webp",
     "products": [
       {
         "id": "cr-001",
@@ -916,9 +923,11 @@
           "Wood processing",
           "Polymer composites"
         ],
-        "image": "/images/products/blades-v2/granulator-rotor-section-v1.svg",
-        "heroImage": "/images/products/blades-v2/granulator-rotor-navy-v1.svg",
-        "images": [],
+        "image": "/images/products/photo-expansion-2026-10-31/granulator-white-v1.webp",
+        "heroImage": "/images/products/photo-expansion-2026-10-31/granulator-hero-v1.webp",
+        "images": [
+          "/images/products/photo-expansion-2026-10-31/granulator-white-v1.webp"
+        ],
         "variants": [
           "Stationary Knives",
           "Rotor Knives"
@@ -933,8 +942,7 @@
           "Wood",
           "Polymer composites"
         ],
-        "bladeProfile": "granulator-rotor",
-        "mediaMode": "specification"
+        "bladeProfile": "granulator-rotor"
       },
       {
         "id": "cr-rotor",
@@ -955,7 +963,7 @@
           "Polymer composites"
         ],
         "image": "/images/products/blades-v2/granulator-rotor-section-v1.svg",
-        "heroImage": "/images/products/blades-v2/granulator-rotor-navy-v1.svg",
+        "heroImage": "/images/products/hero-products-2026-10-31/granulator-rotor-product-hero-v1.webp",
         "images": [],
         "mediaMode": "specification",
         "selectionFields": [
@@ -984,7 +992,7 @@
           "Polymer composites"
         ],
         "image": "/images/products/blades-v2/granulator-bed-section-v1.svg",
-        "heroImage": "/images/products/blades-v2/granulator-bed-navy-v1.svg",
+        "heroImage": "/images/products/hero-products-2026-10-31/granulator-bed-product-hero-v1.webp",
         "images": [],
         "mediaMode": "specification",
         "selectionFields": [

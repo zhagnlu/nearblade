@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaWhatsapp } from "react-icons/fa";
 import { BrandLogo } from "@/components/common/BrandLogo";
 import { contactPhone, phoneUrl, whatsappContact, whatsappUrl } from "@/data/contact";
-import { productCategories } from "@/data/products";
+import { getCategoryPath, productCategories } from "@/data/products";
 
 export function Footer() {
   return (
@@ -45,7 +45,7 @@ export function Footer() {
               {productCategories.map((item) => (
                 <li key={item.id}>
                   <Link
-                    to={`/products?category=${item.id}`}
+                    to={getCategoryPath(item)}
                     className="text-metal-subtext text-sm hover:text-steel transition-colors duration-200"
                   >
                     {item.name}

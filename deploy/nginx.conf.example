@@ -6,8 +6,30 @@ server {
     root /var/www/nearblade;
     index index.html;
 
-    # Each public route has its own HTML entry with page-specific SEO metadata.
+    # Retired URLs go directly to their replacements without HTML/JS redirects.
+    location ~ ^/products/sb-002(?:/index\.html|/)?$ {
+        return 301 https://www.nearblade.com/products/sb-001$is_args$args;
+    }
+    location ~ ^/products/tb-001(?:/index\.html|/)?$ {
+        return 301 https://www.nearblade.com/products/cp-001$is_args$args;
+    }
+
+    # Canonical routes have no trailing slash (except /), matching sitemap/links.
+    # Test the ORIGINAL request so serving an index.html internally cannot loop.
+    # Merge these rules into the existing HTTPS/CDN origin server; keep TLS and
+    # proxy headers. Never redirect based on $scheme behind a TLS-terminating CDN.
     location / {
+        if ($request_uri ~ "^/index\.html(?:\?|$)") {
+            return 301 https://www.nearblade.com/$is_args$args;
+        }
+        if ($request_uri ~ "^(/.+)/index\.html(?:\?|$)") {
+            return 301 https://www.nearblade.com$1$is_args$args;
+        }
+        if ($request_uri ~ "^(/.+)/+(?:\?|$)") {
+            return 301 https://www.nearblade.com$1$is_args$args;
+        }
+        # Read the actual file first. Do not test $uri/ or fall back to /index.html:
+        # those respectively add a slash or serve the homepage for unknown routes.
         try_files $uri/index.html $uri =404;
     }
 

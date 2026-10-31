@@ -39,7 +39,7 @@ export function PageHero({ title, accent, description, contentId, primaryAction,
       </div>
       <div className={`relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 ${visual ? "w-full grid grid-cols-1 lg:grid-cols-2 items-center gap-10" : "text-center"}`}>
         <div>
-        <h1 className={`text-4xl sm:text-5xl ${visual ? "lg:text-5xl" : "lg:text-hero animate-fade-in-up"} text-metal-text mb-6`}>
+        <h1 className={`text-4xl sm:text-5xl ${visual ? "lg:text-5xl" : "lg:text-hero"} text-metal-text mb-6`}>
           {title}<span className="block text-[#8CC6D7]">{accent}</span>
         </h1>
         <p className="text-lg lg:text-xl text-metal-subtext max-w-2xl mx-auto mb-10 animate-fade-in-up" style={{ animationDelay: "200ms" }}>{description}</p>

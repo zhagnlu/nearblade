@@ -3,7 +3,7 @@ import { blogPosts } from "@/data/blog";
 import { PageHero } from "@/components/common/PageHero";
 import { Link } from "react-router-dom";
 import { PageMeta } from "@/components/common/PageMeta";
-import { productCategories } from "@/data/products";
+import { getCategoryPath, productCategories } from "@/data/products";
 import { equipmentList, equipmentImageSize } from "@/data/equipment";
 import { StatCounter } from "@/components/generated/StatCounter";
 import { ContactForm } from "@/components/generated/ContactForm";
@@ -42,7 +42,7 @@ export default function Home() {
             {homeShowcase.map((category, index) => (
               <Link
                 key={category.id}
-                to={`/products?category=${category.id}`}
+                to={getCategoryPath(category)}
                 className="group min-w-0 flex flex-col bg-card border border-border rounded-card overflow-hidden hover:border-steel/50 transition-all duration-300 hover:shadow-xl hover:shadow-steel/5"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
@@ -71,7 +71,7 @@ export default function Home() {
             ))}
           </div>
           <div className="mt-10 flex flex-wrap justify-center gap-x-6 gap-y-3">
-            {productCategories.map(category => <Link key={category.id} to={`/products?category=${category.id}`} className="text-sm text-metal-subtext hover:text-steel underline underline-offset-4">{category.name}</Link>)}
+            {productCategories.map(category => <Link key={category.id} to={getCategoryPath(category)} className="text-sm text-metal-subtext hover:text-steel underline underline-offset-4">{category.name}</Link>)}
           </div>
           <div className="mt-8 text-center"><Link to="/products" className="inline-flex items-center gap-2 px-6 py-3 border border-steel text-steel rounded-card hover:bg-steel hover:text-white transition-colors">Browse Products <FaArrowRight size={14} /></Link></div>
         </div>

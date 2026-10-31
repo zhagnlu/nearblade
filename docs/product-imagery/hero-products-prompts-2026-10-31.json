@@ -1,0 +1,126 @@
+{
+  "mode": "built-in imagegen",
+  "styleReference": "public/images/blades-tooling-hero-v2.jpg",
+  "intent": "Replace every engineering Hero with product photo edit or illustrative solid 3D product render; retain body engineering guides.",
+  "tasks": [
+    {
+      "key": "straight-punch",
+      "ids": [
+        "pb-straight-punch"
+      ],
+      "prompt": "Use case: product-mockup. Asset type: Nearblade product-page full-screen Hero. Create ONE landscape 16:9 realistic three-dimensional industrial product rendering, not a drawing. Match the attached style reference ONLY for deep navy blue industrial tabletop and background, soft cool-blue edge lighting and bright silver machined metal. Do not include the reference's products. Put product in lower half, with generous dark quiet upper half and center for HTML title; keep full product within central 75% width with margin. Oblique three-quarter camera clearly shows solid thickness, working faces and physical geometry. Plain machined steel, no logos, no text, no arrows, no dimensions, no wireframe, no outlines, no exploded diagram, no infographic, no people, no machinery. Illustrative product type, no invented specifications or certification. A single straight-body press-brake upper punch segment standing upright: narrow rectangular top clamping tang, load-bearing shoulder, tall straight steel body tapering down to a continuous narrow V-shaped forming tip along its length. This is an upper punch with a downward tip, not a flat blade and not a lower V die."
+    },
+    {
+      "key": "gooseneck-punch",
+      "ids": [
+        "pb-gooseneck-punch"
+      ],
+      "prompt": "Use case: product-mockup. Asset type: Nearblade product-page full-screen Hero. Create ONE landscape 16:9 realistic three-dimensional industrial product rendering, not a drawing. Match the attached style reference ONLY for deep navy blue industrial tabletop and background, soft cool-blue edge lighting and bright silver machined metal. Do not include the reference's products. Put product in lower half, with generous dark quiet upper half and center for HTML title; keep full product within central 75% width with margin. Oblique three-quarter camera clearly shows solid thickness, working faces and physical geometry. Plain machined steel, no logos, no text, no arrows, no dimensions, no wireframe, no outlines, no exploded diagram, no infographic, no people, no machinery. Illustrative product type, no invented specifications or certification. Two gooseneck press-brake upper punch segments, one longer and one shorter. Both have a deep side-relieved C/gooseneck throat for return-flange clearance, top clamping tang and continuous bottom narrow forming tip. No labels. Keep distinct solid segment bodies."
+    },
+    {
+      "key": "radius-tool",
+      "ids": [
+        "pb-radius-tooling"
+      ],
+      "prompt": "Use case: product-mockup. Asset type: Nearblade product-page full-screen Hero. Create ONE landscape 16:9 realistic three-dimensional industrial product rendering, not a drawing. Match the attached style reference ONLY for deep navy blue industrial tabletop and background, soft cool-blue edge lighting and bright silver machined metal. Do not include the reference's products. Put product in lower half, with generous dark quiet upper half and center for HTML title; keep full product within central 75% width with margin. Oblique three-quarter camera clearly shows solid thickness, working faces and physical geometry. Plain machined steel, no logos, no text, no arrows, no dimensions, no wireframe, no outlines, no exploded diagram, no infographic, no people, no machinery. Illustrative product type, no invented specifications or certification. One cylindrical radius-bending punch insert seated along a machined steel press-brake holder, plus one detached cylindrical insert beside it. Clearly rounded continuous forming surface, holder retaining shoulders, physical end faces. Not a sharp V punch."
+    },
+    {
+      "key": "u-forming",
+      "ids": [
+        "pb-u-forming"
+      ],
+      "prompt": "Use case: product-mockup. Asset type: Nearblade product-page full-screen Hero. Create ONE landscape 16:9 realistic three-dimensional industrial product rendering, not a drawing. Match the attached style reference ONLY for deep navy blue industrial tabletop and background, soft cool-blue edge lighting and bright silver machined metal. Do not include the reference's products. Put product in lower half, with generous dark quiet upper half and center for HTML title; keep full product within central 75% width with margin. Oblique three-quarter camera clearly shows solid thickness, working faces and physical geometry. Plain machined steel, no logos, no text, no arrows, no dimensions, no wireframe, no outlines, no exploded diagram, no infographic, no people, no machinery. Illustrative product type, no invented specifications or certification. One matched solid steel U-channel forming punch and lower die, physically separated with a small vertical air gap. Upper rectangular male punch has rounded bottom corners; lower die has ONE continuous open U-shaped groove matching the punch with material clearance. The long extruded groove and solid end cross sections are clearly visible. No sheet or arrows."
+    },
+    {
+      "key": "profile-forming",
+      "ids": [
+        "pb-embossing"
+      ],
+      "prompt": "Use case: product-mockup. Asset type: Nearblade product-page full-screen Hero. Create ONE landscape 16:9 realistic three-dimensional industrial product rendering, not a drawing. Match the attached style reference ONLY for deep navy blue industrial tabletop and background, soft cool-blue edge lighting and bright silver machined metal. Do not include the reference's products. Put product in lower half, with generous dark quiet upper half and center for HTML title; keep full product within central 75% width with margin. Oblique three-quarter camera clearly shows solid thickness, working faces and physical geometry. Plain machined steel, no logos, no text, no arrows, no dimensions, no wireframe, no outlines, no exploded diagram, no infographic, no people, no machinery. Illustrative product type, no invented specifications or certification. One matched upper and lower custom bead/emboss forming die segment. A single shallow trapezoidal raised male bead runs continuously along upper tool working surface, matched recessed channel in lower tool, slight separation showing complementary contact geometry. Solid tool blocks, rounded transitions, real machined end faces. Not a row of toothed cutting blades."
+    },
+    {
+      "key": "container-forming",
+      "ids": [
+        "pb-container"
+      ],
+      "prompt": "Use case: product-mockup. Asset type: Nearblade product-page full-screen Hero. Create ONE landscape 16:9 realistic three-dimensional industrial product rendering, not a drawing. Match the attached style reference ONLY for deep navy blue industrial tabletop and background, soft cool-blue edge lighting and bright silver machined metal. Do not include the reference's products. Put product in lower half, with generous dark quiet upper half and center for HTML title; keep full product within central 75% width with margin. Oblique three-quarter camera clearly shows solid thickness, working faces and physical geometry. Plain machined steel, no logos, no text, no arrows, no dimensions, no wireframe, no outlines, no exploded diagram, no infographic, no people, no machinery. Illustrative product type, no invented specifications or certification. One matched upper and lower steel container-panel corrugation press-tool set. Three broad repeating trapezoidal ribs with flat lands and rounded corners across the die width, continuous along tool length, complementary upper/lower profiles separated by visible gap. Broad panel-forming die blocks, no sharp saw teeth, no rollers, no shipping container."
+    },
+    {
+      "key": "pole-forming",
+      "ids": [
+        "pb-light-pole"
+      ],
+      "prompt": "Use case: product-mockup. Asset type: Nearblade product-page full-screen Hero. Create ONE landscape 16:9 realistic three-dimensional industrial product rendering, not a drawing. Match the attached style reference ONLY for deep navy blue industrial tabletop and background, soft cool-blue edge lighting and bright silver machined metal. Do not include the reference's products. Put product in lower half, with generous dark quiet upper half and center for HTML title; keep full product within central 75% width with margin. Oblique three-quarter camera clearly shows solid thickness, working faces and physical geometry. Plain machined steel, no logos, no text, no arrows, no dimensions, no wireframe, no outlines, no exploded diagram, no infographic, no people, no machinery. Illustrative product type, no invented specifications or certification. One long press-brake tooling pair for longitudinal light-pole shell bending. A long narrow rounded-tip upper forming tool with mounting tang, above a separate long wide lower V-groove die, both parallel, long uninterrupted longitudinal profiles, wide view with ends visible and consistent straight alignment. No lamp, no finished pole, no machine. Rounded punch apex and lower V cavity clearly visible."
+    },
+    {
+      "key": "quick-clamp",
+      "ids": [
+        "pb-quick-clamps"
+      ],
+      "prompt": "Use case: product-mockup. Asset type: Nearblade product-page full-screen Hero. Create ONE landscape 16:9 realistic three-dimensional industrial product rendering, not a drawing. Match the attached style reference ONLY for deep navy blue industrial tabletop and background, soft cool-blue edge lighting and bright silver machined metal. Do not include the reference's products. Put product in lower half, with generous dark quiet upper half and center for HTML title; keep full product within central 75% width with margin. Oblique three-quarter camera clearly shows solid thickness, working faces and physical geometry. Plain machined steel, no logos, no text, no arrows, no dimensions, no wireframe, no outlines, no exploded diagram, no infographic, no people, no machinery. Illustrative product type, no invented specifications or certification. EDIT TARGET is second attached image: the existing single black press-brake upper-tool quick clamp with red locking lever and red release plate. Replace white background with navy setting. Preserve exactly one complete clamp, lever, plate, bolt counts and positions, mounting jaws and geometry, proportions and surface finish. Keep product bright enough to read black hardware. Do not add any components."
+    },
+    {
+      "key": "foil-slitter",
+      "ids": [
+        "sk-foil"
+      ],
+      "prompt": "Use case: product-mockup. Asset type: Nearblade product-page full-screen Hero. Create ONE landscape 16:9 realistic three-dimensional industrial product rendering, not a drawing. Match the attached style reference ONLY for deep navy blue industrial tabletop and background, soft cool-blue edge lighting and bright silver machined metal. Do not include the reference's products. Put product in lower half, with generous dark quiet upper half and center for HTML title; keep full product within central 75% width with margin. Oblique three-quarter camera clearly shows solid thickness, working faces and physical geometry. Plain machined steel, no logos, no text, no arrows, no dimensions, no wireframe, no outlines, no exploded diagram, no infographic, no people, no machinery. Illustrative product type, no invented specifications or certification. Three thin precision circular foil-slitting knives, smooth round discs with centered circular mounting bores, finely ground polished continuous bevel edges. One stands tilted showing thin edge and bore, two lie flat slightly overlapping. These are thin circular foil slitters, not thick metal spacer rings and not toothed saws. No arbitrary extra mounting holes."
+    },
+    {
+      "key": "billet-shear",
+      "ids": [
+        "sr-casting"
+      ],
+      "prompt": "Use case: product-mockup. Asset type: Nearblade product-page full-screen Hero. Create ONE landscape 16:9 realistic three-dimensional industrial product rendering, not a drawing. Match the attached style reference ONLY for deep navy blue industrial tabletop and background, soft cool-blue edge lighting and bright silver machined metal. Do not include the reference's products. Put product in lower half, with generous dark quiet upper half and center for HTML title; keep full product within central 75% width with margin. Oblique three-quarter camera clearly shows solid thickness, working faces and physical geometry. Plain machined steel, no logos, no text, no arrows, no dimensions, no wireframe, no outlines, no exploded diagram, no infographic, no people, no machinery. Illustrative product type, no invented specifications or certification. A matched pair of heavy rectangular steel billet-shear knife blocks for continuous-casting steel sections, separated to show two opposing 90-degree V-notched cutting contours creating a square opening when paired. Massive flat mounting faces with simple mounting holes, distinct thick bodies and ground cutting edges. Not bar-shear semicircles, not a saw, not a complete machine."
+    },
+    {
+      "key": "corrugated-thin",
+      "ids": [
+        "cp-thin-slitter"
+      ],
+      "prompt": "Use case: product-mockup. Asset type: Nearblade product-page full-screen Hero. Create ONE landscape 16:9 realistic three-dimensional industrial product rendering, not a drawing. Match the attached style reference ONLY for deep navy blue industrial tabletop and background, soft cool-blue edge lighting and bright silver machined metal. Do not include the reference's products. Put product in lower half, with generous dark quiet upper half and center for HTML title; keep full product within central 75% width with margin. Oblique three-quarter camera clearly shows solid thickness, working faces and physical geometry. Plain machined steel, no logos, no text, no arrows, no dimensions, no wireframe, no outlines, no exploded diagram, no infographic, no people, no machinery. Illustrative product type, no invented specifications or certification. Two very thin corrugated-board slitter-scorer circular knives with large centered circular bores, smooth continuous razorlike double-bevel perimeter. One tilted upright and one flat. Large bore approximately two thirds of outside diameter, six evenly spaced small circular mounting holes around annulus. Correct smooth circular geometry and thin physical section; no teeth, no scoring wheels, no paper sheets."
+    },
+    {
+      "key": "doctor-strip",
+      "ids": [
+        "db-001",
+        "db-gravure",
+        "db-flexo"
+      ],
+      "prompt": "Use case: product-mockup. Asset type: Nearblade product-page full-screen Hero. Create ONE landscape 16:9 realistic three-dimensional industrial product rendering, not a drawing. Match the attached style reference ONLY for deep navy blue industrial tabletop and background, soft cool-blue edge lighting and bright silver machined metal. Do not include the reference's products. Put product in lower half, with generous dark quiet upper half and center for HTML title; keep full product within central 75% width with margin. Oblique three-quarter camera clearly shows solid thickness, working faces and physical geometry. Plain machined steel, no logos, no text, no arrows, no dimensions, no wireframe, no outlines, no exploded diagram, no infographic, no people, no machinery. Illustrative product type, no invented specifications or certification. A coil of narrow thin steel printing doctor-blade strip with one gently extended free end, plus one straight cut length beside it. Clearly extremely thin flexible metal ribbon with a straight ground working edge and fine lamella bevel, not a cutting saw, not a thick steel ring, not a foil-slitter disc. Coiled ribbon stands on its narrow edge, smooth wound turns, free end visible. No packaging."
+    },
+    {
+      "key": "doctor-holder",
+      "ids": [
+        "db-holders"
+      ],
+      "prompt": "Use case: product-mockup. Asset type: Nearblade product-page full-screen Hero. Create ONE landscape 16:9 realistic three-dimensional industrial product rendering, not a drawing. Match the attached style reference ONLY for deep navy blue industrial tabletop and background, soft cool-blue edge lighting and bright silver machined metal. Do not include the reference's products. Put product in lower half, with generous dark quiet upper half and center for HTML title; keep full product within central 75% width with margin. Oblique three-quarter camera clearly shows solid thickness, working faces and physical geometry. Plain machined steel, no logos, no text, no arrows, no dimensions, no wireframe, no outlines, no exploded diagram, no infographic, no people, no machinery. Illustrative product type, no invented specifications or certification. One straight printing doctor-blade holder assembly: long rigid silver metal rail with a narrow continuous thin flat doctor-blade strip clamped along one edge by a parallel retaining bar and evenly spaced screws. Show solid end section and distinguish rigid holder from thin replaceable strip. No press-brake V die, no ink chamber, no tool labels."
+    },
+    {
+      "key": "chipper",
+      "ids": [
+        "cb-001"
+      ],
+      "prompt": "Use case: product-mockup. Asset type: Nearblade product-page full-screen Hero. Create ONE landscape 16:9 realistic three-dimensional industrial product rendering, not a drawing. Match the attached style reference ONLY for deep navy blue industrial tabletop and background, soft cool-blue edge lighting and bright silver machined metal. Do not include the reference's products. Put product in lower half, with generous dark quiet upper half and center for HTML title; keep full product within central 75% width with margin. Oblique three-quarter camera clearly shows solid thickness, working faces and physical geometry. Plain machined steel, no logos, no text, no arrows, no dimensions, no wireframe, no outlines, no exploded diagram, no infographic, no people, no machinery. Illustrative product type, no invented specifications or certification. EDIT TARGET is second attached image: one wood-chipper knife. Replace only white background with navy setting. Preserve exactly ONE knife, all six open U mounting slots and TWO round mounting holes, original proportions, straight continuous sharpened lower edge, thickness and bevel. No teeth or extra holes; no text."
+    },
+    {
+      "key": "granulator-rotor",
+      "ids": [
+        "cr-rotor"
+      ],
+      "prompt": "Use case: product-mockup. Asset type: Nearblade product-page full-screen Hero. Create ONE landscape 16:9 realistic three-dimensional industrial product rendering, not a drawing. Match the attached style reference ONLY for deep navy blue industrial tabletop and background, soft cool-blue edge lighting and bright silver machined metal. Do not include the reference's products. Put product in lower half, with generous dark quiet upper half and center for HTML title; keep full product within central 75% width with margin. Oblique three-quarter camera clearly shows solid thickness, working faces and physical geometry. Plain machined steel, no logos, no text, no arrows, no dimensions, no wireframe, no outlines, no exploded diagram, no infographic, no people, no machinery. Illustrative product type, no invented specifications or certification. Two long rectangular granulator ROTOR knife bars with thick solid bodies, three recessed circular mounting holes along each bar and a wide continuous single-bevel sharpened cutting edge. One oblique front and one behind, clearly show broad bevel, mounting face and solid thickness. A knife bar only, no rotor, no triangular crusher teeth, no small square inserts."
+    },
+    {
+      "key": "granulator-bed",
+      "ids": [
+        "cr-stationary"
+      ],
+      "prompt": "Use case: product-mockup. Asset type: Nearblade product-page full-screen Hero. Create ONE landscape 16:9 realistic three-dimensional industrial product rendering, not a drawing. Match the attached style reference ONLY for deep navy blue industrial tabletop and background, soft cool-blue edge lighting and bright silver machined metal. Do not include the reference's products. Put product in lower half, with generous dark quiet upper half and center for HTML title; keep full product within central 75% width with margin. Oblique three-quarter camera clearly shows solid thickness, working faces and physical geometry. Plain machined steel, no logos, no text, no arrows, no dimensions, no wireframe, no outlines, no exploded diagram, no infographic, no people, no machinery. Illustrative product type, no invented specifications or certification. Two long straight stationary granulator BED knife bars, narrower and lower-profile than rotor knives, each has a continuous straight ground cutting edge, a flat machined back mounting datum and three elongated mounting/adjustment slots in a row. Slightly separated parallel arrangement showing solid thickness and bevel. No rotor, no teeth, no square crusher inserts."
+    }
+  ],
+  "revisions": {
+    "gooseneck-punch-v2": {
+      "prompt": "Use case: product-mockup. Asset type: Nearblade product-page full-screen Hero. Create ONE landscape 16:9 realistic three-dimensional industrial product rendering, not a drawing. Match the attached style reference ONLY for deep navy blue industrial tabletop and background, soft cool-blue edge lighting and bright silver machined metal. Do not include the reference's products. Put product in lower half, with generous dark quiet upper half and center for HTML title; keep full product within central 75% width with margin. Oblique three-quarter camera clearly shows solid thickness, working faces and physical geometry. Plain machined steel, no logos, no text, no arrows, no dimensions, no wireframe, no outlines, no exploded diagram, no infographic, no people, no machinery. Illustrative product type, no invented specifications or certification. Two gooseneck press-brake upper punch segments, one longer and one shorter. Both have a deep side-relieved C/gooseneck throat for return-flange clearance, top clamping tang and continuous bottom narrow forming tip. No labels. Keep distinct solid segment bodies. IMPORTANT: second image is the geometry reference. The bottom of each punch must terminate in the same angled narrow pointed forming nose as that reference, NOT a blunt rectangular foot. Preserve the C throat, top tang and pointed lower nose. Omit engraved lettering."
+    }
+  }
+}

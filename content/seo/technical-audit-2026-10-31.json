@@ -1,0 +1,928 @@
+{
+  "auditedAt": "2026-10-31T05:39:46.852902+00:00",
+  "origin": "https://www.nearblade.com",
+  "scope": "Live HTTP technical crawl of all 39 sitemap pages; local crawlability fixes. Not a ranking, Core Web Vitals or Google index-status assessment.",
+  "liveSummary": {
+    "pages": 39,
+    "final200": 39,
+    "redirectedCanonicalURLs": 38,
+    "uniqueTitles": 39,
+    "uniqueDescriptions": 39,
+    "singleH1": 39,
+    "readableBodyWithoutJavaScript": 39,
+    "robotsIndexFollow": 39,
+    "validJsonLd": 39,
+    "viewportPresent": 39,
+    "orphanPages": 0,
+    "unknownInternalPagePaths": 0,
+    "missingImageAltAttributes": 0,
+    "imageResourcesHead200": 43,
+    "mainJavaScriptHead200": true,
+    "robotsAllowsPublicPages": true,
+    "sitemapContainsTargetProduct": true,
+    "unknownPathsTested": 2,
+    "unknownPathsHttp404": 2
+  },
+  "findings": [
+    {
+      "priority": "high",
+      "issue": "38 sitemap/canonical URLs redirect to trailing-slash URLs. Final URL contradicts the preferred canonical format.",
+      "remedy": "Keep existing HTTPS www slashless URLs; apply the amended Nginx route lookup and normalization to the serving origin, and check CDN redirects/caches.",
+      "status": "Configuration template prepared locally; NOT applied online.",
+      "causeOfNonIndexing": "Not established; URL inconsistency alone does not prove the cause."
+    },
+    {
+      "priority": "medium",
+      "issue": "Home family cards and footer links use query-filter catalog URLs instead of existing family pages.",
+      "remedy": "Direct links to all 10 existing family pages; keep the full catalog entry.",
+      "status": "Implemented locally and verified in rendered HTML; NOT deployed."
+    },
+    {
+      "priority": "medium",
+      "issue": "Two retired product routes return 200 redirect documents with meta refresh, rather than HTTP redirects to their replacements.",
+      "remedy": "Nginx 301 for sb-002 to sb-001 and tb-001 to cp-001, including slash/index.html variants.",
+      "status": "Configuration template prepared locally; NOT applied online."
+    },
+    {
+      "priority": "low",
+      "issue": "Explicit index.html URLs return duplicate 200 documents; canonical already points to the preferred URL.",
+      "remedy": "Normalize index.html entry points with server 301.",
+      "status": "Configuration template prepared locally; NOT applied online."
+    },
+    {
+      "priority": "follow-up",
+      "issue": "Client-side translations share English canonical and initial content; they are not nine independently indexable language versions.",
+      "remedy": "Prioritize English discovery now. Plan independent language URLs and hreflang only with complete maintained translations.",
+      "status": "No multilingual SEO migration attempted."
+    }
+  ],
+  "pages": [
+    {
+      "url": "https://www.nearblade.com/",
+      "final": "https://www.nearblade.com/",
+      "status": 200,
+      "redirects": 0,
+      "title": [
+        "Industrial Blade Manufacturer & Custom Tooling | Nearblade"
+      ],
+      "h1": [
+        "Industrial Blade Manufacturer"
+      ],
+      "canonical": [
+        "https://www.nearblade.com/"
+      ],
+      "description": "Nearblade manufactures industrial blades and press brake tooling in Nanjing, China. Explore shear blades, slitting knives and doctor blades, or send a drawing.",
+      "robots": "index, follow",
+      "words": 597
+    },
+    {
+      "url": "https://www.nearblade.com/products",
+      "final": "https://www.nearblade.com/products/",
+      "status": 200,
+      "redirects": 1,
+      "title": [
+        "Industrial Blades & Press Brake Tooling Catalog | Nearblade"
+      ],
+      "h1": [
+        "Industrial Blades"
+      ],
+      "canonical": [
+        "https://www.nearblade.com/products"
+      ],
+      "description": "Browse ten product families: shear blades, press brake tooling, rolling shear and slitting knives, steel rolling blades, corrugated cutters, toothed, doctor, chipper and crusher blades.",
+      "robots": "index, follow",
+      "words": 818
+    },
+    {
+      "url": "https://www.nearblade.com/about",
+      "final": "https://www.nearblade.com/about/",
+      "status": 200,
+      "redirects": 1,
+      "title": [
+        "Industrial Blade Manufacturer in China | About Nearblade"
+      ],
+      "h1": [
+        "About"
+      ],
+      "canonical": [
+        "https://www.nearblade.com/about"
+      ],
+      "description": "Meet Nearblade, an industrial blade and tooling manufacturer in Nanjing, China. Learn about our production capabilities, quality inspection and custom solutions.",
+      "robots": "index, follow",
+      "words": 451
+    },
+    {
+      "url": "https://www.nearblade.com/equipment",
+      "final": "https://www.nearblade.com/equipment/",
+      "status": 200,
+      "redirects": 1,
+      "title": [
+        "Blade Manufacturing Equipment & Heat Treatment | Nearblade"
+      ],
+      "h1": [
+        "Blade Manufacturing"
+      ],
+      "canonical": [
+        "https://www.nearblade.com/equipment"
+      ],
+      "description": "Explore CNC machining, gantry equipment and blade heat-treatment workshop reference views, plus the drawing and inspection details needed for a manufacturing inquiry.",
+      "robots": "index, follow",
+      "words": 362
+    },
+    {
+      "url": "https://www.nearblade.com/contact",
+      "final": "https://www.nearblade.com/contact/",
+      "status": 200,
+      "redirects": 1,
+      "title": [
+        "Request an Industrial Blade & Tooling Quote | Nearblade"
+      ],
+      "h1": [
+        "Industrial Blade Quotes"
+      ],
+      "canonical": [
+        "https://www.nearblade.com/contact"
+      ],
+      "description": "Request an industrial blade or press brake tooling quote. Send your drawing, machine details, material and quantity by email, phone or WhatsApp to Nearblade.",
+      "robots": "index, follow",
+      "words": 350
+    },
+    {
+      "url": "https://www.nearblade.com/blog",
+      "final": "https://www.nearblade.com/blog/",
+      "status": 200,
+      "redirects": 1,
+      "title": [
+        "Industrial Blade Guides & Buying Advice | Nearblade"
+      ],
+      "h1": [
+        "Industrial Blade"
+      ],
+      "canonical": [
+        "https://www.nearblade.com/blog"
+      ],
+      "description": "Read industrial blade guides on product types, custom quotation requirements and replacement planning. Prepare clearer drawings and purchasing inquiries.",
+      "robots": "index, follow",
+      "words": 222
+    },
+    {
+      "url": "https://www.nearblade.com/products/sb-001",
+      "final": "https://www.nearblade.com/products/sb-001/",
+      "status": 200,
+      "redirects": 1,
+      "title": [
+        "Shear Blades for Guillotine & Swing-Beam Shears | Nearblade"
+      ],
+      "h1": [
+        "Shear Blades"
+      ],
+      "canonical": [
+        "https://www.nearblade.com/products/sb-001"
+      ],
+      "description": "Replacement shear blades for Q11 mechanical and QC12Y hydraulic swing-beam shears. Confirm blade size, mounting holes, cutting edge and upper or lower position.",
+      "robots": "index, follow",
+      "words": 575
+    },
+    {
+      "url": "https://www.nearblade.com/products/pb-001",
+      "final": "https://www.nearblade.com/products/pb-001/",
+      "status": 200,
+      "redirects": 1,
+      "title": [
+        "Press Brake Tooling: Punches, Dies & Clamps | Nearblade"
+      ],
+      "h1": [
+        "Press Brake Tooling"
+      ],
+      "canonical": [
+        "https://www.nearblade.com/products/pb-001"
+      ],
+      "description": "Compare press brake punches, forming dies and upper-tool quick clamps. Confirm the part profile, tooling dimensions and clamping interface for a quotation.",
+      "robots": "index, follow",
+      "words": 732
+    },
+    {
+      "url": "https://www.nearblade.com/products/pb-straight-punch",
+      "final": "https://www.nearblade.com/products/pb-straight-punch/",
+      "status": 200,
+      "redirects": 1,
+      "title": [
+        "Straight Press Brake Punches: Angle, Radius & Tang | Nearblade"
+      ],
+      "h1": [
+        "Straight Press Brake Punches"
+      ],
+      "canonical": [
+        "https://www.nearblade.com/products/pb-straight-punch"
+      ],
+      "description": "Straight-body upper punches for accessible bends. Specify the punch angle, tip radius, working height and tang profile together with the lower die.",
+      "robots": "index, follow",
+      "words": 558
+    },
+    {
+      "url": "https://www.nearblade.com/products/pb-gooseneck-punch",
+      "final": "https://www.nearblade.com/products/pb-gooseneck-punch/",
+      "status": 200,
+      "redirects": 1,
+      "title": [
+        "Gooseneck Press Brake Punches for Return Flanges | Nearblade"
+      ],
+      "h1": [
+        "Gooseneck Press Brake Punches"
+      ],
+      "canonical": [
+        "https://www.nearblade.com/products/pb-gooseneck-punch"
+      ],
+      "description": "Relieved upper punches for parts with return flanges. The gooseneck opening provides clearance while the tip forms the bend over a separate lower die.",
+      "robots": "index, follow",
+      "words": 557
+    },
+    {
+      "url": "https://www.nearblade.com/products/pb-radius-tooling",
+      "final": "https://www.nearblade.com/products/pb-radius-tooling/",
+      "status": 200,
+      "redirects": 1,
+      "title": [
+        "Radius Bending Tooling: Punches & Round Inserts | Nearblade"
+      ],
+      "h1": [
+        "Radius Bending Tooling"
+      ],
+      "canonical": [
+        "https://www.nearblade.com/products/pb-radius-tooling"
+      ],
+      "description": "Radius punches and cylindrical inserts for large-radius bends. Select the insert, holder and lower-die opening as a complete forming arrangement.",
+      "robots": "index, follow",
+      "words": 553
+    },
+    {
+      "url": "https://www.nearblade.com/products/pb-u-forming",
+      "final": "https://www.nearblade.com/products/pb-u-forming/",
+      "status": 200,
+      "redirects": 1,
+      "title": [
+        "U-Profile Forming Tooling: Matched Punches & Dies | Nearblade"
+      ],
+      "h1": [
+        "U-profile Forming Tooling"
+      ],
+      "canonical": [
+        "https://www.nearblade.com/products/pb-u-forming"
+      ],
+      "description": "Matched tools for U-shaped sections. The inner width, flange height, bottom shape and release direction define the punch and lower-tool cavity.",
+      "robots": "index, follow",
+      "words": 549
+    },
+    {
+      "url": "https://www.nearblade.com/products/pb-embossing",
+      "final": "https://www.nearblade.com/products/pb-embossing/",
+      "status": 200,
+      "redirects": 1,
+      "title": [
+        "Profile Forming and Embossing Tooling | Nearblade"
+      ],
+      "h1": [
+        "Profile Forming and Embossing Tooling"
+      ],
+      "canonical": [
+        "https://www.nearblade.com/products/pb-embossing"
+      ],
+      "description": "Matched punches and dies for custom pressed sheet sections. Provide the finished profile, forming depth, sheet thickness and release direction.",
+      "robots": "index, follow",
+      "words": 553
+    },
+    {
+      "url": "https://www.nearblade.com/products/pb-container",
+      "final": "https://www.nearblade.com/products/pb-container/",
+      "status": 200,
+      "redirects": 1,
+      "title": [
+        "Container Panel Forming Tooling & Corrugation Dies | Nearblade"
+      ],
+      "h1": [
+        "Container Panel Forming Tooling"
+      ],
+      "canonical": [
+        "https://www.nearblade.com/products/pb-container"
+      ],
+      "description": "Custom tooling for container-panel corrugations and edge sections. The panel drawing determines the profile, pitch, depth and forming sequence.",
+      "robots": "index, follow",
+      "words": 558
+    },
+    {
+      "url": "https://www.nearblade.com/products/pb-light-pole",
+      "final": "https://www.nearblade.com/products/pb-light-pole/",
+      "status": 200,
+      "redirects": 1,
+      "title": [
+        "Light Pole Bending Tooling for Pole Shells | Nearblade"
+      ],
+      "h1": [
+        "Light Pole Bending Tooling"
+      ],
+      "canonical": [
+        "https://www.nearblade.com/products/pb-light-pole"
+      ],
+      "description": "Long tooling sets for polygonal or round pole shells. Select the section, taper, forming sequence and unloading clearance for the press brake arrangement.",
+      "robots": "index, follow",
+      "words": 551
+    },
+    {
+      "url": "https://www.nearblade.com/products/pb-quick-clamps",
+      "final": "https://www.nearblade.com/products/pb-quick-clamps/",
+      "status": 200,
+      "redirects": 1,
+      "title": [
+        "Upper-Tool Quick Clamps for Press Brakes | Nearblade"
+      ],
+      "h1": [
+        "Upper-tool Quick Clamps"
+      ],
+      "canonical": [
+        "https://www.nearblade.com/products/pb-quick-clamps"
+      ],
+      "description": "Upper-tool clamps secure the punch tang to the ram or an intermediate holder. Select the mounting seat, tang interface, seating and retention arrangement.",
+      "robots": "index, follow",
+      "words": 561
+    },
+    {
+      "url": "https://www.nearblade.com/products/rs-001",
+      "final": "https://www.nearblade.com/products/rs-001/",
+      "status": 200,
+      "redirects": 1,
+      "title": [
+        "Rolling Shear Blades & Circular Metal Shear Knives | Nearblade"
+      ],
+      "h1": [
+        "Rolling Shear Blades"
+      ],
+      "canonical": [
+        "https://www.nearblade.com/products/rs-001"
+      ],
+      "description": "Circular rolling shear blades for metal processing. Specify outside diameter, bore, thickness, edge geometry and matched knife-set requirements.",
+      "robots": "index, follow",
+      "words": 504
+    },
+    {
+      "url": "https://www.nearblade.com/products/sk-001",
+      "final": "https://www.nearblade.com/products/sk-001/",
+      "status": 200,
+      "redirects": 1,
+      "title": [
+        "Slitting Knives for Paper, Film & Metal Foil | Nearblade"
+      ],
+      "h1": [
+        "Slitting Knives"
+      ],
+      "canonical": [
+        "https://www.nearblade.com/products/sk-001"
+      ],
+      "description": "Compare slitting knives for paper, film, tape, aluminum foil and copper foil. Confirm the cutting method, knife profile, holder and material thickness.",
+      "robots": "index, follow",
+      "words": 601
+    },
+    {
+      "url": "https://www.nearblade.com/products/sk-paper-film",
+      "final": "https://www.nearblade.com/products/sk-paper-film/",
+      "status": 200,
+      "redirects": 1,
+      "title": [
+        "Paper and Film Slitting Knives for Converting | Nearblade"
+      ],
+      "h1": [
+        "Paper and Film Slitting Knives"
+      ],
+      "canonical": [
+        "https://www.nearblade.com/products/sk-paper-film"
+      ],
+      "description": "Slitting knives for paper, film and tape converting. Identify the cutting method, web thickness, knife profile and holder.",
+      "robots": "index, follow",
+      "words": 555
+    },
+    {
+      "url": "https://www.nearblade.com/products/sk-foil",
+      "final": "https://www.nearblade.com/products/sk-foil/",
+      "status": 200,
+      "redirects": 1,
+      "title": [
+        "Aluminum and Copper Foil Slitting Knives | Nearblade"
+      ],
+      "h1": [
+        "Aluminum and Copper Foil Slitting Knives"
+      ],
+      "canonical": [
+        "https://www.nearblade.com/products/sk-foil"
+      ],
+      "description": "Slitting knives for aluminum and copper foil. Specify foil thickness, edge requirements and the matched knife arrangement.",
+      "robots": "index, follow",
+      "words": 550
+    },
+    {
+      "url": "https://www.nearblade.com/products/sr-001",
+      "final": "https://www.nearblade.com/products/sr-001/",
+      "status": 200,
+      "redirects": 1,
+      "title": [
+        "Steel Rolling Blades for Bar & Casting Lines | Nearblade"
+      ],
+      "h1": [
+        "Steel Rolling Blades"
+      ],
+      "canonical": [
+        "https://www.nearblade.com/products/sr-001"
+      ],
+      "description": "Bar shear blades and continuous-casting rolling blades for steel production. Confirm the cutting section and machine drawing.",
+      "robots": "index, follow",
+      "words": 525
+    },
+    {
+      "url": "https://www.nearblade.com/products/sr-bar",
+      "final": "https://www.nearblade.com/products/sr-bar/",
+      "status": 200,
+      "redirects": 1,
+      "title": [
+        "Bar Shear Blades for Steel Processing | Nearblade"
+      ],
+      "h1": [
+        "Bar Shear Blades"
+      ],
+      "canonical": [
+        "https://www.nearblade.com/products/sr-bar"
+      ],
+      "description": "Shear blades for bar processing. Provide the bar cross-section, material, cutting temperature and blade-seat drawing.",
+      "robots": "index, follow",
+      "words": 489
+    },
+    {
+      "url": "https://www.nearblade.com/products/sr-casting",
+      "final": "https://www.nearblade.com/products/sr-casting/",
+      "status": 200,
+      "redirects": 1,
+      "title": [
+        "Continuous Casting and Rolling Shear Blades | Nearblade"
+      ],
+      "h1": [
+        "Continuous Casting and Rolling Shear Blades"
+      ],
+      "canonical": [
+        "https://www.nearblade.com/products/sr-casting"
+      ],
+      "description": "Shear blades for continuous casting and rolling lines. Identify the cutting station, workpiece section and operating temperature.",
+      "robots": "index, follow",
+      "words": 505
+    },
+    {
+      "url": "https://www.nearblade.com/products/cp-001",
+      "final": "https://www.nearblade.com/products/cp-001/",
+      "status": 200,
+      "redirects": 1,
+      "title": [
+        "Corrugated Paper Cutters: Slitter & Slotting Knives | Nearblade"
+      ],
+      "h1": [
+        "Corrugated Paper Cutters"
+      ],
+      "canonical": [
+        "https://www.nearblade.com/products/cp-001"
+      ],
+      "description": "Compare corrugated board slitter blades and carton slotting knives. Match the cutting station, blade dimensions and mounting arrangement to the machine.",
+      "robots": "index, follow",
+      "words": 510
+    },
+    {
+      "url": "https://www.nearblade.com/products/cp-thin-slitter",
+      "final": "https://www.nearblade.com/products/cp-thin-slitter/",
+      "status": 200,
+      "redirects": 1,
+      "title": [
+        "Corrugated Slitter Scorer Knives & Thin Blades | Nearblade"
+      ],
+      "h1": [
+        "Corrugated Slitter Scorer Knives"
+      ],
+      "canonical": [
+        "https://www.nearblade.com/products/cp-thin-slitter"
+      ],
+      "description": "Thin circular blades for corrugated board slitting and trimming. Specify outside diameter, bore, thickness and mounting pattern.",
+      "robots": "index, follow",
+      "words": 514
+    },
+    {
+      "url": "https://www.nearblade.com/products/cp-slotting",
+      "final": "https://www.nearblade.com/products/cp-slotting/",
+      "status": 200,
+      "redirects": 1,
+      "title": [
+        "Corrugated Slotting Knives for Carton Machines | Nearblade"
+      ],
+      "h1": [
+        "Corrugated Slotting Knives"
+      ],
+      "canonical": [
+        "https://www.nearblade.com/products/cp-slotting"
+      ],
+      "description": "Slotting knives for three-gang and four-gang carton machines. Match the arc profile, slot width and upper and lower knife arrangement.",
+      "robots": "index, follow",
+      "words": 538
+    },
+    {
+      "url": "https://www.nearblade.com/products/tb-002",
+      "final": "https://www.nearblade.com/products/tb-002/",
+      "status": 200,
+      "redirects": 1,
+      "title": [
+        "Toothed Blades & Serrated Industrial Knives | Nearblade"
+      ],
+      "h1": [
+        "Toothed Blades"
+      ],
+      "canonical": [
+        "https://www.nearblade.com/products/tb-002"
+      ],
+      "description": "Serrated and toothed knives for packaging, plastics, food processing and other industrial machinery. Specify the tooth and mounting profiles.",
+      "robots": "index, follow",
+      "words": 549
+    },
+    {
+      "url": "https://www.nearblade.com/products/tb-packaging",
+      "final": "https://www.nearblade.com/products/tb-packaging/",
+      "status": 200,
+      "redirects": 1,
+      "title": [
+        "Packaging Machine Serrated Knives | Nearblade"
+      ],
+      "h1": [
+        "Packaging Machine Serrated Knives"
+      ],
+      "canonical": [
+        "https://www.nearblade.com/products/tb-packaging"
+      ],
+      "description": "Serrated knives for packaging machinery. Specify the film structure, tooth profile and whether the required cut is complete or perforated.",
+      "robots": "index, follow",
+      "words": 529
+    },
+    {
+      "url": "https://www.nearblade.com/products/db-001",
+      "final": "https://www.nearblade.com/products/db-001/",
+      "status": 200,
+      "redirects": 1,
+      "title": [
+        "Doctor Blades for Printing & Coating | Nearblade"
+      ],
+      "h1": [
+        "Doctor Blades"
+      ],
+      "canonical": [
+        "https://www.nearblade.com/products/db-001"
+      ],
+      "description": "Standard, combination, blue-steel, stainless-steel and ceramic doctor blades, with combination holders for printing and coating.",
+      "robots": "index, follow",
+      "words": 590
+    },
+    {
+      "url": "https://www.nearblade.com/products/db-gravure",
+      "final": "https://www.nearblade.com/products/db-gravure/",
+      "status": 200,
+      "redirects": 1,
+      "title": [
+        "Gravure Doctor Blades for Ink Metering | Nearblade"
+      ],
+      "h1": [
+        "Gravure Doctor Blades"
+      ],
+      "canonical": [
+        "https://www.nearblade.com/products/db-gravure"
+      ],
+      "description": "Doctor blades for gravure ink metering. Specify the ink system, blade width, body thickness and working-edge profile.",
+      "robots": "index, follow",
+      "words": 519
+    },
+    {
+      "url": "https://www.nearblade.com/products/db-flexo",
+      "final": "https://www.nearblade.com/products/db-flexo/",
+      "status": 200,
+      "redirects": 1,
+      "title": [
+        "Flexo Doctor Blades for Anilox Ink Metering | Nearblade"
+      ],
+      "h1": [
+        "Flexo Doctor Blades"
+      ],
+      "canonical": [
+        "https://www.nearblade.com/products/db-flexo"
+      ],
+      "description": "Doctor blades for flexographic ink metering. Match the blade edge, ink system and holder to the anilox roll.",
+      "robots": "index, follow",
+      "words": 527
+    },
+    {
+      "url": "https://www.nearblade.com/products/db-holders",
+      "final": "https://www.nearblade.com/products/db-holders/",
+      "status": 200,
+      "redirects": 1,
+      "title": [
+        "Doctor Blade Holders for Printing & Coating | Nearblade"
+      ],
+      "h1": [
+        "Doctor Blade Holders"
+      ],
+      "canonical": [
+        "https://www.nearblade.com/products/db-holders"
+      ],
+      "description": "Holders for ink doctor blades. Provide the blade dimensions, mounting interface and adjustment arrangement.",
+      "robots": "index, follow",
+      "words": 496
+    },
+    {
+      "url": "https://www.nearblade.com/products/cb-001",
+      "final": "https://www.nearblade.com/products/cb-001/",
+      "status": 200,
+      "redirects": 1,
+      "title": [
+        "Chipper Blades & Replacement Wood Chipper Knives | Nearblade"
+      ],
+      "h1": [
+        "Chipper Blades"
+      ],
+      "canonical": [
+        "https://www.nearblade.com/products/cb-001"
+      ],
+      "description": "Wood chipper blades for replacement and custom drawing inquiries. Provide the machine model, blade dimensions, mounting pattern and cutting-edge geometry.",
+      "robots": "index, follow",
+      "words": 496
+    },
+    {
+      "url": "https://www.nearblade.com/products/cr-001",
+      "final": "https://www.nearblade.com/products/cr-001/",
+      "status": 200,
+      "redirects": 1,
+      "title": [
+        "Crusher Blades: Granulator Rotor & Bed Knives | Nearblade"
+      ],
+      "h1": [
+        "Crusher Blades"
+      ],
+      "canonical": [
+        "https://www.nearblade.com/products/cr-001"
+      ],
+      "description": "Stationary and rotor knives for plastics, wood and polymer-composite size reduction. Select the blade material for the feedstock and machine.",
+      "robots": "index, follow",
+      "words": 551
+    },
+    {
+      "url": "https://www.nearblade.com/products/cr-rotor",
+      "final": "https://www.nearblade.com/products/cr-rotor/",
+      "status": 200,
+      "redirects": 1,
+      "title": [
+        "Granulator Rotor Knives & Rotating Blades | Nearblade"
+      ],
+      "h1": [
+        "Granulator Rotor Knives"
+      ],
+      "canonical": [
+        "https://www.nearblade.com/products/cr-rotor"
+      ],
+      "description": "Rotating knives for material granulation. Specify the rotor model, blade-seat geometry, knife quantity and material being processed.",
+      "robots": "index, follow",
+      "words": 513
+    },
+    {
+      "url": "https://www.nearblade.com/products/cr-stationary",
+      "final": "https://www.nearblade.com/products/cr-stationary/",
+      "status": 200,
+      "redirects": 1,
+      "title": [
+        "Granulator Bed Knives & Stationary Blades | Nearblade"
+      ],
+      "h1": [
+        "Granulator Bed Knives"
+      ],
+      "canonical": [
+        "https://www.nearblade.com/products/cr-stationary"
+      ],
+      "description": "Stationary knives for granulators. Match the mounting datum and cutting edge to the rotor knives and machine gap specification.",
+      "robots": "index, follow",
+      "words": 514
+    },
+    {
+      "url": "https://www.nearblade.com/blog/custom-blade-inquiry-guide",
+      "final": "https://www.nearblade.com/blog/custom-blade-inquiry-guide/",
+      "status": 200,
+      "redirects": 1,
+      "title": [
+        "Custom Industrial Blade Quote: Inquiry Checklist | Nearblade"
+      ],
+      "h1": [
+        "Custom Industrial Blade Quote: What to Include"
+      ],
+      "canonical": [
+        "https://www.nearblade.com/blog/custom-blade-inquiry-guide"
+      ],
+      "description": "Prepare a custom industrial blade quote request with a dimensioned drawing, machine details, material, quantity and inspection requirements. Follow this checklist.",
+      "robots": "index, follow",
+      "words": 467
+    },
+    {
+      "url": "https://www.nearblade.com/blog/blade-product-families",
+      "final": "https://www.nearblade.com/blog/blade-product-families/",
+      "status": 200,
+      "redirects": 1,
+      "title": [
+        "Types of Industrial Blades: A Product Guide | Nearblade"
+      ],
+      "h1": [
+        "Types of Industrial Blades: Shear, Slitter & Doctor Blades"
+      ],
+      "canonical": [
+        "https://www.nearblade.com/blog/blade-product-families"
+      ],
+      "description": "Compare types of industrial blades: straight shear blades, circular knives, slitter knives, toothed blades and doctor blades, with links to relevant products.",
+      "robots": "index, follow",
+      "words": 429
+    },
+    {
+      "url": "https://www.nearblade.com/blog/blade-replacement-planning",
+      "final": "https://www.nearblade.com/blog/blade-replacement-planning/",
+      "status": 200,
+      "redirects": 1,
+      "title": [
+        "Industrial Blade Replacement Planning Guide | Nearblade"
+      ],
+      "h1": [
+        "Industrial Blade Replacement Planning for Production Lines"
+      ],
+      "canonical": [
+        "https://www.nearblade.com/blog/blade-replacement-planning"
+      ],
+      "description": "Plan industrial blade replacements using part records, approved drawing revisions, spare quantities and supplier lead times. Build a clearer purchasing schedule.",
+      "robots": "index, follow",
+      "words": 397
+    }
+  ],
+  "inboundCountsBeforeFix": {
+    "/products/pb-light-pole": 2,
+    "/products/sr-001": 4,
+    "/products/pb-u-forming": 5,
+    "/products/pb-gooseneck-punch": 9,
+    "/blog/blade-replacement-planning": 5,
+    "/products/pb-container": 2,
+    "/equipment": 38,
+    "/contact": 38,
+    "/products/pb-radius-tooling": 9,
+    "/products/pb-quick-clamps": 2,
+    "/products/cp-thin-slitter": 3,
+    "/products/cp-slotting": 3,
+    "/products/cr-rotor": 3,
+    "/blog": 38,
+    "/products/rs-001": 2,
+    "/": 38,
+    "/products/db-001": 5,
+    "/products/cb-001": 2,
+    "/blog/custom-blade-inquiry-guide": 18,
+    "/products/tb-packaging": 2,
+    "/products/sr-bar": 3,
+    "/blog/blade-product-families": 34,
+    "/products/pb-embossing": 2,
+    "/about": 38,
+    "/products/db-holders": 4,
+    "/products/pb-straight-punch": 9,
+    "/products/cp-001": 4,
+    "/products/db-gravure": 4,
+    "/products/sk-foil": 3,
+    "/products/sk-paper-film": 3,
+    "/products/db-flexo": 4,
+    "/products/cr-stationary": 3,
+    "/products/cr-001": 4,
+    "/products/pb-001": 11,
+    "/products/sr-casting": 3,
+    "/products/tb-002": 3,
+    "/products/sk-001": 5,
+    "/products/sb-001": 4,
+    "/products": 38
+  },
+  "extraRouteChecks": [
+    {
+      "url": "https://www.nearblade.com/seo-check-missing-20261031",
+      "final": "https://www.nearblade.com/seo-check-missing-20261031",
+      "status": 404,
+      "redirects": 0,
+      "canonical": [],
+      "robots": null
+    },
+    {
+      "url": "https://www.nearblade.com/products/seo-check-missing-20261031",
+      "final": "https://www.nearblade.com/products/seo-check-missing-20261031",
+      "status": 404,
+      "redirects": 0,
+      "canonical": [],
+      "robots": null
+    },
+    {
+      "url": "https://www.nearblade.com/products/sb-002",
+      "final": "https://www.nearblade.com/products/sb-002/",
+      "status": 200,
+      "redirects": 1,
+      "canonical": [
+        "https://www.nearblade.com/products/sb-001"
+      ],
+      "robots": "noindex, follow"
+    },
+    {
+      "url": "https://www.nearblade.com/products/tb-001",
+      "final": "https://www.nearblade.com/products/tb-001/",
+      "status": 200,
+      "redirects": 1,
+      "canonical": [
+        "https://www.nearblade.com/products/cp-001"
+      ],
+      "robots": "noindex, follow"
+    },
+    {
+      "url": "https://www.nearblade.com/index.html",
+      "final": "https://www.nearblade.com/index.html",
+      "status": 200,
+      "redirects": 0,
+      "canonical": [
+        "https://www.nearblade.com/"
+      ],
+      "robots": "index, follow"
+    },
+    {
+      "url": "https://www.nearblade.com/products/pb-u-forming/index.html",
+      "final": "https://www.nearblade.com/products/pb-u-forming/index.html",
+      "status": 200,
+      "redirects": 0,
+      "canonical": [
+        "https://www.nearblade.com/products/pb-u-forming"
+      ],
+      "robots": "index, follow"
+    },
+    {
+      "url": "http://nearblade.com/products/pb-u-forming",
+      "final": "https://www.nearblade.com/products/pb-u-forming/",
+      "status": 200,
+      "redirects": 2,
+      "canonical": [
+        "https://www.nearblade.com/products/pb-u-forming"
+      ],
+      "robots": "index, follow"
+    },
+    {
+      "url": "https://nearblade.com/products/pb-u-forming",
+      "final": "https://www.nearblade.com/products/pb-u-forming/",
+      "status": 200,
+      "redirects": 2,
+      "canonical": [
+        "https://www.nearblade.com/products/pb-u-forming"
+      ],
+      "robots": "index, follow"
+    },
+    {
+      "url": "http://www.nearblade.com/products/pb-u-forming",
+      "final": "https://www.nearblade.com/products/pb-u-forming/",
+      "status": 200,
+      "redirects": 1,
+      "canonical": [
+        "https://www.nearblade.com/products/pb-u-forming"
+      ],
+      "robots": "index, follow"
+    }
+  ],
+  "localValidation": {
+    "command": "npm test",
+    "testsPassed": 31,
+    "testsFailed": 0,
+    "diffCheck": "passed",
+    "nginxSyntaxAndHTTPTests": "Not run: Nginx binary unavailable; server validation required before applying the template.",
+    "visualChanges": "Link destinations only; no layout or product-image changes in this task."
+  },
+  "publication": {
+    "committed": false,
+    "pushed": false,
+    "deployed": false,
+    "serverConfigApplied": false,
+    "gscSitemapSubmitted": false,
+    "gscIndexingRequested": false
+  },
+  "nextActions": [
+    "Review local changes, obtain release authorization, then publish the static changes and separately apply/test the origin/CDN route settings.",
+    "After deployment recrawl all sitemap URLs: each preferred URL should return 200 with no redirect and a matching canonical.",
+    "In the correct Search Console property submit https://www.nearblade.com/sitemap.xml and confirm successful read status.",
+    "Run live URL tests and request indexing for the home, product catalog, priority family pages and pb-u-forming canonical URL. Do not repeatedly submit the same URL.",
+    "Check GSC Crawl Stats, Page Indexing, manual actions/security and verified Googlebot access logs. Observe discovery and crawl changes over 7-14 days; indexing can take longer."
+  ],
+  "limitations": [
+    "No access to Search Console private reports or origin logs; Google discovery, manual actions and real Googlebot reachability are unverified.",
+    "A Googlebot user-agent HEAD request returned 200; this is not proof of genuine Googlebot network access.",
+    "Resource checks used HEAD for 43 unique img sources and the main JS; CSS background images and full browser performance were not comprehensively measured.",
+    "Existing uncommitted catalog, image and language changes were preserved; npm test validates the current combined working tree.",
+    "Unknown URLs returned genuine HTTP 404 but the live error body was the server default, not the custom React 404 page."
+  ],
+  "references": [
+    "https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls",
+    "https://developers.google.com/search/docs/crawling-indexing/links-crawlable",
+    "https://developers.google.com/search/docs/crawling-indexing/ask-google-to-recrawl",
+    "https://nginx.org/en/docs/http/ngx_http_core_module.html#try_files"
+  ]
+}
