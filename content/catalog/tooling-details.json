@@ -65,7 +65,7 @@
   },
   "pb-radius-tooling": {
     "role": "Radius punch and holder",
-    "description": "Radius punches and cylindrical inserts for large-radius bends. Select the insert, holder and lower-die opening as a complete forming arrangement.",
+    "description": "Tooling for radius bending. Confirm the upper-tool profile, any cylindrical insert and holder, and the matching lower die from the part and tooling drawings.",
     "process": "The rounded upper tool forms the sheet across a suitable lower die. Target part radius and tool radius are separate inputs because springback and contact conditions affect the result.",
     "features": [
       "Rounded forming surface",
@@ -97,8 +97,8 @@
   },
   "pb-u-forming": {
     "role": "Matched forming tools",
-    "description": "Matched tools for U-shaped sections. The inner width, flange height, bottom shape and release direction define the punch and lower-tool cavity.",
-    "process": "A forming punch enters the matching lower cavity. Rounded and flat-bottom channels require different profiles; check wall clearance, material thickness and part removal.",
+    "description": "Tooling for U-shaped sections. Confirm the forming sequence, tool profiles and part-release direction from the finished channel drawing.",
+    "process": "For matched forming tools, a punch enters the matching lower cavity. Confirm whether the part uses this arrangement or a sequence of bends, and check part removal.",
     "features": [
       "Matched punch and cavity",
       "Defined channel cross-section",
@@ -129,7 +129,7 @@
   },
   "pb-embossing": {
     "role": "Matched forming tools",
-    "name": "Profile Forming and Embossing Tooling",
+    "name": "Custom Profile Forming Tooling",
     "description": "Matched punches and dies for custom pressed sheet sections. Provide the finished profile, forming depth, sheet thickness and release direction.",
     "process": "The tool outline follows the required part section. Contact surfaces, forming travel, material flow and springback are assessed together for the specified operation.",
     "features": [
@@ -162,9 +162,9 @@
   },
   "pb-container": {
     "role": "Custom panel forming tools",
-    "name": "Container Panel Forming Tooling",
-    "description": "Custom tooling for container-panel corrugations and edge sections. The panel drawing determines the profile, pitch, depth and forming sequence.",
-    "process": "Panel tooling is matched to the specified rib or edge section. Repeated corrugations require controlled pitch and sheet positioning; the tool arrangement depends on the actual panel.",
+    "name": "Container Forming Tooling",
+    "description": "Custom tooling for container forming. The finished part drawing defines the required section, dimensions and forming sequence.",
+    "process": "Match the tooling to the finished container part and its forming sequence. Confirm the working profile and sheet positioning from the part drawing.",
     "features": [
       "Panel-specific forming profile",
       "Pitch and depth coordination",
@@ -195,7 +195,7 @@
   },
   "pb-light-pole": {
     "role": "Long pole forming tools",
-    "description": "Long tooling sets for polygonal or round pole shells. Select the section, taper, forming sequence and unloading clearance for the press brake arrangement.",
+    "description": "Tooling for bending light pole shells. Confirm the shell section, taper, bending sequence and unloading clearance for the press brake.",
     "process": "Longitudinal bends form the pole shell. Tooling and bend sequence must accommodate the small-end section, large-end section and removal of the formed shell.",
     "features": [
       "Longitudinal shell forming",
@@ -255,6 +255,134 @@
     ],
     "drawing": "tooling",
     "toolingProfile": "quick-clamp",
+    "catalogImage": ""
+  },
+  "pb-acute-punch": {
+    "role": "Upper punch",
+    "description": "Acute-angle upper punches for sharp bends and hemming pre-bends. Select the tip angle and radius with a suitable lower die.",
+    "process": "A narrow working angle provides clearance for acute bending. Tool angle is not the finished part angle; verify springback, stroke and load. Hemming needs a separate flattening operation.",
+    "features": [
+      "Acute-angle working profile",
+      "Defined punch-tip radius",
+      "Continuous or sectional lengths"
+    ],
+    "dimensions": [
+      {
+        "label": "Punch angle and tip radius",
+        "detail": "Specify the tool angle and tip radius separately from the finished part angle and radius."
+      },
+      {
+        "label": "Working height and tang",
+        "detail": "Dimension the load-bearing shoulder, tool height and complete clamping profile."
+      },
+      {
+        "label": "Working length and sections",
+        "detail": "Provide total bend length, segment lengths and any horn or end-clearance requirements."
+      }
+    ],
+    "compatibility": "Match the punch tang and load-bearing shoulders to the holder. Check the complete bend sequence for interference.",
+    "inspection": [
+      "Check tip profile, working height and segment alignment.",
+      "Confirm permissible load for the actual punch and lower-die combination."
+    ],
+    "drawing": "tooling",
+    "toolingProfile": "acute-punch",
+    "catalogImage": ""
+  },
+  "pb-single-v-die": {
+    "role": "Lower die",
+    "drawing": "tooling",
+    "catalogImage": "",
+    "description": "Lower dies with one fixed V groove. Specify the V-opening, groove angle and shoulder radii for the material and bend drawing.",
+    "process": "The sheet bridges the two die shoulders while the punch forms the bend. Select the V-opening from material, thickness, flange length and required force; surface marking remains possible.",
+    "features": [
+      "One fixed V groove",
+      "Defined shoulder radii",
+      "Continuous or sectional lengths"
+    ],
+    "dimensions": [
+      {
+        "label": "V-opening and groove angle",
+        "detail": "Specify opening width and groove angle separately, including both shoulder radii."
+      },
+      {
+        "label": "Die height and mounting base",
+        "detail": "Dimension the seating datum, tool height, base profile and locating or clamping features."
+      },
+      {
+        "label": "Working length and sections",
+        "detail": "Specify total working length and individual segment lengths, including any special end sections."
+      }
+    ],
+    "compatibility": "Match the die base to the holder and center the working groove under the punch. Check stroke, part clearance and permissible line load for the complete setup.",
+    "inspection": [
+      "Check V-opening, shoulder radii and groove alignment.",
+      "Confirm permissible load for the actual punch and lower-die combination."
+    ],
+    "toolingProfile": "single-v-die"
+  },
+  "pb-double-v-die": {
+    "role": "Lower die",
+    "drawing": "tooling",
+    "catalogImage": "",
+    "description": "Lower dies with two fixed V grooves. Specify both openings and the groove arrangement; the changeover method depends on the die and holder.",
+    "process": "Use one groove at a time. Reversible dies are turned and reseated; same-face grooves require repositioning and centering. Neither arrangement is an adjustable-V die.",
+    "features": [
+      "Two fixed V grooves",
+      "Groove-specific setup and load",
+      "Continuous or sectional lengths"
+    ],
+    "dimensions": [
+      {
+        "label": "V1 and V2 openings",
+        "detail": "Specify each opening, groove angle and shoulder radius, plus groove positions and the changeover arrangement."
+      },
+      {
+        "label": "Die height and mounting base",
+        "detail": "Dimension the seating datum, tool height, base profile and locating or clamping features."
+      },
+      {
+        "label": "Working length and sections",
+        "detail": "Specify total working length and individual segment lengths, including any special end sections."
+      }
+    ],
+    "compatibility": "Match the die base to the holder and center the working groove under the punch. Check stroke, part clearance and permissible line load for the complete setup.",
+    "inspection": [
+      "Check both groove profiles and seating after changeover.",
+      "Confirm permissible load for each groove and working length."
+    ],
+    "toolingProfile": "double-v-die"
+  },
+  "pb-multi-v-die": {
+    "role": "Lower die",
+    "description": "Multi-V lower dies combine several fixed grooves in one block. Specify each groove and the supporting holder before selecting a working face.",
+    "process": "Index the block to use one fixed groove at a time. Recheck support, centering and working height after rotation. Fixed multi-V tooling is distinct from adjustable-V and rolling-contact dies.",
+    "features": [
+      "Multiple fixed V grooves",
+      "Groove-specific setup and load",
+      "Continuous or sectional lengths"
+    ],
+    "dimensions": [
+      {
+        "label": "Groove schedule and block section",
+        "detail": "List every groove opening, angle, shoulder radius and face position; include the complete block section."
+      },
+      {
+        "label": "Support, indexing and working height",
+        "detail": "Show the holder, support faces and locating features. Confirm centering and working height after each changeover."
+      },
+      {
+        "label": "Working length and sections",
+        "detail": "Specify total working length and individual segment lengths, including any special end sections."
+      }
+    ],
+    "compatibility": "Check tool handling and rotation clearance, holder support and the permissible load of the active groove with the machine and punch.",
+    "inspection": [
+      "Check all groove profiles, support faces and centering after indexing.",
+      "Confirm permissible load for each groove and working length."
+    ],
+    "drawing": "tooling",
+    "toolingProfile": "multi-v-die",
     "catalogImage": ""
   }
 }

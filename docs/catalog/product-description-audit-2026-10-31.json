@@ -1,0 +1,743 @@
+{
+  "reviewedOn": "2026-10-31",
+  "sourceCommit": "4edbb8adba0e8face1609ca96b4ee0cfc5eeecf2",
+  "status": "研究与编辑建议；未修改公开目录、产品页或语言包，未提交或部署本调研",
+  "inputs": {
+    "document": "product.docx",
+    "documentSha256": "238eacd247a67883dba2d3ae36ed894f2bd487dbc2cce6c7d602b797db902b75",
+    "catalog": "content/catalog/products.json",
+    "guides": [
+      "content/catalog/blade-details.json",
+      "src/data/productGuides.ts"
+    ],
+    "priorResearch": "docs/catalog/blade-family-research-2026-10-19.md",
+    "documentReview": "提取全部段落和表格文字；按document.xml关系对应并浏览嵌入图片总览。概览图仅能辅助识别范围，不能证明型号、几何与供货能力。"
+  },
+  "conclusion": "保留手册十个一级系列；二级按切削工序或零件功能，材料/形状/机型/尺寸作独立属性。30个现有条目包含10个系列入口和20个子类/附件，并非30个确认SKU。",
+  "evidencePolicy": {
+    "manual": "手册原文范围，并非逐规格产能保证",
+    "industry": "外部原厂/刀具制造商资料，仅支持术语和市场分类",
+    "proposal": "本站建议层级和英文名称，未写入生产目录",
+    "unconfirmed": "需工厂图纸、样品或订单记录确认；市场存在不等于本厂可供货"
+  },
+  "sources": [
+    {
+      "id": "tkm-metal",
+      "title": "TKM 金属纵剪系统",
+      "url": "https://www.tkmgroup.com/en/industrial-knives-for-the-metal-industry",
+      "support": "金属纵剪主刀与退料环、隔套、分离件为不同部件；不证明本站附件供货范围。",
+      "access": "read"
+    },
+    {
+      "id": "tkm-rotary",
+      "title": "TKM Rotary Slitter Knives",
+      "url": "https://www.tkmgroup.com/en/rotary-slitter-knives",
+      "support": "金属板带纵剪圆刀的行业命名、厚度配组和独立表面指标。",
+      "access": "read"
+    },
+    {
+      "id": "dienes-methods",
+      "title": "DIENES DS4",
+      "url": "https://www.dienesusa.com/products/shear-cut-holders/shear-cut-knife-holders/ds4-shear-crush-razor-knife-holder/",
+      "support": "剪切、剃刀、压切为不同切法；圆刀外形不是完整分类依据。",
+      "access": "read"
+    },
+    {
+      "id": "dienes-core",
+      "title": "DIENES Core Cut Knives",
+      "url": "https://www.dienesusa.com/product-category/circular-knives/core-cut-circular-knives/",
+      "support": "纸管、纸板芯管、塑料芯管切断刀；该来源不覆盖金属管。",
+      "access": "read"
+    },
+    {
+      "id": "wila-shape",
+      "title": "WILA Tool shape",
+      "url": "https://www.wilatooling.com/knowledge-innovation/knowledge-articles/tool-shape/",
+      "support": "区分上模和下模；鹅颈是上模避让结构。",
+      "access": "read"
+    },
+    {
+      "id": "wila-applications",
+      "title": "WILA Applications",
+      "url": "https://www.wilatooling.com/applications/",
+      "support": "下模、夹持系统与大半径、压平、Z形等成形任务应区分组织。",
+      "access": "read"
+    },
+    {
+      "id": "tyzack-mill",
+      "title": "Tyzack Steel Mill Blades",
+      "url": "https://tyzack.com/steel-mill-blades/",
+      "support": "行业按钢坯、板带、棒线材及剪切工位细分；正文打开失败，只获得官方搜索摘要，非独立已读全文证据。",
+      "access": "official-search-excerpt-only"
+    },
+    {
+      "id": "bhs-slitter",
+      "title": "BHS Slitter Scorer",
+      "url": "https://www.bhs-world.com/en/corrugators/individual-machines/slitter-scorer",
+      "support": "设备上刀位和压线位分开；纵切薄刀与压线工具不同。",
+      "access": "read"
+    },
+    {
+      "id": "bhs-cutoff",
+      "title": "BHS Cutoff",
+      "url": "https://www.bhs-world.com/en/corrugators/individual-machines/cutoff",
+      "support": "瓦楞纸板线存在独立横切工位；本厂供货待确认。",
+      "access": "read"
+    },
+    {
+      "id": "bks-packaging",
+      "title": "BKS Packaging knives",
+      "url": "https://www.bks-knives.com/product/packaging/",
+      "support": "VFFS、HFFS、制袋、封箱等工位，区分锯齿切断和穿孔齿形。",
+      "access": "read"
+    },
+    {
+      "id": "fuji-ceramic",
+      "title": "FUJI SHOKO Ceramic Doctor",
+      "url": "https://fujishoko-america.com/doctor-blades/ceramic/",
+      "support": "陶瓷涂层与lamella、bevel刃形分属不同属性。",
+      "access": "read"
+    },
+    {
+      "id": "mdc-roles",
+      "title": "Daetwyler FAQ",
+      "url": "https://www.daetwyler-usa.com/faq/",
+      "support": "柔印计量刀与封墨刀不同；刀材、涂层和刃形需分维度。",
+      "access": "read"
+    },
+    {
+      "id": "andritz-chipper",
+      "title": "ANDRITZ Knife systems",
+      "url": "https://www.andritz.com/products-en/sustainability/pulp-and-paper/service-solutions/knife-systems",
+      "support": "盘式、鼓式、再削片为不同设备应用；可转位刀结构是具体系统方案，不能直接扩为本厂产品。",
+      "access": "read"
+    },
+    {
+      "id": "tkm-wood",
+      "title": "TKM Products",
+      "url": "https://www.tkmgroup.com/en/products",
+      "support": "削片/底刀与单板/胶合板用刀列为不同产品。",
+      "access": "read"
+    },
+    {
+      "id": "tkm-chipper",
+      "title": "TKM Chipper and Counter Knives",
+      "url": "https://www.tkmgroup.com/en/chipper-and-counter-knives",
+      "support": "削片主刀和底刀配合；厂商参数不能复制到本站。",
+      "access": "read"
+    },
+    {
+      "id": "cumberland-knives",
+      "title": "Cumberland Knives",
+      "url": "https://www.cumberlandplastics.com/knowledge-center/granulator-options/knives/",
+      "support": "粉碎机动刀、定刀、刃口、排列及刀隙分别确认。",
+      "access": "read"
+    },
+    {
+      "id": "cumberland-rotors",
+      "title": "Cumberland Rotors",
+      "url": "https://www.cumberlandplastics.com/knowledge-center/granulator-options/rotors/",
+      "support": "转子结构与刀片角色是不同维度；撕碎机另有分类。",
+      "access": "read"
+    }
+  ],
+  "families": [
+    {
+      "id": "shear-blades",
+      "recommendedFunctionalGroups": [
+        "板材直线剪切刀组"
+      ],
+      "attributes": [
+        "上刀/下刀",
+        "整体/分段",
+        "Q11/QC12Y",
+        "刃数/材料/孔位"
+      ],
+      "confirmationQueue": [
+        "开平线横剪刀：供货待确认"
+      ]
+    },
+    {
+      "id": "press-brake-tooling",
+      "recommendedFunctionalGroups": [
+        "上模：直身、鹅颈、半径",
+        "下模：V形及其他确认轮廓",
+        "专用成形：U形、压印、集装箱、灯杆",
+        "附件：上模快夹"
+      ],
+      "attributes": [
+        "角度/R/V口",
+        "夹持接口",
+        "分段/长度",
+        "允许线载荷"
+      ],
+      "confirmationQueue": [
+        "单V/双V/多V下模逐项确认",
+        "R形与圆柱模是否应分开",
+        "压平/Z形模：仅市场候选"
+      ]
+    },
+    {
+      "id": "rolling-shear-blades",
+      "recommendedFunctionalGroups": [
+        "金属板带纵剪圆刀"
+      ],
+      "attributes": [
+        "OD/ID/T",
+        "刀轴/键槽",
+        "厚度配组/精度等级",
+        "材料/板厚/刀隙"
+      ],
+      "confirmationQueue": [
+        "切边圆刀",
+        "退料环/隔套/分离片等附件：逐项确认"
+      ]
+    },
+    {
+      "id": "slitting-knives",
+      "recommendedFunctionalGroups": [
+        "卷材分切：先核对实际切法",
+        "制管线用刀：待界定具体工位"
+      ],
+      "attributes": [
+        "纸/膜/箔/磁带",
+        "刀型/切法",
+        "上刀/下刀",
+        "刀架/安装"
+      ],
+      "confirmationQueue": [
+        "剪切式/剃刀式/压切式供货分别确认",
+        "纸管切断刀",
+        "铜管/钢管线工位与刀型",
+        "锂电极片刀：简介提到范围，但无独立规格"
+      ]
+    },
+    {
+      "id": "steel-rolling-blades",
+      "recommendedFunctionalGroups": [
+        "棒料剪刃",
+        "连铸轧钢线剪刃"
+      ],
+      "attributes": [
+        "热/冷工况",
+        "飞剪/固定剪机构",
+        "截面/安装座/工位",
+        "堆焊制造或修复"
+      ],
+      "confirmationQueue": [
+        "钢坯/板坯剪切",
+        "切头尾/分段工位",
+        "板带剪切：供货待确认"
+      ]
+    },
+    {
+      "id": "corrugated-paper-cutters",
+      "recommendedFunctionalGroups": [
+        "纵切/修边刀：薄刀为结构类型",
+        "纸箱开槽刀"
+      ],
+      "attributes": [
+        "三联/四联配置",
+        "上/下刀",
+        "弧度/齿形/孔槽",
+        "纸板层数/厚度"
+      ],
+      "confirmationQueue": [
+        "横切刀：行业存在，手册未明确单列",
+        "旧式修边分纸刀与薄刀是否为不同接口"
+      ]
+    },
+    {
+      "id": "toothed-blades",
+      "recommendedFunctionalGroups": [
+        "齿形切断刀",
+        "穿孔留连刀：需产品确认"
+      ],
+      "attributes": [
+        "包装/塑胶/食品应用",
+        "圆/直/异形轮廓",
+        "齿距/齿高/单双面齿",
+        "切断方式/配对件"
+      ],
+      "confirmationQueue": [
+        "异形成形齿刀",
+        "具体食品加工刀与包装刀区分",
+        "VFFS/HFFS/制袋/封箱工位：逐项确认"
+      ]
+    },
+    {
+      "id": "doctor-blades",
+      "recommendedFunctionalGroups": [
+        "凹印计量刮刀",
+        "柔印计量刮刀",
+        "涂布用刀：用途在手册中",
+        "附件：刀架"
+      ],
+      "attributes": [
+        "基材",
+        "涂层",
+        "lamella/bevel/rounded刃形",
+        "卷料/定长",
+        "墨水/涂料体系"
+      ],
+      "confirmationQueue": [
+        "封墨刀",
+        "组合刮刀结构",
+        "陶瓷涂层或整体陶瓷",
+        "丝网刮刀是否为另一材质结构"
+      ]
+    },
+    {
+      "id": "chipper-blades",
+      "recommendedFunctionalGroups": [
+        "木材削片主刀"
+      ],
+      "attributes": [
+        "设备类型",
+        "BX机型",
+        "焊接复合/整体结构",
+        "安装/伸出量/重磨余量"
+      ],
+      "confirmationQueue": [
+        "鼓式/盘式/再削片：按机型核实",
+        "配套底刀",
+        "旋切/刨切/刨花刀不得自动纳入"
+      ]
+    },
+    {
+      "id": "crusher-blades",
+      "recommendedFunctionalGroups": [
+        "粒径减小用动刀",
+        "粒径减小用定刀"
+      ],
+      "attributes": [
+        "机型/转子结构",
+        "整刀/分段/排列",
+        "原料与筛网",
+        "刀隙/重磨余量"
+      ],
+      "confirmationQueue": [
+        "撕碎机方刀/钩刀：不同机理，供货待确认",
+        "PT原料缩写含义"
+      ]
+    }
+  ],
+  "productAudits": [
+    {
+      "id": "sb-001",
+      "category": "shear-blades",
+      "currentName": "Shear Blades",
+      "currentDescription": "Shear blades for Q11 mechanical and QC12Y hydraulic swing-beam shears. Specify blade dimensions, mounting holes and upper or lower position.",
+      "verdict": "基本准确，保持一个系列",
+      "recommendedEnglishName": "Sheet Metal Shear Blades",
+      "findings": "Q11/QC12Y保留为适配项；上/下刀为位置属性；补板厚、强度、刃数、安装基准。8米与零毛刺不可转为所有订单保证。",
+      "sourceIds": [
+        "tkm-metal"
+      ],
+      "scope": "系列入口"
+    },
+    {
+      "id": "pb-001",
+      "category": "press-brake-tooling",
+      "currentName": "Press Brake Tooling",
+      "currentDescription": "Standard and CNC press brake tooling, special forming dies and upper-tool quick clamps. Confirm the tooling profile and clamping interface.",
+      "verdict": "结构不够清楚，部分材料缺本手册依据",
+      "recommendedEnglishName": "Press Brake Tooling: Punches, Dies and Clamps",
+      "findings": "上模、下模、专用成形、附件分组；90/60/45/30度为工具角度属性，不能等同工件最终角度；本docx没有42CrMo/Cr12MoV材质依据。",
+      "sourceIds": [
+        "wila-shape",
+        "wila-applications"
+      ],
+      "scope": "系列入口"
+    },
+    {
+      "id": "pb-straight-punch",
+      "category": "press-brake-tooling",
+      "currentName": "Straight Press Brake Punches",
+      "currentDescription": "Straight-body upper punches for accessible bends. Specify the punch angle, tip radius, working height and tang profile together with the lower die.",
+      "verdict": "基本准确",
+      "recommendedEnglishName": "Straight Press Brake Punches",
+      "findings": "保留上模名称；accessible bends太泛，补工具角度、尖端R、有效高度、刀柄、下模V口及允许载荷。",
+      "sourceIds": [
+        "wila-shape"
+      ],
+      "scope": "子类或附件"
+    },
+    {
+      "id": "pb-gooseneck-punch",
+      "category": "press-brake-tooling",
+      "currentName": "Gooseneck Press Brake Punches",
+      "currentDescription": "Relieved upper punches for parts with return flanges. The gooseneck opening provides clearance while the tip forms the bend over a separate lower die.",
+      "verdict": "基本准确",
+      "recommendedEnglishName": "Gooseneck Press Brake Punches",
+      "findings": "明确回边避让；避让腔深度与承载能力需按具体截面确认，不能承诺所有盒形件适用。",
+      "sourceIds": [
+        "wila-shape"
+      ],
+      "scope": "子类或附件"
+    },
+    {
+      "id": "pb-radius-tooling",
+      "category": "press-brake-tooling",
+      "currentName": "Radius Bending Tooling",
+      "currentDescription": "Radius punches and cylindrical inserts for large-radius bends. Select the insert, holder and lower-die opening as a complete forming arrangement.",
+      "verdict": "行业解释合理，手册映射待确认",
+      "recommendedEnglishName": "Radius Bending Tooling",
+      "findings": "手册R形与圆柱形不得未经图纸全部认作可换圆柱镶件；保留两种原始范围标记，确认整体上模/镶件/成套结构后细分。",
+      "sourceIds": [
+        "wila-applications"
+      ],
+      "scope": "子类或附件"
+    },
+    {
+      "id": "pb-u-forming",
+      "category": "press-brake-tooling",
+      "currentName": "U-profile Forming Tooling",
+      "currentDescription": "Matched tools for U-shaped sections. The inner width, flange height, bottom shape and release direction define the punch and lower-tool cavity.",
+      "verdict": "手册支持名称，单次成形结构待确认",
+      "recommendedEnglishName": "U-profile Forming Tooling",
+      "findings": "手册U形模并未证明一定为闭合腔一次压成；区分成对成形模和分步折弯，核对工件脱模。",
+      "sourceIds": [
+        "wila-applications"
+      ],
+      "scope": "子类或附件"
+    },
+    {
+      "id": "pb-embossing",
+      "category": "press-brake-tooling",
+      "currentName": "Profile Forming and Embossing Tooling",
+      "currentDescription": "Matched punches and dies for custom pressed sheet sections. Provide the finished profile, forming depth, sheet thickness and release direction.",
+      "verdict": "需收窄工艺解释",
+      "recommendedEnglishName": "Custom Profile Forming Tooling",
+      "findings": "折弯压印不必然等于花纹/文字压花；profile forming可作中性名称，embossing需工件样品或图纸支持。",
+      "sourceIds": [
+        "wila-applications"
+      ],
+      "scope": "子类或附件"
+    },
+    {
+      "id": "pb-container",
+      "category": "press-brake-tooling",
+      "currentName": "Container Panel Forming Tooling",
+      "currentDescription": "Custom tooling for container-panel corrugations and edge sections. The panel drawing determines the profile, pitch, depth and forming sequence.",
+      "verdict": "用途支持，截面范围待确认",
+      "recommendedEnglishName": "Container Forming Tooling",
+      "findings": "手册仅称集装箱专用模，现文扩展成panel corrugations及edge sections；需图纸确认实际成形部位。",
+      "sourceIds": [
+        "wila-applications"
+      ],
+      "scope": "子类或附件"
+    },
+    {
+      "id": "pb-light-pole",
+      "category": "press-brake-tooling",
+      "currentName": "Light Pole Bending Tooling",
+      "currentDescription": "Long tooling sets for polygonal or round pole shells. Select the section, taper, forming sequence and unloading clearance for the press brake arrangement.",
+      "verdict": "用途支持，工艺范围待确认",
+      "recommendedEnglishName": "Light Pole Bending Tooling",
+      "findings": "灯杆模具成立；多边形/圆形杆壳、锥度范围、一次成形或多步折弯不可一概承诺。",
+      "sourceIds": [
+        "wila-applications"
+      ],
+      "scope": "子类或附件"
+    },
+    {
+      "id": "pb-quick-clamps",
+      "category": "press-brake-tooling",
+      "currentName": "Upper-tool Quick Clamps",
+      "currentDescription": "Upper-tool clamps secure the punch tang to the ram or an intermediate holder. Select the mounting seat, tang interface, seating and retention arrangement.",
+      "verdict": "角色准确，应单列附件",
+      "recommendedEnglishName": "Press Brake Upper-tool Quick Clamps",
+      "findings": "不是刀片或下模；核对刀柄、夹座、防坠、肩部及装卸方式。",
+      "sourceIds": [
+        "wila-applications"
+      ],
+      "scope": "子类或附件"
+    },
+    {
+      "id": "rs-001",
+      "category": "rolling-shear-blades",
+      "currentName": "Rolling Shear Blades",
+      "currentDescription": "Circular shear blades for rolling-shear and plate-cutting applications. Request custom diameters and confirm the complete knife-set arrangement with your machine drawing.",
+      "verdict": "英文工况过泛，需优先改名",
+      "recommendedEnglishName": "Metal Rotary Slitter Knives",
+      "findings": "中文保留滚剪机刀片；metal coil longitudinal slitting应进入主摘要。与轧钢剪刃分开；金属切边圆刀候选待确认，隔套/退料环为附件。现有材质列表不是本docx第7页已证实材料。",
+      "sourceIds": [
+        "tkm-metal",
+        "tkm-rotary"
+      ],
+      "scope": "系列入口"
+    },
+    {
+      "id": "sk-001",
+      "category": "slitting-knives",
+      "currentName": "Slitting Knives",
+      "currentDescription": "Rotary slitting knives, also called rotary slitter knives, for paper, film, aluminum foil, copper foil and tape. Share your drawing for a custom quotation.",
+      "verdict": "范围遗漏且标题与指南不一致",
+      "recommendedEnglishName": "Slitting and Tube-cutting Knives",
+      "findings": "现摘要限定Rotary，指南却包含shear/razor/crush；手册纸管/铜管/钢管制管线用刀未体现。纸管切断可作候选，金属管需先区分带材纵剪、定尺切断、切管/飞锯，不能据手册一句话确定刀型。",
+      "sourceIds": [
+        "dienes-methods",
+        "dienes-core"
+      ],
+      "scope": "系列入口"
+    },
+    {
+      "id": "sk-paper-film",
+      "category": "slitting-knives",
+      "currentName": "Paper and Film Slitting Knives",
+      "currentDescription": "Slitting knives for paper, film and tape converting. Identify the cutting method, web thickness, knife profile and holder.",
+      "verdict": "应用准确，分类过宽",
+      "recommendedEnglishName": "Paper and Film Slitting Knives",
+      "findings": "作为应用集合保留；按实际切法再区分剪切式上下圆刀、剃刀式、压切式。仅行业存在不能作为本站三类都可供货的证据。",
+      "sourceIds": [
+        "dienes-methods"
+      ],
+      "scope": "子类或附件"
+    },
+    {
+      "id": "sk-foil",
+      "category": "slitting-knives",
+      "currentName": "Aluminum and Copper Foil Slitting Knives",
+      "currentDescription": "Slitting knives for aluminum and copper foil. Specify foil thickness, edge requirements and the matched knife arrangement.",
+      "verdict": "基本准确，需补工况",
+      "recommendedEnglishName": "Aluminum and Copper Foil Slitting Knives",
+      "findings": "保留独立应用，补厚度、材料状态、毛刺/粉尘判定、刀具配对和刀隙；不能与厚钢带纵剪互相替代。锂电极片是相邻候选，不等于金属箔。",
+      "sourceIds": [
+        "dienes-methods",
+        "tkm-rotary"
+      ],
+      "scope": "子类或附件"
+    },
+    {
+      "id": "sr-001",
+      "category": "steel-rolling-blades",
+      "currentName": "Steel Rolling Blades",
+      "currentDescription": "Bar shear blades and continuous-casting rolling blades for steel production. Confirm the cutting section and machine drawing.",
+      "verdict": "译名与工位不够精准",
+      "recommendedEnglishName": "Steel Mill Shear Blades",
+      "findings": "Steel Rolling Blades易误解为滚刀；主范围为棒料剪刃与连铸轧钢剪刃。热/冷是温度属性，飞剪是机构属性；不平行建类。",
+      "sourceIds": [
+        "tyzack-mill"
+      ],
+      "scope": "系列入口"
+    },
+    {
+      "id": "sr-bar",
+      "category": "steel-rolling-blades",
+      "currentName": "Bar Shear Blades",
+      "currentDescription": "Shear blades for bar processing. Provide the bar cross-section, material, cutting temperature and blade-seat drawing.",
+      "verdict": "基本准确",
+      "recommendedEnglishName": "Bar Shear Blades",
+      "findings": "补圆/方/异形断面、热冷工况、剪切工位、刃口槽型；方坯/板坯与棒材不可仅按外形归并。",
+      "sourceIds": [
+        "tyzack-mill"
+      ],
+      "scope": "子类或附件"
+    },
+    {
+      "id": "sr-casting",
+      "category": "steel-rolling-blades",
+      "currentName": "Continuous Casting and Rolling Shear Blades",
+      "currentDescription": "Shear blades for continuous casting and rolling lines. Identify the cutting station, workpiece section and operating temperature.",
+      "verdict": "名称可用但仍过宽",
+      "recommendedEnglishName": "Continuous Casting and Rolling-line Shear Blades",
+      "findings": "先确认是否确为刀式剪切工位，连铸切断也可能使用非刀式设备；钢坯切断、切头尾、分段等候选按实际图纸再拆。堆焊制造/修复为工艺属性。",
+      "sourceIds": [
+        "tyzack-mill"
+      ],
+      "scope": "子类或附件"
+    },
+    {
+      "id": "cp-001",
+      "category": "corrugated-paper-cutters",
+      "currentName": "Corrugated Paper Cutters",
+      "currentDescription": "Trimming, slitting, three-gang and four-gang slotting knives, and thin blades for corrugated board production.",
+      "verdict": "系列准确，概览被开槽刀主导",
+      "recommendedEnglishName": "Corrugated Board Cutting Knives",
+      "findings": "纸板board比paper更精准；分纵切修边、开槽两大已知功能。横切有行业依据但未在docx明确单列，待供货确认。当前slotting-arc工程轮廓不能代表整类。",
+      "sourceIds": [
+        "bhs-slitter",
+        "bhs-cutoff"
+      ],
+      "scope": "系列入口"
+    },
+    {
+      "id": "cp-thin-slitter",
+      "category": "corrugated-paper-cutters",
+      "currentName": "Corrugated Slitter Scorer Knives",
+      "currentDescription": "Thin circular blades for corrugated board slitting and trimming. Specify outside diameter, bore, thickness and mounting pattern.",
+      "verdict": "基本准确，术语需说明",
+      "recommendedEnglishName": "Corrugated Board Slitter Knives",
+      "findings": "可保留slitter-scorer machine关键词，说明是该机的切刀，非压线轮；薄刀、修边、纵切有重叠，按工位与刀型合并去重。",
+      "sourceIds": [
+        "bhs-slitter"
+      ],
+      "scope": "子类或附件"
+    },
+    {
+      "id": "cp-slotting",
+      "category": "corrugated-paper-cutters",
+      "currentName": "Corrugated Slotting Knives",
+      "currentDescription": "Slotting knives for three-gang and four-gang carton machines. Match the arc profile, slot width and upper and lower knife arrangement.",
+      "verdict": "基本准确，三联四联不宜独立当刀型",
+      "recommendedEnglishName": "Corrugated Carton Slotting Knives",
+      "findings": "保留弧形上刀与配对下刀；三联/四联为设备配置字段，不直接决定圆弧、齿形、孔槽和互换性。修边刀另核实是否为该机独立部件。",
+      "sourceIds": [
+        "bhs-slitter"
+      ],
+      "scope": "子类或附件"
+    },
+    {
+      "id": "tb-002",
+      "category": "toothed-blades",
+      "currentName": "Toothed Blades",
+      "currentDescription": "Serrated and toothed knives for packaging, plastics, food processing and other industrial machinery. Specify the tooth and mounting profiles.",
+      "verdict": "系列范围成立，功能层不够细",
+      "recommendedEnglishName": "Serrated Industrial Knives",
+      "findings": "区分完全切断、穿孔留连、成形/异形切割；圆/直/异形与齿距齿高放结构属性。食品机械应用不自动等于食品接触合规。TC/SKH非完整材料牌号。",
+      "sourceIds": [
+        "bks-packaging"
+      ],
+      "scope": "系列入口"
+    },
+    {
+      "id": "tb-packaging",
+      "category": "toothed-blades",
+      "currentName": "Packaging Machine Serrated Knives",
+      "currentDescription": "Serrated knives for packaging machinery. Specify the film structure, tooth profile and whether the required cut is complete or perforated.",
+      "verdict": "基本准确但过于笼统",
+      "recommendedEnglishName": "Packaging Machine Serrated Knives",
+      "findings": "按VFFS横封切断、HFFS端封切断、制袋、胶带封箱等候选工位补说明；切断与穿孔留连需分别配刀和验收，不能仅看有齿。",
+      "sourceIds": [
+        "bks-packaging"
+      ],
+      "scope": "子类或附件"
+    },
+    {
+      "id": "db-001",
+      "category": "doctor-blades",
+      "currentName": "Doctor Blades",
+      "currentDescription": "Standard, combination, blue-steel, stainless-steel and ceramic doctor blades, with combination holders for printing and coating.",
+      "verdict": "混合维度，材料栏容易误导",
+      "recommendedEnglishName": "Printing and Coating Doctor Blades",
+      "findings": "主层按计量/封墨/涂布功能；碳钢、蓝钢、不锈钢是基材或材料状态，陶瓷可能是涂层，不应直接与钢基材并列为相同层级；组合刮刀含义待工厂确认。现有process指南已提示涂层与整体陶瓷不同。",
+      "sourceIds": [
+        "fuji-ceramic",
+        "mdc-roles"
+      ],
+      "scope": "系列入口"
+    },
+    {
+      "id": "db-gravure",
+      "category": "doctor-blades",
+      "currentName": "Gravure Doctor Blades",
+      "currentDescription": "Doctor blades for gravure ink metering. Specify the ink system, blade width, body thickness and working-edge profile.",
+      "verdict": "基本准确",
+      "recommendedEnglishName": "Gravure Doctor Blades",
+      "findings": "明确凹印版辊计量，补版辊表面、油墨、lamella/bevel/rounded刃形、工作刃厚；凹印是应用维度。",
+      "sourceIds": [
+        "mdc-roles",
+        "fuji-ceramic"
+      ],
+      "scope": "子类或附件"
+    },
+    {
+      "id": "db-flexo",
+      "category": "doctor-blades",
+      "currentName": "Flexo Doctor Blades",
+      "currentDescription": "Doctor blades for flexographic ink metering. Match the blade edge, ink system and holder to the anilox roll.",
+      "verdict": "基本准确，缺独立角色选项",
+      "recommendedEnglishName": "Flexographic Metering Doctor Blades",
+      "findings": "现指南已区分计量和封墨；主描述应落到网纹辊计量角色，封墨刀可作为待确认配套小类。",
+      "sourceIds": [
+        "mdc-roles"
+      ],
+      "scope": "子类或附件"
+    },
+    {
+      "id": "db-holders",
+      "category": "doctor-blades",
+      "currentName": "Doctor Blade Holders",
+      "currentDescription": "Holders for ink doctor blades. Provide the blade dimensions, mounting interface and adjustment arrangement.",
+      "verdict": "角色准确，手册组合刀架映射待确认",
+      "recommendedEnglishName": "Doctor Blade Holders",
+      "findings": "附件而非刀片；组合刀架不必然等于完整腔式供墨系统，需装配图核对。",
+      "sourceIds": [
+        "mdc-roles"
+      ],
+      "scope": "子类或附件"
+    },
+    {
+      "id": "cb-001",
+      "category": "chipper-blades",
+      "currentName": "Chipper Blades",
+      "currentDescription": "Wood-processing knives for particleboard and plywood production. Confirm the BX21-series machine model and mounting drawing.",
+      "verdict": "用途表述可能让客户误解",
+      "recommendedEnglishName": "Wood Chipper Knives",
+      "findings": "改为木材削片工位和木片生产；particleboard/plywood是下游行业，不意味着本刀可替代旋切刀/刨切刀。鼓式、盘式、再削片是候选，BX型号保留适配字段，需OEM图纸确认类型。复合焊接为结构属性，不把纯碳钢写成已确认工作刃材料。",
+      "sourceIds": [
+        "andritz-chipper",
+        "tkm-wood",
+        "tkm-chipper"
+      ],
+      "scope": "系列入口"
+    },
+    {
+      "id": "cr-001",
+      "category": "crusher-blades",
+      "currentName": "Crusher Blades",
+      "currentDescription": "Stationary and rotor knives for plastics, wood and polymer-composite size reduction. Select the blade material for the feedstock and machine.",
+      "verdict": "中文可保留，英文过泛且混料不明",
+      "recommendedEnglishName": "Granulator Knives",
+      "findings": "docx定刀/动刀的旋转剪切结构对应granulator更准确；不能把crusher默认解释为矿石破碎刀，也不直接并入撕碎刀/磨粉刀。PT含义未知，禁止自行改成PET/PTFE。",
+      "sourceIds": [
+        "cumberland-knives",
+        "cumberland-rotors"
+      ],
+      "scope": "系列入口"
+    },
+    {
+      "id": "cr-rotor",
+      "category": "crusher-blades",
+      "currentName": "Granulator Rotor Knives",
+      "currentDescription": "Rotating knives for material granulation. Specify the rotor model, blade-seat geometry, knife quantity and material being processed.",
+      "verdict": "基本准确",
+      "recommendedEnglishName": "Granulator Rotor Knives",
+      "findings": "保留动刀子类；补平刀/分段及排列角、切削圆、安装座、刀数、重磨后配组。结构须机型图纸支持。",
+      "sourceIds": [
+        "cumberland-knives",
+        "cumberland-rotors"
+      ],
+      "scope": "子类或附件"
+    },
+    {
+      "id": "cr-stationary",
+      "category": "crusher-blades",
+      "currentName": "Granulator Bed Knives",
+      "currentDescription": "Stationary knives for granulators. Match the mounting datum and cutting edge to the rotor knives and machine gap specification.",
+      "verdict": "基本准确",
+      "recommendedEnglishName": "Granulator Bed Knives",
+      "findings": "保留定刀子类；基准、调隙方式、配套转子刀与重磨余量独立说明，不从剪板机套用。",
+      "sourceIds": [
+        "cumberland-knives"
+      ],
+      "scope": "子类或附件"
+    }
+  ],
+  "factoryQuestions": [
+    "分切系列在纸管、铜管、钢管线中具体切什么、在哪个工位、用何种刀型？",
+    "滚剪是否供应切边刀、隔套、退料环，分别有哪些已确认图纸？",
+    "单V/双V/多V下模实际供货清单、接口与材料证据是什么？",
+    "R形/圆柱/U形/压印/集装箱模各自的真实截面与工件是什么？",
+    "组合刮刀的结构是什么；陶瓷刮刀是钢基涂层还是整体陶瓷？",
+    "削片刀对应鼓式、盘式或其他机型；是否另供单板旋切/刨切刀和底刀？",
+    "PT、1.237、TC、SKH、H13K的完整材料名称、牌号及标准是什么？"
+  ],
+  "nextImplementation": [
+    "先修正现有名称和摘要，并同步SEO与九语语言包；不扩展未经确认的供货承诺。",
+    "为现有十个系列整理功能组、属性与附件；保持旧ID/URL兼容。",
+    "优先补下模、制管线用刀的资料与现有范围展示；未确认类型先不建独立销售页。",
+    "新增子页须具备切法、配对部件、尺寸/接口、应用边界、对应图片或工程图及询价字段；不按图片数量或材料牌号批量扩页。"
+  ]
+}

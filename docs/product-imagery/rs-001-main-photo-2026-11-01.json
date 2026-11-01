@@ -1,0 +1,112 @@
+{
+  "date": "2026-11-01",
+  "product": "rs-001",
+  "request": "Replace the introduction main photograph: dark areas and poor product presentation.",
+  "selected": {
+    "supplier": "Shinite",
+    "page": "https://www.shiniteknife.com/circular-rotary-slitter-blades-knives-for-metal-steel/",
+    "imageUrl": "https://www.shiniteknife.com/uploads/202312/ps127920896-circular-rotary-slitter-blades-knives-for-metal-steel_1703492250_WNo_1000d1000.jpg",
+    "original": "research/alibaba/rs-001-review-2026-11-01/shinite.jpg",
+    "output": "public/images/products/category-photos/rs-001-single-white-v2.webp",
+    "nativePixels": [
+      1000,
+      1000
+    ],
+    "originalSha256": "2856d786cbc90d63487e1c43aaf0594957e34d4946eee41cc0eb5a9d4a5b532b",
+    "outputSha256": "eb46228433a07ce3a23452885db5bf312ccb09cab61931a799a776053cd67cb1",
+    "processing": "JPEG to WebP only; no AI generation, enhancement, background editing, geometry changes or upscaling.",
+    "visualReview": "One annular metal rotary slitter knife, smooth outer working circumference, one rectangular bore keyway, white external background and open bore; natural dark metal thickness retained. No visible branding or watermark.",
+    "quality": "1000px native candidate: conditional 960–1199px tier, evaluated at actual approximately 600px gallery width; not described as 1200px or higher resolution.",
+    "identity": "Family-level metal slitting example supported by supplier product detail. Exact dimensions, material and machine interface remain subject to approved drawings.",
+    "rights": "Third-party supplier photo; reuse authorization unverified. Local preview only; not a factory-photo claim."
+  },
+  "comparison": [
+    {
+      "supplier": "Goodklife",
+      "page": "https://www.goodklife.com/products/circular-disc-knife-for-stainless-steel-coil-slitting-2",
+      "file": "goodklife.jpg",
+      "decision": "Reject 500px original with logo; primary site certificate expired, CDN image inspected."
+    },
+    {
+      "supplier": "Maxwell",
+      "page": "https://www.maxwellslitters.com/rotary-slitter-blades-knives/",
+      "file": "maxwell.webp",
+      "decision": "Reject engraved brand and wood background, despite 1080px original."
+    },
+    {
+      "supplier": "Knifetooling",
+      "page": "https://www.knifetooling.com/products/circular-slitter-knife-for-cutting-steel-coil",
+      "file": "knifetooling-ccff2fdfe8.jpg",
+      "decision": "Reject 800px photograph with large watermark across knives."
+    },
+    {
+      "supplier": "TKM",
+      "page": "https://www.tkmgroup.com/en/rotary-slitter-knives",
+      "file": "tkm.jpg",
+      "decision": "Reject 800x533 photograph with brand engraving and strong grey shadows."
+    },
+    {
+      "supplier": "SZBlade",
+      "page": "https://www.szblade.com/rotary-slitter-knives/",
+      "file": "sz-24.webp",
+      "decision": "Reject 750px main candidate on grey background; other candidates too small or show bolted holder assemblies."
+    },
+    {
+      "supplier": "Nanjing Hangjin",
+      "decision": "Reject mismatched thin beveled disc and recessed six-hole cutter types; 1080px examples inspected."
+    },
+    {
+      "supplier": "Xinmechan",
+      "decision": "Reject watermark, brand engraving and marketing collage; three gallery originals inspected."
+    },
+    {
+      "supplier": "King Knife",
+      "decision": "Reject mixed blade-and-holder set as main photo; 1000px original inspected."
+    }
+  ],
+  "changes": [
+    "Series card, product main image and first gallery image share the new versioned file.",
+    "Retain original images and source snapshots locally.",
+    "Keep the second single-knife view, lower dimensional guide and independent navy Hero."
+  ],
+  "validation": {
+    "build": "npm run build passed: 43 routes; 9 language packs, 895 entries.",
+    "builtReferences": "JSDOM verified product photo stage, og:image, product listing and built asset use the new photo.",
+    "desktop": "Actual product page inspected: unchanged navy Hero and readable text, new white introduction photo at approximately 600px, both thumbnails; both photos opened in zoom, next button and Escape close verified.",
+    "mobile": "Chrome responsive viewport 390 × 844: Hero text, both gallery photos, thumbnails and stacked introduction text inspected; no horizontal overflow observed. Mobile zoom was not separately tested in this revision.",
+    "quality": "Accept conditional 1000px source at displayed gallery size. Some softness remains on enlargement; no artificial texture or recovered-detail claim.",
+    "diffCheck": "passed"
+  },
+  "release": "No commit, push or deployment.",
+  "researchDirectory": "research/alibaba/rs-001-review-2026-11-01",
+  "additionalOriginalDownloads": [
+    {
+      "name": "hangjin-0",
+      "url": "https://image.made-in-china.com/2f0j00JNSVdMibGRuB/Circular-Slitter-Knives-HSS-Material-Round-Circular-Steel-Strip-Rotary-Slitting-Blade-Knife-for-Metal-Processing.webp"
+    },
+    {
+      "name": "hangjin-1",
+      "url": "https://image.made-in-china.com/2f0j00AOZiwFVyeRzM/Circular-Slitter-Knives-HSS-Material-Round-Circular-Steel-Strip-Rotary-Slitting-Blade-Knife-for-Metal-Processing.webp"
+    },
+    {
+      "name": "hangjin-2",
+      "url": "https://image.made-in-china.com/2f0j00QNsiATlRHYgK/Circular-Slitter-Knives-HSS-Material-Round-Circular-Steel-Strip-Rotary-Slitting-Blade-Knife-for-Metal-Processing.webp"
+    },
+    {
+      "name": "xinmechan-0",
+      "url": "https://image.made-in-china.com/2f0j00MUCkFnJGSDob/Circular-Slitter-Blade-Knife-for-Slitting-Mild-Steel-Strip-Coils-Made-in-China.webp"
+    },
+    {
+      "name": "xinmechan-1",
+      "url": "https://image.made-in-china.com/2f0j00jfBkOTdnSDcq/Circular-Slitter-Blade-Knife-for-Slitting-Mild-Steel-Strip-Coils-Made-in-China.webp"
+    },
+    {
+      "name": "xinmechan-2",
+      "url": "https://image.made-in-china.com/2f0j00ZfCkOgJqMHbc/Circular-Slitter-Blade-Knife-for-Slitting-Mild-Steel-Strip-Coils-Made-in-China.webp"
+    },
+    {
+      "name": "kingknife-0",
+      "url": "https://image.made-in-china.com/2f0j00CfFRpdPtVYgG/Metal-Coil-Slitter-Knives-for-Slitting-Machine.webp"
+    }
+  ]
+}

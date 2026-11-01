@@ -1,18 +1,18 @@
 [
   {
     "id": "shear-blades",
-    "name": "Shear Blades",
-    "description": "Shear blades for Q11 mechanical and QC12Y hydraulic swing-beam shears. Specify blade dimensions, mounting holes and upper or lower position.",
+    "name": "Sheet Metal Shear Blades",
+    "description": "Paired upper and lower blades for Q11 mechanical and QC12Y hydraulic swing-beam shears. Match blade dimensions, mounting holes and cutting-edge geometry.",
     "image": "/images/products/photo-pilot/guillotine-overview-clear-v2.webp",
     "products": [
       {
         "id": "sb-001",
-        "name": "Shear Blades",
+        "name": "Sheet Metal Shear Blades",
         "category": "shear-blades",
-        "description": "Shear blades for Q11 mechanical and QC12Y hydraulic swing-beam shears. Specify blade dimensions, mounting holes and upper or lower position.",
+        "description": "Paired upper and lower blades for Q11 mechanical and QC12Y hydraulic swing-beam shears. Match blade dimensions, mounting holes and cutting-edge geometry.",
         "features": [
-          "Sharp edge with wear resistance",
-          "Up to 8 meters length"
+          "Upper and lower blade matching",
+          "Cutting-edge and mounting geometry"
         ],
         "materials": [
           "9CrSi",
@@ -38,40 +38,40 @@
           "/images/products/photo-pilot/guillotine-three-white-v3.webp",
           "/images/products/photo-pilot/guillotine-hero-white-v3.webp"
         ],
-        "variants": [],
         "machineModels": [
           "Q11",
           "QC12Y"
         ],
-        "bladeProfile": "shear"
+        "bladeProfile": "shear",
+        "selectionFields": [
+          "Overall size · L × W × T",
+          "Mounting holes · d / P / E",
+          "Cutting edge"
+        ]
       }
     ]
   },
   {
     "id": "press-brake-tooling",
     "name": "Press Brake Tooling",
-    "description": "Standard and CNC press brake tooling, special forming dies and upper-tool quick clamps. Confirm the tooling profile and clamping interface.",
+    "description": "Press brake punches, lower dies, special forming tooling and upper-tool quick clamps. Select the working profile, tool angle and clamping interface separately.",
     "image": "/images/products/category-photos/pb-overview-white-v2.webp",
     "products": [
       {
         "id": "pb-001",
         "name": "Press Brake Tooling",
         "category": "press-brake-tooling",
-        "description": "Standard and CNC press brake tooling, special forming dies and upper-tool quick clamps. Confirm the tooling profile and clamping interface.",
+        "description": "Press brake punches, lower dies, special forming tooling and upper-tool quick clamps. Select the working profile, tool angle and clamping interface separately.",
         "features": [
           "Standard Press Brake Tooling",
           "CNC Press Brake Tooling",
           "Special-purpose Tooling"
         ],
-        "materials": [
-          "42CrMo",
-          "Cr12MoV"
-        ],
+        "materials": [],
         "tolerance": "To approved drawing",
         "applications": [
           "General sheet metal bending",
           "Box and pan forming",
-          "90°/60°/45°/30° bending",
           "Container manufacturing"
         ],
         "image": "/images/products/category-photos/pb-overview-white-v2.webp",
@@ -79,20 +79,98 @@
         "images": [
           "/images/products/category-photos/pb-overview-white-v2.webp"
         ],
-        "variants": [
-          "Gooseneck Punches",
-          "Straight Punches",
-          "90° Tooling",
-          "60° Tooling",
-          "45° Tooling",
-          "30° Tooling",
-          "R-profile Tooling",
-          "Cylindrical Tooling",
-          "U-profile Tooling",
-          "Embossing Dies",
-          "Container Dies",
-          "Light Pole Dies",
-          "Upper-tool Quick Clamps"
+        "variantGroups": [
+          {
+            "title": "Upper punches",
+            "items": [
+              "Straight Punches",
+              "Acute-angle Punches",
+              "Gooseneck Punches"
+            ]
+          },
+          {
+            "title": "Lower dies",
+            "items": [
+              "Single-V Dies",
+              "Double-V Dies",
+              "Multi-V Dies"
+            ]
+          },
+          {
+            "title": "Working profiles",
+            "items": [
+              "R-profile Tooling",
+              "Cylindrical Tooling",
+              "U-profile Tooling",
+              "Custom Profile Forming Tooling"
+            ]
+          },
+          {
+            "title": "Tool angles",
+            "items": [
+              "90°",
+              "60°",
+              "45°",
+              "30°"
+            ]
+          },
+          {
+            "title": "Applications",
+            "items": [
+              "Container Dies",
+              "Light Pole Dies"
+            ]
+          },
+          {
+            "title": "Clamping accessories",
+            "items": [
+              "Upper-tool Quick Clamps"
+            ]
+          }
+        ],
+        "productGroups": [
+          {
+            "title": "Upper punches",
+            "productIds": [
+              "pb-straight-punch",
+              "pb-acute-punch",
+              "pb-gooseneck-punch"
+            ]
+          },
+          {
+            "title": "Lower dies",
+            "productIds": [
+              "pb-single-v-die",
+              "pb-double-v-die",
+              "pb-multi-v-die"
+            ]
+          },
+          {
+            "title": "Working profiles",
+            "productIds": [
+              "pb-radius-tooling",
+              "pb-u-forming",
+              "pb-embossing"
+            ]
+          },
+          {
+            "title": "Applications",
+            "productIds": [
+              "pb-container",
+              "pb-light-pole"
+            ]
+          },
+          {
+            "title": "Clamping accessories",
+            "productIds": [
+              "pb-quick-clamps"
+            ]
+          }
+        ],
+        "selectionFields": [
+          "Length and sections · L",
+          "Tool type and working profile",
+          "Clamping interface"
         ]
       },
       {
@@ -111,10 +189,10 @@
         "applications": [
           "Upper punch"
         ],
-        "image": "/images/products/tooling-v2/straight-punch-white-v1.webp",
+        "image": "/images/products/tooling-v2/straight-punch-installed-white-v2.webp",
         "heroImage": "/images/products/tooling-v2/straight-punch-product-hero-v1.webp",
         "images": [
-          "/images/products/tooling-v2/straight-punch-white-v1.webp"
+          "/images/products/tooling-v2/straight-punch-installed-white-v2.webp"
         ],
         "selectionFields": [
           "Punch angle and tip radius",
@@ -122,6 +200,35 @@
           "Working length and sections"
         ],
         "toolingProfile": "straight-punch",
+        "galleryFit": "contain"
+      },
+      {
+        "id": "pb-acute-punch",
+        "parentId": "pb-001",
+        "name": "Acute-angle Press Brake Punches",
+        "category": "press-brake-tooling",
+        "description": "Acute-angle upper punches for sharp bends and hemming pre-bends. Select the tip angle and radius with a suitable lower die.",
+        "features": [
+          "Acute-angle working profile",
+          "Defined punch-tip radius",
+          "Continuous or sectional lengths"
+        ],
+        "materials": [],
+        "tolerance": "To approved drawing",
+        "applications": [
+          "Upper punch"
+        ],
+        "image": "/images/products/tooling-v2/acute-punch-white-v1.webp",
+        "heroImage": "/images/products/tooling-v2/acute-punch-product-hero-v1.webp",
+        "images": [
+          "/images/products/tooling-v2/acute-punch-white-v1.webp"
+        ],
+        "selectionFields": [
+          "Punch angle and tip radius",
+          "Working height and tang",
+          "Working length and sections"
+        ],
+        "toolingProfile": "acute-punch",
         "galleryFit": "contain"
       },
       {
@@ -154,11 +261,98 @@
         "galleryFit": "contain"
       },
       {
+        "id": "pb-single-v-die",
+        "parentId": "pb-001",
+        "name": "Single-V Press Brake Dies",
+        "category": "press-brake-tooling",
+        "description": "Lower dies with one fixed V groove. Specify the V-opening, groove angle and shoulder radii for the material and bend drawing.",
+        "features": [
+          "One fixed V groove",
+          "Defined shoulder radii",
+          "Continuous or sectional lengths"
+        ],
+        "materials": [],
+        "tolerance": "To approved drawing",
+        "applications": [
+          "Lower die"
+        ],
+        "image": "/images/products/tooling-v2/single-v-die-white-v1.webp",
+        "heroImage": "/images/products/tooling-v2/single-v-die-product-hero-v1.webp",
+        "images": [
+          "/images/products/tooling-v2/single-v-die-white-v1.webp"
+        ],
+        "selectionFields": [
+          "V-opening and groove angle",
+          "Die height and mounting base",
+          "Working length and sections"
+        ],
+        "toolingProfile": "single-v-die",
+        "galleryFit": "contain"
+      },
+      {
+        "id": "pb-double-v-die",
+        "parentId": "pb-001",
+        "name": "Double-V Press Brake Dies",
+        "category": "press-brake-tooling",
+        "description": "Lower dies with two fixed V grooves. Specify both openings and the groove arrangement; the changeover method depends on the die and holder.",
+        "features": [
+          "Two fixed V grooves",
+          "Groove-specific setup and load",
+          "Continuous or sectional lengths"
+        ],
+        "materials": [],
+        "tolerance": "To approved drawing",
+        "applications": [
+          "Lower die"
+        ],
+        "image": "/images/products/tooling-v2/double-v-die-white-v1.webp",
+        "heroImage": "/images/products/tooling-v2/double-v-die-product-hero-v1.webp",
+        "images": [
+          "/images/products/tooling-v2/double-v-die-white-v1.webp"
+        ],
+        "selectionFields": [
+          "V1 and V2 openings",
+          "Die height and mounting base",
+          "Working length and sections"
+        ],
+        "toolingProfile": "double-v-die",
+        "galleryFit": "contain"
+      },
+      {
+        "id": "pb-multi-v-die",
+        "parentId": "pb-001",
+        "name": "Multi-V Press Brake Dies",
+        "category": "press-brake-tooling",
+        "description": "Multi-V lower dies combine several fixed grooves in one block. Specify each groove and the supporting holder before selecting a working face.",
+        "features": [
+          "Multiple fixed V grooves",
+          "Groove-specific setup and load",
+          "Continuous or sectional lengths"
+        ],
+        "materials": [],
+        "tolerance": "To approved drawing",
+        "applications": [
+          "Lower die"
+        ],
+        "image": "/images/products/tooling-v2/multi-v-die-white-v1.webp",
+        "heroImage": "/images/products/tooling-v2/multi-v-die-product-hero-v1.webp",
+        "images": [
+          "/images/products/tooling-v2/multi-v-die-white-v1.webp"
+        ],
+        "selectionFields": [
+          "Groove schedule and block section",
+          "Support, indexing and working height",
+          "Working length and sections"
+        ],
+        "toolingProfile": "multi-v-die",
+        "galleryFit": "contain"
+      },
+      {
         "id": "pb-radius-tooling",
         "parentId": "pb-001",
         "name": "Radius Bending Tooling",
         "category": "press-brake-tooling",
-        "description": "Radius punches and cylindrical inserts for large-radius bends. Select the insert, holder and lower-die opening as a complete forming arrangement.",
+        "description": "Tooling for radius bending. Confirm the upper-tool profile, any cylindrical insert and holder, and the matching lower die from the part and tooling drawings.",
         "features": [
           "Rounded forming surface",
           "Insert and holder arrangement",
@@ -185,7 +379,7 @@
         "parentId": "pb-001",
         "name": "U-profile Forming Tooling",
         "category": "press-brake-tooling",
-        "description": "Matched tools for U-shaped sections. The inner width, flange height, bottom shape and release direction define the punch and lower-tool cavity.",
+        "description": "Tooling for U-shaped sections. Confirm the forming sequence, tool profiles and part-release direction from the finished channel drawing.",
         "features": [
           "Matched punch and cavity",
           "Defined channel cross-section",
@@ -210,7 +404,7 @@
       {
         "id": "pb-embossing",
         "parentId": "pb-001",
-        "name": "Profile Forming and Embossing Tooling",
+        "name": "Custom Profile Forming Tooling",
         "category": "press-brake-tooling",
         "description": "Matched punches and dies for custom pressed sheet sections. Provide the finished profile, forming depth, sheet thickness and release direction.",
         "features": [
@@ -237,9 +431,9 @@
       {
         "id": "pb-container",
         "parentId": "pb-001",
-        "name": "Container Panel Forming Tooling",
+        "name": "Container Forming Tooling",
         "category": "press-brake-tooling",
-        "description": "Custom tooling for container-panel corrugations and edge sections. The panel drawing determines the profile, pitch, depth and forming sequence.",
+        "description": "Custom tooling for container forming. The finished part drawing defines the required section, dimensions and forming sequence.",
         "features": [
           "Panel-specific forming profile",
           "Pitch and depth coordination",
@@ -266,7 +460,7 @@
         "parentId": "pb-001",
         "name": "Light Pole Bending Tooling",
         "category": "press-brake-tooling",
-        "description": "Long tooling sets for polygonal or round pole shells. Select the section, taper, forming sequence and unloading clearance for the press brake arrangement.",
+        "description": "Tooling for bending light pole shells. Confirm the shell section, taper, bending sequence and unloading clearance for the press brake.",
         "features": [
           "Longitudinal shell forming",
           "Small- and large-end section checks",
@@ -321,54 +515,54 @@
   },
   {
     "id": "rolling-shear-blades",
-    "name": "Rolling Shear Blades",
-    "description": "Circular shear blades for rolling-shear and plate-cutting applications. Request custom diameters and confirm the complete knife-set arrangement with your machine drawing.",
-    "image": "/images/products/category-photos/rs-001-sego-01-white-v1.webp",
+    "name": "Metal Rotary Slitter Knives",
+    "description": "Paired circular knives for longitudinal slitting of metal coil and strip. Specify outside diameter, bore, thickness, knife spacing and cutting clearance.",
+    "image": "/images/products/category-photos/rs-001-single-white-v2.webp",
     "products": [
       {
         "id": "rs-001",
-        "name": "Rolling Shear Blades",
+        "name": "Metal Rotary Slitter Knives",
         "category": "rolling-shear-blades",
-        "description": "Circular shear blades for rolling-shear and plate-cutting applications. Request custom diameters and confirm the complete knife-set arrangement with your machine drawing.",
+        "description": "Paired circular knives for longitudinal slitting of metal coil and strip. Specify outside diameter, bore, thickness, knife spacing and cutting clearance.",
         "features": [
           "Main dimensions · D × d × T",
           "Mounting details",
           "Edge and knife set"
         ],
-        "materials": [
-          "Cr12MoV",
-          "H13",
-          "SKD-11"
-        ],
+        "materials": [],
         "tolerance": "To approved drawing",
         "applications": [
           "Plate cutting",
           "Coil processing lines",
           "Steel rolling mills"
         ],
-        "image": "/images/products/category-photos/rs-001-sego-01-white-v1.webp",
+        "image": "/images/products/category-photos/rs-001-single-white-v2.webp",
         "heroImage": "/images/products/category-photos/rs-hero-v1.webp",
         "galleryFit": "contain",
         "images": [
-          "/images/products/category-photos/rs-001-sego-01-white-v1.webp",
+          "/images/products/category-photos/rs-001-single-white-v2.webp",
           "/images/products/category-photos/rs-001-sego-02-white-v1.webp"
         ],
-        "variants": [],
-        "bladeProfile": "metal-slitter"
+        "bladeProfile": "metal-slitter",
+        "selectionFields": [
+          "Main dimensions · D × d × T",
+          "Mounting details",
+          "Edge and knife set"
+        ]
       }
     ]
   },
   {
     "id": "slitting-knives",
     "name": "Slitting Knives",
-    "description": "Rotary slitting knives, also called rotary slitter knives, for paper, film, aluminum foil, copper foil and tape. Share your drawing for a custom quotation.",
+    "description": "Slitting knives for paper, film, foil and tape, plus tube-line tooling specified by cutting station. Confirm the cutting method, knife profile and mounting drawing.",
     "image": "/images/products/category-photos/sk-overview-white-v1.webp",
     "products": [
       {
         "id": "sk-001",
         "name": "Slitting Knives",
         "category": "slitting-knives",
-        "description": "Rotary slitting knives, also called rotary slitter knives, for paper, film, aluminum foil, copper foil and tape. Share your drawing for a custom quotation.",
+        "description": "Slitting knives for paper, film, foil and tape, plus tube-line tooling specified by cutting station. Confirm the cutting method, knife profile and mounting drawing.",
         "features": [
           "Main dimensions · D × d × T",
           "Edge geometry",
@@ -395,8 +589,21 @@
           "/images/products/category-photos/sk-overview-white-v1.webp",
           "/images/products/category-photos/sk-edge-white-v1.webp"
         ],
-        "variants": [],
-        "bladeProfile": "converting-slitter"
+        "bladeProfile": "converting-slitter",
+        "productGroups": [
+          {
+            "title": "Applications",
+            "productIds": [
+              "sk-paper-film",
+              "sk-foil"
+            ]
+          }
+        ],
+        "selectionFields": [
+          "Tool type and working profile",
+          "Edge geometry",
+          "Mounting pattern"
+        ]
       },
       {
         "id": "sk-paper-film",
@@ -422,9 +629,9 @@
           "/images/products/category-photos/sk-edge-white-v1.webp"
         ],
         "selectionFields": [
-          "Main dimensions · D × d × T",
+          "Tool type and working profile",
           "Edge geometry",
-          "Arbor and set arrangement"
+          "Mounting pattern"
         ],
         "bladeProfile": "converting-slitter"
       },
@@ -459,15 +666,15 @@
   },
   {
     "id": "steel-rolling-blades",
-    "name": "Steel Rolling Blades",
-    "description": "Bar shear blades and continuous-casting rolling blades for steel production. Confirm the cutting section and machine drawing.",
+    "name": "Steel Mill Shear Blades",
+    "description": "Shear blades for bar processing and continuous casting and rolling lines. Match the workpiece section, cutting station, temperature and blade seat.",
     "image": "/images/products/photo-expansion-2026-10-31/bar-shear-white-v1.webp",
     "products": [
       {
         "id": "sr-001",
-        "name": "Steel Rolling Blades",
+        "name": "Steel Mill Shear Blades",
         "category": "steel-rolling-blades",
-        "description": "Bar shear blades and continuous-casting rolling blades for steel production. Confirm the cutting section and machine drawing.",
+        "description": "Shear blades for bar processing and continuous casting and rolling lines. Match the workpiece section, cutting station, temperature and blade seat.",
         "features": [
           "Custom dimensions",
           "Drawing-based manufacture"
@@ -487,11 +694,30 @@
         "images": [
           "/images/products/photo-expansion-2026-10-31/bar-shear-white-v1.webp"
         ],
-        "variants": [
-          "Bar Shear Blades",
-          "Continuous-casting Rolling Blades"
+        "bladeProfile": "bar-shear",
+        "variantGroups": [
+          {
+            "title": "Cutting tasks",
+            "items": [
+              "Bar Shear Blades",
+              "Continuous-casting Rolling Blades"
+            ]
+          }
         ],
-        "bladeProfile": "bar-shear"
+        "productGroups": [
+          {
+            "title": "Cutting tasks",
+            "productIds": [
+              "sr-bar",
+              "sr-casting"
+            ]
+          }
+        ],
+        "selectionFields": [
+          "Workpiece section and material",
+          "Cutting temperature and station",
+          "Blade-seat drawing"
+        ]
       },
       {
         "id": "sr-bar",
@@ -552,15 +778,15 @@
   },
   {
     "id": "corrugated-paper-cutters",
-    "name": "Corrugated Paper Cutters",
-    "description": "Trimming, slitting, three-gang and four-gang slotting knives, and thin blades for corrugated board production.",
+    "name": "Corrugated Board Cutting Knives",
+    "description": "Slitting, trimming and slotting knives for corrugated board and carton production. Select the cutting station before specifying the knife geometry.",
     "image": "/images/products/category-photos/tb-overview-white-v1.webp",
     "products": [
       {
         "id": "cp-001",
-        "name": "Corrugated Paper Cutters",
+        "name": "Corrugated Board Cutting Knives",
         "category": "corrugated-paper-cutters",
-        "description": "Trimming, slitting, three-gang and four-gang slotting knives, and thin blades for corrugated board production.",
+        "description": "Slitting, trimming and slotting knives for corrugated board and carton production. Select the cutting station before specifying the knife geometry.",
         "features": [
           "Custom dimensions",
           "Drawing-based manufacture"
@@ -579,13 +805,48 @@
           "/images/products/category-photos/tb-overview-white-v1.webp",
           "/images/products/category-photos/tb-variants-white-v1.webp"
         ],
-        "variants": [
-          "Trimming and Slitting Knives",
-          "Three-gang Slotting Knives",
-          "Four-gang Slotting Knives",
-          "Thin Corrugated-line Blades"
+        "bladeProfile": "slotting-arc",
+        "variantGroups": [
+          {
+            "title": "Slitting and trimming",
+            "items": [
+              "Trimming and Slitting Knives",
+              "Thin Corrugated-line Blades"
+            ]
+          },
+          {
+            "title": "Slotting",
+            "items": [
+              "Corrugated Slotting Knives"
+            ]
+          },
+          {
+            "title": "Machine configurations",
+            "items": [
+              "Three-gang configuration",
+              "Four-gang configuration"
+            ]
+          }
         ],
-        "bladeProfile": "slotting-arc"
+        "productGroups": [
+          {
+            "title": "Slitting and trimming",
+            "productIds": [
+              "cp-thin-slitter"
+            ]
+          },
+          {
+            "title": "Slotting",
+            "productIds": [
+              "cp-slotting"
+            ]
+          }
+        ],
+        "selectionFields": [
+          "Tool type and working profile",
+          "Mounting details",
+          "Edge and knife set"
+        ]
       },
       {
         "id": "cp-thin-slitter",
@@ -666,9 +927,7 @@
           "SK2",
           "SUS-440C",
           "420-J2",
-          "TC",
-          "SKD-11",
-          "SKH"
+          "SKD-11"
         ],
         "tolerance": "To approved drawing",
         "applications": [
@@ -681,8 +940,20 @@
         "images": [
           "/images/products/photo-expansion-2026-10-31/packaging-serrated-white-v1.webp"
         ],
-        "variants": [],
-        "bladeProfile": "serrated"
+        "bladeProfile": "serrated",
+        "productGroups": [
+          {
+            "title": "Applications",
+            "productIds": [
+              "tb-packaging"
+            ]
+          }
+        ],
+        "selectionFields": [
+          "Blade body · L × W × T",
+          "Tooth profile · P / h",
+          "Mounting pattern"
+        ]
       },
       {
         "id": "tb-packaging",
@@ -717,24 +988,23 @@
   {
     "id": "doctor-blades",
     "name": "Doctor Blades",
-    "description": "Standard, combination, blue-steel, stainless-steel and ceramic doctor blades, with combination holders for printing and coating.",
-    "image": "/images/products/hero-products-2026-10-31/doctor-strip-white-v1.webp",
+    "description": "Ink-metering doctor blades for gravure and flexographic printing, with coating applications and blade holders. Specify the base material, coating and working-edge profile separately.",
+    "image": "/images/products/doctor-photos-v2/doctor-strip-white-v2.webp",
     "products": [
       {
         "id": "db-001",
         "name": "Doctor Blades",
         "category": "doctor-blades",
-        "description": "Standard, combination, blue-steel, stainless-steel and ceramic doctor blades, with combination holders for printing and coating.",
+        "description": "Ink-metering doctor blades for gravure and flexographic printing, with coating applications and blade holders. Specify the base material, coating and working-edge profile separately.",
         "features": [
           "Strip dimensions · L × W × T",
           "Metering edge",
           "Holder and delivery format"
         ],
         "materials": [
-          "Stainless steel",
           "Carbon steel",
           "Blue steel",
-          "Ceramic"
+          "Stainless steel"
         ],
         "tolerance": "To approved drawing",
         "applications": [
@@ -744,20 +1014,71 @@
           "Decorative printing",
           "Coating lines"
         ],
-        "image": "/images/products/hero-products-2026-10-31/doctor-strip-white-v1.webp",
+        "image": "/images/products/doctor-photos-v2/doctor-strip-white-v2.webp",
         "images": [
-          "/images/products/hero-products-2026-10-31/doctor-strip-white-v1.webp"
-        ],
-        "variants": [
-          "Standard Doctor Blades",
-          "Combination Doctor Blades",
-          "Blue-steel Doctor Blades",
-          "Stainless-steel Doctor Blades",
-          "Ceramic Doctor Blades",
-          "Combination Blade Holders"
+          "/images/products/doctor-photos-v2/doctor-strip-white-v2.webp",
+          "/images/products/doctor-photos-v2/doctor-box-white-v1.webp"
         ],
         "bladeProfile": "doctor-strip",
-        "heroImage": "/images/products/hero-products-2026-10-31/doctor-strip-product-hero-v1.webp"
+        "heroImage": "/images/products/doctor-photos-v2/doctor-strip-hero-v2.webp",
+        "variantGroups": [
+          {
+            "title": "Applications",
+            "items": [
+              "Gravure printing",
+              "Flexographic printing",
+              "Coating lines"
+            ]
+          },
+          {
+            "title": "Blade formats",
+            "items": [
+              "Standard Doctor Blades",
+              "Combination Doctor Blades"
+            ]
+          },
+          {
+            "title": "Base materials",
+            "items": [
+              "Carbon steel",
+              "Blue steel",
+              "Stainless steel"
+            ]
+          },
+          {
+            "title": "Blade construction",
+            "items": [
+              "Ceramic Doctor Blades"
+            ]
+          },
+          {
+            "title": "Clamping accessories",
+            "items": [
+              "Combination Blade Holders"
+            ]
+          }
+        ],
+        "productGroups": [
+          {
+            "title": "Applications",
+            "productIds": [
+              "db-gravure",
+              "db-flexo"
+            ]
+          },
+          {
+            "title": "Clamping accessories",
+            "productIds": [
+              "db-holders"
+            ]
+          }
+        ],
+        "selectionFields": [
+          "Strip dimensions · L × W × T",
+          "Metering edge",
+          "Holder and delivery format"
+        ],
+        "galleryFit": "contain"
       },
       {
         "id": "db-gravure",
@@ -775,22 +1096,24 @@
         "applications": [
           "Gravure printing"
         ],
-        "image": "/images/products/hero-products-2026-10-31/doctor-strip-white-v1.webp",
-        "heroImage": "/images/products/hero-products-2026-10-31/doctor-strip-product-hero-v1.webp",
+        "image": "/images/products/doctor-photos-v2/doctor-strip-white-v2.webp",
+        "heroImage": "/images/products/doctor-photos-v2/doctor-strip-hero-v2.webp",
         "images": [
-          "/images/products/hero-products-2026-10-31/doctor-strip-white-v1.webp"
+          "/images/products/doctor-photos-v2/doctor-strip-white-v2.webp",
+          "/images/products/doctor-photos-v2/doctor-box-white-v1.webp"
         ],
         "selectionFields": [
           "Strip dimensions · L × W × T",
           "Metering edge",
           "Holder and delivery format"
         ],
-        "bladeProfile": "doctor-strip"
+        "bladeProfile": "doctor-strip",
+        "galleryFit": "contain"
       },
       {
         "id": "db-flexo",
         "parentId": "db-001",
-        "name": "Flexo Doctor Blades",
+        "name": "Flexographic Metering Doctor Blades",
         "category": "doctor-blades",
         "description": "Doctor blades for flexographic ink metering. Match the blade edge, ink system and holder to the anilox roll.",
         "features": [
@@ -803,17 +1126,19 @@
         "applications": [
           "Flexographic printing"
         ],
-        "image": "/images/products/hero-products-2026-10-31/doctor-strip-white-v1.webp",
-        "heroImage": "/images/products/hero-products-2026-10-31/doctor-strip-product-hero-v1.webp",
+        "image": "/images/products/doctor-photos-v2/doctor-strip-white-v2.webp",
+        "heroImage": "/images/products/doctor-photos-v2/doctor-strip-hero-v2.webp",
         "images": [
-          "/images/products/hero-products-2026-10-31/doctor-strip-white-v1.webp"
+          "/images/products/doctor-photos-v2/doctor-strip-white-v2.webp",
+          "/images/products/doctor-photos-v2/doctor-box-white-v1.webp"
         ],
         "selectionFields": [
           "Strip dimensions · L × W × T",
           "Metering edge",
           "Holder and delivery format"
         ],
-        "bladeProfile": "doctor-strip"
+        "bladeProfile": "doctor-strip",
+        "galleryFit": "contain"
       },
       {
         "id": "db-holders",
@@ -833,43 +1158,42 @@
           "Flexographic printing",
           "Coating lines"
         ],
-        "image": "/images/products/blades-v2/doctor-holder-section-v1.svg",
-        "heroImage": "/images/products/hero-products-2026-10-31/doctor-holder-product-hero-v1.webp",
-        "images": [],
-        "mediaMode": "specification",
+        "image": "/images/products/doctor-photos-v2/doctor-holder-white-v2.webp",
+        "heroImage": "/images/products/doctor-photos-v2/doctor-holder-hero-v2.webp",
+        "images": [
+          "/images/products/doctor-photos-v2/doctor-holder-white-v2.webp"
+        ],
         "selectionFields": [
           "Blade dimensions and orientation",
           "Mounting interface and datums",
           "Adjustment and clamping arrangement"
         ],
-        "bladeProfile": "doctor-holder"
+        "bladeProfile": "doctor-holder",
+        "galleryFit": "contain"
       }
     ]
   },
   {
     "id": "chipper-blades",
-    "name": "Chipper Blades",
-    "description": "Wood-processing knives for particleboard and plywood production. Confirm the BX21-series machine model and mounting drawing.",
+    "name": "Wood Chipper Knives",
+    "description": "Knives for cutting wood into chips. Confirm the chipper type, BX21-series model, knife seat and cutting edge; veneer peeling and slicing require different tooling.",
     "image": "/images/products/blades-v2/chipper-white-01-v1.webp",
     "products": [
       {
         "id": "cb-001",
-        "name": "Chipper Blades",
+        "name": "Wood Chipper Knives",
         "category": "chipper-blades",
-        "description": "Wood-processing knives for particleboard and plywood production. Confirm the BX21-series machine model and mounting drawing.",
+        "description": "Knives for cutting wood into chips. Confirm the chipper type, BX21-series model, knife seat and cutting edge; veneer peeling and slicing require different tooling.",
         "features": [
           "Custom dimensions",
           "Drawing-based manufacture"
         ],
         "materials": [
-          "Carbon steel",
           "Alloy tool steel"
         ],
         "tolerance": "To approved drawing",
         "applications": [
-          "Wood processing",
-          "Particleboard production",
-          "Plywood production"
+          "Wood processing"
         ],
         "image": "/images/products/blades-v2/chipper-white-01-v1.webp",
         "heroImage": "/images/products/hero-products-2026-10-31/chipper-product-hero-v1.webp",
@@ -878,7 +1202,6 @@
           "/images/products/blades-v2/chipper-white-02-v1.webp",
           "/images/products/blades-v2/chipper-white-03-v1.webp"
         ],
-        "variants": [],
         "machineModels": [
           "BX213",
           "BX213B",
@@ -895,28 +1218,31 @@
           "BX2116"
         ],
         "bladeProfile": "chipper",
-        "galleryFit": "contain"
+        "galleryFit": "contain",
+        "selectionFields": [
+          "Overall size · L × W × T",
+          "Cutting edge",
+          "Mounting pattern"
+        ]
       }
     ]
   },
   {
     "id": "crusher-blades",
-    "name": "Crusher Blades",
-    "description": "Stationary and rotor knives for plastics, wood and polymer-composite size reduction. Select the blade material for the feedstock and machine.",
+    "name": "Granulator Knives",
+    "description": "Rotor and stationary bed knives for material granulation. Match the feedstock, rotor arrangement, knife seats and machine-defined cutting gap.",
     "image": "/images/products/photo-expansion-2026-10-31/granulator-white-v1.webp",
     "products": [
       {
         "id": "cr-001",
-        "name": "Crusher Blades",
+        "name": "Granulator Knives",
         "category": "crusher-blades",
-        "description": "Stationary and rotor knives for plastics, wood and polymer-composite size reduction. Select the blade material for the feedstock and machine.",
+        "description": "Rotor and stationary bed knives for material granulation. Match the feedstock, rotor arrangement, knife seats and machine-defined cutting gap.",
         "features": [
           "Custom dimensions",
           "Drawing-based manufacture"
         ],
-        "materials": [
-          "Material selected by application"
-        ],
+        "materials": [],
         "tolerance": "To approved drawing",
         "applications": [
           "Plastics processing",
@@ -928,21 +1254,39 @@
         "images": [
           "/images/products/photo-expansion-2026-10-31/granulator-white-v1.webp"
         ],
-        "variants": [
-          "Stationary Knives",
-          "Rotor Knives"
-        ],
         "feedstocks": [
           "ABS",
           "PE",
           "PP",
-          "PT",
           "Nylon",
           "Modified plastics",
           "Wood",
           "Polymer composites"
         ],
-        "bladeProfile": "granulator-rotor"
+        "bladeProfile": "granulator-rotor",
+        "variantGroups": [
+          {
+            "title": "Knife positions",
+            "items": [
+              "Rotor Knives",
+              "Stationary Knives"
+            ]
+          }
+        ],
+        "productGroups": [
+          {
+            "title": "Knife positions",
+            "productIds": [
+              "cr-rotor",
+              "cr-stationary"
+            ]
+          }
+        ],
+        "selectionFields": [
+          "Mounting datum and hole pattern",
+          "Matching rotor knife geometry",
+          "Machine cutting-gap specification"
+        ]
       },
       {
         "id": "cr-rotor",

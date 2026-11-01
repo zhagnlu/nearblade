@@ -1,6 +1,6 @@
 import { useId } from "react";
 
-export type ToolingProfile = "straight-punch" | "gooseneck-punch" | "radius-tool" | "u-forming" | "profile-forming" | "container-forming" | "pole-forming" | "quick-clamp";
+export type ToolingProfile = "straight-punch" | "acute-punch" | "single-v-die" | "double-v-die" | "multi-v-die" | "gooseneck-punch" | "radius-tool" | "u-forming" | "profile-forming" | "container-forming" | "pole-forming" | "quick-clamp";
 
 /** Open tool sections and separate workpiece examples. No standard dimensions are implied. */
 export function ToolingProfileDrawing({ profile, dark = false }: { profile: ToolingProfile; dark?: boolean }) {
@@ -12,15 +12,19 @@ export function ToolingProfileDrawing({ profile, dark = false }: { profile: Tool
   const line = (x1: number, y1: number, x2: number, y2: number, label: string, tx: number, ty: number) => <g stroke={dim} strokeWidth="1.5"><path d={`M${x1} ${y1}L${x2} ${y2}`} markerStart={`url(#${id})`} markerEnd={`url(#${id})`} /><text x={tx} y={ty} fill={dim} stroke="none" fontSize="21" textAnchor="middle">{label}</text></g>;
   const lowerV = <path d="M125 325H190L265 400L340 325H405V452H125Z" />;
   const vSheet = <path d="M147 315H186L265 392L344 315H383" />;
-  const straight = <path d="M225 50H275V83H297V208L265 270L211 210V83H225Z" />;
+  const straight = <path d="M240 50H290V83H320V215L267 268Q265 270 263 268L210 215V83H240Z" />;
   const goose = <path d="M220 45H270V78H295V120L268 143Q225 165 235 195Q239 211 270 235L306 268L267 292L190 217V78H220Z" />;
   const sheetStyle = { fill: "none", stroke: accent, strokeWidth: 5, strokeLinejoin: "round" as const };
-  const profileLabel = { "straight-punch": "Straight punch section", "gooseneck-punch": "Gooseneck punch section", "radius-tool": "Radius tool section", "u-forming": "U-forming tool section", "profile-forming": "Matched profile forming section", "container-forming": "Panel forming tool section", "pole-forming": "Pole forming tool section", "quick-clamp": "Upper-tool clamp section" }[profile];
+  const profileLabel = { "straight-punch": "Straight punch section", "acute-punch": "Acute punch section", "single-v-die": "Single-V die section", "double-v-die": "Double-V die section", "multi-v-die": "Multi-V die section", "gooseneck-punch": "Gooseneck punch section", "radius-tool": "Radius tool section", "u-forming": "U-forming tool section", "profile-forming": "Matched profile forming section", "container-forming": "Panel forming tool section", "pole-forming": "Pole forming tool section", "quick-clamp": "Upper-tool clamp section" }[profile];
   return <svg viewBox="0 0 900 510" direction="ltr" role="img" aria-label={profileLabel} className="tooling-profile-drawing w-full h-auto">
     <defs><marker id={id} markerWidth="7" markerHeight="7" refX="3.5" refY="3.5" orient="auto-start-reverse"><path d="M7 0L0 3.5L7 7" fill="none" stroke={dim} strokeWidth="1.2" /></marker></defs>
     <path d="M550 45V465" stroke={ink} opacity=".18" strokeDasharray="5 7" />
     <g fill={metal} stroke={ink} strokeWidth="2.5" strokeLinejoin="round">
       {profile === "straight-punch" && <>{straight}{lowerV}</>}
+      {profile === "acute-punch" && <><path d="M240 40H290V80H310V140L265 308L220 140V80H240Z" /><path d="M155 340H235L265 452L295 340H375V478H155Z" /></>}
+      {profile === "single-v-die" && <path d="M130 175H195L265 245L335 175H400V335H300V385H230V335H130Z" />}
+      {profile === "double-v-die" && <path d="M130 175H145L185 215L225 175H270L325 230L380 175H400V385H300V350H230V385H130Z" />}
+      {profile === "multi-v-die" && <path d="M125 125H150L190 165L230 125H275L325 175L375 125H405V230L340 295L405 360V405H295V370H235V405H125V310H150V245H125Z" />}
       {profile === "gooseneck-punch" && <>{goose}{lowerV}</>}
       {profile === "radius-tool" && <><path d="M230 45H280V80H310V202H220V80H230Z" /><circle cx="265" cy="231" r="60" /><path d="M95 337H150L265 452L380 337H435V485H95Z" /><path d="M227 190H303" strokeDasharray="4 4" /></>}
       {profile === "u-forming" && <><path d="M235 45H285V85H330V235Q330 257 308 257H222Q200 257 200 235V85H235Z" /><path d="M125 312H175V388Q175 425 212 425H318Q355 425 355 388V312H405V468H125Z" /><path d="M235 440H295V455H235Z" fill={accent} opacity=".4" /></>}
@@ -35,9 +39,14 @@ export function ToolingProfileDrawing({ profile, dark = false }: { profile: Tool
       {profile === "u-forming" && <path d="M184 300V387Q184 416 213 416H317Q346 416 346 387V300" />}
       {profile === "profile-forming" && <path d="M135 316H209L239 346H291L321 316H395" />}
       {profile === "container-forming" && <path d="M108 320H145L165 360H195L215 320H265L285 360H315L335 320H385L405 360H435L455 320H483" />}
+      {profile === "acute-punch" && <path d="M234 325L265 440L296 325" />}
     </g>
     <g fill="none" stroke={ink} strokeWidth="1.2" opacity=".55"><path d="M265 18V475" strokeDasharray="7 6" /></g>
-    {["straight-punch", "gooseneck-punch"].includes(profile) && <>{line(90, 50, 90, profile === "straight-punch" ? 270 : 292, "H", 65, 175)}{line(190, 477, 340, 477, "V", 265, 500)}<path d={`M${profile === "straight-punch" ? 265 : 267} ${profile === "straight-punch" ? 270 : 292}L400 245`} stroke={dim} fill="none" /><text x="418" y="244" fill={dim} fontSize="21">R</text></>}
+    {["straight-punch", "gooseneck-punch"].includes(profile) && <>{line(90, profile === "straight-punch" ? 83 : 78, 90, profile === "straight-punch" ? 270 : 292, "H", 65, 175)}{line(190, 477, 340, 477, "V", 265, 500)}<path d={`M${profile === "straight-punch" ? 265 : 267} ${profile === "straight-punch" ? 270 : 292}L400 245`} stroke={dim} fill="none" /><text x="418" y="244" fill={dim} fontSize="21">R</text></>}
+    {profile === "acute-punch" && <>{line(115, 80, 115, 308, "H", 90, 200)}{line(235, 330, 295, 330, "V", 265, 322)}<path d="M265 308L410 280" stroke={dim} /><text x="430" y="282" fill={dim} fontSize="21">R</text></>}
+    {profile === "single-v-die" && <>{line(85, 175, 85, 385, "H", 60, 280)}{line(195, 135, 335, 135, "V", 265, 120)}<path d="M335 175L440 155" stroke={dim} /><text x="458" y="160" fill={dim} fontSize="21">R</text></>}
+    {profile === "double-v-die" && <>{line(85, 175, 85, 385, "H", 60, 280)}{line(145, 135, 225, 135, "V1", 185, 120)}{line(270, 135, 380, 135, "V2", 325, 120)}<path d="M380 175L440 200" stroke={dim} /><text x="458" y="210" fill={dim} fontSize="21">R</text></>}
+    {profile === "multi-v-die" && <>{line(150, 95, 230, 95, "V1", 190, 78)}{line(275, 95, 375, 95, "V2", 325, 78)}{line(90, 125, 90, 405, "H", 65, 270)}{line(440, 230, 440, 360, "V3", 475, 300)}</>}
     {profile === "gooseneck-punch" && <>{line(236, 184, 329, 184, "C", 287, 168)}<path d="M329 136V235" stroke={dim} strokeDasharray="4 4" /></>}
     {profile === "radius-tool" && <>{line(265, 231, 325, 231, "R", 296, 217)}{line(150, 309, 380, 309, "V", 265, 302)}</>}
     {profile === "u-forming" && <>{line(184, 286, 346, 286, "B", 265, 278)}{line(440, 300, 440, 416, "F", 462, 365)}<path d="M346 392L402 397" stroke={dim} /><text x="412" y="403" fill={dim} fontSize="21">R</text></>}
@@ -47,6 +56,8 @@ export function ToolingProfileDrawing({ profile, dark = false }: { profile: Tool
     {profile === "quick-clamp" && <>{line(252, 330, 283, 330, "A", 267, 321)}{line(218, 175, 218, 245, "P", 162, 216)}<path d="M218 175H175M218 245H175" stroke={dim} /></>}
     <g {...sheetStyle}>
       {profile === "straight-punch" && <path d="M620 145L710 235L800 145" />}
+      {profile === "acute-punch" && <path d="M680 125L710 237L740 125" />}
+      {["single-v-die", "double-v-die", "multi-v-die"].includes(profile) && <path d="M620 145L710 235L800 145" />}
       {profile === "gooseneck-punch" && <path d="M620 130V245H790V170H750" />}
       {profile === "radius-tool" && <path d="M610 145L643 178A95 95 0 0 0 777 178L810 145" />}
       {profile === "u-forming" && <path d="M630 125V205Q630 235 660 235H760Q790 235 790 205V125" />}

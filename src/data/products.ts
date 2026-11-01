@@ -16,7 +16,8 @@ export interface Product {
   heroImage?: string;
   images?: string[];
   galleryFit?: "contain" | "cover";
-  variants?: string[];
+  variantGroups?: { title: string; items: string[] }[];
+  productGroups?: { title: string; productIds: string[] }[];
   machineModels?: string[];
   feedstocks?: string[];
   parentId?: string;
@@ -44,4 +45,13 @@ export const getCategoryPath = (category: ProductCategory): string => {
 
 export const getAllProducts = (): Product[] => productCategories.flatMap(category => category.products);
 export const getProductById = (id: string): Product | undefined => getAllProducts().find(product => product.id === id);
+export const getProductGroups = (family: Product): { title: string; products: Product[] }[] =>
+  (family.productGroups || []).map(group => ({
+    title: group.title,
+    products: group.productIds.map(id => {
+      const product = getProductById(id);
+      if (!product || product.parentId !== family.id) throw new Error(`Invalid child ${id} in ${family.id}`);
+      return product;
+    }),
+  }));
 export const getCategoryById = (id: string): ProductCategory | undefined => productCategories.find(category => category.id === id);

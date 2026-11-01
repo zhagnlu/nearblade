@@ -1,0 +1,156 @@
+{
+  "date": "2026-10-31",
+  "status": "Implemented locally; not committed, pushed or deployed",
+  "research": "docs/catalog/product-description-audit-2026-10-31.json",
+  "scope": {
+    "families": 10,
+    "productEntries": 30,
+    "newSalesPages": 0,
+    "retainedAllProductIds": true
+  },
+  "changes": [
+    {
+      "id": "sb-001",
+      "beforeName": "Shear Blades",
+      "afterName": "Sheet Metal Shear Blades",
+      "descriptionChanged": true
+    },
+    {
+      "id": "pb-001",
+      "beforeName": "Press Brake Tooling",
+      "afterName": "Press Brake Tooling",
+      "descriptionChanged": true
+    },
+    {
+      "id": "pb-radius-tooling",
+      "beforeName": "Radius Bending Tooling",
+      "afterName": "Radius Bending Tooling",
+      "descriptionChanged": true
+    },
+    {
+      "id": "pb-u-forming",
+      "beforeName": "U-profile Forming Tooling",
+      "afterName": "U-profile Forming Tooling",
+      "descriptionChanged": true
+    },
+    {
+      "id": "pb-embossing",
+      "beforeName": "Profile Forming and Embossing Tooling",
+      "afterName": "Custom Profile Forming Tooling",
+      "descriptionChanged": false
+    },
+    {
+      "id": "pb-container",
+      "beforeName": "Container Panel Forming Tooling",
+      "afterName": "Container Forming Tooling",
+      "descriptionChanged": true
+    },
+    {
+      "id": "pb-light-pole",
+      "beforeName": "Light Pole Bending Tooling",
+      "afterName": "Light Pole Bending Tooling",
+      "descriptionChanged": true
+    },
+    {
+      "id": "rs-001",
+      "beforeName": "Rolling Shear Blades",
+      "afterName": "Metal Rotary Slitter Knives",
+      "descriptionChanged": true
+    },
+    {
+      "id": "sk-001",
+      "beforeName": "Slitting Knives",
+      "afterName": "Slitting Knives",
+      "descriptionChanged": true
+    },
+    {
+      "id": "sk-paper-film",
+      "beforeName": "Paper and Film Slitting Knives",
+      "afterName": "Paper and Film Slitting Knives",
+      "descriptionChanged": false
+    },
+    {
+      "id": "sr-001",
+      "beforeName": "Steel Rolling Blades",
+      "afterName": "Steel Mill Shear Blades",
+      "descriptionChanged": true
+    },
+    {
+      "id": "cp-001",
+      "beforeName": "Corrugated Paper Cutters",
+      "afterName": "Corrugated Board Cutting Knives",
+      "descriptionChanged": true
+    },
+    {
+      "id": "tb-002",
+      "beforeName": "Toothed Blades",
+      "afterName": "Toothed Blades",
+      "descriptionChanged": false
+    },
+    {
+      "id": "db-001",
+      "beforeName": "Doctor Blades",
+      "afterName": "Doctor Blades",
+      "descriptionChanged": true
+    },
+    {
+      "id": "db-flexo",
+      "beforeName": "Flexo Doctor Blades",
+      "afterName": "Flexographic Metering Doctor Blades",
+      "descriptionChanged": false
+    },
+    {
+      "id": "cb-001",
+      "beforeName": "Chipper Blades",
+      "afterName": "Wood Chipper Knives",
+      "descriptionChanged": true
+    },
+    {
+      "id": "cr-001",
+      "beforeName": "Crusher Blades",
+      "afterName": "Granulator Knives",
+      "descriptionChanged": true
+    }
+  ],
+  "classification": "Functional roles, working profiles, tool angles, material construction, equipment configuration and accessories use separate labeled groups. No unverified subtype sales page added.",
+  "guides": "Slitting family and paper/film guide no longer require all knives to have a circular bore or arbor; corrugated overview no longer applies slotting tooth inspections to every knife.",
+  "materials": "Removed unverified tooling/metal-slitter grade lists, ceramic as a base material, incomplete TC/SKH labels and unresolved PT feedstock. Full research gaps retained in the audit.",
+  "validation": {
+    "npmTest": {
+      "passed": 37,
+      "failed": 0
+    },
+    "languages": 9,
+    "entriesPerLanguage": 830,
+    "prerenderedPages": 39,
+    "gitDiffCheck": "passed",
+    "assetChanges": "No Hero, gallery or drawing asset changes",
+    "visual": {
+      "checked": [
+        "Actual pb-001 desktop page in Chrome: Chinese description, six groups and readable layout",
+        "Refreshed actual Chinese catalog in Chrome: tooling classification, start of grouped child cards and readable desktop layout; accessibility tree confirms all seven grouped families. This is a partial catalog review, not a complete visual pass."
+      ],
+      "pending": [
+        "Complete affected desktop detail pages and mobile visual review",
+        "Full gallery and zoom visual sweep"
+      ],
+      "blocker": "Chrome native input interrupted twice by user activity; Safari input subsequently stalled for 1763 seconds and returned Computer Use is not active. No visual pass inferred from automated checks.",
+      "latestBlocker": "Independent in-app browser is unavailable. Native Chrome navigation again reported user changes; reading, selecting and refreshing the existing preview tab succeeded, but subsequent detail navigation was interrupted. No complete visual pass claimed."
+    }
+  },
+  "preview": "http://127.0.0.1:4174/products?lang=zh-CN",
+  "navigationPhase": {
+    "status": "Implemented locally; not committed, pushed or deployed",
+    "scope": "All 20 existing child products across seven families; ten family selection checklists",
+    "changes": [
+      "Catalog and family detail pages share the same functional child-navigation groups from products.json.",
+      "Cards include process descriptions and three existing dimension/mounting selection fields.",
+      "Upper-tool clamps and doctor-blade holders are grouped as clamping accessories.",
+      "Family detail links jump to their product group section.",
+      "Both product quote actions target the on-page form, which retains the product-specific subject.",
+      "Category filters retain language and other URL query parameters and expose their pressed state."
+    ],
+    "newProducts": 0,
+    "newTranslationKeys": 0
+  }
+}

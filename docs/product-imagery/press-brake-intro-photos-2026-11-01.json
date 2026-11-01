@@ -1,0 +1,180 @@
+{
+  "date": "2026-11-01",
+  "published": false,
+  "records": [
+    {
+      "id": "pb-straight-punch",
+      "original": "research/tooling-rebuild/photo-review-2026-11-01/kingball-5.webp",
+      "originalPixels": [
+        1500,
+        1500
+      ],
+      "selectedPixels": [
+        1254,
+        1254
+      ],
+      "output": "public/images/products/tooling-v2/straight-punch-installed-white-v2.webp",
+      "imagegenOutput": "/Users/zhanglu/.codex/generated_images/01a191e9-1950-7850-9dab-ffde70139cd9/exec-a2235b7d-2206-4982-9c7b-b8524a36b112.png",
+      "originalSha256": "0c0394eae1da25ac09150e0e718b01dcc4417468dc4861ef43ffd12fa8e69f9a",
+      "outputSha256": "bdca2837f0f4ea258b434d21bfbbda245a9755dc23265c3a46bd57f141008bfd",
+      "page": "https://king-ball.en.made-in-china.com/product/eTPRMqWEqYkJ/China-415mm-835mm-42CrMo-Press-Brake-Straight-Punch-Die-for-Hydraulic-Folding-Machine.html",
+      "geometryReview": "Installed straight-body upper punch above a separate same-face double-V lower die; original clamping and bed remain visible. Two upper punch tip faces and working edge visible at left end. Background and supplier sample engraving cleaned; not a standalone tang photograph.",
+      "quality": "Native 1500 square; edited 1254 square. Installed view is retained; hidden tang and far end are not evidence of interface dimensions.",
+      "rights": "Public supplier image candidate; reuse authorization independently unverified. Local preview only; no factory-photo claim, push or deployment."
+    },
+    {
+      "id": "pb-acute-punch",
+      "original": "research/tooling-rebuild/photo-review-2026-11-01/shinite-upper.jpg",
+      "originalPixels": [
+        800,
+        800
+      ],
+      "selectedPixels": [
+        800,
+        800
+      ],
+      "output": "public/images/products/tooling-v2/acute-punch-white-v1.webp",
+      "imagegenOutput": null,
+      "originalSha256": "6848ee12dd3a7c616940d9ccb2c5573e00b9573fbcd30045894e1e0922d24421",
+      "outputSha256": "d2237c44c12e102402466bf631c23d3a5c98bcc0b2aa2eb293f4247c414efec6",
+      "page": "https://masshenlite.en.made-in-china.com/product/jaUrALyYJmhC/China-Amada-Tooling-Press-Brake-Blade-Die-for-Bending-Brake.html",
+      "geometryReview": "One acute upper punch; narrow working tip, upper retaining groove and two retaining fasteners visible. No branding observed. Format conversion only.",
+      "quality": "800x800 native candidate is below the workflow target; conditional local preview only. No AI upscale or claim of recovered high resolution. Seek a higher-native-resolution replacement.",
+      "rights": "Public supplier image candidate; reuse authorization independently unverified. Local preview only; no factory-photo claim, push or deployment."
+    },
+    {
+      "id": "pb-single-v-die",
+      "original": "research/tooling-rebuild/photo-review-2026-11-01/shark-single.jpg",
+      "originalPixels": [
+        1000,
+        1000
+      ],
+      "selectedPixels": [
+        1254,
+        1254
+      ],
+      "output": "public/images/products/tooling-v2/single-v-die-white-v1.webp",
+      "imagegenOutput": "/Users/zhanglu/.codex/generated_images/01a191e9-1950-7850-9dab-ffde70139cd9/exec-ff8769bd-25bb-4600-aea3-844b32721b8e.png",
+      "originalSha256": "be5f6890f6abe2b7d0707d6534383332623c643d3d0e3213e1893596c58e1d27",
+      "outputSha256": "aa4d4d25f4e642f6736567e9dfa564fd79030e344f745122bf2d289a6d65e771",
+      "page": "https://www.sharktoolings.com/single-V-die.html",
+      "geometryReview": "Two independent single-V dies, one top groove per die; lower locating tangs and complete near ends visible. Only blank-margin supplier and certification graphics cleaned.",
+      "quality": "Native 1000 square; edited 1254 square does not add native photographed resolution.",
+      "rights": "Public supplier image candidate; reuse authorization independently unverified. Local preview only; no factory-photo claim, push or deployment."
+    },
+    {
+      "id": "pb-double-v-die",
+      "original": "research/tooling-rebuild/photo-review-2026-11-01/shark-double.jpg",
+      "originalPixels": [
+        1000,
+        1000
+      ],
+      "selectedPixels": [
+        1254,
+        1254
+      ],
+      "output": "public/images/products/tooling-v2/double-v-die-white-v1.webp",
+      "imagegenOutput": "/Users/zhanglu/.codex/generated_images/01a191e9-1950-7850-9dab-ffde70139cd9/exec-206a40c8-f8ba-40e9-81a3-422e6292cd03.png",
+      "originalSha256": "f91cb355bf0bba1b2f5ac4fcf57062511c88a797b4d633d3294ce923de564a43",
+      "outputSha256": "5ac4731ac282c269d2658ea0b24c6982aa24d36a68671d0f776b6cb8b25ee2b3",
+      "page": "https://www.sharktoolings.com/press-brake-Two-way-die.html",
+      "geometryReview": "Two independent dies, each with two grooves on the same top face and a rectangular locating recess at bottom. Lower engineering drawing changed to the same-face arrangement. Only margin branding/certifications cleaned.",
+      "quality": "Native 1000 square; edited 1254 square. Far ends are cropped in the source; do not infer full lengths.",
+      "rights": "Public supplier image candidate; reuse authorization independently unverified. Local preview only; no factory-photo claim, push or deployment."
+    },
+    {
+      "id": "pb-multi-v-die",
+      "original": "research/tooling-rebuild/photo-review-2026-11-01/shinite-double.jpg",
+      "originalPixels": [
+        1500,
+        1499
+      ],
+      "selectedPixels": [
+        1500,
+        1499
+      ],
+      "output": "public/images/products/tooling-v2/multi-v-die-white-v1.webp",
+      "imagegenOutput": null,
+      "originalSha256": "453639f9542f523e85b401657216c01fd0f723a14f6d5e076eaf3624fde5220f",
+      "outputSha256": "fd9d3f3feb88cab96a7c5d4ff21174b3c7c727b7d14219c60a4e04e5f87cb974",
+      "page": "https://masshenlite.en.made-in-china.com/product/wQBpfkbxbLcj/China-Punching-Tooling-and-Mould-Metal-Plate-Bending-Machine-Holder-Press-Brake-Punching-Die-Good-Price.html",
+      "geometryReview": "One fixed-groove block: two top V grooves, one side V groove, rectangular side and bottom mounting recesses. Three V grooves total, not a double-V nor an adjustable die. Format conversion only. Lower drawing updated to three grooves.",
+      "quality": "1500x1499 native photograph; no imagegen editing.",
+      "rights": "Public supplier image candidate; reuse authorization independently unverified. Local preview only; no factory-photo claim, push or deployment."
+    }
+  ],
+  "imagegenPrompts": {
+    "single": "Use case: precise-object-edit. Edit target is the supplied actual supplier photograph. Remove ONLY all supplier brand logos, supplier name lettering and certification icons in the empty top margin. Replace that margin with pure white. Keep BOTH actual single-V steel lower dies exactly unchanged: same position, two separate pieces, one V groove in EACH die, complete end sections, bottom mounting geometry, sharp edges, machining marks and metal colour. Do not regenerate the tooling, do not add detail, do not change crop or invent missing ends. White-background website product gallery photograph. No text, no logos, no certification icons. Preserve photographed product geometry exactly.",
+    "double": "Use case: precise-object-edit. Input is an actual photograph of TWO press brake double-V lower dies, each with TWO V grooves NEXT TO EACH OTHER ON THE SAME TOP FACE, and rectangular locating recess in bottom. Remove ONLY supplier logo/name and certification icons in blank upper margin; make background pure white. Preserve exactly TWO separate actual steel tools, both groove pairs, end profiles, locating bottom recesses, perspective, relative sizes, tool ends, machining lines and photographed grey metal finish. No geometry changes, no sharpening that invents texture, no extra grooves, no turning into opposite-face dies. Keep existing composition and photographed cropping of far ends; do not invent hidden portions. Product gallery, no embedded text, no branding or certification icons.",
+    "straight": "Use case: background-cleanup. Edit this actual installed press brake photograph. Keep the complete photographed tool installation exactly unchanged: the straight-body silver UPPER PUNCH with its two sloping faces converging at the bottom working tip, its red end face, upper black clamp, the separate lower double-V die and the machine bed with all holes, screws and slots. Remove only background workshop clutter around the installation, replace that background with pure white, and remove faint engraved supplier lettering/numbers on the large silver upper punch face. Preserve all photographed metal surfaces, geometry, proportions, crop and tool alignment. Do NOT invent hidden tangs or tool ends, do not remove the holder or separate the tooling, do not change groove counts or sharp edges. This remains an installed-tool photograph, not a newly rendered standalone tool. No new text or logos."
+  },
+  "baseline": "pb-gooseneck-punch: real product photo gallery in introduction; engineering diagram in the lower Product dimensions and fit section.",
+  "scope": [
+    "pb-straight-punch",
+    "pb-acute-punch",
+    "pb-single-v-die",
+    "pb-double-v-die",
+    "pb-multi-v-die"
+  ],
+  "comparison": "Primary detail pages opened for Golin (straight/acute/single/double/multi), Shark (straight/acute/single/double), Raj (punches and dies), Fabmax (acute), EMAC (standard/straight), Shinite (upper and multi) and Kingball/BHT (straight listings). Alibaba normal search results were inspected but not counted as five supplier-detail comparisons. Five usable photo candidates per subtype have not been achieved.",
+  "rejected": [
+    "Golin: drawings/renders and small 550/750px panels; not actual photos.",
+    "Raj: 370/500px candidate images, some renders.",
+    "Fabmax: 610px branded installed acute views.",
+    "EMAC: dimension drawing or grey-background render, not actual straight photograph.",
+    "BHT: heavily branded flat view does not resolve withdrawn straight-tool identity.",
+    "Alas multi: 550px overview or 800x833 branded factory stack; chosen 1500px three-V block is clearer.",
+    "Old straight-punch-white-v1.webp remains withdrawn; no reference restored.",
+    "Special-tool extra review: radius candidate 620px, U-form candidate includes an engineering composite, container candidate only 550px, pole source a drawing/photo collage. None admitted as a finished photo gallery."
+  ],
+  "existingPhotoGapsOutsideBatch": [
+    "pb-radius-tooling",
+    "pb-u-forming",
+    "pb-embossing",
+    "pb-container",
+    "pb-light-pole"
+  ],
+  "validation": {
+    "automated": {
+      "command": "npm test",
+      "result": "passed",
+      "tests": 40,
+      "prerenderedRoutes": 43,
+      "localeFiles": 9,
+      "localeKeys": 895,
+      "regression": "Checks actual prerendered photo stage, lower dimensional diagram and document order against the gooseneck layout."
+    },
+    "desktop": {
+      "result": "visually checked in Chrome at local port 4174",
+      "pages": [
+        "pb-straight-punch",
+        "pb-acute-punch",
+        "pb-single-v-die",
+        "pb-double-v-die",
+        "pb-multi-v-die"
+      ],
+      "checks": [
+        "Introduction uses the selected white-background photograph.",
+        "Dimensional drawing appears in the lower dimensions-and-fit section.",
+        "Double-V shows two top grooves; selected multi-V example shows two top grooves and one side groove.",
+        "One photograph per gallery; engineering drawings are outside the photo stage."
+      ]
+    },
+    "mobile": {
+      "viewport": "390 × 844 CSS pixels",
+      "result": "All five introduction photos and lower dimensional sections visually checked; no horizontal overflow observed.",
+      "zoomSpotCheck": "Acute-punch photo opened and closed."
+    },
+    "zoom": {
+      "desktop": "All five photographs opened; Escape closes the viewer.",
+      "mobile": "Acute-punch spot check only."
+    },
+    "hero": "Unchanged in this revision; double-V desktop Hero also inspected.",
+    "limitations": [
+      "Acute-punch original is 800 × 800 pixels, below the preferred image target; retained as a local candidate pending a higher-resolution original.",
+      "The five older specialty-page photo gaps listed above are outside this batch.",
+      "Supplier photo rights are not established by this local review."
+    ],
+    "release": "Local preview only; no commit, push or deployment in this revision."
+  }
+}

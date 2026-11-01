@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-01",
+  "mode": "generate",
+  "usage": "Illustrative multi-V Hero, not factory photography",
+  "prompt": "Use case: product-mockup. Asset type: 16:9 dark navy industrial website Hero, illustrative tooling concept, no claim of factory photography. ONE long four-way multi-V press brake LOWER DIE block, silver machined steel. Exact constant cross-section: solid square block with FOUR separate exterior V notches, ONE centered notch on EACH of the four faces (top, bottom, left, right). Different opening widths, all shallow enough that substantial solid central web connects the block. No internal hole or hollow tube. Every notch extends straight continuously the full length. Near end facing camera on LEFT clearly shows all four external V notches. Long axis recedes toward upper right; show a top V groove and a side V groove along length. No punch, no mounting tang, no extra pieces. Scene navy #172536 / #263b4f industrial backdrop and dark table, restrained cool blue side lighting. Bright readable silver metal with natural fine ground finish. Entire object fits with margin across lower two-thirds, upper central area dark for existing centered website text. No embedded text, dimensions, labels, logos, watermarks, people or machines. Preserve correct four separate grooves and solid central web; do not turn into single-V, double-V, or adjustable-V tooling.",
+  "original": "research/tooling-rebuild/multi-v/multi-v-die-hero-original-v1.png",
+  "output": "public/images/products/tooling-v2/multi-v-die-product-hero-v1.webp",
+  "actualDimensions": [
+    1672,
+    941
+  ],
+  "geometryReview": "One solid block, four exterior grooves on four faces, continuous grooves and connected central web; no internal hole. Concept example only, no confirmed manufacturing dimensions.",
+  "withdrawn": {
+    "asset": "public/images/products/tooling-v2/straight-punch-white-v1.webp",
+    "reason": "Insufficient end-section, working nose and tang evidence; title and lying-down orientation cannot verify page correspondence.",
+    "originalAndSourceRecord": "docs/product-imagery/tooling-rebuild/media-audit.json",
+    "replacement": "Engineering section and dimensional guide"
+  },
+  "gaps": [
+    "Multi-V Alibaba five-supplier detail comparison incomplete",
+    "Verified straight/multi-V product photographs pending"
+  ],
+  "engineeringRevisions": {
+    "straight-punch": "v2: symmetric nose and working-height datum",
+    "gooseneck-punch": "v2: working-height datum"
+  }
+}

@@ -6,7 +6,11 @@
 
 产品选图与详情页更新前先阅读 [产品图片工作流](docs/product-imagery/WORKFLOW.md)，并遵守根目录 [AGENTS.md](AGENTS.md) 中保存的用户偏好与本地预览约定。来源及图片处理记录保存在 `docs/product-imagery/`，不作为网页内容发布。
 
+新增页面直接执行工作流中的“产品页面制作标准（2026-11-01）”：手册与现页核对 → 多家实物选图 → 原照片编辑和几何检查 → 共用页面／尺寸指南／九种语言接入 → 实际页面验收 → 经授权提交、部署和线上版本核验。当前介绍区以鹅颈页为标准：上方白底实物图库，下方独立尺寸图；下文恢复阶段的生成图和灰底说明属于历史记录，不作为新页面制作规则。
+
 产品分类以 [整理版手册分类核对](docs/catalog/manual-taxonomy-audit.md) 为准。十个系列及其产品种类统一维护在 `content/catalog/products.json`。
+
+扩充折弯机上模与下模时，按 [折弯模具扩充工作流](docs/catalog/press-brake-expansion-workflow.md) 执行。先核对现有 1 个总览、7 个模具子页和 1 个快夹附件页，再安排豆包调研、Alibaba 比较、素材采集、页面接入和验收，保留已有 ID 与 URL。
 
 ```sh
 npm install

@@ -1,0 +1,86 @@
+{
+  "date": "2026-11-01",
+  "scope": [
+    "db-001",
+    "db-gravure",
+    "db-flexo"
+  ],
+  "request": "Add boxed doctor-blade roll format shown in product.docx as supplementary product gallery image.",
+  "manualEvidence": {
+    "document": "product.docx",
+    "media": "word/media/72bd16b76d66b30fca1062832b145ae0240c172f.png",
+    "finding": "Manual shows tightly wound blade rolls and plastic dispensing cases. Packaging form is supplementary imagery, not a new taxonomy or confirmed model."
+  },
+  "source": {
+    "supplier": "Wenzhou Shuanglong Machinery Co., Ltd.",
+    "page": "https://wzshuanglong.en.made-in-china.com/product/gdUfJuRLvhGs/China-High-Medium-Low-Speed-Ink-Scraper-Doctor-Blade-for-Color-Printing-Coating.html",
+    "image": "https://image.made-in-china.com/2f0j00SeFWstvqkNGI/High-Medium-Low-Speed-Ink-Scraper-Doctor-Blade-for-Color-Printing-Coating.jpg",
+    "original": "research/alibaba/doctor-box-2026-11-01/shuanglong-original.jpg",
+    "pixels": [
+      800,
+      800
+    ],
+    "rights": "Third-party publicly accessible supplier photograph; independent reuse permission not established. AI-edited image is not an unedited Nearblade factory photograph."
+  },
+  "comparison": [
+    {
+      "supplier": "JCT Printing",
+      "page": "https://www.jctprinting.com/product/en/MDC-doctor-blade-for-flexo-printing-gravure-printing.html",
+      "nativePixels": [
+        750,
+        750
+      ],
+      "decision": "Unselected; branded cases and lower resolution."
+    },
+    {
+      "supplier": "MURATA",
+      "page": "https://www.murata-roll.com/supporting-equipment/dr-blade/plastic-doctor-blades.html",
+      "decision": "Product page reviewed; plastic blade listing unsuitable to prove metal-blade construction. Original not downloaded."
+    },
+    {
+      "supplier": "Liyuan Technology",
+      "page": "https://www.corrugatorsplicer.com/sale-36666991-blue-steel-flexographic-printer-spare-parts-gravure-printing-doctor-blades.html",
+      "decision": "Page and indexed image reviewed; branded boxed coil. Original not downloaded."
+    },
+    {
+      "supplier": "DEKEJIE",
+      "page": "https://www.dekejie.com/products/",
+      "decision": "Product range reviewed; not selected for boxed photograph this round."
+    },
+    {
+      "supplier": "Yicai Technology",
+      "page": "https://www.yicai-tech.com/html/web/product/kycp/1765576972248985602.html",
+      "nativePixels": [
+        [
+          250,
+          250
+        ],
+        [
+          400,
+          400
+        ]
+      ],
+      "decision": "Downloaded photos too small; unselected."
+    }
+  ],
+  "processing": {
+    "mode": "Built-in imagegen edit",
+    "prompt": "Use case: precise-object-edit. Asset type: supplementary white-background product gallery photo for printing ink doctor blades. Edit the supplied actual photograph of a tightly coiled thin steel doctor blade in an open grey square plastic dispensing case. Change ONLY the reddish wooden tabletop OUTSIDE the case to pure white, and place the complete existing photographed case centered with modest white margins on all sides, preserving the original top-down camera perspective and original internal photograph. Keep exactly the same coil winding, exposed steel strip tail at upper left, all original posts, central three posts, side ribs, injection molding marks, scratches, material colors and uneven natural steel reflections. Do not reconstruct or invent microscopic detail, sharpen dramatically, alter the shape, add a lid, add a brand, add labels, remove any internal parts, or change any post positions. The case is already almost fully visible: preserve its existing contour and do not invent hidden corners. No text, no watermark. Natural subtle shadow outside case on the white background. Output square image.",
+    "generatedOriginal": "/Users/zhanglu/.codex/generated_images/01a191e9-1950-7850-9dab-ffde70139cd9/exec-7eb3d7b8-5ee6-4132-8464-0dd86b743001.png",
+    "output": "public/images/products/doctor-photos-v2/doctor-box-white-v1.webp",
+    "actualPixels": [
+      1254,
+      1254
+    ],
+    "geometryReview": "Matched four peripheral posts, three central posts, upper-left exposed tail, outer ribs and single dense central coil against original. Background changed from wooden tabletop to white; generated surface details are not technical evidence.",
+    "resolutionLimit": "800px source is below normal gallery target. 1254px edited output is not proof of recovered native detail. Used only as supplementary overview; higher native-resolution replacement remains a gap."
+  },
+  "publicChanges": "Append as second gallery image to three existing strip pages. Main image, Hero, taxonomy, dimensions and holder remain unchanged.",
+  "validation": {
+    "build": "npm run build passed: 43 pages, 9 locales, 903 entries each.",
+    "desktop": "db-001: both gallery images/thumbnail selection and boxed-photo enlargement visually checked. Escape closes enlargement. Hero unchanged. Child pages contain both images in built HTML but not separately visually approved: user was actively navigating browser during follow-up checks.",
+    "mobile": "db-001 at 390x844: boxed photo, two thumbnails and stacked copy visually checked; no visible horizontal overflow. Child pages and mobile enlargement not separately exercised.",
+    "resolution": "Supplementary image acceptable at inspected product overview display size. Higher native-resolution source remains desirable.",
+    "diff": "git diff --check passed."
+  }
+}

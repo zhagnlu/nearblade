@@ -24,14 +24,14 @@
   },
   "/products/sb-001": {
     "intent": "Select shear blades and prepare a drawing-based quotation",
-    "primaryKeyword": "shear blades",
+    "primaryKeyword": "sheet metal shear blades",
     "secondaryKeywords": [
       "guillotine shear blades",
       "swing beam shear blades",
       "replacement shear blades"
     ],
-    "title": "Shear Blades for Guillotine & Swing-Beam Shears | Nearblade",
-    "description": "Replacement shear blades for Q11 mechanical and QC12Y hydraulic swing-beam shears. Confirm blade size, mounting holes, cutting edge and upper or lower position."
+    "title": "Sheet Metal Shear Blades | Nearblade",
+    "description": "Paired upper and lower blades for Q11 mechanical and QC12Y hydraulic swing-beam shears. Match blade dimensions, mounting holes and cutting-edge geometry."
   },
   "/products/pb-001": {
     "intent": "Select press brake tooling and prepare a drawing-based quotation",
@@ -42,18 +42,18 @@
       "press brake tool clamps"
     ],
     "title": "Press Brake Tooling: Punches, Dies & Clamps | Nearblade",
-    "description": "Compare press brake punches, forming dies and upper-tool quick clamps. Confirm the part profile, tooling dimensions and clamping interface for a quotation."
+    "description": "Press brake punches, lower dies, special forming tooling and upper-tool quick clamps. Select the working profile, tool angle and clamping interface separately."
   },
   "/products/rs-001": {
     "intent": "Select rolling shear blades and prepare a drawing-based quotation",
-    "primaryKeyword": "rolling shear blades",
+    "primaryKeyword": "metal rotary slitter knives",
     "secondaryKeywords": [
+      "metal coil slitter knives",
       "circular metal shear knives",
-      "rotary shear blades",
-      "matched slitter knife sets"
+      "matched rotary slitter knives"
     ],
-    "title": "Rolling Shear Blades & Circular Metal Shear Knives | Nearblade",
-    "description": "Circular rolling shear blades for metal processing. Specify outside diameter, bore, thickness, edge geometry and matched knife-set requirements."
+    "title": "Metal Rotary Slitter Knives | Nearblade",
+    "description": "Paired circular knives for longitudinal slitting of metal coil and strip. Specify outside diameter, bore, thickness, knife spacing and cutting clearance."
   },
   "/products/sk-001": {
     "intent": "Select slitting knives and prepare a drawing-based quotation",
@@ -63,8 +63,8 @@
       "paper and film slitting blades",
       "foil slitting knives"
     ],
-    "title": "Slitting Knives for Paper, Film & Metal Foil | Nearblade",
-    "description": "Compare slitting knives for paper, film, tape, aluminum foil and copper foil. Confirm the cutting method, knife profile, holder and material thickness."
+    "title": "Slitting Knives for Converting & Tube-line Applications | Nearblade",
+    "description": "Slitting knives for paper, film, foil and tape, plus tube-line tooling specified by cutting station. Confirm the cutting method, knife profile and mounting drawing."
   },
   "/products/db-001": {
     "intent": "Select doctor blades and prepare a drawing-based quotation",
@@ -75,7 +75,7 @@
       "gravure and flexo doctor blades"
     ],
     "title": "Doctor Blades for Printing & Coating | Nearblade",
-    "description": "Standard, combination, blue-steel, stainless-steel and ceramic doctor blades, with combination holders for printing and coating."
+    "description": "Ink-metering doctor blades for gravure and flexographic printing, with coating applications and blade holders. Specify the base material, coating and working-edge profile separately."
   },
   "/about": {
     "intent": "Evaluate the manufacturer and its production background",
@@ -156,47 +156,47 @@
   },
   "/products/sr-001": {
     "intent": "Select steel rolling blades and prepare a drawing-based quotation",
-    "primaryKeyword": "steel rolling blades",
+    "primaryKeyword": "steel mill shear blades",
     "secondaryKeywords": [
-      "steel mill shear blades",
-      "hot shear blades",
-      "bar and billet shear knives"
+      "bar shear blades",
+      "continuous casting shear blades",
+      "steel mill cutting knives"
     ],
-    "title": "Steel Rolling Blades for Bar & Casting Lines | Nearblade",
-    "description": "Bar shear blades and continuous-casting rolling blades for steel production. Confirm the cutting section and machine drawing."
+    "title": "Steel Mill Shear Blades | Nearblade",
+    "description": "Shear blades for bar processing and continuous casting and rolling lines. Match the workpiece section, cutting station, temperature and blade seat."
   },
   "/products/cp-001": {
     "intent": "Select corrugated paper cutters and prepare a drawing-based quotation",
-    "primaryKeyword": "corrugated paper cutters",
+    "primaryKeyword": "corrugated board cutting knives",
     "secondaryKeywords": [
       "corrugated board cutting knives",
       "corrugated slitter blades",
       "carton slotting knives"
     ],
-    "title": "Corrugated Paper Cutters: Slitter & Slotting Knives | Nearblade",
-    "description": "Compare corrugated board slitter blades and carton slotting knives. Match the cutting station, blade dimensions and mounting arrangement to the machine."
+    "title": "Corrugated Board Cutting Knives | Nearblade",
+    "description": "Slitting, trimming and slotting knives for corrugated board and carton production. Select the cutting station before specifying the knife geometry."
   },
   "/products/cb-001": {
     "intent": "Select chipper blades and prepare a drawing-based quotation",
-    "primaryKeyword": "chipper blades",
+    "primaryKeyword": "wood chipper knives",
     "secondaryKeywords": [
-      "wood chipper knives",
-      "replacement chipper blades",
-      "drum chipper knives"
+      "chipper blades",
+      "replacement wood chipper knives",
+      "custom chipper knives"
     ],
-    "title": "Chipper Blades & Replacement Wood Chipper Knives | Nearblade",
-    "description": "Wood chipper blades for replacement and custom drawing inquiries. Provide the machine model, blade dimensions, mounting pattern and cutting-edge geometry."
+    "title": "Wood Chipper Knives | Nearblade",
+    "description": "Knives for cutting wood into chips. Confirm the chipper type, BX21-series model, knife seat and cutting edge; veneer peeling and slicing require different tooling."
   },
   "/products/cr-001": {
     "intent": "Select crusher blades and prepare a drawing-based quotation",
-    "primaryKeyword": "crusher blades",
+    "primaryKeyword": "granulator knives",
     "secondaryKeywords": [
-      "plastic granulator knives",
-      "crusher rotor and stationary blades",
+      "granulator rotor knives",
+      "granulator bed knives",
       "replacement granulator blades"
     ],
-    "title": "Crusher Blades: Granulator Rotor & Bed Knives | Nearblade",
-    "description": "Stationary and rotor knives for plastics, wood and polymer-composite size reduction. Select the blade material for the feedstock and machine."
+    "title": "Granulator Knives | Nearblade",
+    "description": "Rotor and stationary bed knives for material granulation. Match the feedstock, rotor arrangement, knife seats and machine-defined cutting gap."
   },
   "/products/tb-002": {
     "intent": "Select toothed blades and prepare a drawing-based quotation",
@@ -239,8 +239,8 @@
       "large radius bending tools",
       "round bending inserts"
     ],
-    "title": "Radius Bending Tooling: Punches & Round Inserts | Nearblade",
-    "description": "Radius punches and cylindrical inserts for large-radius bends. Select the insert, holder and lower-die opening as a complete forming arrangement."
+    "title": "Radius Bending Tooling | Nearblade",
+    "description": "Tooling for radius bending. Confirm the upper-tool profile, any cylindrical insert and holder, and the matching lower die from the part and tooling drawings."
   },
   "/products/pb-u-forming": {
     "intent": "Find u-profile forming tooling and confirm dimensions, application and machine fit before requesting a quotation.",
@@ -250,30 +250,30 @@
       "u bend punches and dies",
       "custom channel forming tools"
     ],
-    "title": "U-Profile Forming Tooling: Matched Punches & Dies | Nearblade",
-    "description": "Matched tools for U-shaped sections. The inner width, flange height, bottom shape and release direction define the punch and lower-tool cavity."
+    "title": "U-profile Forming Tooling | Nearblade",
+    "description": "Tooling for U-shaped sections. Confirm the forming sequence, tool profiles and part-release direction from the finished channel drawing."
   },
   "/products/pb-embossing": {
-    "intent": "Find embossing tooling and confirm dimensions, application and machine fit before requesting a quotation.",
-    "primaryKeyword": "profile forming and embossing tooling",
+    "intent": "Find custom profile forming tooling and confirm the finished part section, forming sequence and machine fit.",
+    "primaryKeyword": "custom profile forming tooling",
     "secondaryKeywords": [
-      "sheet metal embossing dies",
-      "custom profile forming dies",
-      "matched forming punches and dies"
+      "custom forming dies",
+      "matched forming tools",
+      "sheet profile forming tooling"
     ],
-    "title": "Profile Forming and Embossing Tooling | Nearblade",
+    "title": "Custom Profile Forming Tooling | Nearblade",
     "description": "Matched punches and dies for custom pressed sheet sections. Provide the finished profile, forming depth, sheet thickness and release direction."
   },
   "/products/pb-container": {
     "intent": "Find container forming tooling and confirm dimensions, application and machine fit before requesting a quotation.",
-    "primaryKeyword": "container panel forming tooling",
+    "primaryKeyword": "container forming tooling",
     "secondaryKeywords": [
-      "container panel dies",
-      "panel corrugation tooling",
-      "container edge forming tools"
+      "container forming dies",
+      "custom container tooling",
+      "press brake forming tools"
     ],
-    "title": "Container Panel Forming Tooling & Corrugation Dies | Nearblade",
-    "description": "Custom tooling for container-panel corrugations and edge sections. The panel drawing determines the profile, pitch, depth and forming sequence."
+    "title": "Container Forming Tooling | Nearblade",
+    "description": "Custom tooling for container forming. The finished part drawing defines the required section, dimensions and forming sequence."
   },
   "/products/pb-light-pole": {
     "intent": "Find light pole bending tooling and confirm dimensions, application and machine fit before requesting a quotation.",
@@ -284,7 +284,7 @@
       "pole shell forming dies"
     ],
     "title": "Light Pole Bending Tooling for Pole Shells | Nearblade",
-    "description": "Long tooling sets for polygonal or round pole shells. Select the section, taper, forming sequence and unloading clearance for the press brake arrangement."
+    "description": "Tooling for bending light pole shells. Confirm the shell section, taper, bending sequence and unloading clearance for the press brake."
   },
   "/products/pb-quick-clamps": {
     "intent": "Find upper-tool quick clamps and confirm dimensions, application and machine fit before requesting a quotation.",
@@ -387,13 +387,13 @@
   },
   "/products/db-flexo": {
     "intent": "Find flexo doctor blades and confirm dimensions, application and machine fit before requesting a quotation.",
-    "primaryKeyword": "flexo doctor blades",
+    "primaryKeyword": "flexographic metering doctor blades",
     "secondaryKeywords": [
       "flexographic doctor blades",
       "anilox metering blades",
       "flexo chamber doctor blades"
     ],
-    "title": "Flexo Doctor Blades for Anilox Ink Metering | Nearblade",
+    "title": "Flexographic Metering Doctor Blades | Nearblade",
     "description": "Doctor blades for flexographic ink metering. Match the blade edge, ink system and holder to the anilox roll."
   },
   "/products/db-holders": {
@@ -428,5 +428,45 @@
     ],
     "title": "Granulator Bed Knives & Stationary Blades | Nearblade",
     "description": "Stationary knives for granulators. Match the mounting datum and cutting edge to the rotor knives and machine gap specification."
+  },
+  "/products/pb-acute-punch": {
+    "intent": "Select acute-angle upper punches for sharp bends and hemming pre-bends",
+    "primaryKeyword": "acute-angle press brake punch",
+    "secondaryKeywords": [
+      "acute-angle press brake punches",
+      "acute angle press brake punch tooling"
+    ],
+    "title": "Acute-angle Press Brake Punches | Nearblade",
+    "description": "Acute-angle upper punches for sharp bends and hemming pre-bends. Select the tip angle and radius with a suitable lower die."
+  },
+  "/products/pb-single-v-die": {
+    "intent": "Select a single-groove lower die and verify its mounting interface",
+    "primaryKeyword": "single-v press brake die",
+    "secondaryKeywords": [
+      "single-v press brake dies",
+      "single V press brake die tooling"
+    ],
+    "title": "Single-V Press Brake Dies | Nearblade",
+    "description": "Lower dies with one fixed V groove. Specify the V-opening, groove angle and shoulder radii for the material and bend drawing."
+  },
+  "/products/pb-double-v-die": {
+    "intent": "Compare two fixed V grooves and verify the changeover arrangement",
+    "primaryKeyword": "double-v press brake die",
+    "secondaryKeywords": [
+      "double-v press brake dies",
+      "double V press brake die tooling"
+    ],
+    "title": "Double-V Press Brake Dies | Nearblade",
+    "description": "Lower dies with two fixed V grooves. Specify both openings and the groove arrangement; the changeover method depends on the die and holder."
+  },
+  "/products/pb-multi-v-die": {
+    "intent": "Select multi-face fixed-groove lower tooling and check indexing, support and groove-specific load",
+    "primaryKeyword": "multi-v press brake die",
+    "secondaryKeywords": [
+      "multi V block die",
+      "four-way press brake die"
+    ],
+    "title": "Multi-V Press Brake Dies | Nearblade",
+    "description": "Multi-V lower dies combine several fixed grooves in one block. Specify each groove and the supporting holder before selecting a working face."
   }
 }

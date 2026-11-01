@@ -55,53 +55,55 @@
     "drawing": "circular",
     "dimensions": [
       {
-        "label": "Main dimensions · D × d × T",
-        "detail": "Send outside diameter, bore diameter and thickness, together with the required quantities."
+        "label": "Tool type and working profile",
+        "detail": "Shear, razor and crush slitting use different knife arrangements. Identify the actual cutting method before selecting a replacement."
       },
       {
         "label": "Edge geometry",
         "detail": "Show the cutting-edge profile and bevel direction; include an existing part drawing when available."
       },
       {
-        "label": "Arbor and set arrangement",
-        "detail": "Specify locating features, keyways and the knife / spacer arrangement used by your slitting line."
+        "label": "Mounting pattern",
+        "detail": "Dimension every hole or slot from a clear datum and show the cutting direction."
       }
     ],
-    "compatibility": "Describe the material being slit, its thickness and the slitting-line model. Provide the knife and spacer drawings and any application-specific edge requirements.",
+    "compatibility": "Identify the material, machine and cutting station, including any tube-line application. Confirm the cutting method and knife drawing before selecting tooling.",
     "inspection": [
       "Identify the thickness or other dimension to which a precision requirement applies.",
-      "Specify flatness, parallelism, bore fit and runout requirements separately.",
-      "Confirm how matched knives will be measured and identified."
+      "Mark the profile dimensions and working datums to be inspected.",
+      "Specify material and treatment requirements for the application."
     ],
     "catalogImage": "",
     "bladeProfile": "converting-slitter",
-    "process": "Shear, razor and crush slitting use different knife arrangements. Identify the actual cutting method before selecting a replacement."
+    "process": "Shear, razor and crush slitting use different knife arrangements. Identify the actual cutting method before selecting a replacement.",
+    "overview": true
   },
   "sk-paper-film": {
     "drawing": "circular",
     "dimensions": [
       {
-        "label": "Main dimensions · D × d × T",
-        "detail": "Send outside diameter, bore diameter and thickness, together with the required quantities."
+        "label": "Tool type and working profile",
+        "detail": "Shear, razor and crush slitting use different knife arrangements. Identify the actual cutting method before selecting a replacement."
       },
       {
         "label": "Edge geometry",
         "detail": "Show the cutting-edge profile and bevel direction; include an existing part drawing when available."
       },
       {
-        "label": "Arbor and set arrangement",
-        "detail": "Specify locating features, keyways and the knife / spacer arrangement used by your slitting line."
+        "label": "Mounting pattern",
+        "detail": "Dimension every hole or slot from a clear datum and show the cutting direction."
       }
     ],
     "compatibility": "Describe the material being slit, its thickness and the slitting-line model. Provide the knife and spacer drawings and any application-specific edge requirements.",
     "inspection": [
       "Identify the thickness or other dimension to which a precision requirement applies.",
-      "Specify flatness, parallelism, bore fit and runout requirements separately.",
-      "Confirm how matched knives will be measured and identified."
+      "Mark the profile dimensions and working datums to be inspected.",
+      "Specify material and treatment requirements for the application."
     ],
     "catalogImage": "",
     "bladeProfile": "converting-slitter",
-    "process": "Shear, razor and crush slitting use different knife arrangements. Identify the actual cutting method before selecting a replacement."
+    "process": "Shear, razor and crush slitting use different knife arrangements. Identify the actual cutting method before selecting a replacement.",
+    "overview": true
   },
   "sk-foil": {
     "drawing": "circular",
@@ -209,21 +211,20 @@
     "dimensions": [
       {
         "label": "Tool type and working profile",
-        "detail": "Identify slitting, slotting or cross-cutting before specifying the knife geometry."
+        "detail": "Identify the corrugated-board machine and the slitting, trimming or slotting station. Match the knife profile and mounting geometry to that station."
       },
       {
         "label": "Mounting details",
-        "detail": "Match the slotting arc, locating slots, blade thickness and mating lower knife."
+        "detail": "Dimension every hole or slot from a clear datum and show the cutting direction."
       },
       {
         "label": "Edge and knife set",
-        "detail": "A slitter knife cuts the board; the scoring tool forms a crease. Confirm the installed cutting and grinding arrangement."
+        "detail": "Show the cutting-edge profile and bevel direction; include an existing part drawing when available."
       }
     ],
-    "compatibility": "Identify the packaging or converting machine, cutting position and material being processed. Match the tooth pattern and mounting geometry to the existing part.",
+    "compatibility": "Identify the corrugated-board machine and the slitting, trimming or slotting station. Match the knife profile and mounting geometry to that station.",
     "inspection": [
-      "Separate tooth-profile requirements from body and mounting tolerances.",
-      "Confirm the tip shape and cutting direction before approving the drawing.",
+      "Mark the profile dimensions and working datums to be inspected.",
       "Specify material and treatment requirements for the application."
     ],
     "catalogImage": "",

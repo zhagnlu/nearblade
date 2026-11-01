@@ -82,7 +82,7 @@ test('hydrated gallery, language switching and internal navigation retain intera
     assert.ok(thumbnail);
     thumbnail.click();
     await waitFor(() => thumbnail.getAttribute('aria-pressed') === 'true');
-    document.querySelector('[role="button"][aria-label="Enlarge Shear Blades image"]').click();
+    document.querySelector('[role="button"][aria-label="Enlarge Sheet Metal Shear Blades image"]').click();
     await waitFor(() => document.querySelector('dialog[open]'));
     assert.equal(document.querySelector('dialog img').getAttribute('src'), thumbnail.querySelector('img').getAttribute('src'));
     document.querySelector('dialog button[aria-label="Close"]').click();
@@ -101,6 +101,30 @@ test('hydrated gallery, language switching and internal navigation retain intera
     await waitFor(() => window.location.pathname === '/products');
     await waitFor(() => document.querySelector('h1').textContent.includes('工业'));
     assert.equal(document.documentElement.lang, 'zh-CN');
+    assert.deepEqual(view.errors, []);
+  } finally { view.dom.window.close(); }
+});
+
+test('category selection preserves the chosen language and grouped child navigation stays interactive', async () => {
+  const view = page('/products');
+  const { document, window } = view;
+  try {
+    view.start();
+    await waitFor(() => window.localStorage.getItem('nearblade-language') === 'en');
+    const language = document.getElementById('site-language');
+    language.value = 'zh-CN';
+    language.dispatchEvent(new window.Event('change', { bubbles: true }));
+    await waitFor(() => window.location.search.includes('lang=zh-CN'));
+    const buttons = [...document.querySelectorAll('.catalog-filter button')];
+    buttons.find(button => button.textContent === '折弯机模具').click();
+    await waitFor(() => document.querySelectorAll('.catalog-category').length === 1);
+    assert.equal(new URLSearchParams(window.location.search).get('lang'), 'zh-CN');
+    assert.equal(new URLSearchParams(window.location.search).get('category'), 'press-brake-tooling');
+    assert.equal(document.querySelector('.catalog-filter button[aria-pressed="true"]').textContent, '折弯机模具');
+    document.querySelector('#pb-001-products a[href="/products/pb-quick-clamps"]').click();
+    await waitFor(() => window.location.pathname === '/products/pb-quick-clamps');
+    assert.equal(document.documentElement.lang, 'zh-CN');
+    assert.equal(document.querySelector('#product-inquiry input[name="subject"]').value, 'Quotation request: Upper-tool Quick Clamps');
     assert.deepEqual(view.errors, []);
   } finally { view.dom.window.close(); }
 });

@@ -1,0 +1,154 @@
+{
+  "date": "2026-11-01",
+  "scope": [
+    "doctor-blades category",
+    "db-001",
+    "db-gravure",
+    "db-flexo",
+    "db-holders"
+  ],
+  "status": "Local replacements complete and ready for user review; no commit, push or deployment.",
+  "researchDirectory": "research/alibaba/doctor-photo-review-2026-11-01",
+  "method": "Built-in imagegen; supplier photographs are edit targets, not permission to invent product geometry. Native holder gallery converted to WebP only.",
+  "sources": [
+    {
+      "supplier": "DEKEJIE",
+      "page": "https://www.dekejie.com/products/",
+      "corroboratingDetail": "https://doctorbladecn.com/carbon-steel-blade-item-cl20-doctor-blade.html",
+      "url": "https://www.dekejie.com/wp-content/uploads/Standard-Steel-Blade-CL-20.png",
+      "original": "research/alibaba/doctor-photo-review-2026-11-01/dekejie-steel-original.png",
+      "pixels": [
+        2404,
+        2091
+      ],
+      "decision": "Selected single loose loop with one free tail. Supplier presentation already contains retouching/reflection; do not claim untouched factory capture. Native published pixel dimensions do not establish capture resolution or measured lamella geometry.",
+      "sha256": "e8aa333db2a098ba0ae5089d56158adaf3d5152c3a7065d54a4d4198939bb949"
+    },
+    {
+      "supplier": "DEKEJIE",
+      "page": "https://www.dekejie.com/products/",
+      "corroboratingDetail": "https://doctorbladecn.com/doctor-blade-holder.html",
+      "url": "https://www.dekejie.com/wp-content/uploads/2019022711_%E7%9C%8B%E5%9B%BE%E7%8E%8B.jpg",
+      "original": "research/alibaba/doctor-photo-review-2026-11-01/dekejie-holder-original.jpg",
+      "pixels": [
+        4032,
+        2280
+      ],
+      "decision": "Selected actual close-up: three parallel combined blade-holder strips with round rivet heads. Cropped photograph does not establish complete holder ends, exact mounting interface or dimensions.",
+      "sha256": "9cbe43ebc19d3b15ebc5df91fb19f0b82eb6dee6658562d6db5872b6f342d499"
+    }
+  ],
+  "comparison": [
+    {
+      "supplier": "Convertech",
+      "page": "https://www.convertechblades.com/products/stainless-steel",
+      "decision": "570x477 loop image too small; 1800x392 edge detail heavily cropped and not a complete product view."
+    },
+    {
+      "supplier": "Tokyo Seisakusho",
+      "page": "https://www.tokyoseisakusho.co.jp/en/product-service/blade",
+      "decision": "960x540 steel/stainless three-strip end photographs examined; left ends cropped, limited pixels. Corroborates thin strip type, not selected main image."
+    },
+    {
+      "supplier": "DEKEER",
+      "page": "https://www.dkeblade.com/products/doctor-blade/",
+      "decision": "620x620 loop images too small; 2081x1177 dark hero has core and fixtures with unclear original-photo status, not selected."
+    },
+    {
+      "supplier": "AGSflexo",
+      "page": "https://agsflexo.com/doctor-blades/",
+      "decision": "Product detail and edge/format descriptions inspected with web tool. Original-image downloads timed out, including an unrestricted retry; cannot claim images inspected."
+    },
+    {
+      "supplier": "Swedev",
+      "page": "https://www.swedev.se/product/m-flex-2/",
+      "decision": "Product detail inspected. Coil original could not be downloaded, including unrestricted retry. Earlier application photo is not an isolated product image."
+    },
+    {
+      "supplier": "Allison",
+      "page": "https://www.allisonblades.com/gravure-doctor-blade-holders/",
+      "decision": "300px clamp-toggle examples show different hardware; no high-resolution accepted image."
+    },
+    {
+      "supplier": "DEKEJIE",
+      "page": "https://doctorbladecn.com/doctor-blade-holder.html",
+      "decision": "400px thumbnails and 800px variant examined before locating 4032px original on the supplier's other official site. Hotdoctorblade is the same supplier, not an additional independent comparison."
+    }
+  ],
+  "comparisonLimit": "At least five supplier detail pages researched; five downloaded high-resolution candidates per product were not obtained. Do not count failed original downloads as visual photo comparisons.",
+  "prompts": [
+    {
+      "id": "white-strip",
+      "prompt": "Use case: precise-object-edit. Edit target: supplied actual supplier photograph of a single printing doctor-blade strip curled into one wide oval loose loop with ONE free tail going to the right. Asset: Nearblade white product gallery, landscape 3:2. Remove only the engraved supplier brand/model text on the front strip and the mirrored floor reflection. Seamless pure white #ffffff background including through the loop, small soft close contact shadow. Preserve the EXACT single-loop geometry, strip width, extremely thin ribbon thickness, smooth uninterrupted straight working edges, tail length and orientation, perspective, existing natural steel surface and original proportions. This is a loose thin blade strip, NOT a thick ring, dense wound coil, saw blade, rolled sheet metal or sharpened heavy knife. No second straight strip, no added objects, holes, bevel detail, seams or turns. Center complete original object at about 85% width with modest margins. Do not invent microscopic texture or claim to recover dimensions. No text, logos or watermarks. Photographic edit based on the supplied image, not a new product design.",
+      "result": "Generated images are saved to /Users/zhanglu/.codex/generated_images/01a191e9-1950-7850-9dab-ffde70139cd9 as /Users/zhanglu/.codex/generated_images/01a191e9-1950-7850-9dab-ffde70139cd9/exec-04ae2957-093e-4a1f-9743-40b8b37775b7.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "decision": "Selected: single loop and right tail retained; engraving/reflection removed, slight lighting/surface changes remain edited content."
+    },
+    {
+      "id": "hero-strip",
+      "prompt": "Use case: precise-object-edit. Edit target: supplied actual supplier photograph of ONE thin printing doctor-blade strip curled into a single wide oval loop with its free tail to the right. Asset: Nearblade full screen product Hero, landscape 16:9. Change ONLY background, lighting and composition: deep navy blue industrial tabletop/background matching the established Nearblade industrial style, subtle cool edge light, bright natural silver metal, gentle contact shadow without mirror reflection. Place the full unchanged loop and tail in lower half, within central 75% of image width; leave upper 45% quiet navy negative space for centered HTML heading. Remove engraved supplier brand/model. Preserve single-loop shape, ribbon width, very thin thickness, original perspective, continuous smooth edges and right tail exactly. No thick solid ring, no dense coil, no extra straight strip, no added blade parts, no invented microscopic bevel or surface texture. Do not redesign the product. No text, logo, watermark, labels, dimension arrows or people.",
+      "result": "Generated images are saved to /Users/zhanglu/.codex/generated_images/01a191e9-1950-7850-9dab-ffde70139cd9 as /Users/zhanglu/.codex/generated_images/01a191e9-1950-7850-9dab-ffde70139cd9/exec-eaf4739f-23cd-4fe8-a79f-8bc54da071a7.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "decision": "Selected. Geometry reviewed against original; actual Hero checked on all three strip pages at desktop and on db-001 at mobile."
+    },
+    {
+      "id": "hero-holder-rejected",
+      "prompt": "Use case: precise-object-edit. Edit target: supplied actual close-up photograph of THREE parallel overlapping stainless printing doctor-blade holder strips with round rivet heads. Asset: Nearblade product-page Hero, landscape 16:9. Preserve this exact photographed crop, three strips, the relative arrangement, visible rivet count and spacing, strip widths, natural metal surface and thin layered geometry. Do NOT turn the rivets into screws, add more fasteners, fabricate hidden ends or build a rigid machine rail. Keep the photo close-up, with its existing cropped edges; no invented full assembly. Change only surrounding white background to deep navy industrial studio backdrop and reframe this same crop into the lower half of the frame; upper 45% quiet navy for HTML title. Bright realistic silver stainless, restrained cool rim light, no heavy darkening. No text, brand, watermarks, arrows or dimensions. Photo-based edit, not a newly designed holder.",
+      "result": "Generated images are saved to /Users/zhanglu/.codex/generated_images/01a191e9-1950-7850-9dab-ffde70139cd9 as /Users/zhanglu/.codex/generated_images/01a191e9-1950-7850-9dab-ffde70139cd9/exec-e6d48a35-7e65-4dfd-a58c-64d730646913.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "decision": "Rejected: enlarged crop loses the third rivet row, insufficient correspondence to source."
+    },
+    {
+      "id": "hero-holder-retry",
+      "prompt": "Use case: precise-object-edit. Edit target: actual supplied photograph of THREE parallel rows of thin stainless combined doctor-blade holder strips. Strict photo background edit, NOT product generation. Keep the complete original photographic composition pixel-for-pixel in relative geometry: the same THREE rows, ALL originally visible round rivet heads including the bottom row, identical row spacing, diagonal slopes, overlaps, original cropped left/right edges and steel finish. Replace ONLY the white background outside the steel with deep navy. Expand canvas upward with quiet navy negative space so the entire unchanged original photograph is contained within the lower 55% of a wide 16:9 Hero. Do not zoom in, remove bottom row, reconstruct cropped ends, add a rail or redesign hardware. No relighting of metal, no new texture, no additional parts or fasteners. No text, brands, logos, dimensions or labels. Retain original three-row metal photograph as the subject.",
+      "decision": "Not selected: three rows are visible but the reframe crops original rivet positions and changes spacing. Prefer original photograph for holder Hero as well as gallery; geometry takes priority over navy styling.",
+      "result": "/Users/zhanglu/.codex/generated_images/01a191e9-1950-7850-9dab-ffde70139cd9/exec-960af03a-59b0-4c19-9d8f-c5239f65af41.png"
+    }
+  ],
+  "rights": "Third-party supplier images: reuse authorization not established by public accessibility. Local preview, no claim of unedited factory photos.",
+  "contentBoundary": "No supplier alloy, coating, hardness, speed, certification, guarantee or exact dimensional claims copied. The same generic strip image serves gravure/flexo application pages; it does not establish separate models or materials. Existing supply definitions remain to be confirmed.",
+  "validation": {
+    "build": "npm run build passed: 43 routes and 9 locales with 897 translation keys.",
+    "desktop": "Actual Chrome pages db-001, db-gravure, db-flexo and db-holders visually checked for Hero and introduction/gallery. Enlargement opened and closed on db-001 and db-holders; child-page enlargement not separately exercised.",
+    "mobile": "Actual Chrome 390x844 responsive layout visually checked on db-001, db-flexo and db-holders: readable Hero/intro, fitted photos and no visible horizontal overflow. db-gravure and mobile enlargement not separately exercised.",
+    "geometry": "Strip: one loose loop with one right-hand tail preserved in both edits; original engraving and mirrored reflection removed. Holder gallery and Hero use unchanged native photographed structure; no generated holder candidate selected.",
+    "automated": "19 tests passed via node --test tests/catalog-taxonomy.test.mjs tests/i18n.test.mjs. Built HTML for all four doctor pages checked for new gallery assets, lower dimension/fit guide and absence of replaced assets.",
+    "lowerGuides": "Existing dimension/fit guides retained and checked in built DOM on all four pages; lower sections not separately visually reviewed this round.",
+    "holderHero": "Original photograph with existing shared overlay retained to preserve rivet geometry; background remains silver/grey rather than a newly generated deep navy setting."
+  },
+  "outputs": [
+    {
+      "path": "public/images/products/doctor-photos-v2/doctor-strip-white-v2.webp",
+      "pixels": [
+        1536,
+        1024
+      ],
+      "sha256": "879b998d5960c5125522bb34cb32ff22c984ac26d3748ffb52a166b7627564b9",
+      "processing": "Built-in imagegen photo-based edit; no dimensions or material claims inferred."
+    },
+    {
+      "path": "public/images/products/doctor-photos-v2/doctor-strip-hero-v2.webp",
+      "pixels": [
+        1672,
+        941
+      ],
+      "sha256": "659dd458f71d4e0b417e9af26a65b017accfb7b5ccc2ac515373e78d1c300b3b",
+      "processing": "Built-in imagegen photo-based edit; no dimensions or material claims inferred."
+    },
+    {
+      "path": "public/images/products/doctor-photos-v2/doctor-holder-white-v2.webp",
+      "pixels": [
+        4032,
+        2280
+      ],
+      "sha256": "b7d95bf692237a00b6edc32646d8acf4021bddecee4a1b262332e66726def0f3",
+      "processing": "Format conversion only; separate Hero file uses original photographed crop with site shared overlay."
+    },
+    {
+      "path": "public/images/products/doctor-photos-v2/doctor-holder-hero-v2.webp",
+      "pixels": [
+        4032,
+        2280
+      ],
+      "sha256": "b7d95bf692237a00b6edc32646d8acf4021bddecee4a1b262332e66726def0f3",
+      "processing": "Format conversion only; separate Hero file uses original photographed crop with site shared overlay."
+    }
+  ]
+}

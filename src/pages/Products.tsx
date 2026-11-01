@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { PageMeta } from "@/components/common/PageMeta";
 import { productCategories } from "@/data/products";
+import { ProductTypeGroups } from "@/components/common/ProductTypeGroups";
+import { ProductSeriesNavigation } from "@/components/common/ProductSeriesNavigation";
 import { FaArrowRight, FaFilter } from "react-icons/fa";
 
 export default function Products() {
@@ -16,11 +18,12 @@ export default function Products() {
 
   const handleCategoryChange = (categoryId: string | null) => {
     setSelectedCategory(categoryId);
-    if (categoryId) {
-      setSearchParams({ category: categoryId });
-    } else {
-      setSearchParams({});
-    }
+    setSearchParams(current => {
+      const next = new URLSearchParams(current);
+      if (categoryId) next.set("category", categoryId);
+      else next.delete("category");
+      return next;
+    });
   };
 
   const filteredCategories = selectedCategory
@@ -50,6 +53,8 @@ export default function Products() {
             </div>
             <div className="flex flex-wrap gap-2">
               <button
+                type="button"
+                aria-pressed={!selectedCategory}
                 onClick={() => handleCategoryChange(null)}
                 className={`px-4 py-2 rounded-card text-sm font-medium transition-all duration-200 ${
                   !selectedCategory
@@ -62,6 +67,8 @@ export default function Products() {
               {productCategories.map((category) => (
                 <button
                   key={category.id}
+                  type="button"
+                  aria-pressed={selectedCategory === category.id}
                   onClick={() => handleCategoryChange(category.id)}
                   className={`px-4 py-2 rounded-card text-sm font-medium transition-all duration-200 ${
                     selectedCategory === category.id
@@ -118,7 +125,7 @@ export default function Products() {
                           {product.name}
                         </h3>
                         <p className="text-metal-subtext text-sm line-clamp-2 mb-4">{product.description}</p>
-                        {!!product.variants?.length && <div className="mb-4"><h4 className="text-sm font-semibold text-metal-text mb-2">Product Types</h4><ul className="flex flex-wrap gap-2">{product.variants.map(type => <li key={type} className="text-xs border border-border rounded px-2 py-1 text-metal-subtext">{type}</li>)}</ul></div>}
+                        {!!product.variantGroups?.length && <div className="mb-4"><ProductTypeGroups groups={product.variantGroups} inCatalog /></div>}
                         {!!product.machineModels?.length && <div className="mb-4"><h4 className="text-sm font-semibold text-metal-text mb-2">Machine Models</h4><p className="text-xs text-metal-subtext leading-relaxed" translate="no">{product.machineModels.join(" · ")}</p></div>}
                         <div className="flex flex-wrap gap-2 mb-4">
                           {product.materials.slice(0, 2).map((material) => (
@@ -136,15 +143,7 @@ export default function Products() {
                         </div>
                       </div>
                     </Link>
-                    {category.products.some(item => item.parentId === product.id) && (
-                      <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3">
-                        {category.products.filter(item => item.parentId === product.id).map(item => (
-                          <Link key={item.id} to={`/products/${item.id}`} className="catalog-subproduct flex items-center justify-between gap-4 rounded-card border border-border p-5 text-metal-text hover:border-steel transition-colors">
-                            <span className="font-medium">{item.name}</span><FaArrowRight className="text-steel shrink-0" size={12} />
-                          </Link>
-                        ))}
-                      </div>
-                    )}
+                    <ProductSeriesNavigation family={product} inCatalog />
                     </div>
                   ))}
                 </div>

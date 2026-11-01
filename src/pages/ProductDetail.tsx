@@ -5,6 +5,8 @@ import { PageMeta } from "@/components/common/PageMeta";
 import { getProductById, productCategories } from "@/data/products";
 import { ContactForm } from "@/components/generated/ContactForm";
 import { ProductSelectionGuide } from "@/components/common/ProductSelectionGuide";
+import { ProductTypeGroups } from "@/components/common/ProductTypeGroups";
+import { ProductSeriesNavigation } from "@/components/common/ProductSeriesNavigation";
 import { productGuides } from "@/data/productGuides";
 import { blogPosts } from "@/data/blog";
 import { BladeDimensionDrawing } from "@/components/common/BladeDimensionDrawing";
@@ -39,7 +41,6 @@ export default function ProductDetail() {
   }
 
   const parent = getProductById(product.parentId || "");
-  const children = category?.products.filter(item => item.parentId === product.id) || [];
   const baseGuide = productGuides[product.id] || productGuides[product.parentId || ""];
   const guide = baseGuide;
   const productImages = [...new Set(product.images?.length ? product.images : [product.image])];
@@ -71,7 +72,7 @@ export default function ProductDetail() {
         description={product.description}
         contentId="product-content"
         primaryAction={{ label: "View Specifications", to: "#product-content" }}
-        secondaryAction={{ label: "Request Quote", to: "/contact" }}
+        secondaryAction={{ label: "Request Quote", to: "#product-inquiry" }}
       />
 
       <section id="product-content" className="product-detail-surface scroll-mt-20 py-section-mobile md:py-section bg-industrial">
@@ -191,6 +192,7 @@ export default function ProductDetail() {
               )}
               <h2 className="text-3xl lg:text-h2 text-metal-text mt-2 mb-4">{product.name}</h2>
               <p className="text-metal-subtext leading-relaxed mb-8">{product.description}</p>
+              {!!product.productGroups?.length && <a href={`#${product.id}-products`} className="inline-flex items-center gap-2 text-steel hover:underline mb-6"><span>Products in This Series</span><FaArrowRight size={12} aria-hidden="true" /></a>}
               {guide?.role && <p className="text-steel font-medium mb-4">{guide.role}</p>}
               {guide?.process && <p className="text-metal-subtext leading-relaxed mb-8">{guide.process}</p>}
 
@@ -199,14 +201,7 @@ export default function ProductDetail() {
                   <h3 className="text-metal-text font-semibold mb-3">Selection Requirements</h3>
                   <ul className="space-y-2 text-metal-subtext">{product.selectionFields.map(field => <li key={field}>{field}</li>)}</ul>
                 </div>}
-                {!!product.variants?.length && (
-                  <div>
-                    <h3 className="text-metal-text font-semibold mb-3">Product Types</h3>
-                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-metal-subtext">
-                      {product.variants.map(type => <li key={type} className="border border-border rounded-card px-3 py-2">{type}</li>)}
-                    </ul>
-                  </div>
-                )}
+                <ProductTypeGroups groups={product.variantGroups} />
                 {!!product.machineModels?.length && (
                   <div>
                     <h3 className="text-metal-text font-semibold mb-3">Machine Models</h3>
@@ -252,22 +247,17 @@ export default function ProductDetail() {
                 </div>
               </div>
 
-              <Link
-                to="/contact"
+              <a
+                href="#product-inquiry"
                 className="inline-flex items-center mt-8 px-8 py-4 bg-steel text-white font-medium rounded-card hover:bg-steel-light transition-all duration-200 hover:-translate-y-0.5"
               >
                 Request Quote
                 <FaArrowRight className="ml-2" size={14} />
-              </Link>
+              </a>
             </div>
           </div>
 
-          {!!children.length && <section className="mb-16" aria-label="Products in this series">
-            <h2 className="text-2xl font-semibold text-metal-text mb-6">Products in This Series</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">{children.map(item => <Link key={item.id} to={`/products/${item.id}`} className="border border-border rounded-card p-6 hover:border-steel transition-colors">
-              <h3 className="text-lg text-metal-text font-semibold mb-2">{item.name}</h3><p className="text-metal-subtext text-sm leading-relaxed mb-4">{item.description}</p><span className="text-steel text-sm">View Details</span>
-            </Link>)}</div>
-          </section>}
+          <ProductSeriesNavigation family={product} />
 
           <div className="product-detail-specs rounded-card border border-border p-5 sm:p-8 mb-16">
             <h2 className="text-2xl font-semibold text-metal-text mb-6">Technical Specifications</h2>
@@ -337,7 +327,7 @@ export default function ProductDetail() {
             </div>
           )}
 
-          <div className="product-detail-inquiry rounded-card border border-border p-5 sm:p-8">
+          <div id="product-inquiry" className="product-detail-inquiry scroll-mt-24 rounded-card border border-border p-5 sm:p-8">
             <h2 className="text-2xl font-semibold text-metal-text mb-2 text-center">Request a Quote</h2>
             <p className="text-metal-subtext text-center mb-8">
               Tell us about your requirements and we will get back to you within 24 hours.
