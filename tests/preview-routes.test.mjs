@@ -12,15 +12,15 @@ test('preview serves all localized HTML, migrates legacy URLs directly and retur
     assert.equal(audit.passed, true, JSON.stringify(audit.failures, null, 2));
     const redirects = [
       ['/', '/en/'], ['/index.html?lang=zh-CN&source=old', '/zh-cn/?source=old'],
-      ['/products/sb-001', '/en/products/sb-001'],
-      ['/products/sb-001/?source=old&lang=zh-CN', '/zh-cn/products/sb-001?source=old'],
-      ['/products/sb-002/index.html?lang=ja&source=old', '/ja/products/sb-001?source=old'],
-      ['/zh-cn/products/sb-002?source=old', '/zh-cn/products/sb-001?source=old'],
-      ['/en/products/tb-001/', '/en/products/cp-001'],
-      ['/de/products/index.html?lang=ja&category=x', '/de/products?category=x'],
-      ['/ZH-CN/products/sb-001/', '/zh-cn/products/sb-001'],
+      ['/products/sb-001', '/en/products/sb-001/'],
+      ['/products/sb-001/?source=old&lang=zh-CN', '/zh-cn/products/sb-001/?source=old'],
+      ['/products/sb-002/index.html?lang=ja&source=old', '/ja/products/sb-001/?source=old'],
+      ['/zh-cn/products/sb-002?source=old', '/zh-cn/products/sb-001/?source=old'],
+      ['/en/products/tb-001/', '/en/products/cp-001/'],
+      ['/de/products/index.html?lang=ja&category=x', '/de/products/?category=x'],
+      ['/ZH-CN/products/sb-001/', '/zh-cn/products/sb-001/'],
       ['/en', '/en/'], ['/en/index.html', '/en/'],
-      ['/products?lang=invalid&lang=ja', '/en/products'],
+      ['/products?lang=invalid&lang=ja', '/en/products/'],
     ];
     for (const [from, to] of redirects) {
       const response = await fetch(origin + from, { redirect: 'manual' });
@@ -28,9 +28,10 @@ test('preview serves all localized HTML, migrates legacy URLs directly and retur
       assert.equal(response.headers.get('location'), to, from);
       assert.equal((await fetch(origin + to, { redirect: 'manual' })).status, 200, to);
     }
-    for (const route of ['/en/products/sb-001', '/zh-cn/products/pb-radius-tooling', '/ja/blog/custom-blade-inquiry-guide']) {
+    for (const route of ['/en/products/sb-001/', '/zh-cn/products/pb-radius-tooling/', '/ja/blog/custom-blade-inquiry-guide/']) {
       const expected = readFileSync(new URL(`../dist${route}/index.html`, import.meta.url), 'utf8');
-      const response = await fetch(origin + route + '?source=test');
+      const response = await fetch(origin + route + '?source=test', { redirect: 'manual' });
+      assert.equal(response.status, 200, route);
       assert.equal(await response.text(), expected);
       const head = await fetch(origin + route, { method: 'HEAD' });
       assert.equal(head.status, 200);

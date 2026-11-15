@@ -30,6 +30,7 @@ export async function checkSeoHttp(origin) {
     const path = new URL(expected).pathname;
     const result = await request(path);
     const issues = [];
+    if (!path.endsWith('/')) issues.push('Canonical page URL must end with a slash');
     if (new URL(expected).origin !== canonicalOrigin || !expected.startsWith('https:')) issues.push('Inconsistent sitemap origin');
     if (result.status !== 200) issues.push(`Canonical URL returned ${result.status}${result.location ? ` -> ${result.location}` : ''}`);
     const dom = new JSDOM(result.body);
@@ -86,7 +87,7 @@ export async function checkSeoHttp(origin) {
       const path = `${prefix}/products/${from}${suffix}`;
       const result = await request(`${path}?seo_check=1`);
       const target = result.location && new URL(result.location, base);
-      if (result.status !== 301 || !target || ![base, canonicalOrigin].includes(target.origin) || target.pathname !== `${prefix || "/en"}/products/${to}` || target.search !== '?seo_check=1') failures.push({ path, issue: 'Expected direct retired-product 301' });
+      if (result.status !== 301 || !target || ![base, canonicalOrigin].includes(target.origin) || target.pathname !== `${prefix || "/en"}/products/${to}/` || target.search !== '?seo_check=1') failures.push({ path, issue: 'Expected direct retired-product 301' });
     }
   }
   for (const path of ['/seo-audit-missing-page', '/products/seo-audit-missing-product', '/blog/seo-audit-missing-article', '/assets/seo-audit-missing.js']) {

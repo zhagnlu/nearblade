@@ -68,7 +68,7 @@ test('series navigation covers every existing child once and separates clamping 
       assert.ok(section, family.id);
       assert.equal(section.querySelectorAll('a').length, children.length);
       for (const child of children) {
-        const link = section.querySelector(`a[href="/en/products/${child.id}"]`);
+        const link = section.querySelector(`a[href="/en/products/${child.id}/"]`);
         assert.ok(link, child.id);
         for (const field of child.selectionFields) assert.ok(link.textContent.includes(field), child.id);
       }
@@ -107,7 +107,7 @@ test('all catalog images exist and retired routes redirect without entering the 
   for (const [from, to] of [['sb-002', 'sb-001'], ['tb-001', 'cp-001']]) {
     assert.ok(!sitemap.includes(`/products/${from}`));
     const redirect = readFileSync(new URL(`../dist/en/products/${from}/index.html`, import.meta.url), 'utf8');
-    assert.ok(redirect.includes(`0;url=/en/products/${to}`));
+    assert.ok(redirect.includes(`0;url=/en/products/${to}/`));
   }
 });
 
@@ -126,7 +126,7 @@ test('related product cards show product images even when the detail gallery use
   const html = readFileSync(new URL('../dist/en/products/pb-straight-punch/index.html', import.meta.url), 'utf8');
   for (const id of ['pb-acute-punch', 'pb-gooseneck-punch', 'pb-single-v-die']) {
     const card = [...html.matchAll(/<a\b[^>]*class="product-detail-related[^>]*>[\s\S]*?<\/a>/g)]
-      .map(match => match[0]).find(card => card.includes(`href="/en/products/${id}"`));
+      .map(match => match[0]).find(card => card.includes(`href="/en/products/${id}/"`));
     assert.ok(card, id);
     assert.ok(card.includes(`src="${byId[id].heroImage}"`), id);
     assert.doesNotMatch(card, /src="[^\"]+\.svg"/);

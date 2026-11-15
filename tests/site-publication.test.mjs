@@ -11,7 +11,7 @@ const keywordPlan = JSON.parse(readFileSync(path.join(root, 'content/seo/pages.j
 const sitemap = readFileSync(path.join(dist, 'sitemap.xml'), 'utf8');
 const urls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map(match => match[1]);
 const englishUrls = urls.filter(url => new URL(url).pathname.startsWith('/en/'));
-const basePath = url => new URL(url).pathname.replace(/^\/[^/]+/, '') || '/';
+const basePath = url => new URL(url).pathname.replace(/^\/[^/]+/, '').replace(/\/+$/, '') || '/';
 const htmlFor = url => readFileSync(path.join(dist, new URL(url).pathname.slice(1), 'index.html'), 'utf8');
 const meta = (html, property) => html.match(new RegExp(`<meta[^>]*(?:name|property)="${property}"[^>]*content="([^"]*)"`))?.[1];
 const graphFor = html => JSON.parse(html.match(/<script[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/)?.[1] || 'null');
@@ -30,15 +30,15 @@ test('every public page contains readable content and product navigation before 
       assert.ok(existsSync(path.join(dist, href, 'index.html')), `${url} links to ${href}`);
       linkedProducts.add(href);
     }
-    if (new URL(url).pathname.startsWith('/en/products/')) {
+    if (new URL(url).pathname.startsWith('/en/') && basePath(url).startsWith('/products/')) {
       assert.match(body, /Technical Specifications/, url);
       assert.match(body, /Dimensions &amp; Fit/, url);
-      assert.match(body, /href="\/en\/contact"/, url);
+      assert.match(body, /href="\/en\/contact\/"/, url);
       const heading = decode(body.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/)[1].replace(/<[^>]*>/g, ' '));
       assert.ok(heading.toLowerCase().includes(keywordPlan[basePath(url)].primaryKeyword), url);
     }
   }
-  for (const url of urls.filter(value => new URL(value).pathname.includes('/products/'))) {
+  for (const url of urls.filter(value => basePath(value).startsWith('/products/'))) {
     assert.ok(linkedProducts.has(new URL(url).pathname), `Orphan product: ${url}`);
   }
 });
@@ -55,7 +55,7 @@ test('home and every footer link directly to all ten canonical family pages', ()
   const familyPaths = catalog.map(category => {
     const families = category.products.filter(product => !product.parentId);
     assert.equal(families.length, 1, category.id);
-    return `/en/products/${families[0].id}`;
+    return `/en/products/${families[0].id}/`;
   });
   assert.equal(familyPaths.length, 10);
   const home = htmlFor(`${config.url}/en/`);
@@ -101,6 +101,7 @@ test('sitemap covers all public pages with unique HTTPS URLs and a matching robo
   for (const url of urls) {
     assert.equal(new URL(url).origin, config.url);
     assert.equal(new URL(url).search, '');
+    assert.ok(new URL(url).pathname.endsWith('/'), url);
     assert.ok(existsSync(path.join(dist, new URL(url).pathname.slice(1), 'index.html')));
   }
   assert.match(readFileSync(path.join(dist, 'robots.txt'), 'utf8'), new RegExp(`Sitemap: ${config.url}/sitemap.xml`));
@@ -132,13 +133,13 @@ test('every route exposes its own canonical, sharing tags and valid JSON-LD with
 });
 
 test('product and article schema match each individual route without invented commercial data', () => {
-  const products = urls.filter(url => new URL(url).pathname.includes('/products/'));
-  const articles = urls.filter(url => new URL(url).pathname.includes('/blog/'));
+  const products = urls.filter(url => basePath(url).startsWith('/products/'));
+  const articles = urls.filter(url => basePath(url).startsWith('/blog/'));
   assert.equal(products.length, 34 * 9);
   assert.equal(articles.length, 3 * 9);
   for (const url of products) {
     const product = graphFor(htmlFor(url))['@graph'].find(item => item['@type'] === 'Product');
-    assert.equal(product.sku, new URL(url).pathname.split('/').at(-1));
+    assert.equal(product.sku, new URL(url).pathname.split('/').filter(Boolean).at(-1));
     assert.ok(product.image.every(image => new URL(image).origin === config.url));
     assert.equal(product.offers, undefined);
     assert.equal(product.aggregateRating, undefined);
@@ -182,7 +183,7 @@ test('every language has translated first-response content, self canonical and r
       assert.equal(bootstrap.language, code);
       assert.deepEqual(bootstrap.dictionary, code === 'en' ? {} : dictionary);
       for (const alternate of [...codes, 'x-default']) {
-        const target = `${config.url}/${alternate === 'x-default' ? 'en' : alternate.toLowerCase()}${route === '/' ? '/' : route}`;
+        const target = `${config.url}/${alternate === 'x-default' ? 'en' : alternate.toLowerCase()}${route === '/' ? '/' : `${route}/`}`;
         assert.ok(html.includes(`hrefLang="${alternate}" href="${target}"`) || html.includes(`hreflang="${alternate}" href="${target}"`), `${url}: ${alternate}`);
       }
       const product = products.find(item => route === `/products/${item.id}`);

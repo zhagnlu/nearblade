@@ -1,8 +1,8 @@
 # ECS 静态部署
 
-## 2026-11-15 多语言目录迁移（本地开发）
+## 多语言目录迁移（2026-11-16 更新）
 
-新构建提供 `/en/`、`/zh-cn/` 等九个语言目录，共387页。完整设计、URL规则、迁移例子及发布前服务器操作见 [独立语言页面方案](i18n/language-pages.md)。下文旧记录中的39页是历史数量；以当前 sitemap 为准。
+新构建提供 `/en/`、`/zh-cn/` 等九个语言目录，共387页。全部页面统一带尾斜杠，沿用现有服务器目录习惯。完整设计、URL规则、迁移例子及发布前服务器操作见 [独立语言页面方案](i18n/language-pages.md)。下文旧记录中的39页是历史数量；以当前 sitemap 为准。
 
 本功能发布时必须将生成的 `deploy/multilingual-maps.conf` include 到 Nginx `http {}`，并将 `deploy/nginx.conf.example` 合入现有提供正文的站点块。保留证书和CDN设置，`nginx -t` 后 reload；确认旧无前缀地址和 `?lang=` 直接301到语言目录。workflow 只上传静态文件，不应用 Nginx 配置。本地预览通过不代表生产迁移已完成。
 
@@ -60,17 +60,19 @@ sudo chmod 755 /var/www/nearblade
 
 Nginx 路由规则以 [deploy/nginx.conf.example](../deploy/nginx.conf.example) 为准，正式域名对应 `site.config.json` 的 `www.nearblade.com`，默认根目录 `/var/www/nearblade`。将规则合并到现有提供正文的 HTTPS / CDN 回源站点块，保留线上证书、代理头和域名跳转配置，不要直接覆盖整个配置。
 
-规范 URL 使用 HTTPS、www、无末尾斜杠（首页 `/` 除外）。模板优先直接读取 `$uri/index.html`，使 `/products/pb-u-forming` 返回 200；带斜杠、显式 `index.html` 入口返回 301 到同一规范 URL，并保留查询参数。两个退役产品 URL 通过服务器 301 直接进入替代页，静态 HTML 跳转只作为尚未应用服务器规则时的兜底。不要把 `try_files` 改成 `$uri $uri/ /index.html`：目录检测会加斜杠，首页回退会让不存在的页面返回错误正文。
+规范 URL 使用 HTTPS、www，所有语言页面统一带末尾斜杠。模板优先读取对应目录的 `index.html`，使 `/en/products/pb-u-forming/` 返回200；不带斜杠、显式 `index.html` 入口返回301到同一带斜杠规范URL，并保留查询参数。两个退役产品 URL 通过服务器 301 直接进入替代页，静态 HTML 跳转只作为尚未应用服务器规则时的兜底。不要把 `try_files` 改成 `$uri $uri/ /index.html`：目录加斜杠与当前规范一致，但首页回退会让不存在的页面返回错误正文。
 
-线上在 CDN 后方，回源 `$scheme` 可能为 HTTP，不能仅据此强制跳 HTTPS，否则可能形成循环；应沿用已验证的边缘 HTTPS / www 规则。CDN 如果单独配置了“目录自动加斜杠”，也需同步关闭或更正。模板文件随源码保存，当前发布 workflow 不会自动应用它。
+线上在 CDN 后方，回源 `$scheme` 可能为 HTTP，不能仅据此强制跳 HTTPS，否则可能形成循环；应沿用已验证的边缘 HTTPS / www 规则。CDN 的目录自动加斜杠可以保留，但应检查无重复跳转或循环。模板文件随源码保存，当前发布 workflow 不会自动应用它。
 
 应用配置后先检查 `nginx -t`，再 reload；按线上实际 URL 重新核对：
 
-- sitemap 中全部 39 个规范 URL 首次响应为 200，最终 URL 与 canonical 一致，正文直接可读。
-- `/products/pb-u-forming/` 和 `/products/pb-u-forming/index.html` 为 301，目标不带斜杠，无循环。
+- sitemap 中全部387个语言规范URL首次响应为200，最终URL与canonical一致，正文直接可读。
+- `/en/products/pb-u-forming` 和 `/en/products/pb-u-forming/index.html` 为301，目标 `/en/products/pb-u-forming/`，无循环。
 - `sb-002` / `tb-001`（含斜杠和 index.html 入口）为 301 到 `sb-001` / `cp-001`，目标为 200。
 - 未知产品、未知文章及未知顶层地址返回真实 404，图片、CSS、JS 仍正常。
 - HTTP / 裸域名入口最终到达同一 HTTPS www 规范页，保留查询参数，并检查 CDN 的缓存跳转。
+
+以下2026-10-31至11-03记录保留为历史快照；其中无尾斜杠规则已由2026-11-16的带尾斜杠规则取代。
 
 2026-10-31 审计时线上 38 个非首页仍跳转到带斜杠地址；本地模板修正不代表线上已生效。当前环境没有 Nginx 可执行程序，未在本机运行配置语法或真实 Nginx 请求测试；上述服务器验收必须在应用配置时完成。
 

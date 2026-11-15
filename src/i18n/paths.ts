@@ -11,7 +11,7 @@ export function localizedPath(path: string, language: Language): string {
   if (!path.startsWith('/') || path.startsWith('//')) return path;
   const match = path.match(/^([^?#]*)(.*)$/)!;
   const bare = splitLocalePath(match[1]).path;
-  return `/${languagePrefix(language)}${bare === '/' ? '/' : bare}${match[2]}`;
+  return `/${languagePrefix(language)}${bare === '/' ? '/' : `${bare}/`}${match[2]}`;
 }
 export function languageTarget(pathname: string, search: string, hash: string, language: Language) {
   const params = new URLSearchParams(search);

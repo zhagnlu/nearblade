@@ -15,7 +15,7 @@ async function waitFor(check) {
 }
 
 function page(route) {
-  const html = read(route === '/' ? 'index.html' : `${route.slice(1)}/index.html`);
+  const html = read(route === '/' ? 'index.html' : `${route.slice(1).replace(/\/$/, '')}/index.html`);
   const errors = [];
   const console = new VirtualConsole();
   console.on('error', (...args) => errors.push(args.map(String).join(' ')));
@@ -45,7 +45,7 @@ function page(route) {
 }
 
 test('published home and product pages hydrate their existing content and form IDs', async () => {
-  for (const route of ['/en/', '/en/products/sb-001', '/en/products/pb-radius-tooling', '/zh-cn/products/pb-radius-tooling', '/ar/products/sb-001', '/ja/blog/blade-product-families']) {
+  for (const route of ['/en/', '/en/products/sb-001/', '/en/products/pb-radius-tooling/', '/zh-cn/products/pb-radius-tooling/', '/ar/products/sb-001/', '/ja/blog/blade-product-families/']) {
     const view = page(route);
     try {
       const root = view.document.getElementById('root');
@@ -73,7 +73,7 @@ test('published home and product pages hydrate their existing content and form I
 });
 
 test('hydrated gallery, language switching and internal navigation retain interactions and typed form values', async () => {
-  const view = page('/en/products/sb-001');
+  const view = page('/en/products/sb-001/');
   const { document, window } = view;
   try {
     view.start();
@@ -95,40 +95,40 @@ test('hydrated gallery, language switching and internal navigation retain intera
     document.querySelector('#site-language a[lang="zh-CN"]').click();
     await waitFor(() => document.documentElement.lang === 'zh-CN');
     assert.equal(input.value, 'Preview visitor');
-    assert.equal(window.location.pathname, '/zh-cn/products/sb-001');
+    assert.equal(window.location.pathname, '/zh-cn/products/sb-001/');
     assert.equal(window.location.search, '');
     assert.ok(document.querySelector('h1').textContent.includes('剪板'));
 
-    const productLink = document.querySelector('a[href="/zh-cn/products"]');
+    const productLink = document.querySelector('a[href="/zh-cn/products/"]');
     productLink.click();
-    await waitFor(() => window.location.pathname === '/zh-cn/products');
+    await waitFor(() => window.location.pathname === '/zh-cn/products/');
     await waitFor(() => document.querySelector('h1').textContent.includes('工业'));
     assert.equal(document.documentElement.lang, 'zh-CN');
     document.querySelector('#site-language a[lang="en"]').click();
-    await waitFor(() => window.location.pathname === '/en/products');
+    await waitFor(() => window.location.pathname === '/en/products/');
     window.history.back();
-    await waitFor(() => window.location.pathname === '/zh-cn/products' && document.documentElement.lang === 'zh-CN');
-    assert.equal(document.querySelector('link[rel="canonical"]').href, 'https://www.nearblade.com/zh-cn/products');
+    await waitFor(() => window.location.pathname === '/zh-cn/products/' && document.documentElement.lang === 'zh-CN');
+    assert.equal(document.querySelector('link[rel="canonical"]').href, 'https://www.nearblade.com/zh-cn/products/');
     assert.deepEqual(view.errors, []);
   } finally { view.dom.window.close(); }
 });
 
 test('category selection preserves the chosen language and grouped child navigation stays interactive', async () => {
-  const view = page('/en/products');
+  const view = page('/en/products/');
   const { document, window } = view;
   try {
     view.start();
     await waitFor(() => window.localStorage.getItem('nearblade-language') === 'en');
     document.querySelector('#site-language a[lang="zh-CN"]').click();
-    await waitFor(() => window.location.pathname === '/zh-cn/products' && document.documentElement.lang === 'zh-CN');
+    await waitFor(() => window.location.pathname === '/zh-cn/products/' && document.documentElement.lang === 'zh-CN');
     const buttons = [...document.querySelectorAll('.catalog-filter button')];
     buttons.find(button => button.textContent === '折弯机模具').click();
     await waitFor(() => document.querySelectorAll('.catalog-category').length === 1);
     assert.equal(new URLSearchParams(window.location.search).get('lang'), null);
     assert.equal(new URLSearchParams(window.location.search).get('category'), 'press-brake-tooling');
     assert.equal(document.querySelector('.catalog-filter button[aria-pressed="true"]').textContent, '折弯机模具');
-    document.querySelector('#pb-001-products a[href="/zh-cn/products/pb-quick-clamps"]').click();
-    await waitFor(() => window.location.pathname === '/zh-cn/products/pb-quick-clamps');
+    document.querySelector('#pb-001-products a[href="/zh-cn/products/pb-quick-clamps/"]').click();
+    await waitFor(() => window.location.pathname === '/zh-cn/products/pb-quick-clamps/');
     assert.equal(document.documentElement.lang, 'zh-CN');
     assert.equal(document.querySelector('#product-inquiry input[name="subject"]').value, 'Quotation request: Upper-tool Quick Clamps');
     assert.deepEqual(view.errors, []);
@@ -136,12 +136,12 @@ test('category selection preserves the chosen language and grouped child navigat
 });
 
 test('language links preserve query and anchor while stale loads cannot override a newer choice', async () => {
-  const view = page('/en/products/sb-001');
+  const view = page('/en/products/sb-001/');
   const { document, window } = view;
   try {
     view.start();
     await waitFor(() => window.localStorage.getItem('nearblade-language') === 'en');
-    window.history.replaceState(null, '', '/en/products/sb-001?source=preview#product-inquiry');
+    window.history.replaceState(null, '', '/en/products/sb-001/?source=preview#product-inquiry');
     // A popstate updates Router's location after the externally changed URL.
     window.dispatchEvent(new window.PopStateEvent('popstate'));
     await waitFor(() => document.querySelector('#site-language a[lang="zh-CN"]').getAttribute('href').includes('?source=preview#product-inquiry'));
@@ -153,7 +153,7 @@ test('language links preserve query and anchor while stale loads cannot override
     await waitFor(() => document.documentElement.lang === 'ja');
     finishChinese();
     await delay(30);
-    assert.equal(window.location.pathname, '/ja/products/sb-001');
+    assert.equal(window.location.pathname, '/ja/products/sb-001/');
     assert.equal(window.location.search, '?source=preview');
     assert.equal(window.location.hash, '#product-inquiry');
     assert.equal(document.documentElement.lang, 'ja');
@@ -162,7 +162,7 @@ test('language links preserve query and anchor while stale loads cannot override
 });
 
 test('a failed language download leaves the current page intact and can be retried', async () => {
-  const view = page('/en/products/sb-001');
+  const view = page('/en/products/sb-001/');
   const { document, window } = view;
   try {
     view.start();
@@ -174,7 +174,7 @@ test('a failed language download leaves the current page intact and can be retri
     window.fetch = async () => { throw new Error('Offline'); };
     document.querySelector('#site-language a[lang="zh-CN"]').click();
     await waitFor(() => document.querySelector('.language-status').textContent.includes('could not'));
-    assert.equal(window.location.pathname, '/en/products/sb-001');
+    assert.equal(window.location.pathname, '/en/products/sb-001/');
     assert.equal(document.querySelector('input[name="name"]'), input);
     assert.equal(input.value, 'Keep this draft');
     window.fetch = fetch;

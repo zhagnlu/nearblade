@@ -1,10 +1,10 @@
 # 独立语言页面设计与实施
 
-日期：2026-11-15。状态：本地开发；本轮未提交、推送或部署。
+日期：2026-11-15；2026-11-16更新尾斜杠规则。多语言开发已提交至 `ce18202`；当前尾斜杠调整仅在本地，尚未提交或部署。
 
 ## URL 与语言规则
 
-九种语言使用同一域名下的目录：`en`、`zh-cn`、`es`、`fr`、`de`、`pt`、`ru`、`ar`、`ja`。HTML / hreflang 的简体中文代码为 `zh-CN`，URL 使用小写 `zh-cn`。语言首页保留末尾斜杠，如 `/en/`；其他页面无尾斜杠，如 `/zh-cn/products/pb-double-v-die`。后半段产品 ID、文章 slug 和目录分类不变，图片与脚本共用。
+九种语言使用同一域名下的目录：`en`、`zh-cn`、`es`、`fr`、`de`、`pt`、`ru`、`ar`、`ja`。HTML / hreflang 的简体中文代码为 `zh-CN`，URL 使用小写 `zh-cn`。全部页面地址统一带尾斜杠，如 `/en/`、`/en/products/`、`/zh-cn/products/pb-double-v-die/`。图片、JS、CSS和JSON等文件地址保持原样，不追加斜杠。后半段产品 ID、文章 slug 和目录分类不变，图片与脚本共用。
 
 URL 是语言的唯一来源。直接访问英语页面，即使 localStorage 曾选择中文，也必须呈现英语。语言偏好仅记录，不自动按浏览器语言或 IP 强制跳转。根路径固定 301 到 `/en/`。
 
@@ -25,10 +25,10 @@ URL 是语言的唯一来源。直接访问英语页面，即使 localStorage �
 | 请求 | 301 目标 |
 | --- | --- |
 | `/` | `/en/` |
-| `/products/sb-001` | `/en/products/sb-001` |
-| `/products/sb-001?lang=zh-CN&source=old` | `/zh-cn/products/sb-001?source=old` |
-| `/products/sb-002/index.html?lang=ja` | `/ja/products/sb-001` |
-| `/de/products/?lang=ja` | `/de/products` |
+| `/products/sb-001` | `/en/products/sb-001/` |
+| `/products/sb-001?lang=zh-CN&source=old` | `/zh-cn/products/sb-001/?source=old` |
+| `/products/sb-002/index.html?lang=ja` | `/ja/products/sb-001/` |
+| `/de/products/?lang=ja` | `/de/products/` |
 | `/en` 或 `/en/index.html` | `/en/` |
 
 已经有语言前缀时，路径语言优先于旧参数。未知语言和未知产品返回真实404，不伪装为首页。预览服务支持 GET / HEAD，已知路由才进行迁移，缺失资源仍为404。
@@ -37,7 +37,7 @@ URL 是语言的唯一来源。直接访问英语页面，即使 localStorage �
 
 构建同步生成 `deploy/multilingual-maps.conf`，必须 include 在 Nginx `http {}` 内；`deploy/nginx.conf.example` 的站点规则合入现有提供正文的 server 块。生成文件包含有效页面、旧页和退役 ID 的目标表，以及规范地址判定、语言参数清理和语言404映射。单个历史 `lang` 参数位于查询头、中、尾时均保留其他参数；多个重复 `lang` 的异常地址在 Nginx 中可能需要多次规范化，预览／浏览器规则会一次移除全部。迁移验收以正常历史单参数 URL 为准。
 
-不得直接覆盖整份生产 Nginx 配置；保留现有证书、CDN回源头、HTTPS/www规则。现有 GitHub Actions 只同步静态产物，不应用这些服务器配置。发布本功能前须安排应用这两份规则，并关闭 CDN 自动添加目录斜杠；否则会与无尾斜杠规范地址冲突。HTML兜底的 meta refresh 不是服务器301。
+不得直接覆盖整份生产 Nginx 配置；保留现有证书、CDN回源头、HTTPS/www规则。现有 GitHub Actions 只同步静态产物，不应用这些服务器配置。页面URL现在沿用现有服务器的目录尾斜杠习惯，不再要求关闭自动添加目录斜杠。旧无语言前缀地址和 `?lang=` 的HTTP 301迁移仍需服务器规则；单纯发布语言目录文件不等于这些迁移规则已生效。HTML兜底的 meta refresh 不是服务器301。
 
 服务器执行 `nginx -t` 后 reload，再核对新路径、全部迁移入口、保留查询参数、未知路由404和资源响应。源代码／部署配置与静态产物的恢复需一起考虑：回滚到上一发布分支提交时同时还原相应服务器规则，避免旧页面被导向不存在的新目录。本地无 Nginx 可执行文件，因此本轮不声称服务器语法及真实 Nginx HTTP 验收通过。
 
@@ -60,3 +60,9 @@ URL 是语言的唯一来源。直接访问英语页面，即使 localStorage �
 - 真实Chrome视觉检查：未完成。浏览器工具能列出标签页，但标签绑定失败；原生Chrome回报 `cgWindowNotFound`。此限制不影响自动化DOM／HTTP验证，但不能据此宣称桌面／手机视觉通过。
 - 真实Nginx语法／HTTP检查：未执行，本机无Nginx；生成配置待在部署前核验和应用。
 - 本轮未提交、推送或部署，线上仍保留上一次版本。供用户检查的本地预览持续运行于8000端口。
+
+## 2026-11-16 尾斜杠统一
+
+用户要求先统一尾斜杠。全部页面链接、语言切换、canonical、hreflang、分享地址、面包屑和sitemap改用带尾斜杠URL；不带尾斜杠和显式index.html作为入口别名，预览和生成的服务器规则都直接301至带尾斜杠地址。查询参数和锚点仍放在斜杠之后。仅调整URL规范，不改产品身份、词典、图片及文件资源路径。本轮不部署，也不修改线上Nginx。上方11月15日验收记录保留为当时快照。此前管理员迁移包依据旧无尾斜杠方案制作，不应再直接应用；后续如需服务器迁移，应基于当前源码重新生成。
+
+本轮验证：`npm test` 构建和43项测试全部通过；重启8000端口预览后，387页独立HTTP/SEO审计通过，0问题，报告 `/tmp/nearblade-trailing-slash-seo.json`。未提交、推送或部署。

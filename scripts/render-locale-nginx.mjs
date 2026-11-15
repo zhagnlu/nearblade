@@ -5,7 +5,7 @@ import { languageCodes } from './extract-locales.mjs';
 export function renderLocaleNginx() {
   const pages = Object.keys(JSON.parse(readFileSync(new URL('../content/seo/pages.json', import.meta.url), 'utf8')));
   const retired = { '/products/sb-002': '/products/sb-001', '/products/tb-001': '/products/cp-001' };
-  const localize = (path, prefix) => `/${prefix}${path === '/' ? '/' : path}`;
+  const localize = (path, prefix) => `/${prefix}${path === '/' ? '/' : `${path}/`}`;
   const variants = path => path === '/' ? ['/', '/index.html'] : path.endsWith('/') ? [path.slice(0, -1), path, `${path}index.html`] : [path, `${path}/`, `${path}/index.html`];
   const targets = new Map();
   for (const page of [...pages, ...Object.keys(retired)]) {

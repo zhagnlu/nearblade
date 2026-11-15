@@ -8,6 +8,7 @@ server {
     index index.html;
 
     location / {
+        # Page URLs use trailing slashes, matching the existing directory policy.
         # One direct 301 handles old URLs, ?lang=, retired IDs and aliases.
         # $uri maps are evaluated before the internal file lookup.
         if ($nearblade_redirect) {
