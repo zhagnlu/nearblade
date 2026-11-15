@@ -1,5 +1,12 @@
 # ECS 静态部署
 
+## 2026-11-15 多语言目录迁移（本地开发）
+
+新构建提供 `/en/`、`/zh-cn/` 等九个语言目录，共387页。完整设计、URL规则、迁移例子及发布前服务器操作见 [独立语言页面方案](i18n/language-pages.md)。下文旧记录中的39页是历史数量；以当前 sitemap 为准。
+
+本功能发布时必须将生成的 `deploy/multilingual-maps.conf` include 到 Nginx `http {}`，并将 `deploy/nginx.conf.example` 合入现有提供正文的站点块。保留证书和CDN设置，`nginx -t` 后 reload；确认旧无前缀地址和 `?lang=` 直接301到语言目录。workflow 只上传静态文件，不应用 Nginx 配置。本地预览通过不代表生产迁移已完成。
+
+
 ## 编译、提交与发布
 
 ```text

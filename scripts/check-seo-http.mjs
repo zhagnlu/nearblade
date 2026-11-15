@@ -46,6 +46,21 @@ export async function checkSeoHttp(origin) {
     if (/\b(noindex|none)\b/i.test(result.xRobotsTag || '')) issues.push('HTTP X-Robots-Tag prevents indexing');
     const schemas = [...document.querySelectorAll('script[type="application/ld+json"]')];
     if (!schemas.length) issues.push('Missing JSON-LD');
+    const prefix = path.split('/')[1];
+    const language = prefix === 'zh-cn' ? 'zh-CN' : prefix;
+    if (document.documentElement.lang !== language) issues.push('Incorrect HTML language');
+    if (document.documentElement.dir !== (language === 'ar' ? 'rtl' : 'ltr')) issues.push('Incorrect text direction');
+    const alternates = [...document.querySelectorAll('link[rel="alternate"][hreflang]')];
+    if (alternates.length !== 10) issues.push('Expected nine language alternates plus x-default');
+    for (const alternate of alternates) {
+      const code = alternate.hreflang;
+      const expectedPath = '/' + (code === 'x-default' ? 'en' : code.toLowerCase()) + path.slice(prefix.length + 1);
+      if (alternate.href !== canonicalOrigin + expectedPath || !paths.has(expectedPath)) issues.push(`Incorrect alternate: ${code}`);
+    }
+    for (const link of document.querySelectorAll('main a[href^="/"], header a[href^="/"], footer a[href^="/"]')) {
+      const target = new URL(link.getAttribute('href'), expected);
+      if (target.origin === canonicalOrigin && paths.has(target.pathname) && !link.closest('.language-switcher') && target.pathname.split('/')[1] !== prefix) issues.push('Internal navigation changes language');
+    }
     for (const script of schemas) {
       try { JSON.parse(script.textContent); } catch { issues.push('Invalid JSON-LD'); }
     }
@@ -59,19 +74,19 @@ export async function checkSeoHttp(origin) {
   }
   // Exercise HTTP redirects and query retention, not meta refresh or browser JS.
   for (const path of paths) {
-    const variants = path === '/' ? ['/index.html'] : [`${path}/`, `${path}/index.html`];
+    const variants = path.endsWith('/') ? [path.slice(0, -1), `${path}index.html`] : [`${path}/`, `${path}/index.html`];
     for (const variant of variants) {
       const result = await request(`${variant}?seo_check=1`);
       const target = result.location && new URL(result.location, base);
       if (result.status !== 301 || !target || ![base, canonicalOrigin].includes(target.origin) || target.pathname !== path || target.search !== '?seo_check=1') failures.push({ path: variant, issue: 'Expected direct 301 to canonical with query preserved' });
     }
   }
-  for (const [from, to] of [['sb-002', 'sb-001'], ['tb-001', 'cp-001']]) {
+  for (const prefix of ['', '/en', '/zh-cn', '/es', '/fr', '/de', '/pt', '/ru', '/ar', '/ja']) for (const [from, to] of [['sb-002', 'sb-001'], ['tb-001', 'cp-001']]) {
     for (const suffix of ['', '/', '/index.html']) {
-      const path = `/products/${from}${suffix}`;
+      const path = `${prefix}/products/${from}${suffix}`;
       const result = await request(`${path}?seo_check=1`);
       const target = result.location && new URL(result.location, base);
-      if (result.status !== 301 || !target || ![base, canonicalOrigin].includes(target.origin) || target.pathname !== `/products/${to}` || target.search !== '?seo_check=1') failures.push({ path, issue: 'Expected direct retired-product 301' });
+      if (result.status !== 301 || !target || ![base, canonicalOrigin].includes(target.origin) || target.pathname !== `${prefix || "/en"}/products/${to}` || target.search !== '?seo_check=1') failures.push({ path, issue: 'Expected direct retired-product 301' });
     }
   }
   for (const path of ['/seo-audit-missing-page', '/products/seo-audit-missing-product', '/blog/seo-audit-missing-article', '/assets/seo-audit-missing.js']) {

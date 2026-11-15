@@ -36,7 +36,7 @@ test('catalog terminology and prerendered metadata distinguish cutting processes
   const expected = { 'rs-001': 'Metal Rotary Slitter Knives', 'sr-001': 'Steel Mill Shear Blades', 'cr-001': 'Granulator Knives' };
   for (const [id, name] of Object.entries(expected)) {
     assert.equal(byId[id].name, name);
-    const html = readFileSync(new URL(`../dist/products/${id}/index.html`, import.meta.url), 'utf8');
+    const html = readFileSync(new URL(`../dist/en/products/${id}/index.html`, import.meta.url), 'utf8');
     assert.ok(html.includes(`<title data-rh="true">${name} | Nearblade</title>`));
     assert.ok(html.includes(byId[id].description));
   }
@@ -48,7 +48,7 @@ test('catalog terminology and prerendered metadata distinguish cutting processes
   assert.deepEqual(byId['rs-001'].materials, []);
   assert.equal(products.length, 34);
   for (const id of ['pb-001', 'cp-001', 'db-001']) {
-    const html = readFileSync(new URL(`../dist/products/${id}/index.html`, import.meta.url), 'utf8');
+    const html = readFileSync(new URL(`../dist/en/products/${id}/index.html`, import.meta.url), 'utf8');
     assert.ok(html.includes('product-type-groups'));
     for (const group of byId[id].variantGroups) assert.ok(html.includes(`>${group.title}</h3>`));
   }
@@ -62,13 +62,13 @@ test('series navigation covers every existing child once and separates clamping 
     assert.equal(new Set(groupedIds).size, groupedIds.length, family.id);
     assert.equal(family.selectionFields.length, 3, family.id);
     if (!children.length) continue;
-    const dom = new JSDOM(readFileSync(new URL(`../dist/products/${family.id}/index.html`, import.meta.url), 'utf8'));
+    const dom = new JSDOM(readFileSync(new URL(`../dist/en/products/${family.id}/index.html`, import.meta.url), 'utf8'));
     try {
       const section = dom.window.document.getElementById(`${family.id}-products`);
       assert.ok(section, family.id);
       assert.equal(section.querySelectorAll('a').length, children.length);
       for (const child of children) {
-        const link = section.querySelector(`a[href="/products/${child.id}"]`);
+        const link = section.querySelector(`a[href="/en/products/${child.id}"]`);
         assert.ok(link, child.id);
         for (const field of child.selectionFields) assert.ok(link.textContent.includes(field), child.id);
       }
@@ -81,7 +81,7 @@ test('series navigation covers every existing child once and separates clamping 
 
 test('product quote actions reach the on-page form with product context', () => {
   for (const product of products) {
-    const dom = new JSDOM(readFileSync(new URL(`../dist/products/${product.id}/index.html`, import.meta.url), 'utf8'));
+    const dom = new JSDOM(readFileSync(new URL(`../dist/en/products/${product.id}/index.html`, import.meta.url), 'utf8'));
     try {
       const document = dom.window.document;
       assert.equal(document.querySelectorAll('a[href="#product-inquiry"]').length, 2, product.id);
@@ -106,15 +106,15 @@ test('all catalog images exist and retired routes redirect without entering the 
   const sitemap = readFileSync(new URL('../dist/sitemap.xml', import.meta.url), 'utf8');
   for (const [from, to] of [['sb-002', 'sb-001'], ['tb-001', 'cp-001']]) {
     assert.ok(!sitemap.includes(`/products/${from}`));
-    const redirect = readFileSync(new URL(`../dist/products/${from}/index.html`, import.meta.url), 'utf8');
-    assert.ok(redirect.includes(`0;url=/products/${to}`));
+    const redirect = readFileSync(new URL(`../dist/en/products/${from}/index.html`, import.meta.url), 'utf8');
+    assert.ok(redirect.includes(`0;url=/en/products/${to}`));
   }
 });
 
 test('product Heroes use product imagery while engineering guides remain in the page body', () => {
   for (const product of products) {
     assert.match(product.heroImage || '', /\.(webp|png|jpe?g)$/i, product.id);
-    const html = readFileSync(new URL(`../dist/products/${product.id}/index.html`, import.meta.url), 'utf8');
+    const html = readFileSync(new URL(`../dist/en/products/${product.id}/index.html`, import.meta.url), 'utf8');
     const hero = html.match(/<section\b[\s\S]*?<\/section>/)?.[0];
     assert.ok(hero?.includes(`src="${product.heroImage}"`), product.id);
     assert.doesNotMatch(hero, /blade-profile-drawing|tooling-profile-drawing/);
@@ -123,10 +123,10 @@ test('product Heroes use product imagery while engineering guides remain in the 
 });
 
 test('related product cards show product images even when the detail gallery uses specifications', () => {
-  const html = readFileSync(new URL('../dist/products/pb-straight-punch/index.html', import.meta.url), 'utf8');
+  const html = readFileSync(new URL('../dist/en/products/pb-straight-punch/index.html', import.meta.url), 'utf8');
   for (const id of ['pb-acute-punch', 'pb-gooseneck-punch', 'pb-single-v-die']) {
     const card = [...html.matchAll(/<a\b[^>]*class="product-detail-related[^>]*>[\s\S]*?<\/a>/g)]
-      .map(match => match[0]).find(card => card.includes(`href="/products/${id}"`));
+      .map(match => match[0]).find(card => card.includes(`href="/en/products/${id}"`));
     assert.ok(card, id);
     assert.ok(card.includes(`src="${byId[id].heroImage}"`), id);
     assert.doesNotMatch(card, /src="[^\"]+\.svg"/);
@@ -145,7 +145,7 @@ test('expanded product routes have a valid family, unique intent and matching me
     assert.equal(parent.category, product.category);
     assert.ok(product.selectionFields.length >= 3);
     if (product.mediaMode === 'specification') assert.deepEqual(product.images, []);
-    const html = readFileSync(new URL(`../dist/products/${product.id}/index.html`, import.meta.url), 'utf8');
+    const html = readFileSync(new URL(`../dist/en/products/${product.id}/index.html`, import.meta.url), 'utf8');
     assert.ok(html.includes(`/products/${product.id}`));
     assert.doesNotMatch(html, /alibaba\.com|Catalog reference|Product-family examples/);
   }
@@ -164,7 +164,7 @@ test('each brake-tool subtype has its own geometry, process and dimensional guid
     assert.deepEqual(product.selectionFields, guide.dimensions.map(dimension => dimension.label));
     assert.ok(guide.process && guide.compatibility && guide.inspection.length >= 2);
     assert.ok(product.heroImage.includes('/tooling-v2/'));
-    const html = readFileSync(new URL(`../dist/products/${product.id}/index.html`, import.meta.url), 'utf8');
+    const html = readFileSync(new URL(`../dist/en/products/${product.id}/index.html`, import.meta.url), 'utf8');
     assert.ok(html.includes(product.description));
   }
   assert.match(details['pb-radius-tooling'].process, /part radius and tool radius are separate/);
@@ -189,7 +189,7 @@ test('new upper and lower tooling retains old URLs and distinguishes process and
   for (const id of ['pb-single-v-die', 'pb-double-v-die', 'pb-multi-v-die']) {
     assert.equal(details[id].role, 'Lower die');
     assert.notEqual(byId[id].mediaMode, 'specification');
-    const html = readFileSync(new URL(`../dist/products/${id}/index.html`, import.meta.url), 'utf8');
+    const html = readFileSync(new URL(`../dist/en/products/${id}/index.html`, import.meta.url), 'utf8');
     assert.ok(html.includes('tooling-profile-drawing'));
     assert.ok(!html.includes('Straight punch section'));
   }
@@ -229,7 +229,7 @@ test('unverified straight-punch photo stays withdrawn and multi-V has a separate
   assert.notEqual(byId['pb-straight-punch'].mediaMode, 'specification');
   assert.match(byId['pb-straight-punch'].image, /straight-punch-installed-white-v2\.webp$/);
   for (const product of products) {
-    const html = readFileSync(new URL(`../dist/products/${product.id}/index.html`, import.meta.url), 'utf8');
+    const html = readFileSync(new URL(`../dist/en/products/${product.id}/index.html`, import.meta.url), 'utf8');
     assert.ok(!html.includes('straight-punch-white-v1.webp'), product.id);
   }
   assert.match(details['pb-multi-v-die'].process, /distinct from adjustable-V and rolling-contact/);
@@ -245,7 +245,7 @@ test('reviewed product introductions use photos before the lower dimensional gui
     assert.notEqual(product.mediaMode, 'specification', id);
     assert.ok(product.images.length > 0, id);
     assert.ok(product.images.every(image => /\.webp$/.test(image)), id);
-    const document = new JSDOM(readFileSync(new URL(`../dist/products/${id}/index.html`, import.meta.url), 'utf8')).window.document;
+    const document = new JSDOM(readFileSync(new URL(`../dist/en/products/${id}/index.html`, import.meta.url), 'utf8')).window.document;
     const content = document.querySelector('#product-content');
     const overview = content.querySelector('.product-photo-stage');
     const dimensions = content.querySelector('section[aria-label="Product dimensions and fit"]');

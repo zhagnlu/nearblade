@@ -4,6 +4,8 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import { BrandLogo } from "@/components/common/BrandLogo";
 import { LanguageSwitcher } from "@/i18n/LanguageSwitcher";
 
+import { splitLocalePath } from "@/i18n/paths";
+
 const navItems = [
   { label: "Home", path: "/" },
   { label: "Products", path: "/products" },
@@ -17,7 +19,7 @@ export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
-  const isActive = (path: string) => location.pathname === path || (path !== "/" && location.pathname.startsWith(path + "/"));
+  const isActive = (path: string) => splitLocalePath(location.pathname).path === path || (path !== "/" && splitLocalePath(location.pathname).path.startsWith(path + "/"));
 
   useEffect(() => {
     const handleScroll = () => {

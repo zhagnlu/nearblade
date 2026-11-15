@@ -4,6 +4,8 @@ import { fileURLToPath, URL } from "node:url";
 import localizeJsx from "./scripts/localize-jsx";
 import { existsSync, readFileSync, statSync } from "node:fs";
 import path from "node:path";
+import { resolvePageRequest } from "./src/i18n/routing";
+import { splitLocalePath, languagePrefix } from "./src/i18n/paths";
 
 export default defineConfig({ plugins: [react({ babel: { plugins: [localizeJsx] } }), {
   name: "preview-prerendered-routes",
@@ -15,22 +17,23 @@ export default defineConfig({ plugins: [react({ babel: { plugins: [localizeJsx] 
         try {
           const url = new URL(request.url, "http://localhost");
           const pathname = decodeURIComponent(url.pathname);
-          const route = pathname.replace(/\/index\.html$/, "").replace(/\/+$/, "") || "/";
-          const retired: Record<string, string> = { "/products/sb-002": "/products/sb-001", "/products/tb-001": "/products/cp-001" };
-          const canonical = retired[route] || route;
-          if (pathname !== canonical) {
-            response.writeHead(301, { Location: `${canonical}${url.search}` });
+          const page = resolvePageRequest(pathname, url.search);
+          if (page?.redirect) {
+            response.writeHead(301, { Location: page.redirect });
             response.end();
             return;
           }
-          const entry = path.resolve(dist, `.${pathname}`, "index.html");
-          if (entry.startsWith(`${dist}${path.sep}`) && existsSync(entry) && statSync(entry).isFile()) {
-            request.url = `${url.pathname.replace(/\/$/, "")}/index.html${url.search}`;
+          if (page) {
+            response.setHeader('Content-Language', page.language);
+            request.url = `${page.canonical.replace(/\/$/, '')}/index.html${url.search}`;
           } else {
             const asset = path.resolve(dist, `.${pathname}`);
-            if (!asset.startsWith(`${dist}${path.sep}`) || !existsSync(asset) || !statSync(asset).isFile() || pathname === "/404.html") {
-              response.writeHead(404, { "Content-Type": "text/html; charset=utf-8" });
-              response.end(request.method === "HEAD" ? undefined : readFileSync(path.join(dist, "404.html")));
+            const isErrorPage = /(?:^|\/)404\.html$/.test(pathname);
+            if (!asset.startsWith(`${dist}${path.sep}`) || !existsSync(asset) || !statSync(asset).isFile() || isErrorPage) {
+              const language = splitLocalePath(pathname).language || 'en';
+              const errorPage = path.join(dist, languagePrefix(language), '404.html');
+              response.writeHead(404, { 'Content-Type': 'text/html; charset=utf-8', 'Content-Language': language });
+              response.end(request.method === 'HEAD' ? undefined : readFileSync(existsSync(errorPage) ? errorPage : path.join(dist, '404.html')));
               return;
             }
           }

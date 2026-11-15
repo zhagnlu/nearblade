@@ -1,52 +1,27 @@
-# Use as the server block for this website; keep existing HTTPS certificate settings.
-# Match site.config.json and the ECS_DEPLOY_PATH repository secret.
+# Include deploy/multilingual-maps.conf in the http {} context first.
+# Merge this server content into the existing HTTPS / CDN origin block;
+# preserve certificates, forwarding headers and HTTPS/www redirects.
 server {
     listen 80;
     server_name www.nearblade.com;
     root /var/www/nearblade;
     index index.html;
 
-    # Retired URLs go directly to their replacements without HTML/JS redirects.
-    location ~ ^/products/sb-002(?:/index\.html|/)?$ {
-        return 301 https://www.nearblade.com/products/sb-001$is_args$args;
-    }
-    location ~ ^/products/tb-001(?:/index\.html|/)?$ {
-        return 301 https://www.nearblade.com/products/cp-001$is_args$args;
-    }
-
-    # Canonical routes have no trailing slash (except /), matching sitemap/links.
-    # Test the ORIGINAL request so serving an index.html internally cannot loop.
-    # Merge these rules into the existing HTTPS/CDN origin server; keep TLS and
-    # proxy headers. Never redirect based on $scheme behind a TLS-terminating CDN.
     location / {
-        if ($request_uri ~ "^/index\.html(?:\?|$)") {
-            return 301 https://www.nearblade.com/$is_args$args;
+        # One direct 301 handles old URLs, ?lang=, retired IDs and aliases.
+        # $uri maps are evaluated before the internal file lookup.
+        if ($nearblade_redirect) {
+            return 301 https://www.nearblade.com$nearblade_page_target$nearblade_query_suffix;
         }
-        if ($request_uri ~ "^(/.+)/index\.html(?:\?|$)") {
-            return 301 https://www.nearblade.com$1$is_args$args;
-        }
-        if ($request_uri ~ "^(/.+)/+(?:\?|$)") {
-            return 301 https://www.nearblade.com$1$is_args$args;
-        }
-        # Read the actual file first. Do not test $uri/ or fall back to /index.html:
-        # those respectively add a slash or serve the homepage for unknown routes.
         try_files $uri/index.html $uri =404;
     }
 
-    error_page 404 /404.html;
-    location = /404.html {
+    error_page 404 $nearblade_error_page;
+    location ~ ^/(?:en|zh-cn|es|fr|de|pt|ru|ar|ja)/404\.html$ {
         internal;
     }
-
-    location /assets/ {
-        try_files $uri =404;
-    }
-
-    location /images/ {
-        try_files $uri =404;
-    }
-
-    location /locales/ {
-        try_files $uri =404;
-    }
+    location = /404.html { internal; }
+    location /assets/ { try_files $uri =404; }
+    location /images/ { try_files $uri =404; }
+    location /locales/ { try_files $uri =404; }
 }

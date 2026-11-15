@@ -5,7 +5,9 @@ import { Footer } from "@/components/generated/Footer";
 import { WhatsAppContact } from "@/components/common/WhatsAppContact";
 import { LanguageProvider } from "@/i18n/LanguageProvider";
 
-export function Layout() {
+import NotFound from "./pages/NotFound";
+
+export function Layout({ invalidLocale = false }: { invalidLocale?: boolean }) {
   const { pathname } = useLocation();
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "instant" });
@@ -15,7 +17,7 @@ export function Layout() {
     <LanguageProvider><div className="flex flex-col min-h-screen bg-industrial">
       <Header />
       <main className="flex-1">
-        <Outlet />
+        {invalidLocale ? <NotFound /> : <Outlet />}
       </main>
       <Footer />
       <WhatsAppContact />

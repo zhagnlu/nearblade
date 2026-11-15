@@ -26,7 +26,7 @@ export async function collectMessages() {
     const add = value => { const text = decode(value).trim(); if (/[A-Za-z]/.test(text)) messages.add(text); };
     console.error = (...args) => { if (!String(args[0]).includes('useLayoutEffect does nothing on the server')) originalError(...args); };
     for (const route of pages) {
-      const router = createMemoryRouter(routes, { initialEntries: [route] });
+      const router = createMemoryRouter(routes, { initialEntries: [route === "/" ? "/en/" : `/en${route}`] });
       try {
         const html = renderToString(React.createElement(helmet.HelmetProvider, null, React.createElement(RouterProvider, { router }))).replace(/<(script|style|noscript)\b[^>]*>[\s\S]*?<\/\1>/gi, '').replace(/(<textarea\b[^>]*>)[\s\S]*?<\/textarea>/gi, '$1</textarea>');
         for (const text of html.split(/<[^>]*>/g)) add(text);
