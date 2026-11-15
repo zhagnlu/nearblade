@@ -15,6 +15,7 @@
     "publish:ecs": "node scripts/publish-ecs.mjs",
     "test:ecs": "node --test tests/ecs-publication.test.mjs",
     "test:site": "node --test tests/site-publication.test.mjs",
+    "check:seo": "node scripts/check-seo-http.mjs",
     "i18n:extract": "node scripts/extract-locales.mjs",
     "i18n:build": "node scripts/check-locales.mjs",
     "test:i18n": "node --test tests/i18n.test.mjs"

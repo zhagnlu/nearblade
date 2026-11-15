@@ -239,8 +239,8 @@ test('unverified straight-punch photo stays withdrawn and multi-V has a separate
   for (const label of ['V1', 'V2', 'V3']) assert.ok(svg.includes(`>${label}</text>`), label);
 });
 
-test('reviewed brake-tool introductions use photos before the lower dimensional guide, matching the gooseneck page', () => {
-  for (const id of ['pb-straight-punch', 'pb-acute-punch', 'pb-gooseneck-punch', 'pb-single-v-die', 'pb-double-v-die', 'pb-multi-v-die']) {
+test('reviewed product introductions use photos before the lower dimensional guide, matching the gooseneck page', () => {
+  for (const id of ['pb-straight-punch', 'pb-acute-punch', 'pb-gooseneck-punch', 'pb-single-v-die', 'pb-double-v-die', 'pb-multi-v-die', 'pb-radius-tooling', 'pb-u-forming', 'pb-embossing', 'pb-container', 'pb-light-pole', 'sk-foil', 'sr-casting', 'cp-thin-slitter', 'cr-rotor', 'cr-stationary']) {
     const product = byId[id];
     assert.notEqual(product.mediaMode, 'specification', id);
     assert.ok(product.images.length > 0, id);
@@ -250,8 +250,8 @@ test('reviewed brake-tool introductions use photos before the lower dimensional 
     const overview = content.querySelector('.product-photo-stage');
     const dimensions = content.querySelector('section[aria-label="Product dimensions and fit"]');
     assert.equal(overview.querySelector('img').getAttribute('src'), product.image, id);
-    assert.equal(overview.querySelector('svg.tooling-profile-drawing'), null, id);
-    assert.ok(dimensions.querySelector('svg.tooling-profile-drawing'), id);
+    assert.equal(overview.querySelector('svg.tooling-profile-drawing, svg.blade-profile-drawing'), null, id);
+    assert.ok(dimensions.querySelector(product.toolingProfile ? 'svg.tooling-profile-drawing' : 'svg.blade-profile-drawing'), id);
     assert.ok(overview.compareDocumentPosition(dimensions) & 4, id);
   }
 });

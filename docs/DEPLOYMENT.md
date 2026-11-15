@@ -67,6 +67,18 @@ Nginx 路由规则以 [deploy/nginx.conf.example](../deploy/nginx.conf.example) 
 
 2026-10-31 审计时线上 38 个非首页仍跳转到带斜杠地址；本地模板修正不代表线上已生效。当前环境没有 Nginx 可执行程序，未在本机运行配置语法或真实 Nginx 请求测试；上述服务器验收必须在应用配置时完成。
 
+2026-11-03 补充自动 HTTP 验收：`npm run preview` 现在也按无尾斜杠规范地址提供正文，带斜杠、`index.html` 和退役地址返回 301；未知路由及缺失资源返回真实 404，不再回退首页。`npm test` 会对当前 sitemap 的全部页面执行原始 HTML 检查及跳转、查询参数保留和 404 验收。预览测试不能代替真实 Nginx 配置验证。
+
+运行以下只读检查可在发布后生成报告，发现不一致时以非零状态退出（命令不会部署、提交 sitemap 或请求索引）：
+
+```bash
+npm run check:seo -- https://www.nearblade.com /tmp/nearblade-seo-http.json
+# 本地先启动 npm run preview -- --port 8000，再运行：
+npm run check:seo -- http://127.0.0.1:8000 /tmp/nearblade-seo-local.json
+```
+
+检查包括 sitemap URL 首次返回 200、初始 HTML 的正文 / H1 / 唯一标题与描述 / canonical / JSON-LD、页面与 HTTP 头 noindex、站内页面链接、全部 slash/index.html 入口的直接 301、退役页 301 和未知地址 404。它不执行 JS，不代表 Google 已收录，也不包含真实 Googlebot 日志、完整 robots 规则解释或 Core Web Vitals 测量。
+
 构建为 39 条公开路由生成独立 HTML 入口，包含完整英文正文、产品链接、对应的 canonical、分享信息及 JSON-LD；正文无需执行 JavaScript 即可读取，浏览器中的 React 接管已有内容后启用交互。上述规则优先读取路由入口（例如 `/products/sb-001/index.html`），未知路由返回带 noindex 的 404 页面并保留 HTTP 404 状态。已有站点若仍使用回退到根 `index.html` 的配置，需同步更新 Nginx，才能让直接访问不同页面时获得各自的初始元数据。
 
 部署前核对根目录 `site.config.json` 的正式域名，再执行构建。`dist/sitemap.xml` 和 `dist/robots.txt` 随产物一起发布；没有编造页面修改日期或产品价格。

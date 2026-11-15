@@ -306,7 +306,7 @@
           "Lower die"
         ],
         "image": "/images/products/tooling-v2/double-v-die-white-v1.webp",
-        "heroImage": "/images/products/tooling-v2/double-v-die-product-hero-v1.webp",
+        "heroImage": "/images/products/tooling-v2/double-v-die-product-hero-v2.webp",
         "images": [
           "/images/products/tooling-v2/double-v-die-white-v1.webp"
         ],
@@ -335,7 +335,7 @@
           "Lower die"
         ],
         "image": "/images/products/tooling-v2/multi-v-die-white-v1.webp",
-        "heroImage": "/images/products/tooling-v2/multi-v-die-product-hero-v1.webp",
+        "heroImage": "/images/products/tooling-v2/multi-v-die-product-hero-v2.webp",
         "images": [
           "/images/products/tooling-v2/multi-v-die-white-v1.webp"
         ],
@@ -363,16 +363,19 @@
         "applications": [
           "Radius punch and holder"
         ],
-        "image": "/images/products/tooling-v2/radius-tool-section-v1.svg",
-        "heroImage": "/images/products/tooling-v2/radius-tool-product-hero-v1.webp",
-        "images": [],
-        "mediaMode": "specification",
+        "image": "/images/products/tooling-v2/pb-radius-tooling-white-v1.webp",
+        "heroImage": "/images/products/tooling-v2/pb-radius-tooling-hero-v2.webp",
+        "images": [
+          "/images/products/tooling-v2/pb-radius-tooling-white-v1.webp"
+        ],
         "selectionFields": [
           "Part radius and tool radius",
           "Insert and holder interface",
           "Lower-die opening and angle"
         ],
-        "toolingProfile": "radius-tool"
+        "toolingProfile": "radius-tool",
+        "galleryFit": "contain",
+        "heroMobileContain": true
       },
       {
         "id": "pb-u-forming",
@@ -390,16 +393,19 @@
         "applications": [
           "Matched forming tools"
         ],
-        "image": "/images/products/tooling-v2/u-forming-section-v1.svg",
-        "heroImage": "/images/products/tooling-v2/u-forming-product-hero-v1.webp",
-        "images": [],
-        "mediaMode": "specification",
+        "image": "/images/products/tooling-v2/pb-u-forming-white-v1.webp",
+        "heroImage": "/images/products/tooling-v2/pb-u-forming-hero-v2.webp",
+        "images": [
+          "/images/products/tooling-v2/pb-u-forming-white-v1.webp"
+        ],
         "selectionFields": [
           "Channel inner width and flanges",
           "Bottom profile and sheet thickness",
           "Release direction and working length"
         ],
-        "toolingProfile": "u-forming"
+        "toolingProfile": "u-forming",
+        "galleryFit": "contain",
+        "heroMobileContain": true
       },
       {
         "id": "pb-embossing",
@@ -417,16 +423,19 @@
         "applications": [
           "Matched forming tools"
         ],
-        "image": "/images/products/tooling-v2/profile-forming-section-v1.svg",
-        "heroImage": "/images/products/tooling-v2/profile-forming-product-hero-v1.webp",
-        "images": [],
-        "mediaMode": "specification",
+        "image": "/images/products/tooling-v2/pb-embossing-white-v1.webp",
+        "heroImage": "/images/products/tooling-v2/pb-embossing-hero-v2.webp",
+        "images": [
+          "/images/products/tooling-v2/pb-embossing-white-v1.webp"
+        ],
         "selectionFields": [
           "Finished profile and forming depth",
           "Material and forming operation",
           "Tool closure and part release"
         ],
-        "toolingProfile": "profile-forming"
+        "toolingProfile": "profile-forming",
+        "galleryFit": "contain",
+        "heroMobileContain": true
       },
       {
         "id": "pb-container",
@@ -444,16 +453,19 @@
         "applications": [
           "Custom panel forming tools"
         ],
-        "image": "/images/products/tooling-v2/container-forming-section-v1.svg",
-        "heroImage": "/images/products/tooling-v2/container-forming-product-hero-v1.webp",
-        "images": [],
-        "mediaMode": "specification",
+        "image": "/images/products/tooling-v2/pb-container-white-v1.webp",
+        "heroImage": "/images/products/tooling-v2/pb-container-hero-v2.webp",
+        "images": [
+          "/images/products/tooling-v2/pb-container-white-v1.webp"
+        ],
         "selectionFields": [
           "Panel profile, pitch and depth",
           "Sheet thickness and forming length",
           "Feed direction and forming sequence"
         ],
-        "toolingProfile": "container-forming"
+        "toolingProfile": "container-forming",
+        "galleryFit": "contain",
+        "heroMobileContain": true
       },
       {
         "id": "pb-light-pole",
@@ -471,16 +483,19 @@
         "applications": [
           "Long pole forming tools"
         ],
-        "image": "/images/products/tooling-v2/pole-forming-section-v1.svg",
-        "heroImage": "/images/products/tooling-v2/pole-forming-product-hero-v1.webp",
-        "images": [],
-        "mediaMode": "specification",
+        "image": "/images/products/tooling-v2/pb-light-pole-white-v1.webp",
+        "heroImage": "/images/products/tooling-v2/pb-light-pole-hero-v2.webp",
+        "images": [
+          "/images/products/tooling-v2/pb-light-pole-white-v1.webp"
+        ],
         "selectionFields": [
           "End sections and taper",
           "Forming method and lower tool",
           "Machine span and working length"
         ],
-        "toolingProfile": "pole-forming"
+        "toolingProfile": "pole-forming",
+        "galleryFit": "contain",
+        "heroMobileContain": true
       },
       {
         "id": "pb-quick-clamps",
@@ -651,16 +666,19 @@
         "applications": [
           "Foil processing"
         ],
-        "image": "/images/products/blades-v2/converting-slitter-section-v1.svg",
-        "heroImage": "/images/products/hero-products-2026-10-31/foil-slitter-product-hero-v1.webp",
-        "images": [],
-        "mediaMode": "specification",
+        "image": "/images/products/specialty-photos-2026-11-02/sk-foil-white-v1.webp",
+        "heroImage": "/images/products/specialty-photos-2026-11-02/sk-foil-hero-v2.webp",
+        "images": [
+          "/images/products/specialty-photos-2026-11-02/sk-foil-white-v1.webp"
+        ],
         "selectionFields": [
           "Main dimensions · D × d × T",
           "Edge geometry",
           "Arbor and set arrangement"
         ],
-        "bladeProfile": "converting-slitter"
+        "bladeProfile": "converting-slitter",
+        "galleryFit": "contain",
+        "heroMobileContain": true
       }
     ]
   },
@@ -763,16 +781,19 @@
         "applications": [
           "Continuous casting"
         ],
-        "image": "/images/products/blades-v2/billet-shear-section-v1.svg",
-        "heroImage": "/images/products/hero-products-2026-10-31/billet-shear-product-hero-v1.webp",
-        "images": [],
-        "mediaMode": "specification",
+        "image": "/images/products/specialty-photos-2026-11-02/sr-casting-white-v1.webp",
+        "heroImage": "/images/products/specialty-photos-2026-11-02/sr-casting-hero-v2.webp",
+        "images": [
+          "/images/products/specialty-photos-2026-11-02/sr-casting-white-v1.webp"
+        ],
         "selectionFields": [
           "Workpiece section and material",
           "Cutting temperature and station",
           "Blade-seat drawing"
         ],
-        "bladeProfile": "billet-shear"
+        "bladeProfile": "billet-shear",
+        "galleryFit": "contain",
+        "heroMobileContain": true
       }
     ]
   },
@@ -865,16 +886,19 @@
           "Corrugated packaging",
           "Paper converting"
         ],
-        "image": "/images/products/blades-v2/corrugated-thin-section-v1.svg",
-        "heroImage": "/images/products/hero-products-2026-10-31/corrugated-thin-product-hero-v1.webp",
-        "images": [],
-        "mediaMode": "specification",
+        "image": "/images/products/specialty-photos-2026-11-02/cp-thin-slitter-white-v1.webp",
+        "heroImage": "/images/products/specialty-photos-2026-11-02/cp-thin-slitter-hero-v2.webp",
+        "images": [
+          "/images/products/specialty-photos-2026-11-02/cp-thin-slitter-white-v1.webp"
+        ],
         "selectionFields": [
           "Outside diameter, bore and thickness",
           "Mounting holes and grinding system",
           "Board structure and line speed"
         ],
-        "bladeProfile": "corrugated-thin"
+        "bladeProfile": "corrugated-thin",
+        "galleryFit": "contain",
+        "heroMobileContain": true
       },
       {
         "id": "cp-slotting",
@@ -1306,16 +1330,19 @@
           "Wood processing",
           "Polymer composites"
         ],
-        "image": "/images/products/blades-v2/granulator-rotor-section-v1.svg",
-        "heroImage": "/images/products/hero-products-2026-10-31/granulator-rotor-product-hero-v1.webp",
-        "images": [],
-        "mediaMode": "specification",
+        "image": "/images/products/specialty-photos-2026-11-02/cr-rotor-white-v1.webp",
+        "heroImage": "/images/products/specialty-photos-2026-11-02/cr-rotor-hero-v2.webp",
+        "images": [
+          "/images/products/specialty-photos-2026-11-02/cr-rotor-white-v1.webp"
+        ],
         "selectionFields": [
           "Rotor model and knife quantity",
           "Matching rotor knife geometry",
           "Machine cutting-gap specification"
         ],
-        "bladeProfile": "granulator-rotor"
+        "bladeProfile": "granulator-rotor",
+        "galleryFit": "contain",
+        "heroMobileContain": true
       },
       {
         "id": "cr-stationary",
@@ -1335,16 +1362,19 @@
           "Wood processing",
           "Polymer composites"
         ],
-        "image": "/images/products/blades-v2/granulator-bed-section-v1.svg",
-        "heroImage": "/images/products/hero-products-2026-10-31/granulator-bed-product-hero-v1.webp",
-        "images": [],
-        "mediaMode": "specification",
+        "image": "/images/products/specialty-photos-2026-11-02/cr-stationary-white-v1.webp",
+        "heroImage": "/images/products/specialty-photos-2026-11-02/cr-stationary-hero-v2.webp",
+        "images": [
+          "/images/products/specialty-photos-2026-11-02/cr-stationary-white-v1.webp"
+        ],
         "selectionFields": [
           "Mounting datum and hole pattern",
           "Matching rotor knife geometry",
           "Machine cutting-gap specification"
         ],
-        "bladeProfile": "granulator-bed"
+        "bladeProfile": "granulator-bed",
+        "galleryFit": "contain",
+        "heroMobileContain": true
       }
     ]
   }

@@ -16,7 +16,8 @@ try {
       const svg = renderToStaticMarkup(React.createElement(ToolingProfileDrawing, { profile: item.toolingProfile, dark }))
         .replace('<svg ', '<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1020" ')
         .replace('</defs>', `</defs><rect width="900" height="510" fill="${dark ? '#263b4f' : '#ffffff'}"/>`);
-      writeFileSync(new URL(`${item.toolingProfile}-${dark ? 'navy' : 'section'}-${['straight-punch', 'gooseneck-punch', 'double-v-die', 'multi-v-die'].includes(item.toolingProfile) ? 'v2' : 'v1'}.svg`, output), svg);
+      const revised = ['straight-punch', 'gooseneck-punch', 'double-v-die', 'multi-v-die', 'radius-tool', 'u-forming', 'profile-forming', 'container-forming', 'pole-forming'];
+      writeFileSync(new URL(`${item.toolingProfile}-${dark ? 'navy' : 'section'}-${revised.includes(item.toolingProfile) ? 'v2' : 'v1'}.svg`, output), svg);
     }
   }
   console.log(`Rendered ${Object.keys(details).length} distinct tooling sections in two color schemes.`);

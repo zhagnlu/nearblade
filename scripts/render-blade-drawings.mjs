@@ -16,7 +16,8 @@ try {
     const svg = renderToStaticMarkup(React.createElement(BladeProfileDrawing, { profile, dark }))
       .replace('<svg ', '<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1020" ')
       .replace('</defs>', `</defs><rect width="900" height="510" fill="${dark ? '#263b4f' : '#ffffff'}"/>`);
-    writeFileSync(new URL(`${profile}-${dark ? 'navy' : 'section'}-v1.svg`, output), svg);
+    const version = ['billet-shear', 'corrugated-thin', 'granulator-rotor', 'granulator-bed'].includes(profile) ? 'v2' : 'v1';
+    writeFileSync(new URL(`${profile}-${dark ? 'navy' : 'section'}-${version}.svg`, output), svg);
   }
   console.log(`Rendered ${profiles.length} blade profiles in two color schemes.`);
 } finally { rmSync(bundle, { force: true }); }

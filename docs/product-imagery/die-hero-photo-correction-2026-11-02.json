@@ -1,0 +1,65 @@
+{
+  "date": "2026-11-02",
+  "status": "Local corrected Hero replacement; no commit, push or deployment.",
+  "scope": [
+    "pb-double-v-die",
+    "pb-multi-v-die"
+  ],
+  "mode": "Built-in imagegen, edit existing verified product photos; background style reference only.",
+  "sourceRecord": "docs/product-imagery/press-brake-intro-photos-2026-11-01.json",
+  "styleReference": "public/images/products/tooling-v2/gooseneck-punch-product-hero-v2.webp",
+  "rights": "Supplier-photo edits; independent reuse permission unverified. Not an unedited Nearblade factory photograph.",
+  "records": [
+    {
+      "id": "pb-double-v-die",
+      "input": "public/images/products/tooling-v2/double-v-die-white-v1.webp",
+      "sourceOriginal": "research/tooling-rebuild/photo-review-2026-11-01/shark-double.jpg",
+      "sourceOriginalPixels": [
+        1000,
+        1000
+      ],
+      "prompt": "Use case: precise-object-edit. Asset type: Nearblade website full-screen product Hero, landscape 16:9. Input image 1 is the sole PRODUCT EDIT TARGET, an existing actual-product photo. Input image 2 is BACKGROUND AND LIGHTING STYLE ONLY: match its deep navy industrial studio backdrop, subtle cool-blue illumination and bright readable silver metal. Do not copy any object or geometry from image 2. Replace only the white background around the photographed product and reframe with the SAME photographed camera angle; retain photographed shape and proportions without stretching or inventing hidden ends. Place the product in the lower half of the landscape composition with generous dark quiet upper 48% and center space for HTML heading, full near end section visible, enough side margins for responsive cropping. No embedded text, logo, dimensions, arrows or certifications. No extra masking that darkens the product. Natural restrained metallic detail; don't invent fine machining texture. Preserve exactly TWO separate double-V lower die blocks from image 1, same relative size, arrangement and perspective. Each block has exactly TWO PARALLEL V GROOVES SIDE BY SIDE ON ITS SAME UPPER FACE, one small and one large as photographed, running along its existing length; keep the front end's W-shaped top edge with its middle land. At BOTTOM each block has a RECTANGULAR LOCATING RECESS, with horizontal flat top inside the recess: this is NOT a V groove. There is NO V groove on the underside or either side. Do not convert into a top-and-bottom opposed V, do not combine two blocks into one, do not extend the photograph's cropped far ends. Preserve near-end proportions and all visible shoulders.",
+      "generatedOriginal": "/Users/zhanglu/.codex/generated_images/01a191e9-1950-7850-9dab-ffde70139cd9/exec-986af1ab-028f-44a2-b5dc-354099eabf17.png",
+      "output": "public/images/products/tooling-v2/double-v-die-product-hero-v2.webp",
+      "actualPixels": [
+        1672,
+        941
+      ],
+      "geometryReview": "Two separate dies, each with two parallel V grooves on the same top face. Original flat-topped rectangular bottom locating recesses retained; no opposed bottom V. Relative positions, unequal groove widths and visible front sections compared against target photograph.",
+      "replaces": "public/images/products/tooling-v2/double-v-die-product-hero-v1.webp",
+      "inputSha256": "5ac4731ac282c269d2658ea0b24c6982aa24d36a68671d0f776b6cb8b25ee2b3",
+      "outputSha256": "4f9177e1361c1ca7d1e9770c43a3459342475007f1d8aca20ac54ce1043c5306",
+      "sourceOriginalSha256": "f91cb355bf0bba1b2f5ac4fcf57062511c88a797b4d633d3294ce923de564a43"
+    },
+    {
+      "id": "pb-multi-v-die",
+      "input": "public/images/products/tooling-v2/multi-v-die-white-v1.webp",
+      "sourceOriginal": "research/tooling-rebuild/photo-review-2026-11-01/shinite-double.jpg",
+      "sourceOriginalPixels": [
+        1500,
+        1499
+      ],
+      "prompt": "Use case: precise-object-edit. Asset type: Nearblade website full-screen product Hero, landscape 16:9. Input image 1 is the sole PRODUCT EDIT TARGET, an existing actual-product photo. Input image 2 is BACKGROUND AND LIGHTING STYLE ONLY: match its deep navy industrial studio backdrop, subtle cool-blue illumination and bright readable silver metal. Do not copy any object or geometry from image 2. Replace only the white background around the photographed product and reframe with the SAME photographed camera angle; retain photographed shape and proportions without stretching or inventing hidden ends. Place the product in the lower half of the landscape composition with generous dark quiet upper 48% and center space for HTML heading, full near end section visible, enough side margins for responsive cropping. No embedded text, logo, dimensions, arrows or certifications. No extra masking that darkens the product. Natural restrained metallic detail; don't invent fine machining texture. Preserve exactly ONE SHORT fixed multi-V die block shown in image 1, with exactly THREE V grooves total: TWO on the TOP face with the same unequal widths as photographed, and ONE on the RIGHT SIDE face. Retain both TOP grooves and their raised middle land, the RIGHT SIDE V's sloping faces, the rectangular mounting recess on LEFT side, and rectangular locating recess on BOTTOM. The left and bottom RECTANGULAR recesses must stay rectangular, NOT be turned into V grooves. No fourth V groove, no symmetric four-sided X-shaped block, no eight-slot cube, no elongated extruded bar. Keep the exact photographed short-block length, perspective and front-face silhouette.",
+      "generatedOriginal": "/Users/zhanglu/.codex/generated_images/01a191e9-1950-7850-9dab-ffde70139cd9/exec-2abdf553-dc5c-4c34-b25b-a00c3238fc81.png",
+      "output": "public/images/products/tooling-v2/multi-v-die-product-hero-v2.webp",
+      "actualPixels": [
+        1672,
+        941
+      ],
+      "geometryReview": "One short block; two top V grooves plus one right-side V. Left-side and bottom mounting recesses remain rectangular. No fourth V or symmetric X-section. Compared near-end contour and visible short-block depth against target photograph.",
+      "replaces": "public/images/products/tooling-v2/multi-v-die-product-hero-v1.webp",
+      "inputSha256": "fd9d3f3feb88cab96a7c5d4ff21174b3c7c727b7d14219c60a4e04e5f87cb974",
+      "outputSha256": "a514c41476d46799358d3b30467d22a650e26c8909181e4fa60a76ad97c6b2f9",
+      "sourceOriginalSha256": "453639f9542f523e85b401657216c01fd0f723a14f6d5e076eaf3624fde5220f"
+    }
+  ],
+  "validation": {
+    "build": "npm run build passed: 43 prerendered routes, 9 locales, 903 entries each.",
+    "desktop": "Both actual product pages visually checked in Chrome at local port 4174: new Hero shown, navy background, readable Chinese heading and description. Shared cover layout crops image edges; structural review uses full asset and unchanged complete gallery.",
+    "mobile": "Both actual product Heroes visually checked in existing Chrome responsive 390x844 setting. Text readable, no visible horizontal overflow; background displays a cropped close-up rather than full product silhouette. Full structure remains available in unchanged gallery below.",
+    "galleryAndGuides": "Unchanged in this revision; built DOM checks retained photo-before-guide order. Gallery enlargement not freshly exercised this revision.",
+    "tests": "All 15 existing catalog-taxonomy tests passed; built HTML checked for v2 Hero references and unchanged photo-before-guide ordering.",
+    "diffCheck": "git diff --check passed."
+  },
+  "limits": "Edited image pixels are not native supplier resolution evidence; edited machining texture does not establish manufacturing detail or dimensions."
+}

@@ -1,0 +1,612 @@
+{
+  "date": "2026-11-02",
+  "status": "Local ten-page photo/guide repair implemented; earlier actual desktop/mobile photo/interaction/guide checks completed. Final CSS contrast adjustment browser recheck outstanding after window disconnected; two native-resolution exceptions conditional. Not committed, pushed or deployed.",
+  "tool": "built-in image_gen",
+  "rights": "Public supplier references; permission not established. No unedited in-house photo claim. Originals retained locally.",
+  "generationIncident": "Four-call Hero batch returned radius/container but pole/foil did not return for over 30 minutes. Wait terminated, successful files preserved, remaining calls retried individually. No CLI or fallback used.",
+  "edits": [
+    {
+      "id": "cr-stationary",
+      "role": "hero",
+      "source": "bed-gl.jpg",
+      "prompt": "Use case: precise-object-edit. Asset type: independent website Hero photograph, 16:9 landscape. Input 1 is the EDIT TARGET, an actual supplier product photograph. ONE long bed knife, FOUR closed elongated holes and TWO open rectangular notches cut into its back edge, continuous front edge, original diagonal perspective. Change only the empty background to deep navy blue industrial studio with subtle blue edge lighting and a dark textured floor; product remains bright silver, centered in lower-middle area, top third empty for heading; scale the existing photographed product to fit with generous margins. Preserve every visible silhouette, thickness, hole, notch, edge, perspective and original metal texture. Remove only existing third-party engraving or watermarks, never add new details. No invented components or geometry, no text, logos, certification, labels, no new holes. Do not reconstruct hidden parts.",
+      "output": "/Users/zhanglu/.codex/generated_images/01a191e9-1950-7850-9dab-ffde70139cd9/exec-efe71175-edc1-4319-ab32-64411e28c5ec.png"
+    },
+    {
+      "id": "sr-casting",
+      "role": "hero",
+      "source": "billet-shinite.webp",
+      "prompt": "Use case: precise-object-edit. Asset type: independent website Hero photograph, 16:9 landscape. Input 1 is the EDIT TARGET, an actual supplier product photograph. TWO overlapping flat billet shear blades with end tabs; each has THREE round mounting bores (one obscured behind front blade), small pilot holes below. Keep the original straight cutting edge and tabs, no V-shaped cutting notches. Change only the empty background to deep navy blue industrial studio with subtle blue edge lighting and a dark textured floor; product remains bright silver, centered in lower-middle area, top third empty for heading; scale the existing photographed product to fit with generous margins. Preserve every visible silhouette, thickness, hole, notch, edge, perspective and original metal texture. Remove only existing third-party engraving or watermarks, never add new details. No invented components or geometry, no text, logos, certification, labels, no new holes. Do not reconstruct hidden parts.",
+      "output": "/Users/zhanglu/.codex/generated_images/01a191e9-1950-7850-9dab-ffde70139cd9/exec-5c197f13-13a8-43ed-a206-b895a535ed5f.png"
+    },
+    {
+      "id": "cr-rotor",
+      "role": "hero",
+      "source": "rotor-gl.jpg",
+      "prompt": "Use case: precise-object-edit. Asset type: independent website Hero photograph, 16:9 landscape. Input 1 is the EDIT TARGET, an actual supplier product photograph. ONE long rotor knife, SIX closed elongated mounting slots, continuous straight bevel, same end contours and original viewing angle. Change only the empty background to deep navy blue industrial studio with subtle blue edge lighting and a dark textured floor; product remains bright silver, centered in lower-middle area, top third empty for heading; scale the existing photographed product to fit with generous margins. Preserve every visible silhouette, thickness, hole, notch, edge, perspective and original metal texture. Remove only existing third-party engraving or watermarks, never add new details. No invented components or geometry, no text, logos, certification, labels, no new holes. Do not reconstruct hidden parts.",
+      "output": "/Users/zhanglu/.codex/generated_images/01a191e9-1950-7850-9dab-ffde70139cd9/exec-70d8b44f-58eb-491c-8f77-b79614dc8acc.png"
+    },
+    {
+      "id": "cp-thin-slitter",
+      "role": "white",
+      "source": "corrugated-kinki.png",
+      "prompt": "Use case: precise-object-edit. Asset type: white-background product gallery photograph. Input 1 is the EDIT TARGET, an actual supplier product photograph. ONE thin circular annular blade, SIX small equally spaced round mounting holes and LARGE center bore about 63% of outer diameter. Preserve original near-front-facing perspective, bore diameter, ring width and exact six holes. Change only the background to pure white #ffffff, preserving subtle close natural contact shadow; center the entire existing blade with generous white margins. Preserve every visible silhouette, thickness, hole, notch, edge, perspective and original metal texture. Remove only existing third-party engraving or watermarks, never add new details. No invented components or geometry, no text, logos, certification, labels, no new holes. Do not reconstruct hidden parts.",
+      "output": "/Users/zhanglu/.codex/generated_images/01a191e9-1950-7850-9dab-ffde70139cd9/exec-907c0dae-93f4-4417-b7c4-c7a5a36df845.png"
+    },
+    {
+      "id": "sk-foil",
+      "role": "white",
+      "source": "foil-multech-second.jpg",
+      "prompt": "Use case: precise-object-edit. Asset type: white-background product gallery photo. Input image is edit target, existing actual supplier photograph. EXACTLY FIVE photographed flat circular foil-slitting blades, arranged in original groups (one at top, one bottom left, one ring bottom middle, two overlapping at right). Preserve each original center bore size, outer edge, thickness and proportions. Keep original warm metallic tint and existing surface appearance. Do not add mounting holes or coating claims. Change ONLY background to pure white #ffffff with very subtle close contact shadows and remove background signage, source logo and watermark. Center original product group with breathing room. Preserve all real geometry, counts, perspective and visible metal texture, no reconstruction of hidden or cropped parts. Do not invent details, add components, straighten or redesign tool sections. No text or logos.",
+      "output": "/Users/zhanglu/.codex/generated_images/01a191e9-1950-7850-9dab-ffde70139cd9/exec-ff182b77-5890-4677-8b33-2dc40b2348f1.png"
+    },
+    {
+      "id": "pb-container",
+      "role": "white",
+      "source": "container-front.jpeg",
+      "prompt": "Use case: precise-object-edit. Asset type: white-background product gallery photo. Input image is edit target, existing actual supplier photograph. EXACTLY TWO separate long container-panel forming tools lying side by side. Keep the foreground tool's raised trapezoidal central forming ridge and the rear tool's matching recessed section and all original round holes. Keep the original viewpoint and respective orientation. Change ONLY background to pure white #ffffff with very subtle close contact shadows and remove background signage, source logo and watermark. Center original product group with breathing room. Preserve all real geometry, counts, perspective and visible metal texture, no reconstruction of hidden or cropped parts. Do not invent details, add components, straighten or redesign tool sections. No text or logos.",
+      "output": "/Users/zhanglu/.codex/generated_images/01a191e9-1950-7850-9dab-ffde70139cd9/exec-dac987ed-126a-49d0-969b-1f170d305a4e.png"
+    },
+    {
+      "id": "pb-light-pole",
+      "role": "white",
+      "source": "pole-370.jpg",
+      "prompt": "Use case: precise-object-edit. Asset type: white-background product gallery photo. Input image is edit target, existing actual supplier photograph. EXACTLY TWO long tapered concave half-round pole-forming die components lying side by side, each with a central projecting bolt on its front end and matching triangular side relief notches. Preserve original length perspective, rounded channels, end profiles and thin clear protective packaging film. Do not replace the concave channels with convex punches. Change ONLY background to pure white #ffffff with very subtle close contact shadows and remove background signage, source logo and watermark. Center original product group with breathing room. Preserve all real geometry, counts, perspective and visible metal texture, no reconstruction of hidden or cropped parts. Do not invent details, add components, straighten or redesign tool sections. No text or logos.",
+      "output": "/Users/zhanglu/.codex/generated_images/01a191e9-1950-7850-9dab-ffde70139cd9/exec-ea18f1cb-a3ce-4c8d-8721-a51d42430b13.png"
+    },
+    {
+      "id": "pb-radius-tooling",
+      "role": "white",
+      "source": "radius-yafei-full.jpg",
+      "prompt": "Use case: precise-object-edit. Asset type: white-background product gallery photo. Input image is edit target, existing actual supplier photograph. ONE assembled long radius punch and matching rounded lower die. Preserve rounded working surfaces, original round mounting holes at punch and die end faces, holder and all visible fixing screws. No cylindrical insert not visible in this photograph. Change ONLY background to pure white #ffffff with very subtle close contact shadows and remove background signage, source logo and watermark. Center original product group with breathing room. Preserve all real geometry, counts, perspective and visible metal texture, no reconstruction of hidden or cropped parts. Do not invent details, add components, straighten or redesign tool sections. No text or logos.",
+      "output": "/Users/zhanglu/.codex/generated_images/01a191e9-1950-7850-9dab-ffde70139cd9/exec-11f94468-1a74-4e08-a9c9-a688bba12135.png"
+    },
+    {
+      "id": "pb-embossing",
+      "role": "hero",
+      "source": "/Users/zhanglu/github/nearblade/research/alibaba/ten-page-repair-2026-11-02/profile-xinmechan.jpg",
+      "prompt": "Use case: precise-object-edit. Asset type: independent product-page Hero photograph, wide 16:9. Input is EDIT TARGET from an actual supplier photograph. ONE photographed custom flanging/profile tooling assembly: preserve the original rectangular internal cavity, vertical inserts, upper groove and narrow long lower opening; all visible walls and original angle. Keep exactly the supplied structure, no extra dies or holes. Change ONLY the background to deep navy industrial studio, subtle blue edge lighting, dark textured work surface. Keep product bright silver with original surface appearance, center it in lower middle with generous margins, top third empty for heading. No text, logos, labels, extra components, hidden-part reconstruction, new geometry or invented textures. Preserve all holes, grooves, edges and thickness.",
+      "output": "/Users/zhanglu/.codex/generated_images/01a191e9-1950-7850-9dab-ffde70139cd9/exec-590604a4-c2cc-40f9-92ea-86bac77c431d.png"
+    },
+    {
+      "id": "cp-thin-slitter",
+      "role": "hero",
+      "source": "/Users/zhanglu/.codex/generated_images/01a191e9-1950-7850-9dab-ffde70139cd9/exec-907c0dae-93f4-4417-b7c4-c7a5a36df845.png",
+      "prompt": "Use case: precise-object-edit. Asset type: independent product-page Hero photograph, wide 16:9. Input is EDIT TARGET from an actual supplier photograph. ONE annular corrugated slitter blade with SIX small equidistant holes and a LARGE center bore about 63 percent of outer diameter. Keep original ring proportions exactly; retain near-front-view angle. Change ONLY the background to deep navy industrial studio, subtle blue edge lighting, dark textured work surface. Keep product bright silver with original surface appearance, center it in lower middle with generous margins, top third empty for heading. No text, logos, labels, extra components, hidden-part reconstruction, new geometry or invented textures. Preserve all holes, grooves, edges and thickness.",
+      "output": "/Users/zhanglu/.codex/generated_images/01a191e9-1950-7850-9dab-ffde70139cd9/exec-9d24f92f-a93b-4786-b0ea-b83b8e1f9ed7.png"
+    },
+    {
+      "id": "pb-u-forming",
+      "role": "hero",
+      "source": "/Users/zhanglu/github/nearblade/research/alibaba/ten-page-repair-2026-11-02/u-full.webp",
+      "prompt": "Use case: precise-object-edit. Asset type: independent product-page Hero photograph, wide 16:9. Input is EDIT TARGET from an actual supplier photograph. ONE solid long U-forming lower die with rounded concave channel. Preserve entire original tool silhouette, U-shaped front end and zero mounting holes. Same original perspective; do not add an upper punch. Change ONLY the background to deep navy industrial studio, subtle blue edge lighting, dark textured work surface. Keep product bright silver with original surface appearance, center it in lower middle with generous margins, top third empty for heading. No text, logos, labels, extra components, hidden-part reconstruction, new geometry or invented textures. Preserve all holes, grooves, edges and thickness.",
+      "output": "/Users/zhanglu/.codex/generated_images/01a191e9-1950-7850-9dab-ffde70139cd9/exec-501c6db1-3c68-4186-87d8-8b4822cba52a.png"
+    },
+    {
+      "id": "sk-foil",
+      "role": "hero",
+      "source": "/Users/zhanglu/.codex/generated_images/01a191e9-1950-7850-9dab-ffde70139cd9/exec-ff182b77-5890-4677-8b33-2dc40b2348f1.png",
+      "prompt": "Use case: precise-object-edit. Edit only the white background of this existing photograph to deep navy blue industrial studio and dark floor. Landscape 16:9 website Hero. Preserve exactly the five photographed foil slitting discs, all different bore sizes, thin edges, warm metallic color and original arrangement. Entire group lower center, generous empty upper third for title. No text, logos, added parts or geometry changes.",
+      "retry": true,
+      "output": "/Users/zhanglu/.codex/generated_images/01a191e9-1950-7850-9dab-ffde70139cd9/exec-0ca263e5-62ab-4391-b96d-e3efa0ba2c7f.png"
+    },
+    {
+      "id": "pb-light-pole",
+      "role": "hero",
+      "source": "/Users/zhanglu/.codex/generated_images/01a191e9-1950-7850-9dab-ffde70139cd9/exec-ea18f1cb-a3ce-4c8d-8721-a51d42430b13.png",
+      "prompt": "Use case: precise-object-edit. Change only white background of this photograph to deep navy blue industrial studio and dark floor. Wide 16:9 website Hero. Preserve EXACTLY the two photographed long concave half-round tapered dies, two front bolts total, triangular side reliefs, protective wrapping and original perspective. Keep silver product bright, entire pair centered, upper third empty. No text, logos, new parts, geometry or reconstructed details.",
+      "retry": true,
+      "output": "/Users/zhanglu/.codex/generated_images/01a191e9-1950-7850-9dab-ffde70139cd9/exec-c6d65ff3-449a-4246-926a-79ba387af773.png"
+    },
+    {
+      "id": "pb-radius-tooling",
+      "role": "hero",
+      "source": "/Users/zhanglu/.codex/generated_images/01a191e9-1950-7850-9dab-ffde70139cd9/exec-11f94468-1a74-4e08-a9c9-a688bba12135.png",
+      "output": "/Users/zhanglu/.codex/generated_images/01a191e9-1950-7850-9dab-ffde70139cd9/exec-a539f06f-f2f2-435a-9c8b-2a5a19315ef6.png",
+      "prompt": "Use case: precise-object-edit. Asset type: independent website Hero photograph, 16:9 landscape. Edit target is the supplied photo-derived white-background product image. One radius punch and rounded lower die assembly; preserve rounded contact surfaces, holder and original fixing screws and end bores. Change only background to deep navy industrial studio with subtle blue light and dark textured floor. Product group remains bright and in original perspective, centered lower-middle with generous empty top third for page title, entire photographed group fits within frame. Keep all original contours, counts, openings, proportions, packaging and metallic surface appearance. No new parts, holes or details, no reconstruction or redesign, no text or logos."
+    },
+    {
+      "id": "pb-container",
+      "role": "hero",
+      "source": "/Users/zhanglu/.codex/generated_images/01a191e9-1950-7850-9dab-ffde70139cd9/exec-dac987ed-126a-49d0-969b-1f170d305a4e.png",
+      "output": "/Users/zhanglu/.codex/generated_images/01a191e9-1950-7850-9dab-ffde70139cd9/exec-a1f608ff-c83a-4a67-8936-4765fb952b58.png",
+      "prompt": "Use case: precise-object-edit. Asset type: independent website Hero photograph, 16:9 landscape. Edit target is the supplied photo-derived white-background product image. Two separate long tools; foreground raised trapezoid ridge, rear matching recessed profile with its existing row of holes. Preserve respective orientations and exact hole count. Change only background to deep navy industrial studio with subtle blue light and dark textured floor. Product group remains bright and in original perspective, centered lower-middle with generous empty top third for page title, entire photographed group fits within frame. Keep all original contours, counts, openings, proportions, packaging and metallic surface appearance. No new parts, holes or details, no reconstruction or redesign, no text or logos."
+    }
+  ],
+  "products": [
+    {
+      "id": "pb-radius-tooling",
+      "original": "radius-yafei-full.jpg",
+      "supplier": "Anhui Yafei",
+      "page": "https://www.yafeiblade.com/Larger-Radius-Forming-Press-Brake-Tooling-pd43789762.html",
+      "url": "https://jprorwxhljpmlk5p-static.micyjz.com/cloud/lpBprKnilkSRrjilkimnin/Z6.jpg",
+      "geometry": "One assembled rounded punch and matching concave lower die; end bores and fixing screws. Supplier photo, not a confirmed Nearblade machine interface.",
+      "originalPath": "research/alibaba/ten-page-repair-2026-11-02/radius-yafei-full.jpg",
+      "nativePixels": [
+        1000,
+        1000
+      ],
+      "nativeFormat": "JPEG",
+      "originalSha256": "8a93f47978aae268db0fdc9371ba1dbce6c6a9fbfecbbae8860363e38858d47d",
+      "outputs": {
+        "white": {
+          "path": "/images/products/tooling-v2/pb-radius-tooling-white-v1.webp",
+          "pixels": [
+            1254,
+            1254
+          ],
+          "sha256": "52aa1237f3bfb44e9fd841d57be4941f02081abe1ef26cde7fd8a14a6d469d84"
+        },
+        "hero": {
+          "path": "/images/products/tooling-v2/pb-radius-tooling-hero-v2.webp",
+          "pixels": [
+            1672,
+            941
+          ],
+          "sha256": "5044ad7da20de6a30de3833573062aaaf353bfff9f9d193ec76c3b6c4b7f41f0"
+        }
+      },
+      "geometryReview": "Compared original photo, white gallery, photo-edited Hero and revised lower engineering guide. One assembled rounded punch and matching concave lower die; end bores and fixing screws. Supplier photo, not a confirmed Nearblade machine interface.",
+      "visualQA": {
+        "date": "2026-11-03",
+        "desktop": "Checked actual Hero, complete white-gallery photo and zoom; title/description legibility checked. Native resolution remains conditional where listed.",
+        "mobile": "Checked actual 390x838 responsive Hero, white photo, zoom and Escape close; full horizontal Hero fits below copy, avoiding enlarged central crop.",
+        "zoom": "Opened the sole gallery image and closed with Escape on desktop and mobile.",
+        "dimensionsBelowPhotos": "Complete lower guide visually checked on mobile; DOM order covered by existing regression test. Desktop guide not independently inspected in full for every route.",
+        "result": "layout and family-level geometry checked; machine-specific supply still requires approved drawing"
+      },
+      "openIssues": []
+    },
+    {
+      "id": "pb-u-forming",
+      "original": "u-full.webp",
+      "supplier": "Shinite",
+      "page": "https://masshenlite.en.made-in-china.com/product/RGCrptByvxWA/China-Press-Brake-U-Bending-Tools-Car-Plate-Corrugated-Plate-Mold.html",
+      "url": "https://image.made-in-china.com/2f0j00RSybMaHwwNoK/Press-Brake-U-Bending-Tools-Car-Plate-Corrugated-Plate-Mold.webp",
+      "geometry": "One solid lower die with rounded U cavity, no mounting holes visible; photo does not establish the matching upper tool.",
+      "originalPath": "research/alibaba/ten-page-repair-2026-11-02/u-full.webp",
+      "nativePixels": [
+        3024,
+        3024
+      ],
+      "nativeFormat": "WEBP",
+      "originalSha256": "3d788aa570e5b8f1daa8f09421b2c17c2813d44cc474a2386689acfbdd55d681",
+      "outputs": {
+        "white": {
+          "path": "/images/products/tooling-v2/pb-u-forming-white-v1.webp",
+          "pixels": [
+            3024,
+            3024
+          ],
+          "sha256": "a7b82ca2feb230d825dd397c0f2a15e259cbe2f388497fd498d88f33de792d79"
+        },
+        "hero": {
+          "path": "/images/products/tooling-v2/pb-u-forming-hero-v2.webp",
+          "pixels": [
+            1672,
+            941
+          ],
+          "sha256": "28938ea9adbdd9aba4d5b055e63ecb7c66c50bcff46e03f5b3a6bce11c32e138"
+        }
+      },
+      "geometryReview": "Compared original photo, white gallery, photo-edited Hero and revised lower engineering guide. One solid lower die with rounded U cavity, no mounting holes visible; photo does not establish the matching upper tool.",
+      "visualQA": {
+        "date": "2026-11-03",
+        "desktop": "Checked actual Hero, complete white-gallery photo and zoom; title/description legibility checked. Native resolution remains conditional where listed.",
+        "mobile": "Checked actual 390x838 responsive Hero, white photo, zoom and Escape close; full horizontal Hero fits below copy, avoiding enlarged central crop.",
+        "zoom": "Opened the sole gallery image and closed with Escape on desktop and mobile.",
+        "dimensionsBelowPhotos": "Complete lower guide visually checked on mobile; DOM order covered by existing regression test. Desktop guide not independently inspected in full for every route.",
+        "result": "layout and family-level geometry checked; machine-specific supply still requires approved drawing"
+      },
+      "openIssues": []
+    },
+    {
+      "id": "pb-embossing",
+      "original": "profile-xinmechan.jpg",
+      "supplier": "Jiangsu Xinmechan",
+      "page": "https://xinmechan.en.made-in-china.com/product/nFPaLMYAqBpR/China-Double-Acting-Press-Brake-Tooling-Custom-Flanging-Die-Helmeted-Die-for-Plate-Metal-Sheet.html",
+      "url": "https://image.made-in-china.com/2f0j00QnKlJpEqAAgH/Double-Acting-Press-Brake-Tooling-Custom-Flanging-Die-Helmeted-Die-for-Plate-Metal-Sheet.jpg",
+      "geometry": "Custom flanging tooling assembly, rectangular internal cavity and inserts, upper groove and lower opening. Family example only; does not define all custom profiles or a standard model.",
+      "limitation": "Native 800px, below preferred 960px minimum; higher-resolution replacement and actual-page visual approval remain open.",
+      "originalPath": "research/alibaba/ten-page-repair-2026-11-02/profile-xinmechan.jpg",
+      "nativePixels": [
+        800,
+        571
+      ],
+      "nativeFormat": "JPEG",
+      "originalSha256": "1e4f7b6d11b539d97a8480c7dd1f9073fcedc7c7759c6a3c2b0a153bf3d00525",
+      "outputs": {
+        "white": {
+          "path": "/images/products/tooling-v2/pb-embossing-white-v1.webp",
+          "pixels": [
+            800,
+            571
+          ],
+          "sha256": "817ac951a6faf257b85ab2f80299a7ac98600677b08d7839e03d61c85980e8cd"
+        },
+        "hero": {
+          "path": "/images/products/tooling-v2/pb-embossing-hero-v2.webp",
+          "pixels": [
+            1672,
+            941
+          ],
+          "sha256": "c517aed8f63917a974fbd7a2e2fb8c5827d9b1c041f5521182a4ed743ba77252"
+        }
+      },
+      "geometryReview": "Compared original photo, white gallery, photo-edited Hero and revised lower engineering guide. Custom flanging tooling assembly, rectangular internal cavity and inserts, upper groove and lower opening. Family example only; does not define all custom profiles or a standard model.",
+      "visualQA": {
+        "date": "2026-11-03",
+        "desktop": "Checked actual Hero, complete white-gallery photo and zoom; title/description legibility checked. Native resolution remains conditional where listed.",
+        "mobile": "Checked actual 390x838 responsive Hero, white photo, zoom and Escape close; full horizontal Hero fits below copy, avoiding enlarged central crop.",
+        "zoom": "Opened the sole gallery image and closed with Escape on desktop and mobile.",
+        "dimensionsBelowPhotos": "Complete lower guide visually checked on mobile; DOM order covered by existing regression test. Desktop guide not independently inspected in full for every route.",
+        "result": "conditional: source 800px; high-resolution replacement outstanding"
+      },
+      "openIssues": [
+        {
+          "priority": "P2",
+          "issue": "Native source only 800px; AI output pixel count is not recovered source detail.",
+          "nextAction": "Replace with a verified higher-resolution original when available."
+        }
+      ]
+    },
+    {
+      "id": "pb-container",
+      "original": "container-front.jpeg",
+      "supplier": "Sarin & Associates",
+      "page": "https://www.sarinassociates.in/press-tools.html",
+      "url": "https://5.imimg.com/data5/SELLER/Default/2022/3/RP/RL/LT/3516365/shipping-container-tool-for-front-panel-1000x1000.jpeg",
+      "geometry": "Two actual container front-panel tools, raised trapezoid and matching recessed section; one corrugation per stroke, no unsupported three-cavity standard.",
+      "originalPath": "research/alibaba/ten-page-repair-2026-11-02/container-front.jpeg",
+      "nativePixels": [
+        1000,
+        750
+      ],
+      "nativeFormat": "JPEG",
+      "originalSha256": "b480a31204bac08d6e1c5f22ecdef6106f85bd6c70aa2bc2cf0325672929c802",
+      "outputs": {
+        "white": {
+          "path": "/images/products/tooling-v2/pb-container-white-v1.webp",
+          "pixels": [
+            1448,
+            1086
+          ],
+          "sha256": "286b3fc8b00bb93326a8411ac84132eae74efdfb70f2539bb106d3c54f0b18cc"
+        },
+        "hero": {
+          "path": "/images/products/tooling-v2/pb-container-hero-v2.webp",
+          "pixels": [
+            1672,
+            941
+          ],
+          "sha256": "02590f7f5ba74f586ea9695f814c0c1355c331a424e3435296bc7044ad4d81d3"
+        }
+      },
+      "geometryReview": "Compared original photo, white gallery, photo-edited Hero and revised lower engineering guide. Two actual container front-panel tools, raised trapezoid and matching recessed section; one corrugation per stroke, no unsupported three-cavity standard.",
+      "visualQA": {
+        "date": "2026-11-03",
+        "desktop": "Checked actual Hero, complete white-gallery photo and zoom; title/description legibility checked. Native resolution remains conditional where listed.",
+        "mobile": "Checked actual 390x838 responsive Hero, white photo, zoom and Escape close; full horizontal Hero fits below copy, avoiding enlarged central crop.",
+        "zoom": "Opened the sole gallery image and closed with Escape on desktop and mobile.",
+        "dimensionsBelowPhotos": "Complete lower guide visually checked on mobile; DOM order covered by existing regression test. Desktop guide not independently inspected in full for every route.",
+        "result": "layout and family-level geometry checked; machine-specific supply still requires approved drawing"
+      },
+      "openIssues": []
+    },
+    {
+      "id": "pb-light-pole",
+      "original": "pole-370.jpg",
+      "supplier": "hydraulic-press-brake.com",
+      "page": "https://www.hydraulic-press-brake.com/quality-39421883-conical-round-10m-light-pole-tooling",
+      "url": "https://www.hydraulic-press-brake.com/photo/ps154532370-conical_round_10m_light_pole_tooling.jpg",
+      "geometry": "Two tapered concave half-round die components, one projecting front bolt each, side relief notches and protective film. Do not substitute a polygonal punch for the photographed round tooling.",
+      "originalPath": "research/alibaba/ten-page-repair-2026-11-02/pole-370.jpg",
+      "nativePixels": [
+        1720,
+        2293
+      ],
+      "nativeFormat": "JPEG",
+      "originalSha256": "7f7064373385fdb44365a4b6a317a8b84955936fe3b49a3a099d18707ed76414",
+      "outputs": {
+        "white": {
+          "path": "/images/products/tooling-v2/pb-light-pole-white-v1.webp",
+          "pixels": [
+            1087,
+            1447
+          ],
+          "sha256": "2a9275d5af157046769eb0495773d2e9257355b4d868671d647e6006a691842e"
+        },
+        "hero": {
+          "path": "/images/products/tooling-v2/pb-light-pole-hero-v2.webp",
+          "pixels": [
+            1672,
+            941
+          ],
+          "sha256": "be18a9fa03a977c8d567f5033c092140d496499c9ba79e6976d7c43cb5f3f372"
+        }
+      },
+      "geometryReview": "Compared original photo, white gallery, photo-edited Hero and revised lower engineering guide. Two tapered concave half-round die components, one projecting front bolt each, side relief notches and protective film. Do not substitute a polygonal punch for the photographed round tooling.",
+      "visualQA": {
+        "date": "2026-11-03",
+        "desktop": "Checked actual Hero, complete white-gallery photo and zoom; title/description legibility checked. Native resolution remains conditional where listed.",
+        "mobile": "Checked actual 390x838 responsive Hero, white photo, zoom and Escape close; full horizontal Hero fits below copy, avoiding enlarged central crop.",
+        "zoom": "Opened the sole gallery image and closed with Escape on desktop and mobile.",
+        "dimensionsBelowPhotos": "Complete lower guide visually checked on mobile; DOM order covered by existing regression test. Desktop guide not independently inspected in full for every route.",
+        "result": "layout and family-level geometry checked; machine-specific supply still requires approved drawing"
+      },
+      "openIssues": []
+    },
+    {
+      "id": "sk-foil",
+      "original": "foil-multech-second.jpg",
+      "supplier": "Multech Machinery",
+      "page": "https://en.multech.com.tw/blade/21020/detail-b77bf040-0e06-11f0-af1c-95eabc83f70a",
+      "url": "https://images.yep.com.tw/thumbnai/67ea4c75e4789/c",
+      "geometry": "Five actual foil-slitting discs in four groups, different bore diameters, no peripheral mounting holes. Warm metallic appearance is not evidence of a coating or material.",
+      "limitation": "Native 800px, below preferred 960px minimum; higher-resolution replacement and actual-page visual approval remain open.",
+      "originalPath": "research/alibaba/ten-page-repair-2026-11-02/foil-multech-second.jpg",
+      "nativePixels": [
+        800,
+        800
+      ],
+      "nativeFormat": "JPEG",
+      "originalSha256": "0085d21a4e3f168523b8e29e825604c91b8aa57bdbdfb56f498ea73a6772cd13",
+      "outputs": {
+        "white": {
+          "path": "/images/products/specialty-photos-2026-11-02/sk-foil-white-v1.webp",
+          "pixels": [
+            1254,
+            1254
+          ],
+          "sha256": "c5ba56f217b7d11f996f25443492ea6a9f31c3b43a4e174f4dc76f3ee7ee66e1"
+        },
+        "hero": {
+          "path": "/images/products/specialty-photos-2026-11-02/sk-foil-hero-v2.webp",
+          "pixels": [
+            1672,
+            941
+          ],
+          "sha256": "006f6975a59a5cac6ad55ea37e8d9673d08db6f2cce9c91c88c8981e167bcc45"
+        }
+      },
+      "geometryReview": "Compared original photo, white gallery, photo-edited Hero and revised lower engineering guide. Five actual foil-slitting discs in four groups, different bore diameters, no peripheral mounting holes. Warm metallic appearance is not evidence of a coating or material.",
+      "visualQA": {
+        "date": "2026-11-03",
+        "desktop": "Checked actual Hero, complete white-gallery photo and zoom; title/description legibility checked. Native resolution remains conditional where listed.",
+        "mobile": "Checked actual 390x838 responsive Hero, white photo, zoom and Escape close; full horizontal Hero fits below copy, avoiding enlarged central crop.",
+        "zoom": "Opened the sole gallery image and closed with Escape on desktop and mobile.",
+        "dimensionsBelowPhotos": "Complete lower guide visually checked on mobile; DOM order covered by existing regression test. Desktop guide not independently inspected in full for every route.",
+        "result": "conditional: source 800px; high-resolution replacement outstanding"
+      },
+      "openIssues": [
+        {
+          "priority": "P2",
+          "issue": "Native source only 800px; AI output pixel count is not recovered source detail.",
+          "nextAction": "Replace with a verified higher-resolution original when available."
+        }
+      ]
+    },
+    {
+      "id": "sr-casting",
+      "original": "billet-shinite.webp",
+      "supplier": "Shinite",
+      "page": "https://masshenlite.en.made-in-china.com/product/eGzpIAiUqrVM/China-Mechanical-Billet-Flying-Shear-Blade-for-Billets-Iron-Wires-and-Rebars-Cutting.html",
+      "url": "https://image.made-in-china.com/203f0j00bFequSOzSNcR/Mechanical-Billet-Flying-Shear-Blade-for-Billets-Iron-Wires-and-Rebars-Cutting.webp",
+      "geometry": "Two straight-edge billet shear blades with end tabs, three mounting bores each (rear bore partially obscured), small pilot holes. Billet flying-shear family evidence; not proof of fit at a particular continuous-caster station.",
+      "originalPath": "research/alibaba/ten-page-repair-2026-11-02/billet-shinite.webp",
+      "nativePixels": [
+        1000,
+        1000
+      ],
+      "nativeFormat": "WEBP",
+      "originalSha256": "a3d80309afa1adfad0f4d1bfca028320bba9e93d0939c42633225452492b1f3a",
+      "outputs": {
+        "white": {
+          "path": "/images/products/specialty-photos-2026-11-02/sr-casting-white-v1.webp",
+          "pixels": [
+            1000,
+            1000
+          ],
+          "sha256": "01e3111e7888f07f69b16b9f7bfe6d3aea4088515dc766af6d23f181cc83a5e3"
+        },
+        "hero": {
+          "path": "/images/products/specialty-photos-2026-11-02/sr-casting-hero-v2.webp",
+          "pixels": [
+            1672,
+            941
+          ],
+          "sha256": "b1d641ce9eb871c069801935ba216fe454809e2da678c84d4202ce33038dca7e"
+        }
+      },
+      "geometryReview": "Compared original photo, white gallery, photo-edited Hero and revised lower engineering guide. Two straight-edge billet shear blades with end tabs, three mounting bores each (rear bore partially obscured), small pilot holes. Billet flying-shear family evidence; not proof of fit at a particular continuous-caster station.",
+      "visualQA": {
+        "date": "2026-11-03",
+        "desktop": "Checked actual Hero, complete white-gallery photo and zoom; title/description legibility checked. Native resolution remains conditional where listed.",
+        "mobile": "Checked actual 390x838 responsive Hero, white photo, zoom and Escape close; full horizontal Hero fits below copy, avoiding enlarged central crop.",
+        "zoom": "Opened the sole gallery image and closed with Escape on desktop and mobile.",
+        "dimensionsBelowPhotos": "Complete lower guide visually checked on mobile; DOM order covered by existing regression test. Desktop guide not independently inspected in full for every route.",
+        "result": "layout and family-level geometry checked; machine-specific supply still requires approved drawing"
+      },
+      "openIssues": []
+    },
+    {
+      "id": "cp-thin-slitter",
+      "original": "corrugated-kinki.png",
+      "supplier": "Kinki Hamono",
+      "page": "https://ja.nc-net.or.jp/company/74871/",
+      "url": "https://ja.nc-net.or.jp/up/library/74871/22900/a64497be26c0fb403dbc1f3fe72bc416.png",
+      "geometry": "One thin annular blade, six mounting holes, center bore approximately 63% of outside diameter. No dimensions inferred from image proportions.",
+      "originalPath": "research/alibaba/ten-page-repair-2026-11-02/corrugated-kinki.png",
+      "nativePixels": [
+        1024,
+        768
+      ],
+      "nativeFormat": "PNG",
+      "originalSha256": "f72082e392d6324e07a769134faa53113003cff295d3a9f2b029ba7e9b4a3306",
+      "outputs": {
+        "white": {
+          "path": "/images/products/specialty-photos-2026-11-02/cp-thin-slitter-white-v1.webp",
+          "pixels": [
+            1448,
+            1086
+          ],
+          "sha256": "c8d03b5c99bcf26a1b8143c481fc8ca8e3f1bbe47259b9edbb0bd0f48717464c"
+        },
+        "hero": {
+          "path": "/images/products/specialty-photos-2026-11-02/cp-thin-slitter-hero-v2.webp",
+          "pixels": [
+            1672,
+            941
+          ],
+          "sha256": "2c1b3c730f9133643f54cd672c2ae7f388ea69b5f715ac669ee36722f7c6495d"
+        }
+      },
+      "geometryReview": "Compared original photo, white gallery, photo-edited Hero and revised lower engineering guide. One thin annular blade, six mounting holes, center bore approximately 63% of outside diameter. No dimensions inferred from image proportions.",
+      "visualQA": {
+        "date": "2026-11-03",
+        "desktop": "Checked actual Hero, complete white-gallery photo and zoom; title/description legibility checked. Native resolution remains conditional where listed.",
+        "mobile": "Checked actual 390x838 responsive Hero, white photo, zoom and Escape close; full horizontal Hero fits below copy, avoiding enlarged central crop.",
+        "zoom": "Opened the sole gallery image and closed with Escape on desktop and mobile.",
+        "dimensionsBelowPhotos": "Complete lower guide visually checked on mobile; DOM order covered by existing regression test. Desktop guide not independently inspected in full for every route.",
+        "result": "layout and family-level geometry checked; machine-specific supply still requires approved drawing"
+      },
+      "openIssues": []
+    },
+    {
+      "id": "cr-rotor",
+      "original": "rotor-gl-original.jpg",
+      "supplier": "Great Lakes Industrial Knife",
+      "page": "https://www.glknife.com/granulator-knives/",
+      "url": "https://www.glknife.com/wp-content/uploads/2024/09/456-Z300600_2.jpg",
+      "geometry": "One granulator rotor knife, six closed elongated slots, continuous straight bevel. Supplier gallery pairs 456 rotor and 457 bed examples; no OEM fit or supplier performance promises copied.",
+      "originalPath": "research/alibaba/ten-page-repair-2026-11-02/rotor-gl-original.jpg",
+      "nativePixels": [
+        1500,
+        1500
+      ],
+      "nativeFormat": "JPEG",
+      "originalSha256": "f0df422af914751d5ea71bdf3d2cc384ac6b4968df2c53aff4bd464682c9a3a8",
+      "outputs": {
+        "white": {
+          "path": "/images/products/specialty-photos-2026-11-02/cr-rotor-white-v1.webp",
+          "pixels": [
+            1500,
+            1500
+          ],
+          "sha256": "e79f8599dea47c844de4c74050a6a19b490197169c1d8bccd17c88e2b7bc88c8"
+        },
+        "hero": {
+          "path": "/images/products/specialty-photos-2026-11-02/cr-rotor-hero-v2.webp",
+          "pixels": [
+            1672,
+            941
+          ],
+          "sha256": "25045aee0ccfd4171e1fb94dffc40f36aac0750bb4a0128023fa5c9667b1b348"
+        }
+      },
+      "geometryReview": "Compared original photo, white gallery, photo-edited Hero and revised lower engineering guide. One granulator rotor knife, six closed elongated slots, continuous straight bevel. Supplier gallery pairs 456 rotor and 457 bed examples; no OEM fit or supplier performance promises copied.",
+      "visualQA": {
+        "date": "2026-11-03",
+        "desktop": "Checked actual Hero, complete white-gallery photo and zoom; title/description legibility checked. Native resolution remains conditional where listed.",
+        "mobile": "Checked actual 390x838 responsive Hero, white photo, zoom and Escape close; full horizontal Hero fits below copy, avoiding enlarged central crop.",
+        "zoom": "Opened the sole gallery image and closed with Escape on desktop and mobile.",
+        "dimensionsBelowPhotos": "Complete lower guide visually checked on mobile; DOM order covered by existing regression test. Desktop guide not independently inspected in full for every route.",
+        "result": "layout and family-level geometry checked; machine-specific supply still requires approved drawing"
+      },
+      "openIssues": []
+    },
+    {
+      "id": "cr-stationary",
+      "original": "bed-gl-original.jpg",
+      "supplier": "Great Lakes Industrial Knife",
+      "page": "https://www.glknife.com/granulator-knives/",
+      "corroboratingPage": "https://americancuttingedge.com/wortex-model-up730-granulator-bed-knife-457-k730",
+      "url": "https://www.glknife.com/wp-content/uploads/2024/09/457-K730_1.jpg",
+      "geometry": "One stationary bed knife, four closed elongated holes and two open rectangular back-edge notches; continuous cutting edge. Bed role corroborated by supplier part page; no OEM compatibility claim transferred.",
+      "originalPath": "research/alibaba/ten-page-repair-2026-11-02/bed-gl-original.jpg",
+      "nativePixels": [
+        1500,
+        1500
+      ],
+      "nativeFormat": "JPEG",
+      "originalSha256": "1ca3b80d711b21af5d57063136890b406df5ebe89e126015ef42af8d2fed8431",
+      "outputs": {
+        "white": {
+          "path": "/images/products/specialty-photos-2026-11-02/cr-stationary-white-v1.webp",
+          "pixels": [
+            1500,
+            1500
+          ],
+          "sha256": "a147cbc8f21914880e47404f65c8fb6180785187034e2e315cd77de1f6ffe8d1"
+        },
+        "hero": {
+          "path": "/images/products/specialty-photos-2026-11-02/cr-stationary-hero-v2.webp",
+          "pixels": [
+            1672,
+            941
+          ],
+          "sha256": "ca53b21c046027ccb42b236fd1a0a3a6f091a1fd73fb9f92cbfc4788d92ccf01"
+        }
+      },
+      "geometryReview": "Compared original photo, white gallery, photo-edited Hero and revised lower engineering guide. One stationary bed knife, four closed elongated holes and two open rectangular back-edge notches; continuous cutting edge. Bed role corroborated by supplier part page; no OEM compatibility claim transferred.",
+      "visualQA": {
+        "date": "2026-11-03",
+        "desktop": "Checked actual Hero, complete white-gallery photo and zoom; title/description legibility checked. Native resolution remains conditional where listed.",
+        "mobile": "Checked actual 390x838 responsive Hero, white photo, zoom and Escape close; full horizontal Hero fits below copy, avoiding enlarged central crop.",
+        "zoom": "Opened the sole gallery image and closed with Escape on desktop and mobile.",
+        "dimensionsBelowPhotos": "Complete lower guide visually checked on mobile; DOM order covered by existing regression test. Desktop guide not independently inspected in full for every route.",
+        "result": "layout and family-level geometry checked; machine-specific supply still requires approved drawing"
+      },
+      "openIssues": []
+    }
+  ],
+  "release": {
+    "committed": false,
+    "pushed": false,
+    "deployed": false
+  },
+  "updated": "2026-11-03",
+  "comparisonHistory": {
+    "method": "Reused the dated 2026-10-31 comparison where applicable and searched additional primary supplier pages/photos. Five suppliers is a first-round target, not a claim that five originals were downloaded for every product. Page-only and failed downloads are not photo approvals.",
+    "previousRecord": "docs/product-imagery/photo-expansion-2026-10-31.json",
+    "pb-radius-tooling": "ALAS, Yafei, TSD, BHT, Fabmax, Infinity compared previously. Old Yafei CAD and cropped BHT promotional photo rejected; selected a different Yafei actual assembly photo Z6.jpg.",
+    "pb-u-forming": "Gunnar, BHT, Yafei, Shinite, HARSLE, UKB considered; roller tools and CAD rejected, some originals unavailable. Selected full Shinite 3024px fixed U-channel lower die photo.",
+    "pb-embossing": "Yafei CAD/offset photo rejected; UKB and Metalmaq originals unavailable, Eurostamp original timed out after retry. Xinmechan actual flanging assembly selected at 800x571; high-resolution replacement outstanding.",
+    "pb-container": "Sarin front-panel actual tool selected; Sarin side-panel alternative downloaded, Shinite small photo, UKB page-only, Yafei CAD rejected. Metalmaq wine-container closure tools rejected as a different application; five comparable actual originals were not obtained.",
+    "pb-light-pole": "Two distinct useful supplier sources: CMC low-resolution photo and hydraulic-press-brake.com tooling photos. Most other results were whole machines or reposts, not counted as independent suppliers. Selected complete pair; cropped rack variant rejected.",
+    "sk-foil": "Goodter, Sollex, Sparkquill, Sundi, Hexin and Multech considered. Renders/promotional graphics, whole slitting assemblies and low-resolution photos rejected; Ingol returned 406 and Ferrotec original unavailable. Multech actual blade group selected; native 800px limitation retained.",
+    "sr-casting": "Apex, Shinite, AMK, ALAS and SENDA compared; ASKO process evidence also consulted. Mixed rolling blade groups and scrap choppers rejected. Selected Shinite billet flying-shear pair; exact continuous-caster station compatibility is not established by this photo.",
+    "cp-thin-slitter": "DOMA, Shen Gong, Yafei, Kinki Hamono and Huatao compared. Selected Kinki actual annular blade with six mounting holes; brand/cloth background removed in edited version.",
+    "cr-rotor/cr-stationary": "Signature, Khosla, Yafei, Sureay, GL Knife and additional suppliers considered in earlier research. Selected GL Knife 1500px originals after successful download; ACE bed-knife product page corroborates stationary identity. Failed KN/EDGE/Mastercut/Kamadur downloads are not approvals."
+  },
+  "validation": {
+    "build": "npm run build passed; 43 prerendered pages; nine language packs, 922 entries each",
+    "tests": "node --test tests/*.test.mjs: 40 passed, 0 failed (outside sandbox for temporary HTTP listening). A subsequent presentational change adds a navy backing to desktop descriptions and title shadow; npm run build passed after that change. Tests were not unnecessarily repeated for this CSS-only adjustment.",
+    "browser": "Chrome native UI, actual localhost:4174 routes, zh-CN. Desktop Hero, single-photo gallery and zoom checked per product; 390x838 responsive Hero, single-photo zoom and complete lower dimension guide checked per product. Escape closes the viewer. No multi-image/thumbnail switching controls exist for these one-image galleries.",
+    "scopeLimits": "Chinese actual-page visual review only; other eight language packs validated by build/tests, not individually visually reviewed. Dimension guides are engineering illustrations, not production drawings.",
+    "finalContrastReview": "Outstanding: Chrome cgWindowNotFound on final screenshot attempt and one getApp retry. All ten earlier desktop/mobile photo checks completed. Final navy description backing/title shadow has build validation but no successful actual-page screenshot after this last adjustment."
+  },
+  "responsiveFix": {
+    "field": "heroMobileContain",
+    "scope": [
+      "pb-radius-tooling",
+      "pb-u-forming",
+      "pb-embossing",
+      "pb-container",
+      "pb-light-pole",
+      "sk-foil",
+      "sr-casting",
+      "cp-thin-slitter",
+      "cr-rotor",
+      "cr-stationary"
+    ],
+    "behavior": "Below md: full horizontal Hero contained at bottom on navy background; desktop retains cover. Description receives navy backing on desktop and heading a text shadow to avoid low contrast over silver metal. Other product entries retain their existing presentation."
+  },
+  "openAcceptanceItems": [
+    {
+      "priority": "P2",
+      "scope": "ten final Hero copy styles",
+      "nextAction": "When Chrome window is available, recheck final desktop description backing and title shadow; do not claim final screenshot approval from build alone."
+    }
+  ]
+}

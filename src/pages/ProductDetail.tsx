@@ -67,6 +67,7 @@ export default function ProductDetail() {
       <PageHero
         image={product.heroImage || product.image}
         productVisual={!product.heroImage}
+        mobileImageContain={product.heroMobileContain}
         title={product.searchName || product.name}
         accent="Made to Your Drawing"
         description={product.description}

@@ -1,0 +1,1580 @@
+{
+  "date": "2026-11-01",
+  "sourceCommit": "d2bfd3f",
+  "scope": "All 34 catalog product routes, current local catalog and built HTML, every referenced raster asset's actual metadata, 26 unique gallery images and 28 unique Hero images inspected in contact sheets, internal source/edit/QA records. This round is a document and evidence audit, not a fresh desktop/mobile/zoom sign-off for all pages.",
+  "summary": {
+    "products": 34,
+    "photoIntroductions": 24,
+    "missingPhotoIntroductions": 10,
+    "heroGeometryConflicts": [
+      "pb-double-v-die",
+      "pb-multi-v-die"
+    ],
+    "missingReferencedAssets": 0,
+    "missingLowerGuides": 0,
+    "photoAfterGuideOrderErrors": 0,
+    "fullyApprovedPages": "Not assigned: no fresh complete per-page visual acceptance in this audit. Conditional/QA gaps do not mean all those products have wrong images."
+  },
+  "rules": {
+    "P0": "Confirmed geometry conflict across Hero, photo and lower drawing; correct first.",
+    "P1": "Missing real-photo introduction, concept Hero not tied to a verified photograph, or unresolved product identity/style.",
+    "P2": "Conditional quality, family-image coverage or incomplete acceptance evidence; do not imply technical product error.",
+    "nativePixels": "Metadata describes saved final files; original photograph dimensions must be read from source records, not inferred from AI output.",
+    "history": "Earlier records saying local-only/unpublished are historical snapshots. Deployment of source d2bfd3f completed through publication commit 385d294; do not use stale snapshot flags as current deployment status."
+  },
+  "pages": [
+    {
+      "id": "sb-001",
+      "name": "Sheet Metal Shear Blades",
+      "category": "shear-blades",
+      "mediaMode": "photo",
+      "image": "/images/products/photo-pilot/guillotine-overview-clear-v2.webp",
+      "images": [
+        "/images/products/photo-pilot/guillotine-overview-clear-v2.webp",
+        "/images/products/photo-pilot/guillotine-three-white-v3.webp",
+        "/images/products/photo-pilot/guillotine-hero-white-v3.webp"
+      ],
+      "heroImage": "/images/products/photo-pilot/guillotine-hero-navy-v4.webp",
+      "assetsExist": true,
+      "htmlExists": true,
+      "introductionPhoto": "/images/products/photo-pilot/guillotine-overview-clear-v2.webp",
+      "lowerGuide": true,
+      "lowerGuideDrawing": true,
+      "photoBeforeGuide": true,
+      "seoCanonical": "https://www.nearblade.com/products/sb-001",
+      "assetMetadata": [
+        {
+          "path": "/images/products/photo-pilot/guillotine-overview-clear-v2.webp",
+          "format": "WEBP",
+          "pixels": [
+            1254,
+            1254
+          ]
+        },
+        {
+          "path": "/images/products/photo-pilot/guillotine-hero-navy-v4.webp",
+          "format": "WEBP",
+          "pixels": [
+            1672,
+            941
+          ]
+        },
+        {
+          "path": "/images/products/photo-pilot/guillotine-three-white-v3.webp",
+          "format": "WEBP",
+          "pixels": [
+            1448,
+            1086
+          ]
+        },
+        {
+          "path": "/images/products/photo-pilot/guillotine-hero-white-v3.webp",
+          "format": "WEBP",
+          "pixels": [
+            1672,
+            941
+          ]
+        }
+      ],
+      "assessment": {
+        "status": "条件符合",
+        "priority": "P2",
+        "finding": "白底图库和下方指南已具备；主图原生约1000px，历史增强图不能视作更高原生清晰度。",
+        "nextAction": "复查放大细节；逐步补1200px以上原图。",
+        "evidence": "docs/product-imagery/sources.json"
+      }
+    },
+    {
+      "id": "pb-001",
+      "name": "Press Brake Tooling",
+      "category": "press-brake-tooling",
+      "mediaMode": "photo",
+      "image": "/images/products/category-photos/pb-overview-white-v2.webp",
+      "images": [
+        "/images/products/category-photos/pb-overview-white-v2.webp"
+      ],
+      "heroImage": "/images/products/category-photos/pb-hero-v1.webp",
+      "assetsExist": true,
+      "htmlExists": true,
+      "introductionPhoto": "/images/products/category-photos/pb-overview-white-v2.webp",
+      "lowerGuide": true,
+      "lowerGuideDrawing": false,
+      "photoBeforeGuide": true,
+      "seoCanonical": "https://www.nearblade.com/products/pb-001",
+      "assetMetadata": [
+        {
+          "path": "/images/products/category-photos/pb-overview-white-v2.webp",
+          "format": "WEBP",
+          "pixels": [
+            1536,
+            1024
+          ]
+        },
+        {
+          "path": "/images/products/category-photos/pb-hero-v1.webp",
+          "format": "WEBP",
+          "pixels": [
+            1672,
+            941
+          ]
+        }
+      ],
+      "assessment": {
+        "status": "待补证据",
+        "priority": "P2",
+        "finding": "总览图仅展示部分下模，历史候选仍记录未完全批准；不能代表全部上下模实物类型。",
+        "nextAction": "核对当前总览图与选定原图的对应关系，补上下模组合概览及手机验收。",
+        "evidence": "docs/product-imagery/category-expansion.json"
+      }
+    },
+    {
+      "id": "pb-straight-punch",
+      "name": "Straight Press Brake Punches",
+      "category": "press-brake-tooling",
+      "mediaMode": "photo",
+      "image": "/images/products/tooling-v2/straight-punch-installed-white-v2.webp",
+      "images": [
+        "/images/products/tooling-v2/straight-punch-installed-white-v2.webp"
+      ],
+      "heroImage": "/images/products/tooling-v2/straight-punch-product-hero-v1.webp",
+      "assetsExist": true,
+      "htmlExists": true,
+      "introductionPhoto": "/images/products/tooling-v2/straight-punch-installed-white-v2.webp",
+      "lowerGuide": true,
+      "lowerGuideDrawing": true,
+      "photoBeforeGuide": true,
+      "seoCanonical": "https://www.nearblade.com/products/pb-straight-punch",
+      "assetMetadata": [
+        {
+          "path": "/images/products/tooling-v2/straight-punch-installed-white-v2.webp",
+          "format": "WEBP",
+          "pixels": [
+            1254,
+            1254
+          ]
+        },
+        {
+          "path": "/images/products/tooling-v2/straight-punch-product-hero-v1.webp",
+          "format": "WEBP",
+          "pixels": [
+            1672,
+            941
+          ]
+        }
+      ],
+      "assessment": {
+        "status": "不符合：Hero来源",
+        "priority": "P1",
+        "finding": "介绍区已用装机实物照片；Hero仍为文字生成概念，不能证明与该照片接口/截面一致。",
+        "nextAction": "依据已核实原照片制作独立Hero，保留装机照片的可见范围。",
+        "evidence": "docs/product-imagery/hero-products-2026-10-31.json"
+      }
+    },
+    {
+      "id": "pb-acute-punch",
+      "name": "Acute-angle Press Brake Punches",
+      "category": "press-brake-tooling",
+      "mediaMode": "photo",
+      "image": "/images/products/tooling-v2/acute-punch-white-v1.webp",
+      "images": [
+        "/images/products/tooling-v2/acute-punch-white-v1.webp"
+      ],
+      "heroImage": "/images/products/tooling-v2/acute-punch-product-hero-v1.webp",
+      "assetsExist": true,
+      "htmlExists": true,
+      "introductionPhoto": "/images/products/tooling-v2/acute-punch-white-v1.webp",
+      "lowerGuide": true,
+      "lowerGuideDrawing": true,
+      "photoBeforeGuide": true,
+      "seoCanonical": "https://www.nearblade.com/products/pb-acute-punch",
+      "assetMetadata": [
+        {
+          "path": "/images/products/tooling-v2/acute-punch-white-v1.webp",
+          "format": "WEBP",
+          "pixels": [
+            800,
+            800
+          ]
+        },
+        {
+          "path": "/images/products/tooling-v2/acute-punch-product-hero-v1.webp",
+          "format": "WEBP",
+          "pixels": [
+            1672,
+            941
+          ]
+        }
+      ],
+      "assessment": {
+        "status": "不符合：Hero来源；原图偏小",
+        "priority": "P1",
+        "finding": "图库原图800×800；Hero为无原照片目标的概念生成图。",
+        "nextAction": "寻找更高清实际照片，基于同一实物制作白底及Hero。",
+        "evidence": "docs/product-imagery/press-brake-intro-photos-2026-11-01.json"
+      }
+    },
+    {
+      "id": "pb-gooseneck-punch",
+      "name": "Gooseneck Press Brake Punches",
+      "category": "press-brake-tooling",
+      "mediaMode": "photo",
+      "image": "/images/products/tooling-v2/gooseneck-punch-white-v1.webp",
+      "images": [
+        "/images/products/tooling-v2/gooseneck-punch-white-v1.webp"
+      ],
+      "heroImage": "/images/products/tooling-v2/gooseneck-punch-product-hero-v2.webp",
+      "assetsExist": true,
+      "htmlExists": true,
+      "introductionPhoto": "/images/products/tooling-v2/gooseneck-punch-white-v1.webp",
+      "lowerGuide": true,
+      "lowerGuideDrawing": true,
+      "photoBeforeGuide": true,
+      "seoCanonical": "https://www.nearblade.com/products/pb-gooseneck-punch",
+      "assetMetadata": [
+        {
+          "path": "/images/products/tooling-v2/gooseneck-punch-white-v1.webp",
+          "format": "WEBP",
+          "pixels": [
+            3000,
+            3000
+          ]
+        },
+        {
+          "path": "/images/products/tooling-v2/gooseneck-punch-product-hero-v2.webp",
+          "format": "WEBP",
+          "pixels": [
+            1672,
+            941
+          ]
+        }
+      ],
+      "assessment": {
+        "status": "条件符合；画质待优化",
+        "priority": "P2",
+        "finding": "布局是基准；原图虽3000×3000，既有实页核对记录表面偏软、拍摄/渲染来源未确认。布局基准不代表图片全项合格。",
+        "nextAction": "寻找自然细节更清晰的照片，并补齐Hero到实际原图的编辑链。",
+        "evidence": "docs/product-imagery/tooling-rebuild/media-audit.json"
+      }
+    },
+    {
+      "id": "pb-single-v-die",
+      "name": "Single-V Press Brake Dies",
+      "category": "press-brake-tooling",
+      "mediaMode": "photo",
+      "image": "/images/products/tooling-v2/single-v-die-white-v1.webp",
+      "images": [
+        "/images/products/tooling-v2/single-v-die-white-v1.webp"
+      ],
+      "heroImage": "/images/products/tooling-v2/single-v-die-product-hero-v1.webp",
+      "assetsExist": true,
+      "htmlExists": true,
+      "introductionPhoto": "/images/products/tooling-v2/single-v-die-white-v1.webp",
+      "lowerGuide": true,
+      "lowerGuideDrawing": true,
+      "photoBeforeGuide": true,
+      "seoCanonical": "https://www.nearblade.com/products/pb-single-v-die",
+      "assetMetadata": [
+        {
+          "path": "/images/products/tooling-v2/single-v-die-white-v1.webp",
+          "format": "WEBP",
+          "pixels": [
+            1254,
+            1254
+          ]
+        },
+        {
+          "path": "/images/products/tooling-v2/single-v-die-product-hero-v1.webp",
+          "format": "WEBP",
+          "pixels": [
+            1672,
+            941
+          ]
+        }
+      ],
+      "assessment": {
+        "status": "不符合：Hero来源",
+        "priority": "P1",
+        "finding": "图库为1000px原图的编辑；Hero记录sourceImage=null，是概念生成，安装脚等结构仍需对齐。",
+        "nextAction": "从实物照片制作Hero，补原生清晰度及安装结构核对。",
+        "evidence": "docs/product-imagery/press-brake-batch-1-heroes.json"
+      }
+    },
+    {
+      "id": "pb-double-v-die",
+      "name": "Double-V Press Brake Dies",
+      "category": "press-brake-tooling",
+      "mediaMode": "photo",
+      "image": "/images/products/tooling-v2/double-v-die-white-v1.webp",
+      "images": [
+        "/images/products/tooling-v2/double-v-die-white-v1.webp"
+      ],
+      "heroImage": "/images/products/tooling-v2/double-v-die-product-hero-v1.webp",
+      "assetsExist": true,
+      "htmlExists": true,
+      "introductionPhoto": "/images/products/tooling-v2/double-v-die-white-v1.webp",
+      "lowerGuide": true,
+      "lowerGuideDrawing": true,
+      "photoBeforeGuide": true,
+      "seoCanonical": "https://www.nearblade.com/products/pb-double-v-die",
+      "assetMetadata": [
+        {
+          "path": "/images/products/tooling-v2/double-v-die-white-v1.webp",
+          "format": "WEBP",
+          "pixels": [
+            1254,
+            1254
+          ]
+        },
+        {
+          "path": "/images/products/tooling-v2/double-v-die-product-hero-v1.webp",
+          "format": "WEBP",
+          "pixels": [
+            1672,
+            941
+          ]
+        }
+      ],
+      "assessment": {
+        "status": "不符合：结构冲突",
+        "priority": "P0",
+        "finding": "图库和下方示意为同一顶面双V槽；Hero是顶部和底部相对V槽。",
+        "nextAction": "优先撤换冲突Hero，以同面双槽实物照片为唯一几何依据。",
+        "evidence": "docs/product-imagery/press-brake-intro-photos-2026-11-01.json"
+      }
+    },
+    {
+      "id": "pb-multi-v-die",
+      "name": "Multi-V Press Brake Dies",
+      "category": "press-brake-tooling",
+      "mediaMode": "photo",
+      "image": "/images/products/tooling-v2/multi-v-die-white-v1.webp",
+      "images": [
+        "/images/products/tooling-v2/multi-v-die-white-v1.webp"
+      ],
+      "heroImage": "/images/products/tooling-v2/multi-v-die-product-hero-v1.webp",
+      "assetsExist": true,
+      "htmlExists": true,
+      "introductionPhoto": "/images/products/tooling-v2/multi-v-die-white-v1.webp",
+      "lowerGuide": true,
+      "lowerGuideDrawing": true,
+      "photoBeforeGuide": true,
+      "seoCanonical": "https://www.nearblade.com/products/pb-multi-v-die",
+      "assetMetadata": [
+        {
+          "path": "/images/products/tooling-v2/multi-v-die-white-v1.webp",
+          "format": "WEBP",
+          "pixels": [
+            1500,
+            1499
+          ]
+        },
+        {
+          "path": "/images/products/tooling-v2/multi-v-die-product-hero-v1.webp",
+          "format": "WEBP",
+          "pixels": [
+            1672,
+            941
+          ]
+        }
+      ],
+      "assessment": {
+        "status": "不符合：结构冲突",
+        "priority": "P0",
+        "finding": "图库/下方示意为两个顶槽加一个侧槽的三槽块；Hero显示四面槽，不对应该实物。",
+        "nextAction": "优先更换Hero，保持三槽数量、所在面及安装凹槽。",
+        "evidence": "docs/product-imagery/press-brake-intro-photos-2026-11-01.json"
+      }
+    },
+    {
+      "id": "pb-radius-tooling",
+      "name": "Radius Bending Tooling",
+      "category": "press-brake-tooling",
+      "mediaMode": "specification",
+      "image": "/images/products/tooling-v2/radius-tool-section-v1.svg",
+      "images": [],
+      "heroImage": "/images/products/tooling-v2/radius-tool-product-hero-v1.webp",
+      "assetsExist": true,
+      "htmlExists": true,
+      "introductionPhoto": null,
+      "lowerGuide": true,
+      "lowerGuideDrawing": false,
+      "photoBeforeGuide": null,
+      "seoCanonical": "https://www.nearblade.com/products/pb-radius-tooling",
+      "assetMetadata": [
+        {
+          "path": "/images/products/tooling-v2/radius-tool-section-v1.svg",
+          "format": "SVG",
+          "pixels": null
+        },
+        {
+          "path": "/images/products/tooling-v2/radius-tool-product-hero-v1.webp",
+          "format": "WEBP",
+          "pixels": [
+            1672,
+            941
+          ]
+        }
+      ],
+      "assessment": {
+        "status": "不符合：缺实物图库",
+        "priority": "P1",
+        "finding": "仍设置mediaMode=specification、images为空；工程图在介绍区，下方尺寸指南不显示独立图；Hero多为概念生成。",
+        "nextAction": "按产品工艺寻找对应实际照片，白底放介绍区、尺寸图下移；基于同一实物制作Hero。",
+        "evidence": "docs/product-imagery/tooling-rebuild/analysis.md"
+      }
+    },
+    {
+      "id": "pb-u-forming",
+      "name": "U-profile Forming Tooling",
+      "category": "press-brake-tooling",
+      "mediaMode": "specification",
+      "image": "/images/products/tooling-v2/u-forming-section-v1.svg",
+      "images": [],
+      "heroImage": "/images/products/tooling-v2/u-forming-product-hero-v1.webp",
+      "assetsExist": true,
+      "htmlExists": true,
+      "introductionPhoto": null,
+      "lowerGuide": true,
+      "lowerGuideDrawing": false,
+      "photoBeforeGuide": null,
+      "seoCanonical": "https://www.nearblade.com/products/pb-u-forming",
+      "assetMetadata": [
+        {
+          "path": "/images/products/tooling-v2/u-forming-section-v1.svg",
+          "format": "SVG",
+          "pixels": null
+        },
+        {
+          "path": "/images/products/tooling-v2/u-forming-product-hero-v1.webp",
+          "format": "WEBP",
+          "pixels": [
+            1672,
+            941
+          ]
+        }
+      ],
+      "assessment": {
+        "status": "不符合：缺实物图库",
+        "priority": "P1",
+        "finding": "仍设置mediaMode=specification、images为空；工程图在介绍区，下方尺寸指南不显示独立图；Hero多为概念生成。",
+        "nextAction": "按产品工艺寻找对应实际照片，白底放介绍区、尺寸图下移；基于同一实物制作Hero。",
+        "evidence": "docs/product-imagery/tooling-rebuild/analysis.md"
+      }
+    },
+    {
+      "id": "pb-embossing",
+      "name": "Custom Profile Forming Tooling",
+      "category": "press-brake-tooling",
+      "mediaMode": "specification",
+      "image": "/images/products/tooling-v2/profile-forming-section-v1.svg",
+      "images": [],
+      "heroImage": "/images/products/tooling-v2/profile-forming-product-hero-v1.webp",
+      "assetsExist": true,
+      "htmlExists": true,
+      "introductionPhoto": null,
+      "lowerGuide": true,
+      "lowerGuideDrawing": false,
+      "photoBeforeGuide": null,
+      "seoCanonical": "https://www.nearblade.com/products/pb-embossing",
+      "assetMetadata": [
+        {
+          "path": "/images/products/tooling-v2/profile-forming-section-v1.svg",
+          "format": "SVG",
+          "pixels": null
+        },
+        {
+          "path": "/images/products/tooling-v2/profile-forming-product-hero-v1.webp",
+          "format": "WEBP",
+          "pixels": [
+            1672,
+            940
+          ]
+        }
+      ],
+      "assessment": {
+        "status": "不符合：缺实物图库",
+        "priority": "P1",
+        "finding": "仍设置mediaMode=specification、images为空；工程图在介绍区，下方尺寸指南不显示独立图；Hero多为概念生成。",
+        "nextAction": "按产品工艺寻找对应实际照片，白底放介绍区、尺寸图下移；基于同一实物制作Hero。",
+        "evidence": "docs/product-imagery/tooling-rebuild/analysis.md"
+      }
+    },
+    {
+      "id": "pb-container",
+      "name": "Container Forming Tooling",
+      "category": "press-brake-tooling",
+      "mediaMode": "specification",
+      "image": "/images/products/tooling-v2/container-forming-section-v1.svg",
+      "images": [],
+      "heroImage": "/images/products/tooling-v2/container-forming-product-hero-v1.webp",
+      "assetsExist": true,
+      "htmlExists": true,
+      "introductionPhoto": null,
+      "lowerGuide": true,
+      "lowerGuideDrawing": false,
+      "photoBeforeGuide": null,
+      "seoCanonical": "https://www.nearblade.com/products/pb-container",
+      "assetMetadata": [
+        {
+          "path": "/images/products/tooling-v2/container-forming-section-v1.svg",
+          "format": "SVG",
+          "pixels": null
+        },
+        {
+          "path": "/images/products/tooling-v2/container-forming-product-hero-v1.webp",
+          "format": "WEBP",
+          "pixels": [
+            1672,
+            941
+          ]
+        }
+      ],
+      "assessment": {
+        "status": "不符合：缺实物图库",
+        "priority": "P1",
+        "finding": "仍设置mediaMode=specification、images为空；工程图在介绍区，下方尺寸指南不显示独立图；Hero多为概念生成。",
+        "nextAction": "按产品工艺寻找对应实际照片，白底放介绍区、尺寸图下移；基于同一实物制作Hero。",
+        "evidence": "docs/product-imagery/tooling-rebuild/analysis.md"
+      }
+    },
+    {
+      "id": "pb-light-pole",
+      "name": "Light Pole Bending Tooling",
+      "category": "press-brake-tooling",
+      "mediaMode": "specification",
+      "image": "/images/products/tooling-v2/pole-forming-section-v1.svg",
+      "images": [],
+      "heroImage": "/images/products/tooling-v2/pole-forming-product-hero-v1.webp",
+      "assetsExist": true,
+      "htmlExists": true,
+      "introductionPhoto": null,
+      "lowerGuide": true,
+      "lowerGuideDrawing": false,
+      "photoBeforeGuide": null,
+      "seoCanonical": "https://www.nearblade.com/products/pb-light-pole",
+      "assetMetadata": [
+        {
+          "path": "/images/products/tooling-v2/pole-forming-section-v1.svg",
+          "format": "SVG",
+          "pixels": null
+        },
+        {
+          "path": "/images/products/tooling-v2/pole-forming-product-hero-v1.webp",
+          "format": "WEBP",
+          "pixels": [
+            1672,
+            941
+          ]
+        }
+      ],
+      "assessment": {
+        "status": "不符合：缺实物图库",
+        "priority": "P1",
+        "finding": "仍设置mediaMode=specification、images为空；工程图在介绍区，下方尺寸指南不显示独立图；Hero多为概念生成。",
+        "nextAction": "按产品工艺寻找对应实际照片，白底放介绍区、尺寸图下移；基于同一实物制作Hero。",
+        "evidence": "docs/product-imagery/tooling-rebuild/analysis.md"
+      }
+    },
+    {
+      "id": "pb-quick-clamps",
+      "name": "Upper-tool Quick Clamps",
+      "category": "press-brake-tooling",
+      "mediaMode": "photo",
+      "image": "/images/products/tooling-v2/quick-clamp-white-v1.webp",
+      "images": [
+        "/images/products/tooling-v2/quick-clamp-white-v1.webp"
+      ],
+      "heroImage": "/images/products/tooling-v2/quick-clamp-product-hero-v1.webp",
+      "assetsExist": true,
+      "htmlExists": true,
+      "introductionPhoto": "/images/products/tooling-v2/quick-clamp-white-v1.webp",
+      "lowerGuide": true,
+      "lowerGuideDrawing": true,
+      "photoBeforeGuide": true,
+      "seoCanonical": "https://www.nearblade.com/products/pb-quick-clamps",
+      "assetMetadata": [
+        {
+          "path": "/images/products/tooling-v2/quick-clamp-white-v1.webp",
+          "format": "WEBP",
+          "pixels": [
+            1254,
+            1254
+          ]
+        },
+        {
+          "path": "/images/products/tooling-v2/quick-clamp-product-hero-v1.webp",
+          "format": "WEBP",
+          "pixels": [
+            1672,
+            941
+          ]
+        }
+      ],
+      "assessment": {
+        "status": "条件符合；验收待补",
+        "priority": "P2",
+        "finding": "白底、Hero均有照片编辑链；原图1000px，既有记录仍有条件预览/验收缺口。",
+        "nextAction": "补当前版本逐图放大和手机验收，寻找更高清原图。",
+        "evidence": "docs/product-imagery/tooling-rebuild/media-audit.json"
+      }
+    },
+    {
+      "id": "rs-001",
+      "name": "Metal Rotary Slitter Knives",
+      "category": "rolling-shear-blades",
+      "mediaMode": "photo",
+      "image": "/images/products/category-photos/rs-001-single-white-v2.webp",
+      "images": [
+        "/images/products/category-photos/rs-001-single-white-v2.webp",
+        "/images/products/category-photos/rs-001-sego-02-white-v1.webp"
+      ],
+      "heroImage": "/images/products/category-photos/rs-hero-v1.webp",
+      "assetsExist": true,
+      "htmlExists": true,
+      "introductionPhoto": "/images/products/category-photos/rs-001-single-white-v2.webp",
+      "lowerGuide": true,
+      "lowerGuideDrawing": true,
+      "photoBeforeGuide": true,
+      "seoCanonical": "https://www.nearblade.com/products/rs-001",
+      "assetMetadata": [
+        {
+          "path": "/images/products/category-photos/rs-001-single-white-v2.webp",
+          "format": "WEBP",
+          "pixels": [
+            1000,
+            1000
+          ]
+        },
+        {
+          "path": "/images/products/category-photos/rs-hero-v1.webp",
+          "format": "WEBP",
+          "pixels": [
+            1672,
+            941
+          ]
+        },
+        {
+          "path": "/images/products/category-photos/rs-001-sego-02-white-v1.webp",
+          "format": "WEBP",
+          "pixels": [
+            1042,
+            1042
+          ]
+        }
+      ],
+      "assessment": {
+        "status": "条件符合",
+        "priority": "P2",
+        "finding": "新主图白底且已有桌面/手机核对；两张照片原生清晰度和第二张偏绿仍可优化，手机放大未单独测试。",
+        "nextAction": "保留当前主图；补手机放大及第二张色彩/清晰度核对。",
+        "evidence": "docs/product-imagery/rs-001-main-photo-2026-11-01.json"
+      }
+    },
+    {
+      "id": "sk-001",
+      "name": "Slitting Knives",
+      "category": "slitting-knives",
+      "mediaMode": "photo",
+      "image": "/images/products/category-photos/sk-overview-white-v1.webp",
+      "images": [
+        "/images/products/category-photos/sk-overview-white-v1.webp",
+        "/images/products/category-photos/sk-edge-white-v1.webp"
+      ],
+      "heroImage": "/images/products/category-photos/sk-hero-v1.webp",
+      "assetsExist": true,
+      "htmlExists": true,
+      "introductionPhoto": "/images/products/category-photos/sk-overview-white-v1.webp",
+      "lowerGuide": true,
+      "lowerGuideDrawing": false,
+      "photoBeforeGuide": true,
+      "seoCanonical": "https://www.nearblade.com/products/sk-001",
+      "assetMetadata": [
+        {
+          "path": "/images/products/category-photos/sk-overview-white-v1.webp",
+          "format": "WEBP",
+          "pixels": [
+            1536,
+            1024
+          ]
+        },
+        {
+          "path": "/images/products/category-photos/sk-hero-v1.webp",
+          "format": "WEBP",
+          "pixels": [
+            1672,
+            941
+          ]
+        },
+        {
+          "path": "/images/products/category-photos/sk-edge-white-v1.webp",
+          "format": "WEBP",
+          "pixels": [
+            1536,
+            1024
+          ]
+        }
+      ],
+      "assessment": {
+        "status": "布局符合；覆盖与验收待补",
+        "priority": "P2",
+        "finding": "图库只展示圆刀，系列还包括其他切法/制管应用；不能由该图确认所有类型。旧记录手机验收不完整。",
+        "nextAction": "补对应子类型照片及逐页手机验收；不把圆刀几何套到所有分切刀。",
+        "evidence": "docs/product-imagery/blade-rebuild/analysis.md"
+      }
+    },
+    {
+      "id": "sk-paper-film",
+      "name": "Paper and Film Slitting Knives",
+      "category": "slitting-knives",
+      "mediaMode": "photo",
+      "image": "/images/products/category-photos/sk-overview-white-v1.webp",
+      "images": [
+        "/images/products/category-photos/sk-overview-white-v1.webp",
+        "/images/products/category-photos/sk-edge-white-v1.webp"
+      ],
+      "heroImage": "/images/products/category-photos/sk-hero-v1.webp",
+      "assetsExist": true,
+      "htmlExists": true,
+      "introductionPhoto": "/images/products/category-photos/sk-overview-white-v1.webp",
+      "lowerGuide": true,
+      "lowerGuideDrawing": false,
+      "photoBeforeGuide": true,
+      "seoCanonical": "https://www.nearblade.com/products/sk-paper-film",
+      "assetMetadata": [
+        {
+          "path": "/images/products/category-photos/sk-overview-white-v1.webp",
+          "format": "WEBP",
+          "pixels": [
+            1536,
+            1024
+          ]
+        },
+        {
+          "path": "/images/products/category-photos/sk-hero-v1.webp",
+          "format": "WEBP",
+          "pixels": [
+            1672,
+            941
+          ]
+        },
+        {
+          "path": "/images/products/category-photos/sk-edge-white-v1.webp",
+          "format": "WEBP",
+          "pixels": [
+            1536,
+            1024
+          ]
+        }
+      ],
+      "assessment": {
+        "status": "布局符合；覆盖与验收待补",
+        "priority": "P2",
+        "finding": "与系列共用圆刀图，不能用照片证明剃刀/压切结构；当前图是示例，需补应用对应及手机验收。",
+        "nextAction": "按剪切/剃刀/压切实际供货范围补照片，先保持工艺边界。",
+        "evidence": "docs/product-imagery/blade-rebuild/analysis.md"
+      }
+    },
+    {
+      "id": "sk-foil",
+      "name": "Aluminum and Copper Foil Slitting Knives",
+      "category": "slitting-knives",
+      "mediaMode": "specification",
+      "image": "/images/products/blades-v2/converting-slitter-section-v1.svg",
+      "images": [],
+      "heroImage": "/images/products/hero-products-2026-10-31/foil-slitter-product-hero-v1.webp",
+      "assetsExist": true,
+      "htmlExists": true,
+      "introductionPhoto": null,
+      "lowerGuide": true,
+      "lowerGuideDrawing": false,
+      "photoBeforeGuide": null,
+      "seoCanonical": "https://www.nearblade.com/products/sk-foil",
+      "assetMetadata": [
+        {
+          "path": "/images/products/blades-v2/converting-slitter-section-v1.svg",
+          "format": "SVG",
+          "pixels": null
+        },
+        {
+          "path": "/images/products/hero-products-2026-10-31/foil-slitter-product-hero-v1.webp",
+          "format": "WEBP",
+          "pixels": [
+            1672,
+            941
+          ]
+        }
+      ],
+      "assessment": {
+        "status": "不符合：缺实物图库",
+        "priority": "P1",
+        "finding": "仍设置mediaMode=specification、images为空；工程图在介绍区，下方尺寸指南不显示独立图；Hero多为概念生成。",
+        "nextAction": "按产品工艺寻找对应实际照片，白底放介绍区、尺寸图下移；基于同一实物制作Hero。",
+        "evidence": "docs/product-imagery/blade-rebuild/analysis.md"
+      }
+    },
+    {
+      "id": "sr-001",
+      "name": "Steel Mill Shear Blades",
+      "category": "steel-rolling-blades",
+      "mediaMode": "photo",
+      "image": "/images/products/photo-expansion-2026-10-31/bar-shear-white-v1.webp",
+      "images": [
+        "/images/products/photo-expansion-2026-10-31/bar-shear-white-v1.webp"
+      ],
+      "heroImage": "/images/products/photo-expansion-2026-10-31/bar-shear-hero-v1.webp",
+      "assetsExist": true,
+      "htmlExists": true,
+      "introductionPhoto": "/images/products/photo-expansion-2026-10-31/bar-shear-white-v1.webp",
+      "lowerGuide": true,
+      "lowerGuideDrawing": true,
+      "photoBeforeGuide": true,
+      "seoCanonical": "https://www.nearblade.com/products/sr-001",
+      "assetMetadata": [
+        {
+          "path": "/images/products/photo-expansion-2026-10-31/bar-shear-white-v1.webp",
+          "format": "WEBP",
+          "pixels": [
+            1000,
+            1000
+          ]
+        },
+        {
+          "path": "/images/products/photo-expansion-2026-10-31/bar-shear-hero-v1.webp",
+          "format": "WEBP",
+          "pixels": [
+            1672,
+            941
+          ]
+        }
+      ],
+      "assessment": {
+        "status": "条件符合；验收待补",
+        "priority": "P2",
+        "finding": "七件棒材剪刃图不能代表整个钢厂刀系列；1000px条件原图，既有记录系列页/手机Hero验收未全。",
+        "nextAction": "补系列范围对应的实物及当前版本逐页验收。",
+        "evidence": "docs/product-imagery/photo-expansion-2026-10-31.json"
+      }
+    },
+    {
+      "id": "sr-bar",
+      "name": "Bar Shear Blades",
+      "category": "steel-rolling-blades",
+      "mediaMode": "photo",
+      "image": "/images/products/photo-expansion-2026-10-31/bar-shear-white-v1.webp",
+      "images": [
+        "/images/products/photo-expansion-2026-10-31/bar-shear-white-v1.webp"
+      ],
+      "heroImage": "/images/products/photo-expansion-2026-10-31/bar-shear-hero-v1.webp",
+      "assetsExist": true,
+      "htmlExists": true,
+      "introductionPhoto": "/images/products/photo-expansion-2026-10-31/bar-shear-white-v1.webp",
+      "lowerGuide": true,
+      "lowerGuideDrawing": true,
+      "photoBeforeGuide": true,
+      "seoCanonical": "https://www.nearblade.com/products/sr-bar",
+      "assetMetadata": [
+        {
+          "path": "/images/products/photo-expansion-2026-10-31/bar-shear-white-v1.webp",
+          "format": "WEBP",
+          "pixels": [
+            1000,
+            1000
+          ]
+        },
+        {
+          "path": "/images/products/photo-expansion-2026-10-31/bar-shear-hero-v1.webp",
+          "format": "WEBP",
+          "pixels": [
+            1672,
+            941
+          ]
+        }
+      ],
+      "assessment": {
+        "status": "条件符合；验收待补",
+        "priority": "P2",
+        "finding": "1000px原图；桌面图库有记录，最终Hero和完整手机验收不全。",
+        "nextAction": "补高清原图及最终Hero/手机核对，不推导刀座互换性。",
+        "evidence": "docs/product-imagery/photo-expansion-2026-10-31.json"
+      }
+    },
+    {
+      "id": "sr-casting",
+      "name": "Continuous Casting and Rolling Shear Blades",
+      "category": "steel-rolling-blades",
+      "mediaMode": "specification",
+      "image": "/images/products/blades-v2/billet-shear-section-v1.svg",
+      "images": [],
+      "heroImage": "/images/products/hero-products-2026-10-31/billet-shear-product-hero-v1.webp",
+      "assetsExist": true,
+      "htmlExists": true,
+      "introductionPhoto": null,
+      "lowerGuide": true,
+      "lowerGuideDrawing": false,
+      "photoBeforeGuide": null,
+      "seoCanonical": "https://www.nearblade.com/products/sr-casting",
+      "assetMetadata": [
+        {
+          "path": "/images/products/blades-v2/billet-shear-section-v1.svg",
+          "format": "SVG",
+          "pixels": null
+        },
+        {
+          "path": "/images/products/hero-products-2026-10-31/billet-shear-product-hero-v1.webp",
+          "format": "WEBP",
+          "pixels": [
+            1672,
+            941
+          ]
+        }
+      ],
+      "assessment": {
+        "status": "不符合：缺实物图库",
+        "priority": "P1",
+        "finding": "仍设置mediaMode=specification、images为空；工程图在介绍区，下方尺寸指南不显示独立图；Hero多为概念生成。",
+        "nextAction": "按产品工艺寻找对应实际照片，白底放介绍区、尺寸图下移；基于同一实物制作Hero。",
+        "evidence": "docs/product-imagery/blade-rebuild/analysis.md"
+      }
+    },
+    {
+      "id": "cp-001",
+      "name": "Corrugated Board Cutting Knives",
+      "category": "corrugated-paper-cutters",
+      "mediaMode": "photo",
+      "image": "/images/products/category-photos/tb-overview-white-v1.webp",
+      "images": [
+        "/images/products/category-photos/tb-overview-white-v1.webp",
+        "/images/products/category-photos/tb-variants-white-v1.webp"
+      ],
+      "heroImage": "/images/products/category-photos/tb-hero-navy-v1.webp",
+      "assetsExist": true,
+      "htmlExists": true,
+      "introductionPhoto": "/images/products/category-photos/tb-overview-white-v1.webp",
+      "lowerGuide": true,
+      "lowerGuideDrawing": false,
+      "photoBeforeGuide": true,
+      "seoCanonical": "https://www.nearblade.com/products/cp-001",
+      "assetMetadata": [
+        {
+          "path": "/images/products/category-photos/tb-overview-white-v1.webp",
+          "format": "WEBP",
+          "pixels": [
+            1536,
+            1024
+          ]
+        },
+        {
+          "path": "/images/products/category-photos/tb-hero-navy-v1.webp",
+          "format": "WEBP",
+          "pixels": [
+            1672,
+            941
+          ]
+        },
+        {
+          "path": "/images/products/category-photos/tb-variants-white-v1.webp",
+          "format": "WEBP",
+          "pixels": [
+            960,
+            960
+          ]
+        }
+      ],
+      "assessment": {
+        "status": "布局符合；系列覆盖待补",
+        "priority": "P2",
+        "finding": "只用开槽弧刀代表系列，未覆盖薄圆刀实物；历史手机验收缺口仍需核对。",
+        "nextAction": "补薄圆刀对应实物及系列页完整验收，不以弧刀替代薄刀。",
+        "evidence": "docs/product-imagery/blade-rebuild/analysis.md"
+      }
+    },
+    {
+      "id": "cp-thin-slitter",
+      "name": "Corrugated Slitter Scorer Knives",
+      "category": "corrugated-paper-cutters",
+      "mediaMode": "specification",
+      "image": "/images/products/blades-v2/corrugated-thin-section-v1.svg",
+      "images": [],
+      "heroImage": "/images/products/hero-products-2026-10-31/corrugated-thin-product-hero-v1.webp",
+      "assetsExist": true,
+      "htmlExists": true,
+      "introductionPhoto": null,
+      "lowerGuide": true,
+      "lowerGuideDrawing": false,
+      "photoBeforeGuide": null,
+      "seoCanonical": "https://www.nearblade.com/products/cp-thin-slitter",
+      "assetMetadata": [
+        {
+          "path": "/images/products/blades-v2/corrugated-thin-section-v1.svg",
+          "format": "SVG",
+          "pixels": null
+        },
+        {
+          "path": "/images/products/hero-products-2026-10-31/corrugated-thin-product-hero-v1.webp",
+          "format": "WEBP",
+          "pixels": [
+            1672,
+            941
+          ]
+        }
+      ],
+      "assessment": {
+        "status": "不符合：缺实物图库",
+        "priority": "P1",
+        "finding": "仍设置mediaMode=specification、images为空；工程图在介绍区，下方尺寸指南不显示独立图；Hero多为概念生成。",
+        "nextAction": "按产品工艺寻找对应实际照片，白底放介绍区、尺寸图下移；基于同一实物制作Hero。",
+        "evidence": "docs/product-imagery/blade-rebuild/analysis.md"
+      }
+    },
+    {
+      "id": "cp-slotting",
+      "name": "Corrugated Slotting Knives",
+      "category": "corrugated-paper-cutters",
+      "mediaMode": "photo",
+      "image": "/images/products/category-photos/tb-overview-white-v1.webp",
+      "images": [
+        "/images/products/category-photos/tb-overview-white-v1.webp",
+        "/images/products/category-photos/tb-variants-white-v1.webp"
+      ],
+      "heroImage": "/images/products/category-photos/tb-hero-navy-v1.webp",
+      "assetsExist": true,
+      "htmlExists": true,
+      "introductionPhoto": "/images/products/category-photos/tb-overview-white-v1.webp",
+      "lowerGuide": true,
+      "lowerGuideDrawing": true,
+      "photoBeforeGuide": true,
+      "seoCanonical": "https://www.nearblade.com/products/cp-slotting",
+      "assetMetadata": [
+        {
+          "path": "/images/products/category-photos/tb-overview-white-v1.webp",
+          "format": "WEBP",
+          "pixels": [
+            1536,
+            1024
+          ]
+        },
+        {
+          "path": "/images/products/category-photos/tb-hero-navy-v1.webp",
+          "format": "WEBP",
+          "pixels": [
+            1672,
+            941
+          ]
+        },
+        {
+          "path": "/images/products/category-photos/tb-variants-white-v1.webp",
+          "format": "WEBP",
+          "pixels": [
+            960,
+            960
+          ]
+        }
+      ],
+      "assessment": {
+        "status": "布局符合；验收待补",
+        "priority": "P2",
+        "finding": "开槽弧刀白底图库和下方指南具备；现存来源记录未证明本版手机及全部放大验收完整。",
+        "nextAction": "补当前版本逐图和手机验收。",
+        "evidence": "docs/product-imagery/category-expansion.json"
+      }
+    },
+    {
+      "id": "tb-002",
+      "name": "Toothed Blades",
+      "category": "toothed-blades",
+      "mediaMode": "photo",
+      "image": "/images/products/photo-expansion-2026-10-31/packaging-serrated-white-v1.webp",
+      "images": [
+        "/images/products/photo-expansion-2026-10-31/packaging-serrated-white-v1.webp"
+      ],
+      "heroImage": "/images/products/photo-expansion-2026-10-31/packaging-serrated-hero-v1.webp",
+      "assetsExist": true,
+      "htmlExists": true,
+      "introductionPhoto": "/images/products/photo-expansion-2026-10-31/packaging-serrated-white-v1.webp",
+      "lowerGuide": true,
+      "lowerGuideDrawing": true,
+      "photoBeforeGuide": true,
+      "seoCanonical": "https://www.nearblade.com/products/tb-002",
+      "assetMetadata": [
+        {
+          "path": "/images/products/photo-expansion-2026-10-31/packaging-serrated-white-v1.webp",
+          "format": "WEBP",
+          "pixels": [
+            1536,
+            1024
+          ]
+        },
+        {
+          "path": "/images/products/photo-expansion-2026-10-31/packaging-serrated-hero-v1.webp",
+          "format": "WEBP",
+          "pixels": [
+            1672,
+            941
+          ]
+        }
+      ],
+      "assessment": {
+        "status": "布局符合；验收待补",
+        "priority": "P2",
+        "finding": "照片有2025px原图及几何对照；旧记录仍列白底图库/放大及完整手机Hero待验收。",
+        "nextAction": "补本版图库、放大、手机Hero逐项验收。",
+        "evidence": "docs/product-imagery/photo-expansion-2026-10-31.json"
+      }
+    },
+    {
+      "id": "tb-packaging",
+      "name": "Packaging Machine Serrated Knives",
+      "category": "toothed-blades",
+      "mediaMode": "photo",
+      "image": "/images/products/photo-expansion-2026-10-31/packaging-serrated-white-v1.webp",
+      "images": [
+        "/images/products/photo-expansion-2026-10-31/packaging-serrated-white-v1.webp"
+      ],
+      "heroImage": "/images/products/photo-expansion-2026-10-31/packaging-serrated-hero-v1.webp",
+      "assetsExist": true,
+      "htmlExists": true,
+      "introductionPhoto": "/images/products/photo-expansion-2026-10-31/packaging-serrated-white-v1.webp",
+      "lowerGuide": true,
+      "lowerGuideDrawing": true,
+      "photoBeforeGuide": true,
+      "seoCanonical": "https://www.nearblade.com/products/tb-packaging",
+      "assetMetadata": [
+        {
+          "path": "/images/products/photo-expansion-2026-10-31/packaging-serrated-white-v1.webp",
+          "format": "WEBP",
+          "pixels": [
+            1536,
+            1024
+          ]
+        },
+        {
+          "path": "/images/products/photo-expansion-2026-10-31/packaging-serrated-hero-v1.webp",
+          "format": "WEBP",
+          "pixels": [
+            1672,
+            941
+          ]
+        }
+      ],
+      "assessment": {
+        "status": "布局符合；验收待补",
+        "priority": "P2",
+        "finding": "有实物编辑链，桌面图库和放大已有记录；最终Hero及手机检查仍未完整记录。",
+        "nextAction": "补最终Hero与手机验收。",
+        "evidence": "docs/product-imagery/photo-expansion-2026-10-31.json"
+      }
+    },
+    {
+      "id": "db-001",
+      "name": "Doctor Blades",
+      "category": "doctor-blades",
+      "mediaMode": "photo",
+      "image": "/images/products/doctor-photos-v2/doctor-strip-white-v2.webp",
+      "images": [
+        "/images/products/doctor-photos-v2/doctor-strip-white-v2.webp",
+        "/images/products/doctor-photos-v2/doctor-box-white-v1.webp"
+      ],
+      "heroImage": "/images/products/doctor-photos-v2/doctor-strip-hero-v2.webp",
+      "assetsExist": true,
+      "htmlExists": true,
+      "introductionPhoto": "/images/products/doctor-photos-v2/doctor-strip-white-v2.webp",
+      "lowerGuide": true,
+      "lowerGuideDrawing": true,
+      "photoBeforeGuide": true,
+      "seoCanonical": "https://www.nearblade.com/products/db-001",
+      "assetMetadata": [
+        {
+          "path": "/images/products/doctor-photos-v2/doctor-strip-white-v2.webp",
+          "format": "WEBP",
+          "pixels": [
+            1536,
+            1024
+          ]
+        },
+        {
+          "path": "/images/products/doctor-photos-v2/doctor-strip-hero-v2.webp",
+          "format": "WEBP",
+          "pixels": [
+            1672,
+            941
+          ]
+        },
+        {
+          "path": "/images/products/doctor-photos-v2/doctor-box-white-v1.webp",
+          "format": "WEBP",
+          "pixels": [
+            1254,
+            1254
+          ]
+        }
+      ],
+      "assessment": {
+        "status": "条件符合；原图偏小",
+        "priority": "P2",
+        "finding": "薄钢带和盒装卷料均有原照片；盒装源800px，1254px编辑输出不等于高清原图。",
+        "nextAction": "补更高清盒装照片；继续核对六类手册范围，不能由银色外观推断材料。",
+        "evidence": "docs/product-imagery/doctor-box-photo-2026-11-01.json"
+      }
+    },
+    {
+      "id": "db-gravure",
+      "name": "Gravure Doctor Blades",
+      "category": "doctor-blades",
+      "mediaMode": "photo",
+      "image": "/images/products/doctor-photos-v2/doctor-strip-white-v2.webp",
+      "images": [
+        "/images/products/doctor-photos-v2/doctor-strip-white-v2.webp",
+        "/images/products/doctor-photos-v2/doctor-box-white-v1.webp"
+      ],
+      "heroImage": "/images/products/doctor-photos-v2/doctor-strip-hero-v2.webp",
+      "assetsExist": true,
+      "htmlExists": true,
+      "introductionPhoto": "/images/products/doctor-photos-v2/doctor-strip-white-v2.webp",
+      "lowerGuide": true,
+      "lowerGuideDrawing": true,
+      "photoBeforeGuide": true,
+      "seoCanonical": "https://www.nearblade.com/products/db-gravure",
+      "assetMetadata": [
+        {
+          "path": "/images/products/doctor-photos-v2/doctor-strip-white-v2.webp",
+          "format": "WEBP",
+          "pixels": [
+            1536,
+            1024
+          ]
+        },
+        {
+          "path": "/images/products/doctor-photos-v2/doctor-strip-hero-v2.webp",
+          "format": "WEBP",
+          "pixels": [
+            1672,
+            941
+          ]
+        },
+        {
+          "path": "/images/products/doctor-photos-v2/doctor-box-white-v1.webp",
+          "format": "WEBP",
+          "pixels": [
+            1254,
+            1254
+          ]
+        }
+      ],
+      "assessment": {
+        "status": "条件符合；原图偏小/验收待补",
+        "priority": "P2",
+        "finding": "共用钢带与盒装通用图不能证明凹印专属型号；盒装800px，手机和全轮播放大记录未全。",
+        "nextAction": "补应用对应证据、高分辨率盒装照片及手机验收。",
+        "evidence": "docs/product-imagery/doctor-photo-based-2026-11-01.json"
+      }
+    },
+    {
+      "id": "db-flexo",
+      "name": "Flexographic Metering Doctor Blades",
+      "category": "doctor-blades",
+      "mediaMode": "photo",
+      "image": "/images/products/doctor-photos-v2/doctor-strip-white-v2.webp",
+      "images": [
+        "/images/products/doctor-photos-v2/doctor-strip-white-v2.webp",
+        "/images/products/doctor-photos-v2/doctor-box-white-v1.webp"
+      ],
+      "heroImage": "/images/products/doctor-photos-v2/doctor-strip-hero-v2.webp",
+      "assetsExist": true,
+      "htmlExists": true,
+      "introductionPhoto": "/images/products/doctor-photos-v2/doctor-strip-white-v2.webp",
+      "lowerGuide": true,
+      "lowerGuideDrawing": true,
+      "photoBeforeGuide": true,
+      "seoCanonical": "https://www.nearblade.com/products/db-flexo",
+      "assetMetadata": [
+        {
+          "path": "/images/products/doctor-photos-v2/doctor-strip-white-v2.webp",
+          "format": "WEBP",
+          "pixels": [
+            1536,
+            1024
+          ]
+        },
+        {
+          "path": "/images/products/doctor-photos-v2/doctor-strip-hero-v2.webp",
+          "format": "WEBP",
+          "pixels": [
+            1672,
+            941
+          ]
+        },
+        {
+          "path": "/images/products/doctor-photos-v2/doctor-box-white-v1.webp",
+          "format": "WEBP",
+          "pixels": [
+            1254,
+            1254
+          ]
+        }
+      ],
+      "assessment": {
+        "status": "条件符合；原图偏小/验收待补",
+        "priority": "P2",
+        "finding": "共用钢带与盒装通用图不能证明柔印专属型号；盒装800px，新增盒装手机/放大记录未全。",
+        "nextAction": "补应用对应证据、高分辨率盒装照片及新增图片验收。",
+        "evidence": "docs/product-imagery/doctor-box-photo-2026-11-01.json"
+      }
+    },
+    {
+      "id": "db-holders",
+      "name": "Doctor Blade Holders",
+      "category": "doctor-blades",
+      "mediaMode": "photo",
+      "image": "/images/products/doctor-photos-v2/doctor-holder-white-v2.webp",
+      "images": [
+        "/images/products/doctor-photos-v2/doctor-holder-white-v2.webp"
+      ],
+      "heroImage": "/images/products/doctor-photos-v2/doctor-holder-hero-v2.webp",
+      "assetsExist": true,
+      "htmlExists": true,
+      "introductionPhoto": "/images/products/doctor-photos-v2/doctor-holder-white-v2.webp",
+      "lowerGuide": true,
+      "lowerGuideDrawing": true,
+      "photoBeforeGuide": true,
+      "seoCanonical": "https://www.nearblade.com/products/db-holders",
+      "assetMetadata": [
+        {
+          "path": "/images/products/doctor-photos-v2/doctor-holder-white-v2.webp",
+          "format": "WEBP",
+          "pixels": [
+            4032,
+            2280
+          ]
+        },
+        {
+          "path": "/images/products/doctor-photos-v2/doctor-holder-hero-v2.webp",
+          "format": "WEBP",
+          "pixels": [
+            4032,
+            2280
+          ]
+        }
+      ],
+      "assessment": {
+        "status": "待确认：身份与Hero样式",
+        "priority": "P1",
+        "finding": "照片来自供应商刀架条，但product.docx只列组合刀架、未给对应结构；两端裁切，Hero仍是银灰原照片，未达深蓝标准。",
+        "nextAction": "先核对本厂组合刀架结构与接口，再选完整实物照片；不靠生成补全隐藏端部。",
+        "evidence": "docs/product-imagery/doctor-photo-based-2026-11-01.json"
+      }
+    },
+    {
+      "id": "cb-001",
+      "name": "Wood Chipper Knives",
+      "category": "chipper-blades",
+      "mediaMode": "photo",
+      "image": "/images/products/blades-v2/chipper-white-01-v1.webp",
+      "images": [
+        "/images/products/blades-v2/chipper-white-01-v1.webp",
+        "/images/products/blades-v2/chipper-white-02-v1.webp",
+        "/images/products/blades-v2/chipper-white-03-v1.webp"
+      ],
+      "heroImage": "/images/products/hero-products-2026-10-31/chipper-product-hero-v1.webp",
+      "assetsExist": true,
+      "htmlExists": true,
+      "introductionPhoto": "/images/products/blades-v2/chipper-white-01-v1.webp",
+      "lowerGuide": true,
+      "lowerGuideDrawing": true,
+      "photoBeforeGuide": true,
+      "seoCanonical": "https://www.nearblade.com/products/cb-001",
+      "assetMetadata": [
+        {
+          "path": "/images/products/blades-v2/chipper-white-01-v1.webp",
+          "format": "WEBP",
+          "pixels": [
+            1000,
+            1000
+          ]
+        },
+        {
+          "path": "/images/products/hero-products-2026-10-31/chipper-product-hero-v1.webp",
+          "format": "WEBP",
+          "pixels": [
+            1672,
+            941
+          ]
+        },
+        {
+          "path": "/images/products/blades-v2/chipper-white-02-v1.webp",
+          "format": "WEBP",
+          "pixels": [
+            1000,
+            1000
+          ]
+        },
+        {
+          "path": "/images/products/blades-v2/chipper-white-03-v1.webp",
+          "format": "WEBP",
+          "pixels": [
+            1000,
+            1000
+          ]
+        }
+      ],
+      "assessment": {
+        "status": "条件符合；验收待补",
+        "priority": "P2",
+        "finding": "三张1000px实物图及Hero有记录；未证明BX各机型兼容，已有记录图库/放大实际页面验收未完成。",
+        "nextAction": "补本版三图/放大/手机验收；型号对应另需图纸或实物资料。",
+        "evidence": "docs/product-imagery/blade-rebuild/media-audit.json"
+      }
+    },
+    {
+      "id": "cr-001",
+      "name": "Granulator Knives",
+      "category": "crusher-blades",
+      "mediaMode": "photo",
+      "image": "/images/products/photo-expansion-2026-10-31/granulator-white-v1.webp",
+      "images": [
+        "/images/products/photo-expansion-2026-10-31/granulator-white-v1.webp"
+      ],
+      "heroImage": "/images/products/photo-expansion-2026-10-31/granulator-hero-v1.webp",
+      "assetsExist": true,
+      "htmlExists": true,
+      "introductionPhoto": "/images/products/photo-expansion-2026-10-31/granulator-white-v1.webp",
+      "lowerGuide": true,
+      "lowerGuideDrawing": true,
+      "photoBeforeGuide": true,
+      "seoCanonical": "https://www.nearblade.com/products/cr-001",
+      "assetMetadata": [
+        {
+          "path": "/images/products/photo-expansion-2026-10-31/granulator-white-v1.webp",
+          "format": "WEBP",
+          "pixels": [
+            1254,
+            1254
+          ]
+        },
+        {
+          "path": "/images/products/photo-expansion-2026-10-31/granulator-hero-v1.webp",
+          "format": "WEBP",
+          "pixels": [
+            1672,
+            941
+          ]
+        }
+      ],
+      "assessment": {
+        "status": "布局符合；验收待补",
+        "priority": "P2",
+        "finding": "九件刀组有照片编辑和数量核对；不是动刀/定刀特定接口证据，完整手机检查未记录。",
+        "nextAction": "补手机Hero/图库/放大验收；子类型单独找照片。",
+        "evidence": "docs/product-imagery/photo-expansion-2026-10-31.json"
+      }
+    },
+    {
+      "id": "cr-rotor",
+      "name": "Granulator Rotor Knives",
+      "category": "crusher-blades",
+      "mediaMode": "specification",
+      "image": "/images/products/blades-v2/granulator-rotor-section-v1.svg",
+      "images": [],
+      "heroImage": "/images/products/hero-products-2026-10-31/granulator-rotor-product-hero-v1.webp",
+      "assetsExist": true,
+      "htmlExists": true,
+      "introductionPhoto": null,
+      "lowerGuide": true,
+      "lowerGuideDrawing": false,
+      "photoBeforeGuide": null,
+      "seoCanonical": "https://www.nearblade.com/products/cr-rotor",
+      "assetMetadata": [
+        {
+          "path": "/images/products/blades-v2/granulator-rotor-section-v1.svg",
+          "format": "SVG",
+          "pixels": null
+        },
+        {
+          "path": "/images/products/hero-products-2026-10-31/granulator-rotor-product-hero-v1.webp",
+          "format": "WEBP",
+          "pixels": [
+            1672,
+            941
+          ]
+        }
+      ],
+      "assessment": {
+        "status": "不符合：缺实物图库",
+        "priority": "P1",
+        "finding": "仍设置mediaMode=specification、images为空；工程图在介绍区，下方尺寸指南不显示独立图；Hero多为概念生成。",
+        "nextAction": "按产品工艺寻找对应实际照片，白底放介绍区、尺寸图下移；基于同一实物制作Hero。",
+        "evidence": "docs/product-imagery/blade-rebuild/analysis.md"
+      }
+    },
+    {
+      "id": "cr-stationary",
+      "name": "Granulator Bed Knives",
+      "category": "crusher-blades",
+      "mediaMode": "specification",
+      "image": "/images/products/blades-v2/granulator-bed-section-v1.svg",
+      "images": [],
+      "heroImage": "/images/products/hero-products-2026-10-31/granulator-bed-product-hero-v1.webp",
+      "assetsExist": true,
+      "htmlExists": true,
+      "introductionPhoto": null,
+      "lowerGuide": true,
+      "lowerGuideDrawing": false,
+      "photoBeforeGuide": null,
+      "seoCanonical": "https://www.nearblade.com/products/cr-stationary",
+      "assetMetadata": [
+        {
+          "path": "/images/products/blades-v2/granulator-bed-section-v1.svg",
+          "format": "SVG",
+          "pixels": null
+        },
+        {
+          "path": "/images/products/hero-products-2026-10-31/granulator-bed-product-hero-v1.webp",
+          "format": "WEBP",
+          "pixels": [
+            1672,
+            941
+          ]
+        }
+      ],
+      "assessment": {
+        "status": "不符合：缺实物图库",
+        "priority": "P1",
+        "finding": "仍设置mediaMode=specification、images为空；工程图在介绍区，下方尺寸指南不显示独立图；Hero多为概念生成。",
+        "nextAction": "按产品工艺寻找对应实际照片，白底放介绍区、尺寸图下移；基于同一实物制作Hero。",
+        "evidence": "docs/product-imagery/blade-rebuild/analysis.md"
+      }
+    }
+  ],
+  "followUp20261102": {
+    "scope": [
+      "pb-double-v-die",
+      "pb-multi-v-die"
+    ],
+    "status": "P0 Hero geometry conflicts corrected locally using existing actual-product photos. The original audit above remains a dated snapshot; no deployment of this fix.",
+    "record": "docs/product-imagery/die-hero-photo-correction-2026-11-02.json",
+    "localOpenHeroGeometryConflicts": [],
+    "remainingLimits": "Double-V source resolution and other pre-existing P1/P2 issues remain; no blanket all-page approval."
+  },
+  "followUp20261103": {
+    "scope": [
+      "pb-radius-tooling",
+      "pb-u-forming",
+      "pb-embossing",
+      "pb-container",
+      "pb-light-pole",
+      "sk-foil",
+      "sr-casting",
+      "cp-thin-slitter",
+      "cr-rotor",
+      "cr-stationary"
+    ],
+    "status": "All ten former specification-only introductions now have a corresponding supplier-photo-based white gallery and independently edited navy Hero; lower guides revised to match family geometry. Local only.",
+    "record": "docs/product-imagery/ten-page-photo-repair-2026-11-02.json",
+    "localIntroductionPhotoCount": 34,
+    "localSpecificationOnlyCount": 0,
+    "conditionalNativeResolution": [
+      "sk-foil",
+      "pb-embossing"
+    ],
+    "remainingLimits": "Original 2026-11-01 audit remains a historical snapshot. Other products and previously recorded P1/P2 issues are not cleared. These ten are family-level illustrations, not proof of confirmed Nearblade model interfaces."
+  }
+}

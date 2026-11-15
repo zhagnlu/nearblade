@@ -14,6 +14,7 @@ export interface Product {
   applications: string[];
   image: string;
   heroImage?: string;
+  heroMobileContain?: boolean;
   images?: string[];
   galleryFit?: "contain" | "cover";
   variantGroups?: { title: string; items: string[] }[];

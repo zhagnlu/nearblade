@@ -17,10 +17,11 @@ interface PageHeroProps {
   image: string;
   productVisual?: boolean;
   lightOverlay?: boolean;
+  mobileImageContain?: boolean;
   visual?: ReactNode;
 }
 
-export function PageHero({ title, accent, description, contentId, primaryAction, secondaryAction, image, productVisual = false, lightOverlay = false, visual }: PageHeroProps) {
+export function PageHero({ title, accent, description, contentId, primaryAction, secondaryAction, image, productVisual = false, lightOverlay = false, mobileImageContain = false, visual }: PageHeroProps) {
   const primaryClass = "inline-flex items-center px-8 py-4 bg-steel text-white font-medium rounded-card hover:bg-steel-light transition-all duration-200 hover:-translate-y-0.5 group";
   const secondaryClass = "inline-flex items-center px-8 py-4 border border-metal-subtext/30 text-metal-text font-medium rounded-card hover:border-steel hover:text-steel transition-all duration-200";
   const action = ({ label, to }: HeroAction, primary: boolean) => {
@@ -34,15 +35,15 @@ export function PageHero({ title, accent, description, contentId, primaryAction,
   return (
     <section className={`relative min-h-screen min-h-[100svh] flex items-center justify-center overflow-hidden ${productVisual ? "hero-product-scene" : "hero-scene"}`}>
       <div className="absolute inset-0" aria-hidden="true">
-        {visual ? <div className="absolute inset-0 bg-gradient-to-br from-[#172536] via-[#263b4f] to-[#34495B]" /> : <img src={image} alt="" className={productVisual ? "hero-product-visual" : "w-full h-full object-cover"} {...{ fetchpriority: "high" }} />}
+        {visual ? <div className="absolute inset-0 bg-gradient-to-br from-[#172536] via-[#263b4f] to-[#34495B]" /> : <img src={image} alt="" className={productVisual ? "hero-product-visual" : mobileImageContain ? "w-full h-full bg-[#0b2037] object-contain object-bottom md:object-cover md:object-center" : "w-full h-full object-cover"} {...{ fetchpriority: "high" }} />}
         <div className={productVisual ? "absolute inset-0 bg-gradient-to-b from-[#263440]/35 via-[#263440]/65 to-[#293640]" : lightOverlay ? "absolute inset-0 bg-gradient-to-b from-[#101820]/20 via-[#101820]/25 to-[#34495B]/75" : "absolute inset-0 bg-gradient-to-b from-[#101820]/30 via-[#101820]/35 to-[#34495B]/80"} />
       </div>
       <div className={`relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 ${visual ? "w-full grid grid-cols-1 lg:grid-cols-2 items-center gap-10" : "text-center"}`}>
         <div>
-        <h1 className={`text-4xl sm:text-5xl ${visual ? "lg:text-5xl" : "lg:text-hero"} text-metal-text mb-6`}>
+        <h1 className={`text-4xl sm:text-5xl ${visual ? "lg:text-5xl" : "lg:text-hero"} text-metal-text mb-6 ${mobileImageContain ? "[text-shadow:0_2px_6px_#061526]" : ""}`}>
           {title}<span className="block text-[#8CC6D7]">{accent}</span>
         </h1>
-        <p className="text-lg lg:text-xl text-metal-subtext max-w-2xl mx-auto mb-10 animate-fade-in-up" style={{ animationDelay: "200ms" }}>{description}</p>
+        <p className={`text-lg lg:text-xl text-metal-subtext max-w-2xl mx-auto mb-10 animate-fade-in-up ${mobileImageContain ? "md:bg-[#0b2037]/85 md:p-4 md:rounded-card" : ""}`} style={{ animationDelay: "200ms" }}>{description}</p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up" style={{ animationDelay: "400ms" }}>
           {action(primaryAction, true)}
           {secondaryAction && action(secondaryAction, false)}

@@ -1,0 +1,30 @@
+{
+  "date": "2026-11-06",
+  "scope": "SEO HTTP verification and local preview routing",
+  "changes": [
+    "Preview serves canonical page HTML directly and redirects slash/index.html aliases with HTTP 301 while preserving query parameters.",
+    "Retired products redirect directly to their replacements without browser JavaScript.",
+    "Missing pages and resources return HTTP 404 instead of falling back to home HTML; HEAD responses have no body.",
+    "Added npm run check:seo for raw-HTML HTTP audits of every sitemap page, canonical aliases, retired routes and missing URLs.",
+    "Documented production origin/CDN validation separately from local preview checks."
+  ],
+  "verification": {
+    "fullSuiteBeforeInterruption": "npm test: build and 40 tests passed, with 43 prerendered public pages",
+    "finalFocusedCheck": "node --test tests/preview-routes.test.mjs: passed on 2026-11-06 after resuming; includes checkSeoHttp for the complete local sitemap",
+    "diffCheck": "git diff --check passed",
+    "nginxValidation": "Not run: no local Nginx executable. Preview checks do not validate the production Nginx configuration."
+  },
+  "publication": {
+    "committedThisTask": false,
+    "pushed": false,
+    "deployed": false,
+    "originConfigApplied": false,
+    "searchConsoleActionsPerformed": false
+  },
+  "outstanding": [
+    "Apply and validate the prepared Nginx rules on the serving origin and check CDN directory redirects after release authorization.",
+    "Run npm run check:seo against the live origin after applying server changes.",
+    "Confirm successful sitemap ingestion and live URL inspection in Search Console; request indexing for priority canonical URLs."
+  ],
+  "preservedWork": "Existing uncommitted product-image, catalog, localization and workflow changes were preserved; no unrelated files were committed."
+}
